@@ -1,0 +1,7995 @@
+window.BEEPOP_REPORT_DATA={
+  "schema_version": "phase6.5-report-data.v1",
+  "slot": "local-edit",
+  "run_id": "local-edit-images-gemini-flash-20260624-c8-plus-annotation-single-image-rerun",
+  "created_at": "2026-06-24T13:57:47.295Z",
+  "summary": {
+    "total_cases": 56,
+    "generated_cases": 56,
+    "failed_cases": 0,
+    "annotation_cases": 24,
+    "single_image_cases": 32,
+    "prompt_provider": "codex_native",
+    "image_provider": "gemini_flash_image",
+    "image_model": "gemini-3.1-flash-image",
+    "source_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-c8",
+    "incremental_source_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-anno021-024",
+    "incremental_cases": [
+      "ANNO-021",
+      "ANNO-022",
+      "ANNO-023",
+      "ANNO-024"
+    ],
+    "retry_source_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-retry-anno001-005-010-single008-013",
+    "retry_replaced_cases": [
+      "ANNO-001",
+      "ANNO-005",
+      "ANNO-010",
+      "SINGLE-008",
+      "SINGLE-013"
+    ],
+    "annotation_single_image_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+    "annotation_single_image_source_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+    "annotation_single_image_cases": [
+      "ANNO-001",
+      "ANNO-002",
+      "ANNO-003",
+      "ANNO-004",
+      "ANNO-005",
+      "ANNO-006",
+      "ANNO-007",
+      "ANNO-008",
+      "ANNO-009",
+      "ANNO-010",
+      "ANNO-011",
+      "ANNO-012",
+      "ANNO-013",
+      "ANNO-014",
+      "ANNO-015",
+      "ANNO-016",
+      "ANNO-017",
+      "ANNO-018",
+      "ANNO-019",
+      "ANNO-020",
+      "ANNO-021",
+      "ANNO-022",
+      "ANNO-023",
+      "ANNO-024"
+    ],
+    "annotation_input_rule": "Annotation guided edits use one input image only: Image A is the annotated / marked edit target."
+  },
+  "cases": [
+    {
+      "case_id": "ANNO-001",
+      "title": "将文本内容调整至指定位置；添加项链",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "将文本内容调整至指定位置；添加项链",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-001-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 989673
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-001-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1229809
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "将文本内容调整至指定位置；添加项链",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the two red rectangles and the red curved arrow\",\n    \"target_area\": \"the boxed text area at the lower left, the boxed right-side necklace display stand, and the arrow path between them\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying image naturally with matching background tone, fabric texture, shelf surface, and edge detail\"\n  },\n  \"move\": {\n    \"target\": \"the visible bottom text content currently placed at the lower left of the image\",\n    \"target_area\": \"the location indicated by the red arrow\",\n    \"content\": \"relocate the existing text to the arrow-designated position while keeping the same wording and elegant editorial layout style\",\n    \"integration\": \"preserve consistent typography appearance, scale balance, spacing, perspective, and natural placement within the composition; the moved text should look intentionally designed into the original scene\"\n  },\n  \"text_edit\": {\n    \"target\": \"the visible lower-left caption text\",\n    \"content\": \"keep the same text content and styling, but place it at the annotation-specified destination instead of its current position\",\n    \"integration\": \"maintain the refined serif typography, clean black text color, and premium product-poster aesthetic\"\n  },\n  \"insert\": {\n    \"target\": \"the rightmost black velvet necklace display stand marked by the red rectangle\",\n    \"content\": \"add a necklace displayed on that stand, naturally draped and centered on the stand surface, matching the premium jewelry product scene\",\n    \"integration\": \"anchor the necklace to the display stand itself, with realistic hanging behavior, correct scale, matching studio lighting, consistent shadows, correct perspective, and material detail coherent with the existing jewelry displays\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after moving the text and removing the annotations\",\n    \"content\": \"reconstruct the original clean poster background and shelf area where the text and red marks were previously visible\",\n    \"integration\": \"match surrounding lighting, shadows, soft background blur, tabletop texture, and composition continuity without visible retouch traces\"\n  },\n  \"preserve\": [\n    \"the overall product photography composition\",\n    \"the three black velvet necklace display stands and their existing structure, shape, material, and color\",\n    \"the two existing necklaces on the left and center stands\",\n    \"the soft draped background, lighting direction, shadows, depth of field, and tabletop appearance\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the camera angle or scene perspective\",\n    \"do not change the material or color of the display stands\",\n    \"do not move or redesign the left and center necklaces\",\n    \"do not place the new necklace beside the stand or in the background; it must be on the rightmost stand\",\n    \"do not leave any red annotation marks in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the two red rectangles and the red curved arrow\",\n    \"target_area\": \"the boxed text area at the lower left, the boxed right-side necklace display stand, and the arrow path between them\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying image naturally with matching background tone, fabric texture, shelf surface, and edge detail\"\n  },\n  \"move\": {\n    \"target\": \"the visible bottom text content currently placed at the lower left of the image\",\n    \"target_area\": \"the location indicated by the red arrow\",\n    \"content\": \"relocate the existing text to the arrow-designated position while keeping the same wording and elegant editorial layout style\",\n    \"integration\": \"preserve consistent typography appearance, scale balance, spacing, perspective, and natural placement within the composition; the moved text should look intentionally designed into the original scene\"\n  },\n  \"text_edit\": {\n    \"target\": \"the visible lower-left caption text\",\n    \"content\": \"keep the same text content and styling, but place it at the annotation-specified destination instead of its current position\",\n    \"integration\": \"maintain the refined serif typography, clean black text color, and premium product-poster aesthetic\"\n  },\n  \"insert\": {\n    \"target\": \"the rightmost black velvet necklace display stand marked by the red rectangle\",\n    \"content\": \"add a necklace displayed on that stand, naturally draped and centered on the stand surface, matching the premium jewelry product scene\",\n    \"integration\": \"anchor the necklace to the display stand itself, with realistic hanging behavior, correct scale, matching studio lighting, consistent shadows, correct perspective, and material detail coherent with the existing jewelry displays\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after moving the text and removing the annotations\",\n    \"content\": \"reconstruct the original clean poster background and shelf area where the text and red marks were previously visible\",\n    \"integration\": \"match surrounding lighting, shadows, soft background blur, tabletop texture, and composition continuity without visible retouch traces\"\n  },\n  \"preserve\": [\n    \"the overall product photography composition\",\n    \"the three black velvet necklace display stands and their existing structure, shape, material, and color\",\n    \"the two existing necklaces on the left and center stands\",\n    \"the soft draped background, lighting direction, shadows, depth of field, and tabletop appearance\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the camera angle or scene perspective\",\n    \"do not change the material or color of the display stands\",\n    \"do not move or redesign the left and center necklaces\",\n    \"do not place the new necklace beside the stand or in the background; it must be on the rightmost stand\",\n    \"do not leave any red annotation marks in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the two red rectangles and the red curved arrow\",\n    \"target_area\": \"the boxed text area at the lower left, the boxed right-side necklace display stand, and the arrow path between them\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying image naturally with matching background tone, fabric texture, shelf surface, and edge detail\"\n  },\n  \"move\": {\n    \"target\": \"the visible bottom text content currently placed at the lower left of the image\",\n    \"target_area\": \"the location indicated by the red arrow\",\n    \"content\": \"relocate the existing text to the arrow-designated position while keeping the same wording and elegant editorial layout style\",\n    \"integration\": \"preserve consistent typography appearance, scale balance, spacing, perspective, and natural placement within the composition; the moved text should look intentionally designed into the original scene\"\n  },\n  \"text_edit\": {\n    \"target\": \"the visible lower-left caption text\",\n    \"content\": \"keep the same text content and styling, but place it at the annotation-specified destination instead of its current position\",\n    \"integration\": \"maintain the refined serif typography, clean black text color, and premium product-poster aesthetic\"\n  },\n  \"insert\": {\n    \"target\": \"the rightmost black velvet necklace display stand marked by the red rectangle\",\n    \"content\": \"add a necklace displayed on that stand, naturally draped and centered on the stand surface, matching the premium jewelry product scene\",\n    \"integration\": \"anchor the necklace to the display stand itself, with realistic hanging behavior, correct scale, matching studio lighting, consistent shadows, correct perspective, and material detail coherent with the existing jewelry displays\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after moving the text and removing the annotations\",\n    \"content\": \"reconstruct the original clean poster background and shelf area where the text and red marks were previously visible\",\n    \"inte...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the two red rectangles and the red curved arrow\",\n    \"target_area\": \"the boxed text area at the lower left, the boxed right-side necklace display stand, and the arrow path between them\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying image naturally with matching background tone, fabric texture, shelf surface, and edge detail\"\n  },\n  \"move\": {\n    \"target\": \"the visible bottom text content currently placed at the lower left of the image\",\n    \"target_area\": \"the location indicated by the red arrow\",\n    \"content\": \"relocate the existing text to the arrow-designated position while keeping the same wording and elegant editorial layout style\",\n    \"integration\": \"preserve consistent typography appearance, scale balance, spacing, perspective, and natural placement within the composition; the moved text should look intentionally designed into the original scene\"\n  },\n  \"text_edit\": {\n    \"target\": \"the visible lower-left caption text\",\n    \"content\": \"keep the same text content and styling, but place it at the annotation-specified destination instead of its current position\",\n    \"integration\": \"maintain the refined serif typography, clean black text color, and premium product-poster aesthetic\"\n  },\n  \"insert\": {\n    \"target\": \"the rightmost black velvet necklace display stand marked by the red rectangle\",\n    \"content\": \"add a necklace displayed on that stand, naturally draped and centered on the stand surface, matching the premium jewelry product scene\",\n    \"integration\": \"anchor the necklace to the display stand itself, with realistic hanging behavior, correct scale, matching studio lighting, consistent shadows, correct perspective, and material detail coherent with the existing jewelry displays\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after moving the text and removing the annotations\",\n    \"content\": \"reconstruct the original clean poster background and shelf area where the text and red marks were previously visible\",\n    \"inte..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-001/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-001/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the two red rectangles and the red curved arrow\",\n    \"target_area\": \"the boxed text area at the lower left, the boxed right-side necklace display stand, and the arrow path between them\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying image naturally with matching background tone, fabric texture, shelf surface, and edge detail\"\n  },\n  \"move\": {\n    \"target\": \"the visible bottom text content currently placed at the lower left of the image\",\n    \"target_area\": \"the location indicated by the red arrow\",\n    \"content\": \"relocate the existing text to the arrow-designated position while keeping the same wording and elegant editorial layout style\",\n    \"integration\": \"preserve consistent typography appearance, scale balance, spacing, perspective, and natural placement within the composition; the moved text should look intentionally designed into the original scene\"\n  },\n  \"text_edit\": {\n    \"target\": \"the visible lower-left caption text\",\n    \"content\": \"keep the same text content and styling, but place it at the annotation-specified destination instead of its current position\",\n    \"integration\": \"maintain the refined serif typography, clean black text color, and premium product-poster aesthetic\"\n  },\n  \"insert\": {\n    \"target\": \"the rightmost black velvet necklace display stand marked by the red rectangle\",\n    \"content\": \"add a necklace displayed on that stand, naturally draped and centered on the stand surface, matching the premium jewelry product scene\",\n    \"integration\": \"anchor the necklace to the display stand itself, with realistic hanging behavior, correct scale, matching studio lighting, consistent shadows, correct perspective, and material detail coherent with the existing jewelry displays\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after moving the text and removing the annotations\",\n    \"content\": \"reconstruct the original clean poster background and shelf area where the text and red marks were previously visible\",\n    \"integration\": \"match surrounding lighting, shadows, soft background blur, tabletop texture, and composition continuity without visible retouch traces\"\n  },\n  \"preserve\": [\n    \"the overall product photography composition\",\n    \"the three black velvet necklace display stands and their existing structure, shape, material, and color\",\n    \"the two existing necklaces on the left and center stands\",\n    \"the soft draped background, lighting direction, shadows, depth of field, and tabletop appearance\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the camera angle or scene perspective\",\n    \"do not change the material or color of the display stands\",\n    \"do not move or redesign the left and center necklaces\",\n    \"do not place the new necklace beside the stand or in the background; it must be on the rightmost stand\",\n    \"do not leave any red annotation marks in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the two red rectangles and the red curved arrow\",\n    \"target_area\": \"the boxed text area at the lower left, the boxed right-side necklace display stand, and the arrow path between them\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying image naturally with matching background tone, fabric texture, shelf surface, and edge detail\"\n  },\n  \"move\": {\n    \"target\": \"the visible bottom text content currently placed at the lower left of the image\",\n    \"target_area\": \"the location indicated by the red arrow\",\n    \"content\": \"relocate the existing text to the arrow-designated position while keeping the same wording and elegant editorial layout style\",\n    \"integration\": \"preserve consistent typography appearance, scale balance, spacing, perspective, and natural placement within the composition; the moved text should look intentionally designed into the original scene\"\n  },\n  \"text_edit\": {\n    \"target\": \"the visible lower-left caption text\",\n    \"content\": \"keep the same text content and styling, but place it at the annotation-specified destination instead of its current position\",\n    \"integration\": \"maintain the refined serif typography, clean black text color, and premium product-poster aesthetic\"\n  },\n  \"insert\": {\n    \"target\": \"the rightmost black velvet necklace display stand marked by the red rectangle\",\n    \"content\": \"add a necklace displayed on that stand, naturally draped and centered on the stand surface, matching the premium jewelry product scene\",\n    \"integration\": \"anchor the necklace to the display stand itself, with realistic hanging behavior, correct scale, matching studio lighting, consistent shadows, correct perspective, and material detail coherent with the existing jewelry displays\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after moving the text and removing the annotations\",\n    \"content\": \"reconstruct the original clean poster background and shelf area where the text and red marks were previously visible\",\n    \"inte..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-001-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-001-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-001-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-001-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-001-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:50:19.809Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-002",
+      "title": "添加书本",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "添加书本",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-002-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1231075
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-002-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1234356
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "添加书本",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three circled compartments inside the transparent acrylic desktop organizer in Image A\",\n    \"target_area\": \"the front-left slot, the center slot, and the adjacent right-side circled slot of the organizer itself\",\n    \"content\": \"add neatly arranged books standing upright inside the circled organizer compartments, sized realistically to fit the slots, with clean office-style appearance and natural variation in spine width and color\",\n    \"integration\": \"anchor the books inside the organizer compartments, not beside the product or in the background; match the existing perspective, scale, lighting, transparency interactions, soft shadows, and realistic contact with the acrylic surfaces; keep the books looking naturally placed for a product listing image\"\n  },\n  \"repair\": {\n    \"target\": \"all visible red hand-drawn annotation marks\",\n    \"content\": \"remove the red circles completely and restore the underlying product and background cleanly\",\n    \"integration\": \"reconstruct the acrylic edges, reflections, and desk surface smoothly so the final image looks like an unmarked original product photo\"\n  },\n  \"preserve\": [\n    \"the acrylic organizer's structure, shape, transparent material, and compartment layout\",\n    \"the existing camera angle, perspective, lighting, reflections, and shadows\",\n    \"the background scene and desk surface\",\n    \"the visible headline, subtitle, and icon text in the upper-right area\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's size, color, material, or number of compartments\",\n    \"do not move the product from its current position\",\n    \"do not change any non-target areas outside the annotated compartments and annotation marks\",\n    \"do not modify the visible text, icons, or branding-style layout in the image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three circled compartments inside the transparent acrylic desktop organizer in Image A\",\n    \"target_area\": \"the front-left slot, the center slot, and the adjacent right-side circled slot of the organizer itself\",\n    \"content\": \"add neatly arranged books standing upright inside the circled organizer compartments, sized realistically to fit the slots, with clean office-style appearance and natural variation in spine width and color\",\n    \"integration\": \"anchor the books inside the organizer compartments, not beside the product or in the background; match the existing perspective, scale, lighting, transparency interactions, soft shadows, and realistic contact with the acrylic surfaces; keep the books looking naturally placed for a product listing image\"\n  },\n  \"repair\": {\n    \"target\": \"all visible red hand-drawn annotation marks\",\n    \"content\": \"remove the red circles completely and restore the underlying product and background cleanly\",\n    \"integration\": \"reconstruct the acrylic edges, reflections, and desk surface smoothly so the final image looks like an unmarked original product photo\"\n  },\n  \"preserve\": [\n    \"the acrylic organizer's structure, shape, transparent material, and compartment layout\",\n    \"the existing camera angle, perspective, lighting, reflections, and shadows\",\n    \"the background scene and desk surface\",\n    \"the visible headline, subtitle, and icon text in the upper-right area\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's size, color, material, or number of compartments\",\n    \"do not move the product from its current position\",\n    \"do not change any non-target areas outside the annotated compartments and annotation marks\",\n    \"do not modify the visible text, icons, or branding-style layout in the image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three circled compartments inside the transparent acrylic desktop organizer in Image A\",\n    \"target_area\": \"the front-left slot, the center slot, and the adjacent right-side circled slot of the organizer itself\",\n    \"content\": \"add neatly arranged books standing upright inside the circled organizer compartments, sized realistically to fit the slots, with clean office-style appearance and natural variation in spine width and color\",\n    \"integration\": \"anchor the books inside the organizer compartments, not beside the product or in the background; match the existing perspective, scale, lighting, transparency interactions, soft shadows, and realistic contact with the acrylic surfaces; keep the books looking naturally placed for a product listing image\"\n  },\n  \"repair\": {\n    \"target\": \"all visible red hand-drawn annotation marks\",\n    \"content\": \"remove the red circles completely and restore the underlying product and background cleanly\",\n    \"integration\": \"reconstruct the acrylic edges, reflections, and desk surface smoothly so the final image looks like an unmarked original product photo\"\n  },\n  \"preserve\": [\n    \"the acrylic organizer's structure, shape, transparent material, and compartment layout\",\n    \"the existing camera angle, perspective, lighting, reflections, and shadows\",\n    \"the background scene and desk surface\",\n    \"the visible headline, subtitle, and icon text in the upper-right area\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's size, color, material, or number of compartments\",\n    \"do not move the product from its current position\",\n    \"do not change any non-target areas outside the annotated compartments and annotation marks\",\n    \"do not modify the visible text, icons, or branding-style layout in the image\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three circled compartments inside the transparent acrylic desktop organizer in Image A\",\n    \"target_area\": \"the front-left slot, the center slot, and the adjacent right-side circled slot of the organizer itself\",\n    \"content\": \"add neatly arranged books standing upright inside the circled organizer compartments, sized realistically to fit the slots, with clean office-style appearance and natural variation in spine width and color\",\n    \"integration\": \"anchor the books inside the organizer compartments, not beside the product or in the background; match the existing perspective, scale, lighting, transparency interactions, soft shadows, and realistic contact with the acrylic surfaces; keep the books looking naturally placed for a product listing image\"\n  },\n  \"repair\": {\n    \"target\": \"all visible red hand-drawn annotation marks\",\n    \"content\": \"remove the red circles completely and restore the underlying product and background cleanly\",\n    \"integration\": \"reconstruct the acrylic edges, reflections, and desk surface smoothly so the final image looks like an unmarked original product photo\"\n  },\n  \"preserve\": [\n    \"the acrylic organizer's structure, shape, transparent material, and compartment layout\",\n    \"the existing camera angle, perspective, lighting, reflections, and shadows\",\n    \"the background scene and desk surface\",\n    \"the visible headline, subtitle, and icon text in the upper-right area\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's size, color, material, or number of compartments\",\n    \"do not move the product from its current position\",\n    \"do not change any non-target areas outside the annotated compartments and annotation marks\",\n    \"do not modify the visible text, icons, or branding-style layout in the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-002/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-002/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three circled compartments inside the transparent acrylic desktop organizer in Image A\",\n    \"target_area\": \"the front-left slot, the center slot, and the adjacent right-side circled slot of the organizer itself\",\n    \"content\": \"add neatly arranged books standing upright inside the circled organizer compartments, sized realistically to fit the slots, with clean office-style appearance and natural variation in spine width and color\",\n    \"integration\": \"anchor the books inside the organizer compartments, not beside the product or in the background; match the existing perspective, scale, lighting, transparency interactions, soft shadows, and realistic contact with the acrylic surfaces; keep the books looking naturally placed for a product listing image\"\n  },\n  \"repair\": {\n    \"target\": \"all visible red hand-drawn annotation marks\",\n    \"content\": \"remove the red circles completely and restore the underlying product and background cleanly\",\n    \"integration\": \"reconstruct the acrylic edges, reflections, and desk surface smoothly so the final image looks like an unmarked original product photo\"\n  },\n  \"preserve\": [\n    \"the acrylic organizer's structure, shape, transparent material, and compartment layout\",\n    \"the existing camera angle, perspective, lighting, reflections, and shadows\",\n    \"the background scene and desk surface\",\n    \"the visible headline, subtitle, and icon text in the upper-right area\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's size, color, material, or number of compartments\",\n    \"do not move the product from its current position\",\n    \"do not change any non-target areas outside the annotated compartments and annotation marks\",\n    \"do not modify the visible text, icons, or branding-style layout in the image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three circled compartments inside the transparent acrylic desktop organizer in Image A\",\n    \"target_area\": \"the front-left slot, the center slot, and the adjacent right-side circled slot of the organizer itself\",\n    \"content\": \"add neatly arranged books standing upright inside the circled organizer compartments, sized realistically to fit the slots, with clean office-style appearance and natural variation in spine width and color\",\n    \"integration\": \"anchor the books inside the organizer compartments, not beside the product or in the background; match the existing perspective, scale, lighting, transparency interactions, soft shadows, and realistic contact with the acrylic surfaces; keep the books looking naturally placed for a product listing image\"\n  },\n  \"repair\": {\n    \"target\": \"all visible red hand-drawn annotation marks\",\n    \"content\": \"remove the red circles completely and restore the underlying product and background cleanly\",\n    \"integration\": \"reconstruct the acrylic edges, reflections, and desk surface smoothly so the final image looks like an unmarked original product photo\"\n  },\n  \"preserve\": [\n    \"the acrylic organizer's structure, shape, transparent material, and compartment layout\",\n    \"the existing camera angle, perspective, lighting, reflections, and shadows\",\n    \"the background scene and desk surface\",\n    \"the visible headline, subtitle, and icon text in the upper-right area\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's size, color, material, or number of compartments\",\n    \"do not move the product from its current position\",\n    \"do not change any non-target areas outside the annotated compartments and annotation marks\",\n    \"do not modify the visible text, icons, or branding-style layout in the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-002-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-002-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-002-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-002-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-002-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:49:16.779Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-003",
+      "title": "图片位置互换",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "图片位置互换",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-003-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1404311
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-003-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1396761
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "图片位置互换",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the two annotated image panels inside the collage layout\",\n    \"target_area\": \"swap the boxed top-left panel and the boxed bottom-right panel\",\n    \"content\": \"move the current top-left close-up image panel into the bottom-right panel position, and move the current bottom-right close-up image panel into the top-left panel position\",\n    \"integration\": \"keep both panels aligned to the existing rounded-rectangle frames, preserve their original scale and crop style as much as possible, match the surrounding soft lighting, shadows, edge highlights, and border treatment, and make the swap look like the layout was originally designed this way\",\n    \"preserve_conditions\": \"only swap the two annotated image panels themselves; do not reposition other panels or surrounding design elements\"\n  },\n  \"remove\": [\n    \"all red annotation boxes\",\n    \"all red arrows and any other visible annotation marks\"\n  ],\n  \"repair\": {\n    \"target\": \"the swapped panel edges and any areas previously covered by annotations\",\n    \"content\": \"cleanly restore frame edges, corners, shadows, and background continuity so no annotation residue or swap artifacts remain\",\n    \"integration\": \"match the original poster finish, soft beige background glow, panel border radius, and layout polish\"\n  },\n  \"preserve\": [\n    \"the overall poster composition and canvas size\",\n    \"the main title and subtitle text at the top\",\n    \"the two right-side and lower-left image panels that are not annotated for swapping\",\n    \"all visible captions and typography\",\n    \"the product structure, material, color, visible markings, lighting, perspective, and shadows inside each panel except for the two swapped panel positions\",\n    \"the soft cream-beige background, thin outer border, and overall premium product-ad style\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or redesign the product\",\n    \"do not alter the visible text, logo, or numbering on the dial\",\n    \"do not change the size or shape of the collage panels\",\n    \"do not move any element other than the two annotated image panels\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the two annotated image panels inside the collage layout\",\n    \"target_area\": \"swap the boxed top-left panel and the boxed bottom-right panel\",\n    \"content\": \"move the current top-left close-up image panel into the bottom-right panel position, and move the current bottom-right close-up image panel into the top-left panel position\",\n    \"integration\": \"keep both panels aligned to the existing rounded-rectangle frames, preserve their original scale and crop style as much as possible, match the surrounding soft lighting, shadows, edge highlights, and border treatment, and make the swap look like the layout was originally designed this way\",\n    \"preserve_conditions\": \"only swap the two annotated image panels themselves; do not reposition other panels or surrounding design elements\"\n  },\n  \"remove\": [\n    \"all red annotation boxes\",\n    \"all red arrows and any other visible annotation marks\"\n  ],\n  \"repair\": {\n    \"target\": \"the swapped panel edges and any areas previously covered by annotations\",\n    \"content\": \"cleanly restore frame edges, corners, shadows, and background continuity so no annotation residue or swap artifacts remain\",\n    \"integration\": \"match the original poster finish, soft beige background glow, panel border radius, and layout polish\"\n  },\n  \"preserve\": [\n    \"the overall poster composition and canvas size\",\n    \"the main title and subtitle text at the top\",\n    \"the two right-side and lower-left image panels that are not annotated for swapping\",\n    \"all visible captions and typography\",\n    \"the product structure, material, color, visible markings, lighting, perspective, and shadows inside each panel except for the two swapped panel positions\",\n    \"the soft cream-beige background, thin outer border, and overall premium product-ad style\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or redesign the product\",\n    \"do not alter the visible text, logo, or numbering on the dial\",\n    \"do not change the size or shape of the collage panels\",\n    \"do not move any element other than the two annotated image panels\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the two annotated image panels inside the collage layout\",\n    \"target_area\": \"swap the boxed top-left panel and the boxed bottom-right panel\",\n    \"content\": \"move the current top-left close-up image panel into the bottom-right panel position, and move the current bottom-right close-up image panel into the top-left panel position\",\n    \"integration\": \"keep both panels aligned to the existing rounded-rectangle frames, preserve their original scale and crop style as much as possible, match the surrounding soft lighting, shadows, edge highlights, and border treatment, and make the swap look like the layout was originally designed this way\",\n    \"preserve_conditions\": \"only swap the two annotated image panels themselves; do not reposition other panels or surrounding design elements\"\n  },\n  \"remove\": [\n    \"all red annotation boxes\",\n    \"all red arrows and any other visible annotation marks\"\n  ],\n  \"repair\": {\n    \"target\": \"the swapped panel edges and any areas previously covered by annotations\",\n    \"content\": \"cleanly restore frame edges, corners, shadows, and background continuity so no annotation residue or swap artifacts remain\",\n    \"integration\": \"match the original poster finish, soft beige background glow, panel border radius, and layout polish\"\n  },\n  \"preserve\": [\n    \"the overall poster composition and canvas size\",\n    \"the main title and subtitle text at the top\",\n    \"the two right-side and lower-left image panels that are not annotated for swapping\",\n    \"all visible captions and typography\",\n    \"the product structure, material, color, visible markings, lighting, perspective, and shadows inside each panel except for the two swapped panel positions\",\n    \"the soft cream-beige background, thin outer border, and overall premium product-ad style\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or redesign the product\",\n    \"do not alter the visible text, logo, or numbering on the dial\",\n    \"do not change the size or shape of the collage panels\",\n    \"do not move any element other than the two annotated i...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the two annotated image panels inside the collage layout\",\n    \"target_area\": \"swap the boxed top-left panel and the boxed bottom-right panel\",\n    \"content\": \"move the current top-left close-up image panel into the bottom-right panel position, and move the current bottom-right close-up image panel into the top-left panel position\",\n    \"integration\": \"keep both panels aligned to the existing rounded-rectangle frames, preserve their original scale and crop style as much as possible, match the surrounding soft lighting, shadows, edge highlights, and border treatment, and make the swap look like the layout was originally designed this way\",\n    \"preserve_conditions\": \"only swap the two annotated image panels themselves; do not reposition other panels or surrounding design elements\"\n  },\n  \"remove\": [\n    \"all red annotation boxes\",\n    \"all red arrows and any other visible annotation marks\"\n  ],\n  \"repair\": {\n    \"target\": \"the swapped panel edges and any areas previously covered by annotations\",\n    \"content\": \"cleanly restore frame edges, corners, shadows, and background continuity so no annotation residue or swap artifacts remain\",\n    \"integration\": \"match the original poster finish, soft beige background glow, panel border radius, and layout polish\"\n  },\n  \"preserve\": [\n    \"the overall poster composition and canvas size\",\n    \"the main title and subtitle text at the top\",\n    \"the two right-side and lower-left image panels that are not annotated for swapping\",\n    \"all visible captions and typography\",\n    \"the product structure, material, color, visible markings, lighting, perspective, and shadows inside each panel except for the two swapped panel positions\",\n    \"the soft cream-beige background, thin outer border, and overall premium product-ad style\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or redesign the product\",\n    \"do not alter the visible text, logo, or numbering on the dial\",\n    \"do not change the size or shape of the collage panels\",\n    \"do not move any element other than the two annotated i..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-003/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-003/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the two annotated image panels inside the collage layout\",\n    \"target_area\": \"swap the boxed top-left panel and the boxed bottom-right panel\",\n    \"content\": \"move the current top-left close-up image panel into the bottom-right panel position, and move the current bottom-right close-up image panel into the top-left panel position\",\n    \"integration\": \"keep both panels aligned to the existing rounded-rectangle frames, preserve their original scale and crop style as much as possible, match the surrounding soft lighting, shadows, edge highlights, and border treatment, and make the swap look like the layout was originally designed this way\",\n    \"preserve_conditions\": \"only swap the two annotated image panels themselves; do not reposition other panels or surrounding design elements\"\n  },\n  \"remove\": [\n    \"all red annotation boxes\",\n    \"all red arrows and any other visible annotation marks\"\n  ],\n  \"repair\": {\n    \"target\": \"the swapped panel edges and any areas previously covered by annotations\",\n    \"content\": \"cleanly restore frame edges, corners, shadows, and background continuity so no annotation residue or swap artifacts remain\",\n    \"integration\": \"match the original poster finish, soft beige background glow, panel border radius, and layout polish\"\n  },\n  \"preserve\": [\n    \"the overall poster composition and canvas size\",\n    \"the main title and subtitle text at the top\",\n    \"the two right-side and lower-left image panels that are not annotated for swapping\",\n    \"all visible captions and typography\",\n    \"the product structure, material, color, visible markings, lighting, perspective, and shadows inside each panel except for the two swapped panel positions\",\n    \"the soft cream-beige background, thin outer border, and overall premium product-ad style\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or redesign the product\",\n    \"do not alter the visible text, logo, or numbering on the dial\",\n    \"do not change the size or shape of the collage panels\",\n    \"do not move any element other than the two annotated image panels\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the two annotated image panels inside the collage layout\",\n    \"target_area\": \"swap the boxed top-left panel and the boxed bottom-right panel\",\n    \"content\": \"move the current top-left close-up image panel into the bottom-right panel position, and move the current bottom-right close-up image panel into the top-left panel position\",\n    \"integration\": \"keep both panels aligned to the existing rounded-rectangle frames, preserve their original scale and crop style as much as possible, match the surrounding soft lighting, shadows, edge highlights, and border treatment, and make the swap look like the layout was originally designed this way\",\n    \"preserve_conditions\": \"only swap the two annotated image panels themselves; do not reposition other panels or surrounding design elements\"\n  },\n  \"remove\": [\n    \"all red annotation boxes\",\n    \"all red arrows and any other visible annotation marks\"\n  ],\n  \"repair\": {\n    \"target\": \"the swapped panel edges and any areas previously covered by annotations\",\n    \"content\": \"cleanly restore frame edges, corners, shadows, and background continuity so no annotation residue or swap artifacts remain\",\n    \"integration\": \"match the original poster finish, soft beige background glow, panel border radius, and layout polish\"\n  },\n  \"preserve\": [\n    \"the overall poster composition and canvas size\",\n    \"the main title and subtitle text at the top\",\n    \"the two right-side and lower-left image panels that are not annotated for swapping\",\n    \"all visible captions and typography\",\n    \"the product structure, material, color, visible markings, lighting, perspective, and shadows inside each panel except for the two swapped panel positions\",\n    \"the soft cream-beige background, thin outer border, and overall premium product-ad style\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or redesign the product\",\n    \"do not alter the visible text, logo, or numbering on the dial\",\n    \"do not change the size or shape of the collage panels\",\n    \"do not move any element other than the two annotated i..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-003-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-003-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-003-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-003-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-003-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:50:28.832Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-004",
+      "title": "添加一排调料瓶；添加一个调料瓶",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "添加一排调料瓶；添加一个调料瓶",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-004-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1325995
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-004-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1380307
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "添加一排调料瓶；添加一个调料瓶",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation circles and marks over the wooden organizer\",\n    \"integration\": \"remove the annotation strokes completely and restore the original wood surfaces, shelf edges, and visible scene details beneath them so the final image looks clean and unmarked\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the circled middle open shelf area inside the wooden organizer\",\n      \"target_area\": \"centered across the middle shelf opening between the two slanted side panels\",\n      \"content\": \"a neat row of spice bottles placed on the middle shelf, matching the style of the existing bottles already on the organizer, with similar glass bodies, dark caps, neutral labels, realistic spacing, and appropriate scale for the shelf\",\n      \"integration\": \"anchor the bottles directly on the middle shelf of the product, aligned with the shelf perspective and depth, with realistic contact shadows, consistent lighting, and natural material reflections so they appear to belong to the original scene\"\n    },\n    {\n      \"target\": \"the circled right side of the lower front shelf opening inside the wooden organizer\",\n      \"target_area\": \"right side of the lower front shelf compartment\",\n      \"content\": \"one spice bottle matching the existing bottle design, using a similar glass container, dark cap, subtle label, and realistic size for the lower shelf\",\n      \"integration\": \"place the bottle inside the product on the lower front shelf, not beside the organizer, and match the existing perspective, shelf height, lighting direction, wood occlusion, and shadow behavior\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the wood grain, shelf edges, and scene details seamlessly after annotation removal\",\n    \"integration\": \"keep the repaired areas visually consistent with the organizer's dark stained wood texture, surrounding reflections, and overall image sharpness\"\n  },\n  \"preserve\": [\n    \"the wooden organizer's overall structure, dimensions, shelf layout, and side-panel shape\",\n    \"the dark stained wood material, grain, finish, and visible screws\",\n    \"the existing spice bottles already present on the top shelf\",\n    \"the countertop surface, reflections, and surrounding kitchen background\",\n    \"the plant on the right side\",\n    \"the visible text 'Elevate Your Essentials'\",\n    \"the original lighting, perspective, depth, and shadows across the full scene\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's shape or add new compartments\",\n    \"do not move or remove existing objects outside the requested bottle additions\",\n    \"do not change the color tone of the wood, countertop, background, or text\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation circles and marks over the wooden organizer\",\n    \"integration\": \"remove the annotation strokes completely and restore the original wood surfaces, shelf edges, and visible scene details beneath them so the final image looks clean and unmarked\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the circled middle open shelf area inside the wooden organizer\",\n      \"target_area\": \"centered across the middle shelf opening between the two slanted side panels\",\n      \"content\": \"a neat row of spice bottles placed on the middle shelf, matching the style of the existing bottles already on the organizer, with similar glass bodies, dark caps, neutral labels, realistic spacing, and appropriate scale for the shelf\",\n      \"integration\": \"anchor the bottles directly on the middle shelf of the product, aligned with the shelf perspective and depth, with realistic contact shadows, consistent lighting, and natural material reflections so they appear to belong to the original scene\"\n    },\n    {\n      \"target\": \"the circled right side of the lower front shelf opening inside the wooden organizer\",\n      \"target_area\": \"right side of the lower front shelf compartment\",\n      \"content\": \"one spice bottle matching the existing bottle design, using a similar glass container, dark cap, subtle label, and realistic size for the lower shelf\",\n      \"integration\": \"place the bottle inside the product on the lower front shelf, not beside the organizer, and match the existing perspective, shelf height, lighting direction, wood occlusion, and shadow behavior\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the wood grain, shelf edges, and scene details seamlessly after annotation removal\",\n    \"integration\": \"keep the repaired areas visually consistent with the organizer's dark stained wood texture, surrounding reflections, and overall image sharpness\"\n  },\n  \"preserve\": [\n    \"the wooden organizer's overall structure, dimensions, shelf layout, and side-panel shape\",\n    \"the dark stained wood material, grain, finish, and visible screws\",\n    \"the existing spice bottles already present on the top shelf\",\n    \"the countertop surface, reflections, and surrounding kitchen background\",\n    \"the plant on the right side\",\n    \"the visible text 'Elevate Your Essentials'\",\n    \"the original lighting, perspective, depth, and shadows across the full scene\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's shape or add new compartments\",\n    \"do not move or remove existing objects outside the requested bottle additions\",\n    \"do not change the color tone of the wood, countertop, background, or text\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation circles and marks over the wooden organizer\",\n    \"integration\": \"remove the annotation strokes completely and restore the original wood surfaces, shelf edges, and visible scene details beneath them so the final image looks clean and unmarked\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the circled middle open shelf area inside the wooden organizer\",\n      \"target_area\": \"centered across the middle shelf opening between the two slanted side panels\",\n      \"content\": \"a neat row of spice bottles placed on the middle shelf, matching the style of the existing bottles already on the organizer, with similar glass bodies, dark caps, neutral labels, realistic spacing, and appropriate scale for the shelf\",\n      \"integration\": \"anchor the bottles directly on the middle shelf of the product, aligned with the shelf perspective and depth, with realistic contact shadows, consistent lighting, and natural material reflections so they appear to belong to the original scene\"\n    },\n    {\n      \"target\": \"the circled right side of the lower front shelf opening inside the wooden organizer\",\n      \"target_area\": \"right side of the lower front shelf compartment\",\n      \"content\": \"one spice bottle matching the existing bottle design, using a similar glass container, dark cap, subtle label, and realistic size for the lower shelf\",\n      \"integration\": \"place the bottle inside the product on the lower front shelf, not beside the organizer, and match the existing perspective, shelf height, lighting direction, wood occlusion, and shadow behavior\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the wood grain, shelf edges, and scene details seamlessly after annotation removal\",\n    \"integration\": \"keep the repaired areas visually consistent with the organizer's dark stained wood texture, surrounding reflections, and overall image sharpness\"\n  },\n  \"preserve\": [\n    \"the wooden organizer's overall structure, dimensions, shelf layout, and side-pane...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation circles and marks over the wooden organizer\",\n    \"integration\": \"remove the annotation strokes completely and restore the original wood surfaces, shelf edges, and visible scene details beneath them so the final image looks clean and unmarked\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the circled middle open shelf area inside the wooden organizer\",\n      \"target_area\": \"centered across the middle shelf opening between the two slanted side panels\",\n      \"content\": \"a neat row of spice bottles placed on the middle shelf, matching the style of the existing bottles already on the organizer, with similar glass bodies, dark caps, neutral labels, realistic spacing, and appropriate scale for the shelf\",\n      \"integration\": \"anchor the bottles directly on the middle shelf of the product, aligned with the shelf perspective and depth, with realistic contact shadows, consistent lighting, and natural material reflections so they appear to belong to the original scene\"\n    },\n    {\n      \"target\": \"the circled right side of the lower front shelf opening inside the wooden organizer\",\n      \"target_area\": \"right side of the lower front shelf compartment\",\n      \"content\": \"one spice bottle matching the existing bottle design, using a similar glass container, dark cap, subtle label, and realistic size for the lower shelf\",\n      \"integration\": \"place the bottle inside the product on the lower front shelf, not beside the organizer, and match the existing perspective, shelf height, lighting direction, wood occlusion, and shadow behavior\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the wood grain, shelf edges, and scene details seamlessly after annotation removal\",\n    \"integration\": \"keep the repaired areas visually consistent with the organizer's dark stained wood texture, surrounding reflections, and overall image sharpness\"\n  },\n  \"preserve\": [\n    \"the wooden organizer's overall structure, dimensions, shelf layout, and side-pane..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-004/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-004/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation circles and marks over the wooden organizer\",\n    \"integration\": \"remove the annotation strokes completely and restore the original wood surfaces, shelf edges, and visible scene details beneath them so the final image looks clean and unmarked\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the circled middle open shelf area inside the wooden organizer\",\n      \"target_area\": \"centered across the middle shelf opening between the two slanted side panels\",\n      \"content\": \"a neat row of spice bottles placed on the middle shelf, matching the style of the existing bottles already on the organizer, with similar glass bodies, dark caps, neutral labels, realistic spacing, and appropriate scale for the shelf\",\n      \"integration\": \"anchor the bottles directly on the middle shelf of the product, aligned with the shelf perspective and depth, with realistic contact shadows, consistent lighting, and natural material reflections so they appear to belong to the original scene\"\n    },\n    {\n      \"target\": \"the circled right side of the lower front shelf opening inside the wooden organizer\",\n      \"target_area\": \"right side of the lower front shelf compartment\",\n      \"content\": \"one spice bottle matching the existing bottle design, using a similar glass container, dark cap, subtle label, and realistic size for the lower shelf\",\n      \"integration\": \"place the bottle inside the product on the lower front shelf, not beside the organizer, and match the existing perspective, shelf height, lighting direction, wood occlusion, and shadow behavior\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the wood grain, shelf edges, and scene details seamlessly after annotation removal\",\n    \"integration\": \"keep the repaired areas visually consistent with the organizer's dark stained wood texture, surrounding reflections, and overall image sharpness\"\n  },\n  \"preserve\": [\n    \"the wooden organizer's overall structure, dimensions, shelf layout, and side-panel shape\",\n    \"the dark stained wood material, grain, finish, and visible screws\",\n    \"the existing spice bottles already present on the top shelf\",\n    \"the countertop surface, reflections, and surrounding kitchen background\",\n    \"the plant on the right side\",\n    \"the visible text 'Elevate Your Essentials'\",\n    \"the original lighting, perspective, depth, and shadows across the full scene\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the organizer's shape or add new compartments\",\n    \"do not move or remove existing objects outside the requested bottle additions\",\n    \"do not change the color tone of the wood, countertop, background, or text\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation circles and marks over the wooden organizer\",\n    \"integration\": \"remove the annotation strokes completely and restore the original wood surfaces, shelf edges, and visible scene details beneath them so the final image looks clean and unmarked\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the circled middle open shelf area inside the wooden organizer\",\n      \"target_area\": \"centered across the middle shelf opening between the two slanted side panels\",\n      \"content\": \"a neat row of spice bottles placed on the middle shelf, matching the style of the existing bottles already on the organizer, with similar glass bodies, dark caps, neutral labels, realistic spacing, and appropriate scale for the shelf\",\n      \"integration\": \"anchor the bottles directly on the middle shelf of the product, aligned with the shelf perspective and depth, with realistic contact shadows, consistent lighting, and natural material reflections so they appear to belong to the original scene\"\n    },\n    {\n      \"target\": \"the circled right side of the lower front shelf opening inside the wooden organizer\",\n      \"target_area\": \"right side of the lower front shelf compartment\",\n      \"content\": \"one spice bottle matching the existing bottle design, using a similar glass container, dark cap, subtle label, and realistic size for the lower shelf\",\n      \"integration\": \"place the bottle inside the product on the lower front shelf, not beside the organizer, and match the existing perspective, shelf height, lighting direction, wood occlusion, and shadow behavior\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the wood grain, shelf edges, and scene details seamlessly after annotation removal\",\n    \"integration\": \"keep the repaired areas visually consistent with the organizer's dark stained wood texture, surrounding reflections, and overall image sharpness\"\n  },\n  \"preserve\": [\n    \"the wooden organizer's overall structure, dimensions, shelf layout, and side-pane..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-004-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-004-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-004-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-004-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-004-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:50:44.675Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-005",
+      "title": "将内容移至右下角；删除这些瓶子",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "将内容移至右下角；删除这些瓶子",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-005-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1553314
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-005-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1531266
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "将内容移至右下角；删除这些瓶子",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the entire lower-left inset content, including the grayscale cluttered spice-cabinet photo and the word 'INEFFICIENT' beneath it\",\n    \"target_area\": \"move from the lower-left corner to the lower-right corner of the main image, into the empty wood-panel area below the spice shelf\",\n    \"content\": \"keep the inset content itself intact while repositioning it as a clean design element in the bottom-right area\",\n    \"integration\": \"preserve the inset's original rectangular layout and scale proportion, place it neatly in the lower-right corner without covering the spice rack, and remove all red annotation graphics associated with the arrow and frame\"\n  },\n  \"remove\": {\n    \"target\": [\n      \"the three spice jars marked with red X annotations on the rack\",\n      \"all visible red annotation marks, including the three X marks, the long arrow, and the red outline around the inset\"\n    ],\n    \"integration\": \"after removal, reconstruct the wooden rack, shelf edges, background wood grain, and surrounding jar spacing so the scene looks natural and uninterrupted under the original warm lighting and perspective\"\n  },\n  \"repair\": {\n    \"target\": [\n      \"the lower-left area where the inset was originally placed\",\n      \"the rack areas where the deleted spice jars were located\"\n    ],\n    \"content\": \"restore clean continuous cabinet surfaces and rack geometry with believable wood texture, shadows, and spacing\",\n    \"integration\": \"match the original wood tones, shelf lighting, reflections, and perspective so no trace of moved content, removed jars, or annotations remains\"\n  },\n  \"preserve\": [\n    \"the overall wooden cabinet structure and spice rack design\",\n    \"the warm shelf lighting, shadows, and camera perspective\",\n    \"the visible headline text 'EFFICIENT STORAGE UNIT'\",\n    \"the material, color, and arrangement of all unmarked spice jars\",\n    \"the overall premium product-render look of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cabinet dimensions or shelf layout\",\n    \"do not change the wood color or texture outside repaired areas\",\n    \"do not modify the headline text\",\n    \"do not add new jars or decorative objects\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the entire lower-left inset content, including the grayscale cluttered spice-cabinet photo and the word 'INEFFICIENT' beneath it\",\n    \"target_area\": \"move from the lower-left corner to the lower-right corner of the main image, into the empty wood-panel area below the spice shelf\",\n    \"content\": \"keep the inset content itself intact while repositioning it as a clean design element in the bottom-right area\",\n    \"integration\": \"preserve the inset's original rectangular layout and scale proportion, place it neatly in the lower-right corner without covering the spice rack, and remove all red annotation graphics associated with the arrow and frame\"\n  },\n  \"remove\": {\n    \"target\": [\n      \"the three spice jars marked with red X annotations on the rack\",\n      \"all visible red annotation marks, including the three X marks, the long arrow, and the red outline around the inset\"\n    ],\n    \"integration\": \"after removal, reconstruct the wooden rack, shelf edges, background wood grain, and surrounding jar spacing so the scene looks natural and uninterrupted under the original warm lighting and perspective\"\n  },\n  \"repair\": {\n    \"target\": [\n      \"the lower-left area where the inset was originally placed\",\n      \"the rack areas where the deleted spice jars were located\"\n    ],\n    \"content\": \"restore clean continuous cabinet surfaces and rack geometry with believable wood texture, shadows, and spacing\",\n    \"integration\": \"match the original wood tones, shelf lighting, reflections, and perspective so no trace of moved content, removed jars, or annotations remains\"\n  },\n  \"preserve\": [\n    \"the overall wooden cabinet structure and spice rack design\",\n    \"the warm shelf lighting, shadows, and camera perspective\",\n    \"the visible headline text 'EFFICIENT STORAGE UNIT'\",\n    \"the material, color, and arrangement of all unmarked spice jars\",\n    \"the overall premium product-render look of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cabinet dimensions or shelf layout\",\n    \"do not change the wood color or texture outside repaired areas\",\n    \"do not modify the headline text\",\n    \"do not add new jars or decorative objects\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the entire lower-left inset content, including the grayscale cluttered spice-cabinet photo and the word 'INEFFICIENT' beneath it\",\n    \"target_area\": \"move from the lower-left corner to the lower-right corner of the main image, into the empty wood-panel area below the spice shelf\",\n    \"content\": \"keep the inset content itself intact while repositioning it as a clean design element in the bottom-right area\",\n    \"integration\": \"preserve the inset's original rectangular layout and scale proportion, place it neatly in the lower-right corner without covering the spice rack, and remove all red annotation graphics associated with the arrow and frame\"\n  },\n  \"remove\": {\n    \"target\": [\n      \"the three spice jars marked with red X annotations on the rack\",\n      \"all visible red annotation marks, including the three X marks, the long arrow, and the red outline around the inset\"\n    ],\n    \"integration\": \"after removal, reconstruct the wooden rack, shelf edges, background wood grain, and surrounding jar spacing so the scene looks natural and uninterrupted under the original warm lighting and perspective\"\n  },\n  \"repair\": {\n    \"target\": [\n      \"the lower-left area where the inset was originally placed\",\n      \"the rack areas where the deleted spice jars were located\"\n    ],\n    \"content\": \"restore clean continuous cabinet surfaces and rack geometry with believable wood texture, shadows, and spacing\",\n    \"integration\": \"match the original wood tones, shelf lighting, reflections, and perspective so no trace of moved content, removed jars, or annotations remains\"\n  },\n  \"preserve\": [\n    \"the overall wooden cabinet structure and spice rack design\",\n    \"the warm shelf lighting, shadows, and camera perspective\",\n    \"the visible headline text 'EFFICIENT STORAGE UNIT'\",\n    \"the material, color, and arrangement of all unmarked spice jars\",\n    \"the overall premium product-render look of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cabinet dimensions or shelf layout\",\n    \"do not change the wood color or texture outsid...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the entire lower-left inset content, including the grayscale cluttered spice-cabinet photo and the word 'INEFFICIENT' beneath it\",\n    \"target_area\": \"move from the lower-left corner to the lower-right corner of the main image, into the empty wood-panel area below the spice shelf\",\n    \"content\": \"keep the inset content itself intact while repositioning it as a clean design element in the bottom-right area\",\n    \"integration\": \"preserve the inset's original rectangular layout and scale proportion, place it neatly in the lower-right corner without covering the spice rack, and remove all red annotation graphics associated with the arrow and frame\"\n  },\n  \"remove\": {\n    \"target\": [\n      \"the three spice jars marked with red X annotations on the rack\",\n      \"all visible red annotation marks, including the three X marks, the long arrow, and the red outline around the inset\"\n    ],\n    \"integration\": \"after removal, reconstruct the wooden rack, shelf edges, background wood grain, and surrounding jar spacing so the scene looks natural and uninterrupted under the original warm lighting and perspective\"\n  },\n  \"repair\": {\n    \"target\": [\n      \"the lower-left area where the inset was originally placed\",\n      \"the rack areas where the deleted spice jars were located\"\n    ],\n    \"content\": \"restore clean continuous cabinet surfaces and rack geometry with believable wood texture, shadows, and spacing\",\n    \"integration\": \"match the original wood tones, shelf lighting, reflections, and perspective so no trace of moved content, removed jars, or annotations remains\"\n  },\n  \"preserve\": [\n    \"the overall wooden cabinet structure and spice rack design\",\n    \"the warm shelf lighting, shadows, and camera perspective\",\n    \"the visible headline text 'EFFICIENT STORAGE UNIT'\",\n    \"the material, color, and arrangement of all unmarked spice jars\",\n    \"the overall premium product-render look of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cabinet dimensions or shelf layout\",\n    \"do not change the wood color or texture outsid..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-005/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-005/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the entire lower-left inset content, including the grayscale cluttered spice-cabinet photo and the word 'INEFFICIENT' beneath it\",\n    \"target_area\": \"move from the lower-left corner to the lower-right corner of the main image, into the empty wood-panel area below the spice shelf\",\n    \"content\": \"keep the inset content itself intact while repositioning it as a clean design element in the bottom-right area\",\n    \"integration\": \"preserve the inset's original rectangular layout and scale proportion, place it neatly in the lower-right corner without covering the spice rack, and remove all red annotation graphics associated with the arrow and frame\"\n  },\n  \"remove\": {\n    \"target\": [\n      \"the three spice jars marked with red X annotations on the rack\",\n      \"all visible red annotation marks, including the three X marks, the long arrow, and the red outline around the inset\"\n    ],\n    \"integration\": \"after removal, reconstruct the wooden rack, shelf edges, background wood grain, and surrounding jar spacing so the scene looks natural and uninterrupted under the original warm lighting and perspective\"\n  },\n  \"repair\": {\n    \"target\": [\n      \"the lower-left area where the inset was originally placed\",\n      \"the rack areas where the deleted spice jars were located\"\n    ],\n    \"content\": \"restore clean continuous cabinet surfaces and rack geometry with believable wood texture, shadows, and spacing\",\n    \"integration\": \"match the original wood tones, shelf lighting, reflections, and perspective so no trace of moved content, removed jars, or annotations remains\"\n  },\n  \"preserve\": [\n    \"the overall wooden cabinet structure and spice rack design\",\n    \"the warm shelf lighting, shadows, and camera perspective\",\n    \"the visible headline text 'EFFICIENT STORAGE UNIT'\",\n    \"the material, color, and arrangement of all unmarked spice jars\",\n    \"the overall premium product-render look of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cabinet dimensions or shelf layout\",\n    \"do not change the wood color or texture outside repaired areas\",\n    \"do not modify the headline text\",\n    \"do not add new jars or decorative objects\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the entire lower-left inset content, including the grayscale cluttered spice-cabinet photo and the word 'INEFFICIENT' beneath it\",\n    \"target_area\": \"move from the lower-left corner to the lower-right corner of the main image, into the empty wood-panel area below the spice shelf\",\n    \"content\": \"keep the inset content itself intact while repositioning it as a clean design element in the bottom-right area\",\n    \"integration\": \"preserve the inset's original rectangular layout and scale proportion, place it neatly in the lower-right corner without covering the spice rack, and remove all red annotation graphics associated with the arrow and frame\"\n  },\n  \"remove\": {\n    \"target\": [\n      \"the three spice jars marked with red X annotations on the rack\",\n      \"all visible red annotation marks, including the three X marks, the long arrow, and the red outline around the inset\"\n    ],\n    \"integration\": \"after removal, reconstruct the wooden rack, shelf edges, background wood grain, and surrounding jar spacing so the scene looks natural and uninterrupted under the original warm lighting and perspective\"\n  },\n  \"repair\": {\n    \"target\": [\n      \"the lower-left area where the inset was originally placed\",\n      \"the rack areas where the deleted spice jars were located\"\n    ],\n    \"content\": \"restore clean continuous cabinet surfaces and rack geometry with believable wood texture, shadows, and spacing\",\n    \"integration\": \"match the original wood tones, shelf lighting, reflections, and perspective so no trace of moved content, removed jars, or annotations remains\"\n  },\n  \"preserve\": [\n    \"the overall wooden cabinet structure and spice rack design\",\n    \"the warm shelf lighting, shadows, and camera perspective\",\n    \"the visible headline text 'EFFICIENT STORAGE UNIT'\",\n    \"the material, color, and arrangement of all unmarked spice jars\",\n    \"the overall premium product-render look of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cabinet dimensions or shelf layout\",\n    \"do not change the wood color or texture outsid..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-005-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-005-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-005-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-005-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-005-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:49:31.029Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-006",
+      "title": "添加厨房纸；添加烧烤调料瓶",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "添加厨房纸；添加烧烤调料瓶",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-006-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1545449
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-006-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1601435
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "添加厨房纸；添加烧烤调料瓶",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red hand-drawn annotation circles and strokes overlaid on Image A\",\n    \"target_area\": \"the upper circled hanging-rod region and the lower circled basket region\",\n    \"content\": \"clean product image with no annotation marks remaining\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the upper hanging rod area on the grill organizer\",\n      \"target_area\": \"inside the upper red circled region, aligned with the horizontal rod on the main product\",\n      \"content\": \"a realistic kitchen paper roll mounted onto the rod as a usable paper towel holder\",\n      \"integration\": \"match the existing black metal product perspective, outdoor lighting, depth of field, shadows, reflections, and scale; make the paper roll look physically supported by the product and not floating\"\n    },\n    {\n      \"target\": \"the lower storage basket compartment on the grill organizer\",\n      \"target_area\": \"inside the lower red circled region within the main basket\",\n      \"content\": \"several realistic barbecue seasoning bottles neatly placed inside the basket\",\n      \"integration\": \"match the scene perspective, lighting, shadows, scale, and product styling; bottles should sit naturally inside the basket and appear organized for product-use presentation\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the underlying rods, basket mesh, edges, and background so the image looks original and seamless after annotation removal\",\n    \"integration\": \"preserve the existing material texture, blur level, lighting direction, and shadow continuity\"\n  },\n  \"preserve\": [\n    \"the grill organizer’s overall structure, proportions, black metal material, and folding-frame design\",\n    \"the visible headline text and bottom marketing text/icons\",\n    \"the outdoor campfire background, table surface, and existing scene atmosphere\",\n    \"the image perspective, lighting, shadows, reflections, and depth of field\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product frame shape or move existing rods, hooks, basket walls, or side rack\",\n    \"do not place the added kitchen paper or seasoning bottles outside the product\",\n    \"do not leave any annotation marks visible in the final image\",\n    \"do not modify colors, logos, text, or composition outside the requested additions and cleanup\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red hand-drawn annotation circles and strokes overlaid on Image A\",\n    \"target_area\": \"the upper circled hanging-rod region and the lower circled basket region\",\n    \"content\": \"clean product image with no annotation marks remaining\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the upper hanging rod area on the grill organizer\",\n      \"target_area\": \"inside the upper red circled region, aligned with the horizontal rod on the main product\",\n      \"content\": \"a realistic kitchen paper roll mounted onto the rod as a usable paper towel holder\",\n      \"integration\": \"match the existing black metal product perspective, outdoor lighting, depth of field, shadows, reflections, and scale; make the paper roll look physically supported by the product and not floating\"\n    },\n    {\n      \"target\": \"the lower storage basket compartment on the grill organizer\",\n      \"target_area\": \"inside the lower red circled region within the main basket\",\n      \"content\": \"several realistic barbecue seasoning bottles neatly placed inside the basket\",\n      \"integration\": \"match the scene perspective, lighting, shadows, scale, and product styling; bottles should sit naturally inside the basket and appear organized for product-use presentation\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the underlying rods, basket mesh, edges, and background so the image looks original and seamless after annotation removal\",\n    \"integration\": \"preserve the existing material texture, blur level, lighting direction, and shadow continuity\"\n  },\n  \"preserve\": [\n    \"the grill organizer’s overall structure, proportions, black metal material, and folding-frame design\",\n    \"the visible headline text and bottom marketing text/icons\",\n    \"the outdoor campfire background, table surface, and existing scene atmosphere\",\n    \"the image perspective, lighting, shadows, reflections, and depth of field\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product frame shape or move existing rods, hooks, basket walls, or side rack\",\n    \"do not place the added kitchen paper or seasoning bottles outside the product\",\n    \"do not leave any annotation marks visible in the final image\",\n    \"do not modify colors, logos, text, or composition outside the requested additions and cleanup\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red hand-drawn annotation circles and strokes overlaid on Image A\",\n    \"target_area\": \"the upper circled hanging-rod region and the lower circled basket region\",\n    \"content\": \"clean product image with no annotation marks remaining\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the upper hanging rod area on the grill organizer\",\n      \"target_area\": \"inside the upper red circled region, aligned with the horizontal rod on the main product\",\n      \"content\": \"a realistic kitchen paper roll mounted onto the rod as a usable paper towel holder\",\n      \"integration\": \"match the existing black metal product perspective, outdoor lighting, depth of field, shadows, reflections, and scale; make the paper roll look physically supported by the product and not floating\"\n    },\n    {\n      \"target\": \"the lower storage basket compartment on the grill organizer\",\n      \"target_area\": \"inside the lower red circled region within the main basket\",\n      \"content\": \"several realistic barbecue seasoning bottles neatly placed inside the basket\",\n      \"integration\": \"match the scene perspective, lighting, shadows, scale, and product styling; bottles should sit naturally inside the basket and appear organized for product-use presentation\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the underlying rods, basket mesh, edges, and background so the image looks original and seamless after annotation removal\",\n    \"integration\": \"preserve the existing material texture, blur level, lighting direction, and shadow continuity\"\n  },\n  \"preserve\": [\n    \"the grill organizer’s overall structure, proportions, black metal material, and folding-frame design\",\n    \"the visible headline text and bottom marketing text/icons\",\n    \"the outdoor campfire background, table surface, and existing scene atmosphere\",\n    \"the image perspective, lighting, shadows, reflections, and depth of field\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red hand-drawn annotation circles and strokes overlaid on Image A\",\n    \"target_area\": \"the upper circled hanging-rod region and the lower circled basket region\",\n    \"content\": \"clean product image with no annotation marks remaining\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the upper hanging rod area on the grill organizer\",\n      \"target_area\": \"inside the upper red circled region, aligned with the horizontal rod on the main product\",\n      \"content\": \"a realistic kitchen paper roll mounted onto the rod as a usable paper towel holder\",\n      \"integration\": \"match the existing black metal product perspective, outdoor lighting, depth of field, shadows, reflections, and scale; make the paper roll look physically supported by the product and not floating\"\n    },\n    {\n      \"target\": \"the lower storage basket compartment on the grill organizer\",\n      \"target_area\": \"inside the lower red circled region within the main basket\",\n      \"content\": \"several realistic barbecue seasoning bottles neatly placed inside the basket\",\n      \"integration\": \"match the scene perspective, lighting, shadows, scale, and product styling; bottles should sit naturally inside the basket and appear organized for product-use presentation\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the underlying rods, basket mesh, edges, and background so the image looks original and seamless after annotation removal\",\n    \"integration\": \"preserve the existing material texture, blur level, lighting direction, and shadow continuity\"\n  },\n  \"preserve\": [\n    \"the grill organizer’s overall structure, proportions, black metal material, and folding-frame design\",\n    \"the visible headline text and bottom marketing text/icons\",\n    \"the outdoor campfire background, table surface, and existing scene atmosphere\",\n    \"the image perspective, lighting, shadows, reflections, and depth of field\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-006/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-006/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red hand-drawn annotation circles and strokes overlaid on Image A\",\n    \"target_area\": \"the upper circled hanging-rod region and the lower circled basket region\",\n    \"content\": \"clean product image with no annotation marks remaining\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the upper hanging rod area on the grill organizer\",\n      \"target_area\": \"inside the upper red circled region, aligned with the horizontal rod on the main product\",\n      \"content\": \"a realistic kitchen paper roll mounted onto the rod as a usable paper towel holder\",\n      \"integration\": \"match the existing black metal product perspective, outdoor lighting, depth of field, shadows, reflections, and scale; make the paper roll look physically supported by the product and not floating\"\n    },\n    {\n      \"target\": \"the lower storage basket compartment on the grill organizer\",\n      \"target_area\": \"inside the lower red circled region within the main basket\",\n      \"content\": \"several realistic barbecue seasoning bottles neatly placed inside the basket\",\n      \"integration\": \"match the scene perspective, lighting, shadows, scale, and product styling; bottles should sit naturally inside the basket and appear organized for product-use presentation\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the underlying rods, basket mesh, edges, and background so the image looks original and seamless after annotation removal\",\n    \"integration\": \"preserve the existing material texture, blur level, lighting direction, and shadow continuity\"\n  },\n  \"preserve\": [\n    \"the grill organizer’s overall structure, proportions, black metal material, and folding-frame design\",\n    \"the visible headline text and bottom marketing text/icons\",\n    \"the outdoor campfire background, table surface, and existing scene atmosphere\",\n    \"the image perspective, lighting, shadows, reflections, and depth of field\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product frame shape or move existing rods, hooks, basket walls, or side rack\",\n    \"do not place the added kitchen paper or seasoning bottles outside the product\",\n    \"do not leave any annotation marks visible in the final image\",\n    \"do not modify colors, logos, text, or composition outside the requested additions and cleanup\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red hand-drawn annotation circles and strokes overlaid on Image A\",\n    \"target_area\": \"the upper circled hanging-rod region and the lower circled basket region\",\n    \"content\": \"clean product image with no annotation marks remaining\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the upper hanging rod area on the grill organizer\",\n      \"target_area\": \"inside the upper red circled region, aligned with the horizontal rod on the main product\",\n      \"content\": \"a realistic kitchen paper roll mounted onto the rod as a usable paper towel holder\",\n      \"integration\": \"match the existing black metal product perspective, outdoor lighting, depth of field, shadows, reflections, and scale; make the paper roll look physically supported by the product and not floating\"\n    },\n    {\n      \"target\": \"the lower storage basket compartment on the grill organizer\",\n      \"target_area\": \"inside the lower red circled region within the main basket\",\n      \"content\": \"several realistic barbecue seasoning bottles neatly placed inside the basket\",\n      \"integration\": \"match the scene perspective, lighting, shadows, scale, and product styling; bottles should sit naturally inside the basket and appear organized for product-use presentation\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by the red annotation marks\",\n    \"content\": \"reconstruct the underlying rods, basket mesh, edges, and background so the image looks original and seamless after annotation removal\",\n    \"integration\": \"preserve the existing material texture, blur level, lighting direction, and shadow continuity\"\n  },\n  \"preserve\": [\n    \"the grill organizer’s overall structure, proportions, black metal material, and folding-frame design\",\n    \"the visible headline text and bottom marketing text/icons\",\n    \"the outdoor campfire background, table surface, and existing scene atmosphere\",\n    \"the image perspective, lighting, shadows, reflections, and depth of field\",\n    \"all non-target areas not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-006-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-006-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-006-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-006-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-006-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:48:46.502Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-007",
+      "title": "换一张图；换一个女人；换一张背景",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "换一张图；换一个女人；换一张背景",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-007-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1874423
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-007-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1879127
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "换一张图；换一个女人；换一张背景",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the small inset photo in the upper-left corner that is enclosed by the red rectangle\",\n      \"target_area\": \"upper-left inset image card only\",\n      \"content\": \"replace this inset with a different dog-related lifestyle photo that fits the pool theme, shown inside the same inset card area, with a clean realistic promotional look\",\n      \"integration\": \"keep the inset card placement, size, perspective, white border style, and natural sharpness consistent with the original layout\"\n    },\n    {\n      \"target\": \"the woman in the pool inside the red circled area on the right side\",\n      \"target_area\": \"right-side pool subject area\",\n      \"content\": \"replace her with a different adult woman in a similar playful pose interacting with the dog float in the pool, with natural swimwear styling and a friendly expression\",\n      \"integration\": \"match the original sunlight direction, skin highlights, waterline, reflections, splash interaction, pose scale, perspective, and shadows so the new person looks naturally captured in the same scene\"\n    },\n    {\n      \"target\": \"the overall outdoor poolside background scene behind the main dog and person\",\n      \"target_area\": \"background environment excluding the main dog on the float and the unmarked inset card\",\n      \"content\": \"replace the background with a different poolside setting while keeping it bright, summery, upscale, and consistent with a dog-in-pool lifestyle scene\",\n      \"integration\": \"preserve believable depth, horizon, pool geometry continuity, lighting direction, color temperature, reflections, and natural separation between foreground subjects and the new background\"\n    }\n  ],\n  \"remove\": \"remove all visible annotation marks from the final image, including the red rectangle, the red hand-drawn circle, and the red handwritten text at the bottom left\",\n  \"repair\": \"repair all edited boundaries and previously annotated areas so the water surface, pool edges, skin edges, inset edges, and background transitions appear clean and artifact-free\",\n  \"preserve\": [\n    \"the golden retriever as the main subject\",\n    \"the blue paw-print inflatable float and its shape, color, and pattern\",\n    \"the dog's pose, scale, and placement on the float\",\n    \"the overall camera angle, foreground pool water clarity, and realistic sunlight look\",\n    \"the unmarked upper-right inset photo unless needed only for seamless cleanup around annotations\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the main dog, the float design, or the foreground pool water except where necessary for seamless integration with the new woman\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not move the main subject composition away from the original centered dog-on-float layout\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the small inset photo in the upper-left corner that is enclosed by the red rectangle\",\n      \"target_area\": \"upper-left inset image card only\",\n      \"content\": \"replace this inset with a different dog-related lifestyle photo that fits the pool theme, shown inside the same inset card area, with a clean realistic promotional look\",\n      \"integration\": \"keep the inset card placement, size, perspective, white border style, and natural sharpness consistent with the original layout\"\n    },\n    {\n      \"target\": \"the woman in the pool inside the red circled area on the right side\",\n      \"target_area\": \"right-side pool subject area\",\n      \"content\": \"replace her with a different adult woman in a similar playful pose interacting with the dog float in the pool, with natural swimwear styling and a friendly expression\",\n      \"integration\": \"match the original sunlight direction, skin highlights, waterline, reflections, splash interaction, pose scale, perspective, and shadows so the new person looks naturally captured in the same scene\"\n    },\n    {\n      \"target\": \"the overall outdoor poolside background scene behind the main dog and person\",\n      \"target_area\": \"background environment excluding the main dog on the float and the unmarked inset card\",\n      \"content\": \"replace the background with a different poolside setting while keeping it bright, summery, upscale, and consistent with a dog-in-pool lifestyle scene\",\n      \"integration\": \"preserve believable depth, horizon, pool geometry continuity, lighting direction, color temperature, reflections, and natural separation between foreground subjects and the new background\"\n    }\n  ],\n  \"remove\": \"remove all visible annotation marks from the final image, including the red rectangle, the red hand-drawn circle, and the red handwritten text at the bottom left\",\n  \"repair\": \"repair all edited boundaries and previously annotated areas so the water surface, pool edges, skin edges, inset edges, and background transitions appear clean and artifact-free\",\n  \"preserve\": [\n    \"the golden retriever as the main subject\",\n    \"the blue paw-print inflatable float and its shape, color, and pattern\",\n    \"the dog's pose, scale, and placement on the float\",\n    \"the overall camera angle, foreground pool water clarity, and realistic sunlight look\",\n    \"the unmarked upper-right inset photo unless needed only for seamless cleanup around annotations\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the main dog, the float design, or the foreground pool water except where necessary for seamless integration with the new woman\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not move the main subject composition away from the original centered dog-on-float layout\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the small inset photo in the upper-left corner that is enclosed by the red rectangle\",\n      \"target_area\": \"upper-left inset image card only\",\n      \"content\": \"replace this inset with a different dog-related lifestyle photo that fits the pool theme, shown inside the same inset card area, with a clean realistic promotional look\",\n      \"integration\": \"keep the inset card placement, size, perspective, white border style, and natural sharpness consistent with the original layout\"\n    },\n    {\n      \"target\": \"the woman in the pool inside the red circled area on the right side\",\n      \"target_area\": \"right-side pool subject area\",\n      \"content\": \"replace her with a different adult woman in a similar playful pose interacting with the dog float in the pool, with natural swimwear styling and a friendly expression\",\n      \"integration\": \"match the original sunlight direction, skin highlights, waterline, reflections, splash interaction, pose scale, perspective, and shadows so the new person looks naturally captured in the same scene\"\n    },\n    {\n      \"target\": \"the overall outdoor poolside background scene behind the main dog and person\",\n      \"target_area\": \"background environment excluding the main dog on the float and the unmarked inset card\",\n      \"content\": \"replace the background with a different poolside setting while keeping it bright, summery, upscale, and consistent with a dog-in-pool lifestyle scene\",\n      \"integration\": \"preserve believable depth, horizon, pool geometry continuity, lighting direction, color temperature, reflections, and natural separation between foreground subjects and the new background\"\n    }\n  ],\n  \"remove\": \"remove all visible annotation marks from the final image, including the red rectangle, the red hand-drawn circle, and the red handwritten text at the bottom left\",\n  \"repair\": \"repair all edited boundaries and previously annotated areas so the water surface, pool edges, skin edges, inset edges, and background transitions appear clean and artifact-free\",\n  \"preserve\": [\n    ...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the small inset photo in the upper-left corner that is enclosed by the red rectangle\",\n      \"target_area\": \"upper-left inset image card only\",\n      \"content\": \"replace this inset with a different dog-related lifestyle photo that fits the pool theme, shown inside the same inset card area, with a clean realistic promotional look\",\n      \"integration\": \"keep the inset card placement, size, perspective, white border style, and natural sharpness consistent with the original layout\"\n    },\n    {\n      \"target\": \"the woman in the pool inside the red circled area on the right side\",\n      \"target_area\": \"right-side pool subject area\",\n      \"content\": \"replace her with a different adult woman in a similar playful pose interacting with the dog float in the pool, with natural swimwear styling and a friendly expression\",\n      \"integration\": \"match the original sunlight direction, skin highlights, waterline, reflections, splash interaction, pose scale, perspective, and shadows so the new person looks naturally captured in the same scene\"\n    },\n    {\n      \"target\": \"the overall outdoor poolside background scene behind the main dog and person\",\n      \"target_area\": \"background environment excluding the main dog on the float and the unmarked inset card\",\n      \"content\": \"replace the background with a different poolside setting while keeping it bright, summery, upscale, and consistent with a dog-in-pool lifestyle scene\",\n      \"integration\": \"preserve believable depth, horizon, pool geometry continuity, lighting direction, color temperature, reflections, and natural separation between foreground subjects and the new background\"\n    }\n  ],\n  \"remove\": \"remove all visible annotation marks from the final image, including the red rectangle, the red hand-drawn circle, and the red handwritten text at the bottom left\",\n  \"repair\": \"repair all edited boundaries and previously annotated areas so the water surface, pool edges, skin edges, inset edges, and background transitions appear clean and artifact-free\",\n  \"preserve\": [\n    ..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-007/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-007/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the small inset photo in the upper-left corner that is enclosed by the red rectangle\",\n      \"target_area\": \"upper-left inset image card only\",\n      \"content\": \"replace this inset with a different dog-related lifestyle photo that fits the pool theme, shown inside the same inset card area, with a clean realistic promotional look\",\n      \"integration\": \"keep the inset card placement, size, perspective, white border style, and natural sharpness consistent with the original layout\"\n    },\n    {\n      \"target\": \"the woman in the pool inside the red circled area on the right side\",\n      \"target_area\": \"right-side pool subject area\",\n      \"content\": \"replace her with a different adult woman in a similar playful pose interacting with the dog float in the pool, with natural swimwear styling and a friendly expression\",\n      \"integration\": \"match the original sunlight direction, skin highlights, waterline, reflections, splash interaction, pose scale, perspective, and shadows so the new person looks naturally captured in the same scene\"\n    },\n    {\n      \"target\": \"the overall outdoor poolside background scene behind the main dog and person\",\n      \"target_area\": \"background environment excluding the main dog on the float and the unmarked inset card\",\n      \"content\": \"replace the background with a different poolside setting while keeping it bright, summery, upscale, and consistent with a dog-in-pool lifestyle scene\",\n      \"integration\": \"preserve believable depth, horizon, pool geometry continuity, lighting direction, color temperature, reflections, and natural separation between foreground subjects and the new background\"\n    }\n  ],\n  \"remove\": \"remove all visible annotation marks from the final image, including the red rectangle, the red hand-drawn circle, and the red handwritten text at the bottom left\",\n  \"repair\": \"repair all edited boundaries and previously annotated areas so the water surface, pool edges, skin edges, inset edges, and background transitions appear clean and artifact-free\",\n  \"preserve\": [\n    \"the golden retriever as the main subject\",\n    \"the blue paw-print inflatable float and its shape, color, and pattern\",\n    \"the dog's pose, scale, and placement on the float\",\n    \"the overall camera angle, foreground pool water clarity, and realistic sunlight look\",\n    \"the unmarked upper-right inset photo unless needed only for seamless cleanup around annotations\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the main dog, the float design, or the foreground pool water except where necessary for seamless integration with the new woman\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not move the main subject composition away from the original centered dog-on-float layout\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the small inset photo in the upper-left corner that is enclosed by the red rectangle\",\n      \"target_area\": \"upper-left inset image card only\",\n      \"content\": \"replace this inset with a different dog-related lifestyle photo that fits the pool theme, shown inside the same inset card area, with a clean realistic promotional look\",\n      \"integration\": \"keep the inset card placement, size, perspective, white border style, and natural sharpness consistent with the original layout\"\n    },\n    {\n      \"target\": \"the woman in the pool inside the red circled area on the right side\",\n      \"target_area\": \"right-side pool subject area\",\n      \"content\": \"replace her with a different adult woman in a similar playful pose interacting with the dog float in the pool, with natural swimwear styling and a friendly expression\",\n      \"integration\": \"match the original sunlight direction, skin highlights, waterline, reflections, splash interaction, pose scale, perspective, and shadows so the new person looks naturally captured in the same scene\"\n    },\n    {\n      \"target\": \"the overall outdoor poolside background scene behind the main dog and person\",\n      \"target_area\": \"background environment excluding the main dog on the float and the unmarked inset card\",\n      \"content\": \"replace the background with a different poolside setting while keeping it bright, summery, upscale, and consistent with a dog-in-pool lifestyle scene\",\n      \"integration\": \"preserve believable depth, horizon, pool geometry continuity, lighting direction, color temperature, reflections, and natural separation between foreground subjects and the new background\"\n    }\n  ],\n  \"remove\": \"remove all visible annotation marks from the final image, including the red rectangle, the red hand-drawn circle, and the red handwritten text at the bottom left\",\n  \"repair\": \"repair all edited boundaries and previously annotated areas so the water surface, pool edges, skin edges, inset edges, and background transitions appear clean and artifact-free\",\n  \"preserve\": [\n    ..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-007-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-007-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-007-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-007-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-007-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:49:32.634Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-008",
+      "title": "猫的爪子搭在鱼缸；将产品放置进鱼缸",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "猫的爪子搭在鱼缸；将产品放置进鱼缸",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-008-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1390665
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-008-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1525329
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "猫的爪子搭在鱼缸；将产品放置进鱼缸",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the large hand-drawn circle around the cat, the arrow pointing toward the bowl, the red circle around the product inset, and the entire bottom-right annotation-style product callout area\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying scene so the tabletop, bowl edge, reflections, and background look natural and uninterrupted\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the cat on the left side of the table\",\n    \"target_area\": \"the cat's front paws and lower front body posture relative to the fishbowl\",\n    \"content\": \"adjust the pose so one front paw is naturally resting on or lightly touching the fishbowl, with anatomically believable leg alignment and a calm, curious posture\",\n    \"integration\": \"match the existing warm cinematic lighting, fur detail, perspective, contact shadow, and the cat's original size, breed, color, and overall pose as closely as possible except for the requested paw placement\",\n    \"preserve_conditions\": \"keep the cat's identity, fur pattern, facial direction, expression, body proportions, and seated position on the tabletop unchanged aside from the paw adjustment\"\n  },\n  \"insert\": {\n    \"target\": \"inside the fishbowl\",\n    \"target_area\": \"the clear water-filled interior of the bowl\",\n    \"content\": \"place the red goldfish product shown in the bottom-right callout into the fishbowl as the main fish inside the bowl, scaled naturally for the bowl and oriented as a realistic fish within the water\",\n    \"integration\": \"the fish must appear fully inside the bowl, with correct perspective through the curved glass, realistic underwater positioning, water refraction, subtle magnification, matching warm highlights, and natural interaction with the bowl's reflections and caustic light patterns\",\n    \"preserve_conditions\": \"do not place the fish outside the bowl, on the table, or in the background; keep the bowl glass shape, waterline, and tabletop reflections intact\"\n  },\n  \"repair\": {\n    \"target\": \"the bottom-right corner and any areas exposed after removing the annotation callout, plus local bowl and tabletop areas affected by the edits\",\n    \"content\": \"rebuild the background, table surface, reflections, and bowl surroundings so the image looks like a clean original photograph with no trace of annotations or compositing artifacts\",\n    \"integration\": \"maintain consistent wood grain, warm glow, shadow falloff, and background blur\"\n  },\n  \"preserve\": [\n    \"the fishbowl's structure, glass material, water level, and overall position on the table\",\n    \"the warm moody lighting, reflections, shadows, and underwater-style caustic light patterns\",\n    \"the cat's overall identity, fur color, face, body size, and seated placement except for the requested paw change\",\n    \"the tabletop, background decor, and the visible English headline and subheadline text at the top\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the visible top text content or typography\",\n    \"do not change the bowl into a different container shape\",\n    \"do not move the bowl to a different location\",\n    \"do not add extra animals or extra fish\",\n    \"do not leave any annotation marks, arrows, circles, or callout graphics in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the large hand-drawn circle around the cat, the arrow pointing toward the bowl, the red circle around the product inset, and the entire bottom-right annotation-style product callout area\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying scene so the tabletop, bowl edge, reflections, and background look natural and uninterrupted\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the cat on the left side of the table\",\n    \"target_area\": \"the cat's front paws and lower front body posture relative to the fishbowl\",\n    \"content\": \"adjust the pose so one front paw is naturally resting on or lightly touching the fishbowl, with anatomically believable leg alignment and a calm, curious posture\",\n    \"integration\": \"match the existing warm cinematic lighting, fur detail, perspective, contact shadow, and the cat's original size, breed, color, and overall pose as closely as possible except for the requested paw placement\",\n    \"preserve_conditions\": \"keep the cat's identity, fur pattern, facial direction, expression, body proportions, and seated position on the tabletop unchanged aside from the paw adjustment\"\n  },\n  \"insert\": {\n    \"target\": \"inside the fishbowl\",\n    \"target_area\": \"the clear water-filled interior of the bowl\",\n    \"content\": \"place the red goldfish product shown in the bottom-right callout into the fishbowl as the main fish inside the bowl, scaled naturally for the bowl and oriented as a realistic fish within the water\",\n    \"integration\": \"the fish must appear fully inside the bowl, with correct perspective through the curved glass, realistic underwater positioning, water refraction, subtle magnification, matching warm highlights, and natural interaction with the bowl's reflections and caustic light patterns\",\n    \"preserve_conditions\": \"do not place the fish outside the bowl, on the table, or in the background; keep the bowl glass shape, waterline, and tabletop reflections intact\"\n  },\n  \"repair\": {\n    \"target\": \"the bottom-right corner and any areas exposed after removing the annotation callout, plus local bowl and tabletop areas affected by the edits\",\n    \"content\": \"rebuild the background, table surface, reflections, and bowl surroundings so the image looks like a clean original photograph with no trace of annotations or compositing artifacts\",\n    \"integration\": \"maintain consistent wood grain, warm glow, shadow falloff, and background blur\"\n  },\n  \"preserve\": [\n    \"the fishbowl's structure, glass material, water level, and overall position on the table\",\n    \"the warm moody lighting, reflections, shadows, and underwater-style caustic light patterns\",\n    \"the cat's overall identity, fur color, face, body size, and seated placement except for the requested paw change\",\n    \"the tabletop, background decor, and the visible English headline and subheadline text at the top\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the visible top text content or typography\",\n    \"do not change the bowl into a different container shape\",\n    \"do not move the bowl to a different location\",\n    \"do not add extra animals or extra fish\",\n    \"do not leave any annotation marks, arrows, circles, or callout graphics in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the large hand-drawn circle around the cat, the arrow pointing toward the bowl, the red circle around the product inset, and the entire bottom-right annotation-style product callout area\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying scene so the tabletop, bowl edge, reflections, and background look natural and uninterrupted\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the cat on the left side of the table\",\n    \"target_area\": \"the cat's front paws and lower front body posture relative to the fishbowl\",\n    \"content\": \"adjust the pose so one front paw is naturally resting on or lightly touching the fishbowl, with anatomically believable leg alignment and a calm, curious posture\",\n    \"integration\": \"match the existing warm cinematic lighting, fur detail, perspective, contact shadow, and the cat's original size, breed, color, and overall pose as closely as possible except for the requested paw placement\",\n    \"preserve_conditions\": \"keep the cat's identity, fur pattern, facial direction, expression, body proportions, and seated position on the tabletop unchanged aside from the paw adjustment\"\n  },\n  \"insert\": {\n    \"target\": \"inside the fishbowl\",\n    \"target_area\": \"the clear water-filled interior of the bowl\",\n    \"content\": \"place the red goldfish product shown in the bottom-right callout into the fishbowl as the main fish inside the bowl, scaled naturally for the bowl and oriented as a realistic fish within the water\",\n    \"integration\": \"the fish must appear fully inside the bowl, with correct perspective through the curved glass, realistic underwater positioning, water refraction, subtle magnification, matching warm highlights, and natural interaction with the bowl's reflections and caustic light patterns\",\n    \"preserve_conditions\": \"do not place the fish outside the bowl, on the table, or in the background; keep the bowl glass shape, waterline, and tabletop reflections intact\"\n  },\n  \"repair\": {\n    \"target\": \"the bottom-right corner ...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the large hand-drawn circle around the cat, the arrow pointing toward the bowl, the red circle around the product inset, and the entire bottom-right annotation-style product callout area\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying scene so the tabletop, bowl edge, reflections, and background look natural and uninterrupted\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the cat on the left side of the table\",\n    \"target_area\": \"the cat's front paws and lower front body posture relative to the fishbowl\",\n    \"content\": \"adjust the pose so one front paw is naturally resting on or lightly touching the fishbowl, with anatomically believable leg alignment and a calm, curious posture\",\n    \"integration\": \"match the existing warm cinematic lighting, fur detail, perspective, contact shadow, and the cat's original size, breed, color, and overall pose as closely as possible except for the requested paw placement\",\n    \"preserve_conditions\": \"keep the cat's identity, fur pattern, facial direction, expression, body proportions, and seated position on the tabletop unchanged aside from the paw adjustment\"\n  },\n  \"insert\": {\n    \"target\": \"inside the fishbowl\",\n    \"target_area\": \"the clear water-filled interior of the bowl\",\n    \"content\": \"place the red goldfish product shown in the bottom-right callout into the fishbowl as the main fish inside the bowl, scaled naturally for the bowl and oriented as a realistic fish within the water\",\n    \"integration\": \"the fish must appear fully inside the bowl, with correct perspective through the curved glass, realistic underwater positioning, water refraction, subtle magnification, matching warm highlights, and natural interaction with the bowl's reflections and caustic light patterns\",\n    \"preserve_conditions\": \"do not place the fish outside the bowl, on the table, or in the background; keep the bowl glass shape, waterline, and tabletop reflections intact\"\n  },\n  \"repair\": {\n    \"target\": \"the bottom-right corner ..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-008/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-008/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the large hand-drawn circle around the cat, the arrow pointing toward the bowl, the red circle around the product inset, and the entire bottom-right annotation-style product callout area\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying scene so the tabletop, bowl edge, reflections, and background look natural and uninterrupted\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the cat on the left side of the table\",\n    \"target_area\": \"the cat's front paws and lower front body posture relative to the fishbowl\",\n    \"content\": \"adjust the pose so one front paw is naturally resting on or lightly touching the fishbowl, with anatomically believable leg alignment and a calm, curious posture\",\n    \"integration\": \"match the existing warm cinematic lighting, fur detail, perspective, contact shadow, and the cat's original size, breed, color, and overall pose as closely as possible except for the requested paw placement\",\n    \"preserve_conditions\": \"keep the cat's identity, fur pattern, facial direction, expression, body proportions, and seated position on the tabletop unchanged aside from the paw adjustment\"\n  },\n  \"insert\": {\n    \"target\": \"inside the fishbowl\",\n    \"target_area\": \"the clear water-filled interior of the bowl\",\n    \"content\": \"place the red goldfish product shown in the bottom-right callout into the fishbowl as the main fish inside the bowl, scaled naturally for the bowl and oriented as a realistic fish within the water\",\n    \"integration\": \"the fish must appear fully inside the bowl, with correct perspective through the curved glass, realistic underwater positioning, water refraction, subtle magnification, matching warm highlights, and natural interaction with the bowl's reflections and caustic light patterns\",\n    \"preserve_conditions\": \"do not place the fish outside the bowl, on the table, or in the background; keep the bowl glass shape, waterline, and tabletop reflections intact\"\n  },\n  \"repair\": {\n    \"target\": \"the bottom-right corner and any areas exposed after removing the annotation callout, plus local bowl and tabletop areas affected by the edits\",\n    \"content\": \"rebuild the background, table surface, reflections, and bowl surroundings so the image looks like a clean original photograph with no trace of annotations or compositing artifacts\",\n    \"integration\": \"maintain consistent wood grain, warm glow, shadow falloff, and background blur\"\n  },\n  \"preserve\": [\n    \"the fishbowl's structure, glass material, water level, and overall position on the table\",\n    \"the warm moody lighting, reflections, shadows, and underwater-style caustic light patterns\",\n    \"the cat's overall identity, fur color, face, body size, and seated placement except for the requested paw change\",\n    \"the tabletop, background decor, and the visible English headline and subheadline text at the top\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the visible top text content or typography\",\n    \"do not change the bowl into a different container shape\",\n    \"do not move the bowl to a different location\",\n    \"do not add extra animals or extra fish\",\n    \"do not leave any annotation marks, arrows, circles, or callout graphics in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the large hand-drawn circle around the cat, the arrow pointing toward the bowl, the red circle around the product inset, and the entire bottom-right annotation-style product callout area\",\n    \"integration\": \"remove the annotation overlays cleanly and restore the underlying scene so the tabletop, bowl edge, reflections, and background look natural and uninterrupted\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the cat on the left side of the table\",\n    \"target_area\": \"the cat's front paws and lower front body posture relative to the fishbowl\",\n    \"content\": \"adjust the pose so one front paw is naturally resting on or lightly touching the fishbowl, with anatomically believable leg alignment and a calm, curious posture\",\n    \"integration\": \"match the existing warm cinematic lighting, fur detail, perspective, contact shadow, and the cat's original size, breed, color, and overall pose as closely as possible except for the requested paw placement\",\n    \"preserve_conditions\": \"keep the cat's identity, fur pattern, facial direction, expression, body proportions, and seated position on the tabletop unchanged aside from the paw adjustment\"\n  },\n  \"insert\": {\n    \"target\": \"inside the fishbowl\",\n    \"target_area\": \"the clear water-filled interior of the bowl\",\n    \"content\": \"place the red goldfish product shown in the bottom-right callout into the fishbowl as the main fish inside the bowl, scaled naturally for the bowl and oriented as a realistic fish within the water\",\n    \"integration\": \"the fish must appear fully inside the bowl, with correct perspective through the curved glass, realistic underwater positioning, water refraction, subtle magnification, matching warm highlights, and natural interaction with the bowl's reflections and caustic light patterns\",\n    \"preserve_conditions\": \"do not place the fish outside the bowl, on the table, or in the background; keep the bowl glass shape, waterline, and tabletop reflections intact\"\n  },\n  \"repair\": {\n    \"target\": \"the bottom-right corner ..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-008-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-008-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-008-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-008-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-008-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:49:33.913Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-009",
+      "title": "添加仓鼠粮；添加仓鼠",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "添加仓鼠粮；添加仓鼠",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-009-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1233999
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-009-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1318036
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "添加仓鼠粮；添加仓鼠",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the red outline inside the orange container and the red circle around the right-side tabletop area\",\n    \"integration\": \"cleanly remove the annotation marks and restore the underlying product photo so the final image looks like an unmarked original photograph\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the orange container marked by the red outline\",\n    \"target_area\": \"the inner cavity of the main orange product\",\n    \"content\": \"add natural-looking hamster food inside the container, appearing as a realistic portion of mixed small pet feed suitable for a hamster\",\n    \"integration\": \"keep the food fully inside the container, match the existing warm studio lighting, perspective, focus, shadows, and scale, and make it look naturally placed in the product rather than floating or spilling outside\"\n  },\n  \"insert\": {\n    \"target\": \"a hamster\",\n    \"target_area\": \"the right-side tabletop area indicated by the red circle, near the moss\",\n    \"content\": \"add one realistic hamster positioned on the wooden surface beside the product, with a natural pose that fits the scene\",\n    \"integration\": \"match the existing lighting direction, soft shadows, perspective, scale, and shallow depth of field; blend the hamster naturally with the wood surface, moss, and surrounding props without covering the product\"\n  },\n  \"repair\": {\n    \"target\": \"the edited container interior and the right-side circled tabletop area after annotation removal and object insertion\",\n    \"content\": \"restore any background texture, wood grain, moss edges, and local shading affected by the edits\",\n    \"integration\": \"maintain a clean commercial product-photo finish with consistent realism and no visible edit seams\"\n  },\n  \"preserve\": [\n    \"the orange container's structure, shape, material, and color\",\n    \"the visible text 'Vibrant Cage Landscaping' at the top\",\n    \"the overall warm studio lighting, perspective, shadows, and composition\",\n    \"the wooden platform, house structure in the background, glass edge, moss outside the edited target areas, and other non-target scene elements\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's outer form or reposition it\",\n    \"do not add extra animals beyond one hamster\",\n    \"do not place the hamster loosely in the background; keep it anchored in the circled tabletop area\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the red outline inside the orange container and the red circle around the right-side tabletop area\",\n    \"integration\": \"cleanly remove the annotation marks and restore the underlying product photo so the final image looks like an unmarked original photograph\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the orange container marked by the red outline\",\n    \"target_area\": \"the inner cavity of the main orange product\",\n    \"content\": \"add natural-looking hamster food inside the container, appearing as a realistic portion of mixed small pet feed suitable for a hamster\",\n    \"integration\": \"keep the food fully inside the container, match the existing warm studio lighting, perspective, focus, shadows, and scale, and make it look naturally placed in the product rather than floating or spilling outside\"\n  },\n  \"insert\": {\n    \"target\": \"a hamster\",\n    \"target_area\": \"the right-side tabletop area indicated by the red circle, near the moss\",\n    \"content\": \"add one realistic hamster positioned on the wooden surface beside the product, with a natural pose that fits the scene\",\n    \"integration\": \"match the existing lighting direction, soft shadows, perspective, scale, and shallow depth of field; blend the hamster naturally with the wood surface, moss, and surrounding props without covering the product\"\n  },\n  \"repair\": {\n    \"target\": \"the edited container interior and the right-side circled tabletop area after annotation removal and object insertion\",\n    \"content\": \"restore any background texture, wood grain, moss edges, and local shading affected by the edits\",\n    \"integration\": \"maintain a clean commercial product-photo finish with consistent realism and no visible edit seams\"\n  },\n  \"preserve\": [\n    \"the orange container's structure, shape, material, and color\",\n    \"the visible text 'Vibrant Cage Landscaping' at the top\",\n    \"the overall warm studio lighting, perspective, shadows, and composition\",\n    \"the wooden platform, house structure in the background, glass edge, moss outside the edited target areas, and other non-target scene elements\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's outer form or reposition it\",\n    \"do not add extra animals beyond one hamster\",\n    \"do not place the hamster loosely in the background; keep it anchored in the circled tabletop area\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the red outline inside the orange container and the red circle around the right-side tabletop area\",\n    \"integration\": \"cleanly remove the annotation marks and restore the underlying product photo so the final image looks like an unmarked original photograph\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the orange container marked by the red outline\",\n    \"target_area\": \"the inner cavity of the main orange product\",\n    \"content\": \"add natural-looking hamster food inside the container, appearing as a realistic portion of mixed small pet feed suitable for a hamster\",\n    \"integration\": \"keep the food fully inside the container, match the existing warm studio lighting, perspective, focus, shadows, and scale, and make it look naturally placed in the product rather than floating or spilling outside\"\n  },\n  \"insert\": {\n    \"target\": \"a hamster\",\n    \"target_area\": \"the right-side tabletop area indicated by the red circle, near the moss\",\n    \"content\": \"add one realistic hamster positioned on the wooden surface beside the product, with a natural pose that fits the scene\",\n    \"integration\": \"match the existing lighting direction, soft shadows, perspective, scale, and shallow depth of field; blend the hamster naturally with the wood surface, moss, and surrounding props without covering the product\"\n  },\n  \"repair\": {\n    \"target\": \"the edited container interior and the right-side circled tabletop area after annotation removal and object insertion\",\n    \"content\": \"restore any background texture, wood grain, moss edges, and local shading affected by the edits\",\n    \"integration\": \"maintain a clean commercial product-photo finish with consistent realism and no visible edit seams\"\n  },\n  \"preserve\": [\n    \"the orange container's structure, shape, material, and color\",\n    \"the visible text 'Vibrant Cage Landscaping' at the top\",\n    \"the overall warm studio lighting, perspective, shadows, and composition\",\n    \"the wooden platform, house structure in the background, glass edge, moss ...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the red outline inside the orange container and the red circle around the right-side tabletop area\",\n    \"integration\": \"cleanly remove the annotation marks and restore the underlying product photo so the final image looks like an unmarked original photograph\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the orange container marked by the red outline\",\n    \"target_area\": \"the inner cavity of the main orange product\",\n    \"content\": \"add natural-looking hamster food inside the container, appearing as a realistic portion of mixed small pet feed suitable for a hamster\",\n    \"integration\": \"keep the food fully inside the container, match the existing warm studio lighting, perspective, focus, shadows, and scale, and make it look naturally placed in the product rather than floating or spilling outside\"\n  },\n  \"insert\": {\n    \"target\": \"a hamster\",\n    \"target_area\": \"the right-side tabletop area indicated by the red circle, near the moss\",\n    \"content\": \"add one realistic hamster positioned on the wooden surface beside the product, with a natural pose that fits the scene\",\n    \"integration\": \"match the existing lighting direction, soft shadows, perspective, scale, and shallow depth of field; blend the hamster naturally with the wood surface, moss, and surrounding props without covering the product\"\n  },\n  \"repair\": {\n    \"target\": \"the edited container interior and the right-side circled tabletop area after annotation removal and object insertion\",\n    \"content\": \"restore any background texture, wood grain, moss edges, and local shading affected by the edits\",\n    \"integration\": \"maintain a clean commercial product-photo finish with consistent realism and no visible edit seams\"\n  },\n  \"preserve\": [\n    \"the orange container's structure, shape, material, and color\",\n    \"the visible text 'Vibrant Cage Landscaping' at the top\",\n    \"the overall warm studio lighting, perspective, shadows, and composition\",\n    \"the wooden platform, house structure in the background, glass edge, moss ..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-009/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-009/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the red outline inside the orange container and the red circle around the right-side tabletop area\",\n    \"integration\": \"cleanly remove the annotation marks and restore the underlying product photo so the final image looks like an unmarked original photograph\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the orange container marked by the red outline\",\n    \"target_area\": \"the inner cavity of the main orange product\",\n    \"content\": \"add natural-looking hamster food inside the container, appearing as a realistic portion of mixed small pet feed suitable for a hamster\",\n    \"integration\": \"keep the food fully inside the container, match the existing warm studio lighting, perspective, focus, shadows, and scale, and make it look naturally placed in the product rather than floating or spilling outside\"\n  },\n  \"insert\": {\n    \"target\": \"a hamster\",\n    \"target_area\": \"the right-side tabletop area indicated by the red circle, near the moss\",\n    \"content\": \"add one realistic hamster positioned on the wooden surface beside the product, with a natural pose that fits the scene\",\n    \"integration\": \"match the existing lighting direction, soft shadows, perspective, scale, and shallow depth of field; blend the hamster naturally with the wood surface, moss, and surrounding props without covering the product\"\n  },\n  \"repair\": {\n    \"target\": \"the edited container interior and the right-side circled tabletop area after annotation removal and object insertion\",\n    \"content\": \"restore any background texture, wood grain, moss edges, and local shading affected by the edits\",\n    \"integration\": \"maintain a clean commercial product-photo finish with consistent realism and no visible edit seams\"\n  },\n  \"preserve\": [\n    \"the orange container's structure, shape, material, and color\",\n    \"the visible text 'Vibrant Cage Landscaping' at the top\",\n    \"the overall warm studio lighting, perspective, shadows, and composition\",\n    \"the wooden platform, house structure in the background, glass edge, moss outside the edited target areas, and other non-target scene elements\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's outer form or reposition it\",\n    \"do not add extra animals beyond one hamster\",\n    \"do not place the hamster loosely in the background; keep it anchored in the circled tabletop area\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the red outline inside the orange container and the red circle around the right-side tabletop area\",\n    \"integration\": \"cleanly remove the annotation marks and restore the underlying product photo so the final image looks like an unmarked original photograph\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the orange container marked by the red outline\",\n    \"target_area\": \"the inner cavity of the main orange product\",\n    \"content\": \"add natural-looking hamster food inside the container, appearing as a realistic portion of mixed small pet feed suitable for a hamster\",\n    \"integration\": \"keep the food fully inside the container, match the existing warm studio lighting, perspective, focus, shadows, and scale, and make it look naturally placed in the product rather than floating or spilling outside\"\n  },\n  \"insert\": {\n    \"target\": \"a hamster\",\n    \"target_area\": \"the right-side tabletop area indicated by the red circle, near the moss\",\n    \"content\": \"add one realistic hamster positioned on the wooden surface beside the product, with a natural pose that fits the scene\",\n    \"integration\": \"match the existing lighting direction, soft shadows, perspective, scale, and shallow depth of field; blend the hamster naturally with the wood surface, moss, and surrounding props without covering the product\"\n  },\n  \"repair\": {\n    \"target\": \"the edited container interior and the right-side circled tabletop area after annotation removal and object insertion\",\n    \"content\": \"restore any background texture, wood grain, moss edges, and local shading affected by the edits\",\n    \"integration\": \"maintain a clean commercial product-photo finish with consistent realism and no visible edit seams\"\n  },\n  \"preserve\": [\n    \"the orange container's structure, shape, material, and color\",\n    \"the visible text 'Vibrant Cage Landscaping' at the top\",\n    \"the overall warm studio lighting, perspective, shadows, and composition\",\n    \"the wooden platform, house structure in the background, glass edge, moss ..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-009-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-009-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-009-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-009-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-009-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:50:39.582Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-010",
+      "title": "换成杂乱无章的花；换成鲜花花束",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "换成杂乱无章的花；换成鲜花花束",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-010-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1448093
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-010-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1477343
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "换成杂乱无章的花；换成鲜花花束",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements overlaid on Image A, including the red hand-drawn circle, the red-outlined top-left inset overlay, and any other red markup\",\n    \"integration\": \"remove the annotation graphics cleanly so the final image looks like a natural unmarked photograph with no collage or markup remnants\"\n  },\n  \"replace\": {\n    \"target\": \"the dried floral arrangement emerging from the white pitcher vase in the circled area\",\n    \"target_area\": \"inside and directly above the vase opening, occupying the same bouquet region as the current pampas and dried stems\",\n    \"content\": \"a fresh flower bouquet replacing the dried arrangement, with natural live blooms and greenery, visually fuller and more organic, slightly messy and irregular rather than neatly arranged, while still reading as an attractive fresh bouquet\",\n    \"integration\": \"keep the bouquet anchored inside the existing vase, match the original scene's soft warm daylight, preserve realistic scale, depth, shadows, and perspective, and blend naturally with the tabletop interior setting\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by the annotation overlay and the replaced bouquet edges\",\n    \"content\": \"restore background wall, lighting gradients, and scene continuity where needed after removing overlays and replacing the bouquet\",\n    \"integration\": \"maintain the original photographic texture, soft focus falloff, and consistent natural interior lighting\"\n  },\n  \"preserve\": [\n    \"the white pitcher vase shape, material, color, handle, and position\",\n    \"the desk surface, notebook, tray, plate, pens, driftwood, and all surrounding objects outside the bouquet edit area\",\n    \"the original camera angle, composition, lighting direction, perspective, and soft indoor atmosphere\",\n    \"the wall, background blur, and non-target areas of the room\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the vase\",\n    \"do not add loose flowers elsewhere in the scene or background\",\n    \"do not alter product structure, visible objects, or overall composition outside the targeted bouquet replacement\",\n    \"do not leave any annotation marks, red outlines, or inset overlay in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements overlaid on Image A, including the red hand-drawn circle, the red-outlined top-left inset overlay, and any other red markup\",\n    \"integration\": \"remove the annotation graphics cleanly so the final image looks like a natural unmarked photograph with no collage or markup remnants\"\n  },\n  \"replace\": {\n    \"target\": \"the dried floral arrangement emerging from the white pitcher vase in the circled area\",\n    \"target_area\": \"inside and directly above the vase opening, occupying the same bouquet region as the current pampas and dried stems\",\n    \"content\": \"a fresh flower bouquet replacing the dried arrangement, with natural live blooms and greenery, visually fuller and more organic, slightly messy and irregular rather than neatly arranged, while still reading as an attractive fresh bouquet\",\n    \"integration\": \"keep the bouquet anchored inside the existing vase, match the original scene's soft warm daylight, preserve realistic scale, depth, shadows, and perspective, and blend naturally with the tabletop interior setting\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by the annotation overlay and the replaced bouquet edges\",\n    \"content\": \"restore background wall, lighting gradients, and scene continuity where needed after removing overlays and replacing the bouquet\",\n    \"integration\": \"maintain the original photographic texture, soft focus falloff, and consistent natural interior lighting\"\n  },\n  \"preserve\": [\n    \"the white pitcher vase shape, material, color, handle, and position\",\n    \"the desk surface, notebook, tray, plate, pens, driftwood, and all surrounding objects outside the bouquet edit area\",\n    \"the original camera angle, composition, lighting direction, perspective, and soft indoor atmosphere\",\n    \"the wall, background blur, and non-target areas of the room\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the vase\",\n    \"do not add loose flowers elsewhere in the scene or background\",\n    \"do not alter product structure, visible objects, or overall composition outside the targeted bouquet replacement\",\n    \"do not leave any annotation marks, red outlines, or inset overlay in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements overlaid on Image A, including the red hand-drawn circle, the red-outlined top-left inset overlay, and any other red markup\",\n    \"integration\": \"remove the annotation graphics cleanly so the final image looks like a natural unmarked photograph with no collage or markup remnants\"\n  },\n  \"replace\": {\n    \"target\": \"the dried floral arrangement emerging from the white pitcher vase in the circled area\",\n    \"target_area\": \"inside and directly above the vase opening, occupying the same bouquet region as the current pampas and dried stems\",\n    \"content\": \"a fresh flower bouquet replacing the dried arrangement, with natural live blooms and greenery, visually fuller and more organic, slightly messy and irregular rather than neatly arranged, while still reading as an attractive fresh bouquet\",\n    \"integration\": \"keep the bouquet anchored inside the existing vase, match the original scene's soft warm daylight, preserve realistic scale, depth, shadows, and perspective, and blend naturally with the tabletop interior setting\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by the annotation overlay and the replaced bouquet edges\",\n    \"content\": \"restore background wall, lighting gradients, and scene continuity where needed after removing overlays and replacing the bouquet\",\n    \"integration\": \"maintain the original photographic texture, soft focus falloff, and consistent natural interior lighting\"\n  },\n  \"preserve\": [\n    \"the white pitcher vase shape, material, color, handle, and position\",\n    \"the desk surface, notebook, tray, plate, pens, driftwood, and all surrounding objects outside the bouquet edit area\",\n    \"the original camera angle, composition, lighting direction, perspective, and soft indoor atmosphere\",\n    \"the wall, background blur, and non-target areas of the room\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the vase\",\n    \"do not add loose flowers elsewhere in the scene or background\",\n    \"do not alter product structure, visible objects, or overall comp...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements overlaid on Image A, including the red hand-drawn circle, the red-outlined top-left inset overlay, and any other red markup\",\n    \"integration\": \"remove the annotation graphics cleanly so the final image looks like a natural unmarked photograph with no collage or markup remnants\"\n  },\n  \"replace\": {\n    \"target\": \"the dried floral arrangement emerging from the white pitcher vase in the circled area\",\n    \"target_area\": \"inside and directly above the vase opening, occupying the same bouquet region as the current pampas and dried stems\",\n    \"content\": \"a fresh flower bouquet replacing the dried arrangement, with natural live blooms and greenery, visually fuller and more organic, slightly messy and irregular rather than neatly arranged, while still reading as an attractive fresh bouquet\",\n    \"integration\": \"keep the bouquet anchored inside the existing vase, match the original scene's soft warm daylight, preserve realistic scale, depth, shadows, and perspective, and blend naturally with the tabletop interior setting\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by the annotation overlay and the replaced bouquet edges\",\n    \"content\": \"restore background wall, lighting gradients, and scene continuity where needed after removing overlays and replacing the bouquet\",\n    \"integration\": \"maintain the original photographic texture, soft focus falloff, and consistent natural interior lighting\"\n  },\n  \"preserve\": [\n    \"the white pitcher vase shape, material, color, handle, and position\",\n    \"the desk surface, notebook, tray, plate, pens, driftwood, and all surrounding objects outside the bouquet edit area\",\n    \"the original camera angle, composition, lighting direction, perspective, and soft indoor atmosphere\",\n    \"the wall, background blur, and non-target areas of the room\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the vase\",\n    \"do not add loose flowers elsewhere in the scene or background\",\n    \"do not alter product structure, visible objects, or overall comp..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-010/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-010/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements overlaid on Image A, including the red hand-drawn circle, the red-outlined top-left inset overlay, and any other red markup\",\n    \"integration\": \"remove the annotation graphics cleanly so the final image looks like a natural unmarked photograph with no collage or markup remnants\"\n  },\n  \"replace\": {\n    \"target\": \"the dried floral arrangement emerging from the white pitcher vase in the circled area\",\n    \"target_area\": \"inside and directly above the vase opening, occupying the same bouquet region as the current pampas and dried stems\",\n    \"content\": \"a fresh flower bouquet replacing the dried arrangement, with natural live blooms and greenery, visually fuller and more organic, slightly messy and irregular rather than neatly arranged, while still reading as an attractive fresh bouquet\",\n    \"integration\": \"keep the bouquet anchored inside the existing vase, match the original scene's soft warm daylight, preserve realistic scale, depth, shadows, and perspective, and blend naturally with the tabletop interior setting\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by the annotation overlay and the replaced bouquet edges\",\n    \"content\": \"restore background wall, lighting gradients, and scene continuity where needed after removing overlays and replacing the bouquet\",\n    \"integration\": \"maintain the original photographic texture, soft focus falloff, and consistent natural interior lighting\"\n  },\n  \"preserve\": [\n    \"the white pitcher vase shape, material, color, handle, and position\",\n    \"the desk surface, notebook, tray, plate, pens, driftwood, and all surrounding objects outside the bouquet edit area\",\n    \"the original camera angle, composition, lighting direction, perspective, and soft indoor atmosphere\",\n    \"the wall, background blur, and non-target areas of the room\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the vase\",\n    \"do not add loose flowers elsewhere in the scene or background\",\n    \"do not alter product structure, visible objects, or overall composition outside the targeted bouquet replacement\",\n    \"do not leave any annotation marks, red outlines, or inset overlay in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements overlaid on Image A, including the red hand-drawn circle, the red-outlined top-left inset overlay, and any other red markup\",\n    \"integration\": \"remove the annotation graphics cleanly so the final image looks like a natural unmarked photograph with no collage or markup remnants\"\n  },\n  \"replace\": {\n    \"target\": \"the dried floral arrangement emerging from the white pitcher vase in the circled area\",\n    \"target_area\": \"inside and directly above the vase opening, occupying the same bouquet region as the current pampas and dried stems\",\n    \"content\": \"a fresh flower bouquet replacing the dried arrangement, with natural live blooms and greenery, visually fuller and more organic, slightly messy and irregular rather than neatly arranged, while still reading as an attractive fresh bouquet\",\n    \"integration\": \"keep the bouquet anchored inside the existing vase, match the original scene's soft warm daylight, preserve realistic scale, depth, shadows, and perspective, and blend naturally with the tabletop interior setting\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by the annotation overlay and the replaced bouquet edges\",\n    \"content\": \"restore background wall, lighting gradients, and scene continuity where needed after removing overlays and replacing the bouquet\",\n    \"integration\": \"maintain the original photographic texture, soft focus falloff, and consistent natural interior lighting\"\n  },\n  \"preserve\": [\n    \"the white pitcher vase shape, material, color, handle, and position\",\n    \"the desk surface, notebook, tray, plate, pens, driftwood, and all surrounding objects outside the bouquet edit area\",\n    \"the original camera angle, composition, lighting direction, perspective, and soft indoor atmosphere\",\n    \"the wall, background blur, and non-target areas of the room\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the vase\",\n    \"do not add loose flowers elsewhere in the scene or background\",\n    \"do not alter product structure, visible objects, or overall comp..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-010-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-010-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-010-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-010-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-010-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:51:35.301Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-011",
+      "title": "8557268",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8557268",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-011-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1420278
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-011-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1352613
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8557268",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current outdoor background scene behind and around the product\",\n    \"content\": \"a different clean lifestyle background that still feels like a premium product ad setting, replacing the existing blurred trees and path while keeping the product as the clear focal point\",\n    \"integration\": \"match the original warm natural lighting direction, shallow depth of field, soft bokeh, perspective, horizon level, and realistic shadows so the bottle remains naturally placed on the wooden table without changing its scale or position\"\n  },\n  \"fill\": {\n    \"target\": \"the transparent lower cup section of the bottle\",\n    \"target_area\": \"inside the product container only, bounded by the clear ribbed cup area marked by the annotation box\",\n    \"content\": \"iced fresh lemon water with visible pale yellow liquid, realistic transparency, ice cubes, and fresh lemon slices integrated inside the cup\",\n    \"integration\": \"keep the glass thickness, ribbed texture, reflections, refraction, meniscus, highlights, and contact shadows realistic so the drink looks naturally contained inside the existing bottle\"\n  },\n  \"remove\": [\n    \"all red annotation text\",\n    \"the red rectangular annotation box\"\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by annotation marks and the edited cup/background regions\",\n    \"content\": \"restore clean image detail with no trace of markup or overlay\",\n    \"integration\": \"repair edges, reflections, and background continuity so the final image looks like an original unmarked product photo\"\n  },\n  \"preserve\": [\n    \"the bottle's overall structure, proportions, handle shape, lid, white upper body, green handle color, and clear ribbed cup design\",\n    \"the visible headline text 'Blend Fresh Anywhere, Anytime'\",\n    \"the product's central placement on the wooden picnic table\",\n    \"the table, rolled cloth item, and overall camera angle\",\n    \"the original warm advertising style, realistic lighting, and natural shadow behavior except where background replacement requires matching integration\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product\",\n    \"do not alter the bottle logo area, materials, or hardware details\",\n    \"do not place the drink outside the bottle or beside the product\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not change non-target objects unless required for seamless visual integration\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current outdoor background scene behind and around the product\",\n    \"content\": \"a different clean lifestyle background that still feels like a premium product ad setting, replacing the existing blurred trees and path while keeping the product as the clear focal point\",\n    \"integration\": \"match the original warm natural lighting direction, shallow depth of field, soft bokeh, perspective, horizon level, and realistic shadows so the bottle remains naturally placed on the wooden table without changing its scale or position\"\n  },\n  \"fill\": {\n    \"target\": \"the transparent lower cup section of the bottle\",\n    \"target_area\": \"inside the product container only, bounded by the clear ribbed cup area marked by the annotation box\",\n    \"content\": \"iced fresh lemon water with visible pale yellow liquid, realistic transparency, ice cubes, and fresh lemon slices integrated inside the cup\",\n    \"integration\": \"keep the glass thickness, ribbed texture, reflections, refraction, meniscus, highlights, and contact shadows realistic so the drink looks naturally contained inside the existing bottle\"\n  },\n  \"remove\": [\n    \"all red annotation text\",\n    \"the red rectangular annotation box\"\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by annotation marks and the edited cup/background regions\",\n    \"content\": \"restore clean image detail with no trace of markup or overlay\",\n    \"integration\": \"repair edges, reflections, and background continuity so the final image looks like an original unmarked product photo\"\n  },\n  \"preserve\": [\n    \"the bottle's overall structure, proportions, handle shape, lid, white upper body, green handle color, and clear ribbed cup design\",\n    \"the visible headline text 'Blend Fresh Anywhere, Anytime'\",\n    \"the product's central placement on the wooden picnic table\",\n    \"the table, rolled cloth item, and overall camera angle\",\n    \"the original warm advertising style, realistic lighting, and natural shadow behavior except where background replacement requires matching integration\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product\",\n    \"do not alter the bottle logo area, materials, or hardware details\",\n    \"do not place the drink outside the bottle or beside the product\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not change non-target objects unless required for seamless visual integration\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current outdoor background scene behind and around the product\",\n    \"content\": \"a different clean lifestyle background that still feels like a premium product ad setting, replacing the existing blurred trees and path while keeping the product as the clear focal point\",\n    \"integration\": \"match the original warm natural lighting direction, shallow depth of field, soft bokeh, perspective, horizon level, and realistic shadows so the bottle remains naturally placed on the wooden table without changing its scale or position\"\n  },\n  \"fill\": {\n    \"target\": \"the transparent lower cup section of the bottle\",\n    \"target_area\": \"inside the product container only, bounded by the clear ribbed cup area marked by the annotation box\",\n    \"content\": \"iced fresh lemon water with visible pale yellow liquid, realistic transparency, ice cubes, and fresh lemon slices integrated inside the cup\",\n    \"integration\": \"keep the glass thickness, ribbed texture, reflections, refraction, meniscus, highlights, and contact shadows realistic so the drink looks naturally contained inside the existing bottle\"\n  },\n  \"remove\": [\n    \"all red annotation text\",\n    \"the red rectangular annotation box\"\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by annotation marks and the edited cup/background regions\",\n    \"content\": \"restore clean image detail with no trace of markup or overlay\",\n    \"integration\": \"repair edges, reflections, and background continuity so the final image looks like an original unmarked product photo\"\n  },\n  \"preserve\": [\n    \"the bottle's overall structure, proportions, handle shape, lid, white upper body, green handle color, and clear ribbed cup design\",\n    \"the visible headline text 'Blend Fresh Anywhere, Anytime'\",\n    \"the product's central placement on the wooden picnic table\",\n    \"the table, rolled cloth item, and overall camera angle\",\n    \"the original warm advertising style, realistic lighting, and natural shadow behavior except where background replacement requires matching integration\"\n  ],\n  \"do_not_c...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current outdoor background scene behind and around the product\",\n    \"content\": \"a different clean lifestyle background that still feels like a premium product ad setting, replacing the existing blurred trees and path while keeping the product as the clear focal point\",\n    \"integration\": \"match the original warm natural lighting direction, shallow depth of field, soft bokeh, perspective, horizon level, and realistic shadows so the bottle remains naturally placed on the wooden table without changing its scale or position\"\n  },\n  \"fill\": {\n    \"target\": \"the transparent lower cup section of the bottle\",\n    \"target_area\": \"inside the product container only, bounded by the clear ribbed cup area marked by the annotation box\",\n    \"content\": \"iced fresh lemon water with visible pale yellow liquid, realistic transparency, ice cubes, and fresh lemon slices integrated inside the cup\",\n    \"integration\": \"keep the glass thickness, ribbed texture, reflections, refraction, meniscus, highlights, and contact shadows realistic so the drink looks naturally contained inside the existing bottle\"\n  },\n  \"remove\": [\n    \"all red annotation text\",\n    \"the red rectangular annotation box\"\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by annotation marks and the edited cup/background regions\",\n    \"content\": \"restore clean image detail with no trace of markup or overlay\",\n    \"integration\": \"repair edges, reflections, and background continuity so the final image looks like an original unmarked product photo\"\n  },\n  \"preserve\": [\n    \"the bottle's overall structure, proportions, handle shape, lid, white upper body, green handle color, and clear ribbed cup design\",\n    \"the visible headline text 'Blend Fresh Anywhere, Anytime'\",\n    \"the product's central placement on the wooden picnic table\",\n    \"the table, rolled cloth item, and overall camera angle\",\n    \"the original warm advertising style, realistic lighting, and natural shadow behavior except where background replacement requires matching integration\"\n  ],\n  \"do_not_c..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-011/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-011/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current outdoor background scene behind and around the product\",\n    \"content\": \"a different clean lifestyle background that still feels like a premium product ad setting, replacing the existing blurred trees and path while keeping the product as the clear focal point\",\n    \"integration\": \"match the original warm natural lighting direction, shallow depth of field, soft bokeh, perspective, horizon level, and realistic shadows so the bottle remains naturally placed on the wooden table without changing its scale or position\"\n  },\n  \"fill\": {\n    \"target\": \"the transparent lower cup section of the bottle\",\n    \"target_area\": \"inside the product container only, bounded by the clear ribbed cup area marked by the annotation box\",\n    \"content\": \"iced fresh lemon water with visible pale yellow liquid, realistic transparency, ice cubes, and fresh lemon slices integrated inside the cup\",\n    \"integration\": \"keep the glass thickness, ribbed texture, reflections, refraction, meniscus, highlights, and contact shadows realistic so the drink looks naturally contained inside the existing bottle\"\n  },\n  \"remove\": [\n    \"all red annotation text\",\n    \"the red rectangular annotation box\"\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by annotation marks and the edited cup/background regions\",\n    \"content\": \"restore clean image detail with no trace of markup or overlay\",\n    \"integration\": \"repair edges, reflections, and background continuity so the final image looks like an original unmarked product photo\"\n  },\n  \"preserve\": [\n    \"the bottle's overall structure, proportions, handle shape, lid, white upper body, green handle color, and clear ribbed cup design\",\n    \"the visible headline text 'Blend Fresh Anywhere, Anytime'\",\n    \"the product's central placement on the wooden picnic table\",\n    \"the table, rolled cloth item, and overall camera angle\",\n    \"the original warm advertising style, realistic lighting, and natural shadow behavior except where background replacement requires matching integration\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product\",\n    \"do not alter the bottle logo area, materials, or hardware details\",\n    \"do not place the drink outside the bottle or beside the product\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not change non-target objects unless required for seamless visual integration\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current outdoor background scene behind and around the product\",\n    \"content\": \"a different clean lifestyle background that still feels like a premium product ad setting, replacing the existing blurred trees and path while keeping the product as the clear focal point\",\n    \"integration\": \"match the original warm natural lighting direction, shallow depth of field, soft bokeh, perspective, horizon level, and realistic shadows so the bottle remains naturally placed on the wooden table without changing its scale or position\"\n  },\n  \"fill\": {\n    \"target\": \"the transparent lower cup section of the bottle\",\n    \"target_area\": \"inside the product container only, bounded by the clear ribbed cup area marked by the annotation box\",\n    \"content\": \"iced fresh lemon water with visible pale yellow liquid, realistic transparency, ice cubes, and fresh lemon slices integrated inside the cup\",\n    \"integration\": \"keep the glass thickness, ribbed texture, reflections, refraction, meniscus, highlights, and contact shadows realistic so the drink looks naturally contained inside the existing bottle\"\n  },\n  \"remove\": [\n    \"all red annotation text\",\n    \"the red rectangular annotation box\"\n  ],\n  \"repair\": {\n    \"target\": \"areas previously covered by annotation marks and the edited cup/background regions\",\n    \"content\": \"restore clean image detail with no trace of markup or overlay\",\n    \"integration\": \"repair edges, reflections, and background continuity so the final image looks like an original unmarked product photo\"\n  },\n  \"preserve\": [\n    \"the bottle's overall structure, proportions, handle shape, lid, white upper body, green handle color, and clear ribbed cup design\",\n    \"the visible headline text 'Blend Fresh Anywhere, Anytime'\",\n    \"the product's central placement on the wooden picnic table\",\n    \"the table, rolled cloth item, and overall camera angle\",\n    \"the original warm advertising style, realistic lighting, and natural shadow behavior except where background replacement requires matching integration\"\n  ],\n  \"do_not_c..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-011-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-011-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-011-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-011-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-011-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:50:19.110Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-012",
+      "title": "8556638",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8556638",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-012-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1343013
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-012-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1272284
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8556638",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, red circles, and red handwritten overlay text on the image\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene details underneath\"\n  },\n  \"replace\": {\n    \"target\": \"the current light wood table surface and visible table front panel beneath the jewelry case\",\n    \"content\": \"a different table design that still fits the soft elegant product scene, with realistic furniture material and a clean premium appearance\",\n    \"integration\": \"match the existing camera angle, perspective, scale, warm indoor lighting, soft shadows, and scene depth; keep the jewelry case resting naturally on the new table surface\"\n  },\n  \"insert\": {\n    \"target\": \"the two circled compartments inside the open jewelry organizer\",\n    \"content\": \"small elegant jewelry pieces placed inside the organizer, such as delicate rings or other refined accessories that fit the compartment sizes\",\n    \"integration\": \"anchor the jewelry inside the product compartments, match the organizer scale, soft lighting, shadows, and material interaction, and make the added items look naturally arranged within the case rather than floating or placed outside it\",\n    \"preserve_conditions\": \"do not alter the compartment layout, padding, or the overall structure of the jewelry organizer\"\n  },\n  \"preserve\": [\n    \"the blush pink jewelry case shape, structure, material, and color\",\n    \"the open-lid angle and interior compartment layout\",\n    \"the visible headline text at the top of the image\",\n    \"the towel on the right side\",\n    \"the overall warm lighting, soft focus background, perspective, and shadows\",\n    \"all non-target areas outside the requested table replacement and jewelry insertion\"\n  ],\n  \"do_not_change\": [\n    \"do not move the jewelry case\",\n    \"do not change the product branding or visible headline text\",\n    \"do not add jewelry outside the organizer\",\n    \"do not modify the background room setting except where naturally affected by the table replacement\",\n    \"do not leave any annotation marks in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, red circles, and red handwritten overlay text on the image\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene details underneath\"\n  },\n  \"replace\": {\n    \"target\": \"the current light wood table surface and visible table front panel beneath the jewelry case\",\n    \"content\": \"a different table design that still fits the soft elegant product scene, with realistic furniture material and a clean premium appearance\",\n    \"integration\": \"match the existing camera angle, perspective, scale, warm indoor lighting, soft shadows, and scene depth; keep the jewelry case resting naturally on the new table surface\"\n  },\n  \"insert\": {\n    \"target\": \"the two circled compartments inside the open jewelry organizer\",\n    \"content\": \"small elegant jewelry pieces placed inside the organizer, such as delicate rings or other refined accessories that fit the compartment sizes\",\n    \"integration\": \"anchor the jewelry inside the product compartments, match the organizer scale, soft lighting, shadows, and material interaction, and make the added items look naturally arranged within the case rather than floating or placed outside it\",\n    \"preserve_conditions\": \"do not alter the compartment layout, padding, or the overall structure of the jewelry organizer\"\n  },\n  \"preserve\": [\n    \"the blush pink jewelry case shape, structure, material, and color\",\n    \"the open-lid angle and interior compartment layout\",\n    \"the visible headline text at the top of the image\",\n    \"the towel on the right side\",\n    \"the overall warm lighting, soft focus background, perspective, and shadows\",\n    \"all non-target areas outside the requested table replacement and jewelry insertion\"\n  ],\n  \"do_not_change\": [\n    \"do not move the jewelry case\",\n    \"do not change the product branding or visible headline text\",\n    \"do not add jewelry outside the organizer\",\n    \"do not modify the background room setting except where naturally affected by the table replacement\",\n    \"do not leave any annotation marks in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, red circles, and red handwritten overlay text on the image\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene details underneath\"\n  },\n  \"replace\": {\n    \"target\": \"the current light wood table surface and visible table front panel beneath the jewelry case\",\n    \"content\": \"a different table design that still fits the soft elegant product scene, with realistic furniture material and a clean premium appearance\",\n    \"integration\": \"match the existing camera angle, perspective, scale, warm indoor lighting, soft shadows, and scene depth; keep the jewelry case resting naturally on the new table surface\"\n  },\n  \"insert\": {\n    \"target\": \"the two circled compartments inside the open jewelry organizer\",\n    \"content\": \"small elegant jewelry pieces placed inside the organizer, such as delicate rings or other refined accessories that fit the compartment sizes\",\n    \"integration\": \"anchor the jewelry inside the product compartments, match the organizer scale, soft lighting, shadows, and material interaction, and make the added items look naturally arranged within the case rather than floating or placed outside it\",\n    \"preserve_conditions\": \"do not alter the compartment layout, padding, or the overall structure of the jewelry organizer\"\n  },\n  \"preserve\": [\n    \"the blush pink jewelry case shape, structure, material, and color\",\n    \"the open-lid angle and interior compartment layout\",\n    \"the visible headline text at the top of the image\",\n    \"the towel on the right side\",\n    \"the overall warm lighting, soft focus background, perspective, and shadows\",\n    \"all non-target areas outside the requested table replacement and jewelry insertion\"\n  ],\n  \"do_not_change\": [\n    \"do not move the jewelry case\",\n    \"do not change the product branding or visible headline text\",\n    \"do not add jewelry outside the organizer\",\n    \"do not modify the background room setting except where naturally affected by the table replacement\",\n    \"do not l...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, red circles, and red handwritten overlay text on the image\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene details underneath\"\n  },\n  \"replace\": {\n    \"target\": \"the current light wood table surface and visible table front panel beneath the jewelry case\",\n    \"content\": \"a different table design that still fits the soft elegant product scene, with realistic furniture material and a clean premium appearance\",\n    \"integration\": \"match the existing camera angle, perspective, scale, warm indoor lighting, soft shadows, and scene depth; keep the jewelry case resting naturally on the new table surface\"\n  },\n  \"insert\": {\n    \"target\": \"the two circled compartments inside the open jewelry organizer\",\n    \"content\": \"small elegant jewelry pieces placed inside the organizer, such as delicate rings or other refined accessories that fit the compartment sizes\",\n    \"integration\": \"anchor the jewelry inside the product compartments, match the organizer scale, soft lighting, shadows, and material interaction, and make the added items look naturally arranged within the case rather than floating or placed outside it\",\n    \"preserve_conditions\": \"do not alter the compartment layout, padding, or the overall structure of the jewelry organizer\"\n  },\n  \"preserve\": [\n    \"the blush pink jewelry case shape, structure, material, and color\",\n    \"the open-lid angle and interior compartment layout\",\n    \"the visible headline text at the top of the image\",\n    \"the towel on the right side\",\n    \"the overall warm lighting, soft focus background, perspective, and shadows\",\n    \"all non-target areas outside the requested table replacement and jewelry insertion\"\n  ],\n  \"do_not_change\": [\n    \"do not move the jewelry case\",\n    \"do not change the product branding or visible headline text\",\n    \"do not add jewelry outside the organizer\",\n    \"do not modify the background room setting except where naturally affected by the table replacement\",\n    \"do not l..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-012/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-012/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, red circles, and red handwritten overlay text on the image\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene details underneath\"\n  },\n  \"replace\": {\n    \"target\": \"the current light wood table surface and visible table front panel beneath the jewelry case\",\n    \"content\": \"a different table design that still fits the soft elegant product scene, with realistic furniture material and a clean premium appearance\",\n    \"integration\": \"match the existing camera angle, perspective, scale, warm indoor lighting, soft shadows, and scene depth; keep the jewelry case resting naturally on the new table surface\"\n  },\n  \"insert\": {\n    \"target\": \"the two circled compartments inside the open jewelry organizer\",\n    \"content\": \"small elegant jewelry pieces placed inside the organizer, such as delicate rings or other refined accessories that fit the compartment sizes\",\n    \"integration\": \"anchor the jewelry inside the product compartments, match the organizer scale, soft lighting, shadows, and material interaction, and make the added items look naturally arranged within the case rather than floating or placed outside it\",\n    \"preserve_conditions\": \"do not alter the compartment layout, padding, or the overall structure of the jewelry organizer\"\n  },\n  \"preserve\": [\n    \"the blush pink jewelry case shape, structure, material, and color\",\n    \"the open-lid angle and interior compartment layout\",\n    \"the visible headline text at the top of the image\",\n    \"the towel on the right side\",\n    \"the overall warm lighting, soft focus background, perspective, and shadows\",\n    \"all non-target areas outside the requested table replacement and jewelry insertion\"\n  ],\n  \"do_not_change\": [\n    \"do not move the jewelry case\",\n    \"do not change the product branding or visible headline text\",\n    \"do not add jewelry outside the organizer\",\n    \"do not modify the background room setting except where naturally affected by the table replacement\",\n    \"do not leave any annotation marks in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, red circles, and red handwritten overlay text on the image\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene details underneath\"\n  },\n  \"replace\": {\n    \"target\": \"the current light wood table surface and visible table front panel beneath the jewelry case\",\n    \"content\": \"a different table design that still fits the soft elegant product scene, with realistic furniture material and a clean premium appearance\",\n    \"integration\": \"match the existing camera angle, perspective, scale, warm indoor lighting, soft shadows, and scene depth; keep the jewelry case resting naturally on the new table surface\"\n  },\n  \"insert\": {\n    \"target\": \"the two circled compartments inside the open jewelry organizer\",\n    \"content\": \"small elegant jewelry pieces placed inside the organizer, such as delicate rings or other refined accessories that fit the compartment sizes\",\n    \"integration\": \"anchor the jewelry inside the product compartments, match the organizer scale, soft lighting, shadows, and material interaction, and make the added items look naturally arranged within the case rather than floating or placed outside it\",\n    \"preserve_conditions\": \"do not alter the compartment layout, padding, or the overall structure of the jewelry organizer\"\n  },\n  \"preserve\": [\n    \"the blush pink jewelry case shape, structure, material, and color\",\n    \"the open-lid angle and interior compartment layout\",\n    \"the visible headline text at the top of the image\",\n    \"the towel on the right side\",\n    \"the overall warm lighting, soft focus background, perspective, and shadows\",\n    \"all non-target areas outside the requested table replacement and jewelry insertion\"\n  ],\n  \"do_not_change\": [\n    \"do not move the jewelry case\",\n    \"do not change the product branding or visible headline text\",\n    \"do not add jewelry outside the organizer\",\n    \"do not modify the background room setting except where naturally affected by the table replacement\",\n    \"do not l..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-012-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-012-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-012-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-012-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-012-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:49:56.284Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-013",
+      "title": "8463180",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8463180",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-013-annotation-1.jpg",
+          "exists": true,
+          "mime_type": "image/jpeg",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 101703
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-013-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1337178
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8463180",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline and handwritten red instruction text overlays\",\n    \"integration\": \"remove the annotations cleanly without leaving traces, while preserving the original product edges, tabletop texture, and surrounding scene details\"\n  },\n  \"fill\": {\n    \"target\": \"the lower transparent cup body interior inside the marked product area\",\n    \"content\": \"fill the cup with black coffee visible through the transparent body, with realistic dark coffee color, natural liquid level, subtle reflections, and glass-appropriate refraction\",\n    \"integration\": \"keep the coffee fully inside the cup, aligned to the cup perspective and curvature, matching the existing lighting, shadows, reflections, and transparent material behavior of the product\"\n  },\n  \"replace\": {\n    \"target\": \"the current background environment behind the product\",\n    \"content\": \"a brighter background setting that feels clean, daylight-lit, and visually fresh, while still fitting a product lifestyle scene\",\n    \"integration\": \"match the original camera angle, product position, desk perspective, depth of field, and natural shadow direction; keep the product as the visual focus and ensure the brighter background looks realistic with the existing scene\"\n  },\n  \"preserve\": [\n    \"the cup's structure, proportions, lid shape, handle/strap detail, transparent body material, and beige lid color\",\n    \"the product's perspective, scale, reflections, and shadows on the table\",\n    \"the large English headline text at the top of the image\",\n    \"the wooden tabletop, laptop, books, and overall composition unless minimally affected by the brighter background replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or convert it into a different container\",\n    \"do not place the coffee outside the cup or beside the product\",\n    \"do not add new objects, logos, or extra text\",\n    \"do not keep any annotation marks in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline and handwritten red instruction text overlays\",\n    \"integration\": \"remove the annotations cleanly without leaving traces, while preserving the original product edges, tabletop texture, and surrounding scene details\"\n  },\n  \"fill\": {\n    \"target\": \"the lower transparent cup body interior inside the marked product area\",\n    \"content\": \"fill the cup with black coffee visible through the transparent body, with realistic dark coffee color, natural liquid level, subtle reflections, and glass-appropriate refraction\",\n    \"integration\": \"keep the coffee fully inside the cup, aligned to the cup perspective and curvature, matching the existing lighting, shadows, reflections, and transparent material behavior of the product\"\n  },\n  \"replace\": {\n    \"target\": \"the current background environment behind the product\",\n    \"content\": \"a brighter background setting that feels clean, daylight-lit, and visually fresh, while still fitting a product lifestyle scene\",\n    \"integration\": \"match the original camera angle, product position, desk perspective, depth of field, and natural shadow direction; keep the product as the visual focus and ensure the brighter background looks realistic with the existing scene\"\n  },\n  \"preserve\": [\n    \"the cup's structure, proportions, lid shape, handle/strap detail, transparent body material, and beige lid color\",\n    \"the product's perspective, scale, reflections, and shadows on the table\",\n    \"the large English headline text at the top of the image\",\n    \"the wooden tabletop, laptop, books, and overall composition unless minimally affected by the brighter background replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or convert it into a different container\",\n    \"do not place the coffee outside the cup or beside the product\",\n    \"do not add new objects, logos, or extra text\",\n    \"do not keep any annotation marks in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline and handwritten red instruction text overlays\",\n    \"integration\": \"remove the annotations cleanly without leaving traces, while preserving the original product edges, tabletop texture, and surrounding scene details\"\n  },\n  \"fill\": {\n    \"target\": \"the lower transparent cup body interior inside the marked product area\",\n    \"content\": \"fill the cup with black coffee visible through the transparent body, with realistic dark coffee color, natural liquid level, subtle reflections, and glass-appropriate refraction\",\n    \"integration\": \"keep the coffee fully inside the cup, aligned to the cup perspective and curvature, matching the existing lighting, shadows, reflections, and transparent material behavior of the product\"\n  },\n  \"replace\": {\n    \"target\": \"the current background environment behind the product\",\n    \"content\": \"a brighter background setting that feels clean, daylight-lit, and visually fresh, while still fitting a product lifestyle scene\",\n    \"integration\": \"match the original camera angle, product position, desk perspective, depth of field, and natural shadow direction; keep the product as the visual focus and ensure the brighter background looks realistic with the existing scene\"\n  },\n  \"preserve\": [\n    \"the cup's structure, proportions, lid shape, handle/strap detail, transparent body material, and beige lid color\",\n    \"the product's perspective, scale, reflections, and shadows on the table\",\n    \"the large English headline text at the top of the image\",\n    \"the wooden tabletop, laptop, books, and overall composition unless minimally affected by the brighter background replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or convert it into a different container\",\n    \"do not place the coffee outside the cup or beside the product\",\n    \"do not add new objects, logos, or extra text\",\n    \"do not keep any annotation marks in the final image\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline and handwritten red instruction text overlays\",\n    \"integration\": \"remove the annotations cleanly without leaving traces, while preserving the original product edges, tabletop texture, and surrounding scene details\"\n  },\n  \"fill\": {\n    \"target\": \"the lower transparent cup body interior inside the marked product area\",\n    \"content\": \"fill the cup with black coffee visible through the transparent body, with realistic dark coffee color, natural liquid level, subtle reflections, and glass-appropriate refraction\",\n    \"integration\": \"keep the coffee fully inside the cup, aligned to the cup perspective and curvature, matching the existing lighting, shadows, reflections, and transparent material behavior of the product\"\n  },\n  \"replace\": {\n    \"target\": \"the current background environment behind the product\",\n    \"content\": \"a brighter background setting that feels clean, daylight-lit, and visually fresh, while still fitting a product lifestyle scene\",\n    \"integration\": \"match the original camera angle, product position, desk perspective, depth of field, and natural shadow direction; keep the product as the visual focus and ensure the brighter background looks realistic with the existing scene\"\n  },\n  \"preserve\": [\n    \"the cup's structure, proportions, lid shape, handle/strap detail, transparent body material, and beige lid color\",\n    \"the product's perspective, scale, reflections, and shadows on the table\",\n    \"the large English headline text at the top of the image\",\n    \"the wooden tabletop, laptop, books, and overall composition unless minimally affected by the brighter background replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or convert it into a different container\",\n    \"do not place the coffee outside the cup or beside the product\",\n    \"do not add new objects, logos, or extra text\",\n    \"do not keep any annotation marks in the final image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-013/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-013/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline and handwritten red instruction text overlays\",\n    \"integration\": \"remove the annotations cleanly without leaving traces, while preserving the original product edges, tabletop texture, and surrounding scene details\"\n  },\n  \"fill\": {\n    \"target\": \"the lower transparent cup body interior inside the marked product area\",\n    \"content\": \"fill the cup with black coffee visible through the transparent body, with realistic dark coffee color, natural liquid level, subtle reflections, and glass-appropriate refraction\",\n    \"integration\": \"keep the coffee fully inside the cup, aligned to the cup perspective and curvature, matching the existing lighting, shadows, reflections, and transparent material behavior of the product\"\n  },\n  \"replace\": {\n    \"target\": \"the current background environment behind the product\",\n    \"content\": \"a brighter background setting that feels clean, daylight-lit, and visually fresh, while still fitting a product lifestyle scene\",\n    \"integration\": \"match the original camera angle, product position, desk perspective, depth of field, and natural shadow direction; keep the product as the visual focus and ensure the brighter background looks realistic with the existing scene\"\n  },\n  \"preserve\": [\n    \"the cup's structure, proportions, lid shape, handle/strap detail, transparent body material, and beige lid color\",\n    \"the product's perspective, scale, reflections, and shadows on the table\",\n    \"the large English headline text at the top of the image\",\n    \"the wooden tabletop, laptop, books, and overall composition unless minimally affected by the brighter background replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or convert it into a different container\",\n    \"do not place the coffee outside the cup or beside the product\",\n    \"do not add new objects, logos, or extra text\",\n    \"do not keep any annotation marks in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline and handwritten red instruction text overlays\",\n    \"integration\": \"remove the annotations cleanly without leaving traces, while preserving the original product edges, tabletop texture, and surrounding scene details\"\n  },\n  \"fill\": {\n    \"target\": \"the lower transparent cup body interior inside the marked product area\",\n    \"content\": \"fill the cup with black coffee visible through the transparent body, with realistic dark coffee color, natural liquid level, subtle reflections, and glass-appropriate refraction\",\n    \"integration\": \"keep the coffee fully inside the cup, aligned to the cup perspective and curvature, matching the existing lighting, shadows, reflections, and transparent material behavior of the product\"\n  },\n  \"replace\": {\n    \"target\": \"the current background environment behind the product\",\n    \"content\": \"a brighter background setting that feels clean, daylight-lit, and visually fresh, while still fitting a product lifestyle scene\",\n    \"integration\": \"match the original camera angle, product position, desk perspective, depth of field, and natural shadow direction; keep the product as the visual focus and ensure the brighter background looks realistic with the existing scene\"\n  },\n  \"preserve\": [\n    \"the cup's structure, proportions, lid shape, handle/strap detail, transparent body material, and beige lid color\",\n    \"the product's perspective, scale, reflections, and shadows on the table\",\n    \"the large English headline text at the top of the image\",\n    \"the wooden tabletop, laptop, books, and overall composition unless minimally affected by the brighter background replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or convert it into a different container\",\n    \"do not place the coffee outside the cup or beside the product\",\n    \"do not add new objects, logos, or extra text\",\n    \"do not keep any annotation marks in the final image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-013-annotation-1.jpg"
+              }
+            ],
+            "compare_source": "assets/ANNO-013-annotation-1.jpg",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-013-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-013-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-013-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:51:23.736Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-014",
+      "title": "8369031",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8369031",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-014-annotation-1.jpg",
+          "exists": true,
+          "mime_type": "image/jpeg",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 109707
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-014-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1374178
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8369031",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation text, the red rectangular outline, and any other visible annotation marks over the image\",\n    \"target_area\": \"the boxed region above and around the bowl and the red text near the bottom edge\",\n    \"integration\": \"remove the annotations cleanly and restore the underlying photo so the final image looks like an original unmarked product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the existing kitchen background only\",\n    \"target_area\": \"the scene behind the bowl and countertop\",\n    \"content\": \"a Japanese-style background suitable for a ramen serving scene, such as a clean Japanese dining or kitchen environment with subtle authentic decor\",\n    \"integration\": \"match the original camera angle, depth of field, daylight tone, perspective, and shadows; keep the bowl, countertop placement, and top English headline intact\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the bowl\",\n    \"target_area\": \"the bowl interior opening\",\n    \"content\": \"a full serving of hot ramen inside the bowl, with visible noodles and appetizing soup presentation\",\n    \"integration\": \"anchor the ramen naturally inside the bowl with correct scale, rim occlusion, perspective, and contact with the bowl interior; make it look like the bowl is actually containing the ramen\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added ramen\",\n    \"content\": \"add realistic rising steam so the ramen appears freshly served and hot\",\n    \"integration\": \"keep the steam natural, soft, and consistent with the scene lighting without obscuring the bowl or headline text\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal\",\n    \"content\": \"reconstruct the blurred background and any covered product edges or countertop details so the image remains seamless and photorealistic\"\n  },\n  \"preserve\": [\n    \"the bowl's structure, size, shape, glossy material, black exterior, and red interior\",\n    \"the bowl's position on the countertop\",\n    \"the top English text 'Serve style, savor flavor.'\",\n    \"the overall lighting direction, reflections, perspective, and natural shadows\",\n    \"the countertop appearance outside of necessary local reconstruction\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the bowl color or redesign the product\",\n    \"do not move the bowl\",\n    \"do not place the ramen outside the bowl\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not modify the top English headline text\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation text, the red rectangular outline, and any other visible annotation marks over the image\",\n    \"target_area\": \"the boxed region above and around the bowl and the red text near the bottom edge\",\n    \"integration\": \"remove the annotations cleanly and restore the underlying photo so the final image looks like an original unmarked product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the existing kitchen background only\",\n    \"target_area\": \"the scene behind the bowl and countertop\",\n    \"content\": \"a Japanese-style background suitable for a ramen serving scene, such as a clean Japanese dining or kitchen environment with subtle authentic decor\",\n    \"integration\": \"match the original camera angle, depth of field, daylight tone, perspective, and shadows; keep the bowl, countertop placement, and top English headline intact\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the bowl\",\n    \"target_area\": \"the bowl interior opening\",\n    \"content\": \"a full serving of hot ramen inside the bowl, with visible noodles and appetizing soup presentation\",\n    \"integration\": \"anchor the ramen naturally inside the bowl with correct scale, rim occlusion, perspective, and contact with the bowl interior; make it look like the bowl is actually containing the ramen\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added ramen\",\n    \"content\": \"add realistic rising steam so the ramen appears freshly served and hot\",\n    \"integration\": \"keep the steam natural, soft, and consistent with the scene lighting without obscuring the bowl or headline text\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal\",\n    \"content\": \"reconstruct the blurred background and any covered product edges or countertop details so the image remains seamless and photorealistic\"\n  },\n  \"preserve\": [\n    \"the bowl's structure, size, shape, glossy material, black exterior, and red interior\",\n    \"the bowl's position on the countertop\",\n    \"the top English text 'Serve style, savor flavor.'\",\n    \"the overall lighting direction, reflections, perspective, and natural shadows\",\n    \"the countertop appearance outside of necessary local reconstruction\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the bowl color or redesign the product\",\n    \"do not move the bowl\",\n    \"do not place the ramen outside the bowl\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not modify the top English headline text\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation text, the red rectangular outline, and any other visible annotation marks over the image\",\n    \"target_area\": \"the boxed region above and around the bowl and the red text near the bottom edge\",\n    \"integration\": \"remove the annotations cleanly and restore the underlying photo so the final image looks like an original unmarked product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the existing kitchen background only\",\n    \"target_area\": \"the scene behind the bowl and countertop\",\n    \"content\": \"a Japanese-style background suitable for a ramen serving scene, such as a clean Japanese dining or kitchen environment with subtle authentic decor\",\n    \"integration\": \"match the original camera angle, depth of field, daylight tone, perspective, and shadows; keep the bowl, countertop placement, and top English headline intact\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the bowl\",\n    \"target_area\": \"the bowl interior opening\",\n    \"content\": \"a full serving of hot ramen inside the bowl, with visible noodles and appetizing soup presentation\",\n    \"integration\": \"anchor the ramen naturally inside the bowl with correct scale, rim occlusion, perspective, and contact with the bowl interior; make it look like the bowl is actually containing the ramen\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added ramen\",\n    \"content\": \"add realistic rising steam so the ramen appears freshly served and hot\",\n    \"integration\": \"keep the steam natural, soft, and consistent with the scene lighting without obscuring the bowl or headline text\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal\",\n    \"content\": \"reconstruct the blurred background and any covered product edges or countertop details so the image remains seamless and photorealistic\"\n  },\n  \"preserve\": [\n    \"the bowl's structure, size, shape, glossy material, black exterior, and red interior\",\n    \"the bowl's position on the countertop\",\n    \"the top English text 'Serve style, savor flavor.'\",\n    \"the overall lighting direction, reflections, pers...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation text, the red rectangular outline, and any other visible annotation marks over the image\",\n    \"target_area\": \"the boxed region above and around the bowl and the red text near the bottom edge\",\n    \"integration\": \"remove the annotations cleanly and restore the underlying photo so the final image looks like an original unmarked product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the existing kitchen background only\",\n    \"target_area\": \"the scene behind the bowl and countertop\",\n    \"content\": \"a Japanese-style background suitable for a ramen serving scene, such as a clean Japanese dining or kitchen environment with subtle authentic decor\",\n    \"integration\": \"match the original camera angle, depth of field, daylight tone, perspective, and shadows; keep the bowl, countertop placement, and top English headline intact\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the bowl\",\n    \"target_area\": \"the bowl interior opening\",\n    \"content\": \"a full serving of hot ramen inside the bowl, with visible noodles and appetizing soup presentation\",\n    \"integration\": \"anchor the ramen naturally inside the bowl with correct scale, rim occlusion, perspective, and contact with the bowl interior; make it look like the bowl is actually containing the ramen\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added ramen\",\n    \"content\": \"add realistic rising steam so the ramen appears freshly served and hot\",\n    \"integration\": \"keep the steam natural, soft, and consistent with the scene lighting without obscuring the bowl or headline text\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal\",\n    \"content\": \"reconstruct the blurred background and any covered product edges or countertop details so the image remains seamless and photorealistic\"\n  },\n  \"preserve\": [\n    \"the bowl's structure, size, shape, glossy material, black exterior, and red interior\",\n    \"the bowl's position on the countertop\",\n    \"the top English text 'Serve style, savor flavor.'\",\n    \"the overall lighting direction, reflections, pers..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-014/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-014/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation text, the red rectangular outline, and any other visible annotation marks over the image\",\n    \"target_area\": \"the boxed region above and around the bowl and the red text near the bottom edge\",\n    \"integration\": \"remove the annotations cleanly and restore the underlying photo so the final image looks like an original unmarked product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the existing kitchen background only\",\n    \"target_area\": \"the scene behind the bowl and countertop\",\n    \"content\": \"a Japanese-style background suitable for a ramen serving scene, such as a clean Japanese dining or kitchen environment with subtle authentic decor\",\n    \"integration\": \"match the original camera angle, depth of field, daylight tone, perspective, and shadows; keep the bowl, countertop placement, and top English headline intact\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the bowl\",\n    \"target_area\": \"the bowl interior opening\",\n    \"content\": \"a full serving of hot ramen inside the bowl, with visible noodles and appetizing soup presentation\",\n    \"integration\": \"anchor the ramen naturally inside the bowl with correct scale, rim occlusion, perspective, and contact with the bowl interior; make it look like the bowl is actually containing the ramen\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added ramen\",\n    \"content\": \"add realistic rising steam so the ramen appears freshly served and hot\",\n    \"integration\": \"keep the steam natural, soft, and consistent with the scene lighting without obscuring the bowl or headline text\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal\",\n    \"content\": \"reconstruct the blurred background and any covered product edges or countertop details so the image remains seamless and photorealistic\"\n  },\n  \"preserve\": [\n    \"the bowl's structure, size, shape, glossy material, black exterior, and red interior\",\n    \"the bowl's position on the countertop\",\n    \"the top English text 'Serve style, savor flavor.'\",\n    \"the overall lighting direction, reflections, perspective, and natural shadows\",\n    \"the countertop appearance outside of necessary local reconstruction\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the bowl color or redesign the product\",\n    \"do not move the bowl\",\n    \"do not place the ramen outside the bowl\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not modify the top English headline text\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation text, the red rectangular outline, and any other visible annotation marks over the image\",\n    \"target_area\": \"the boxed region above and around the bowl and the red text near the bottom edge\",\n    \"integration\": \"remove the annotations cleanly and restore the underlying photo so the final image looks like an original unmarked product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the existing kitchen background only\",\n    \"target_area\": \"the scene behind the bowl and countertop\",\n    \"content\": \"a Japanese-style background suitable for a ramen serving scene, such as a clean Japanese dining or kitchen environment with subtle authentic decor\",\n    \"integration\": \"match the original camera angle, depth of field, daylight tone, perspective, and shadows; keep the bowl, countertop placement, and top English headline intact\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the bowl\",\n    \"target_area\": \"the bowl interior opening\",\n    \"content\": \"a full serving of hot ramen inside the bowl, with visible noodles and appetizing soup presentation\",\n    \"integration\": \"anchor the ramen naturally inside the bowl with correct scale, rim occlusion, perspective, and contact with the bowl interior; make it look like the bowl is actually containing the ramen\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added ramen\",\n    \"content\": \"add realistic rising steam so the ramen appears freshly served and hot\",\n    \"integration\": \"keep the steam natural, soft, and consistent with the scene lighting without obscuring the bowl or headline text\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal\",\n    \"content\": \"reconstruct the blurred background and any covered product edges or countertop details so the image remains seamless and photorealistic\"\n  },\n  \"preserve\": [\n    \"the bowl's structure, size, shape, glossy material, black exterior, and red interior\",\n    \"the bowl's position on the countertop\",\n    \"the top English text 'Serve style, savor flavor.'\",\n    \"the overall lighting direction, reflections, pers..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-014-annotation-1.jpg"
+              }
+            ],
+            "compare_source": "assets/ANNO-014-annotation-1.jpg",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-014-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-014-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-014-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:52:07.344Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-015",
+      "title": "8200812",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8200812",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-015-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1341133
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-015-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1343744
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8200812",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the central soap bar placed on top of the wooden soap dish\",\n    \"target_area\": \"the soap itself inside the red circled region\",\n    \"content\": \"replace the current opaque white rectangular soap bar with a pink transparent soap bar, keeping a realistic translucent glycerin-soap appearance and the same general size, placement, and product orientation on the soap dish\",\n    \"integration\": \"match the existing warm spa lighting, perspective, shadows, reflections, scale, and contact with the wooden soap dish so the edited soap looks naturally photographed in the same scene\"\n  },\n  \"remove\": [\n    {\n      \"target\": \"the dark stone at the bottom-right corner marked with a red X\",\n      \"target_area\": \"bottom-right foreground area\",\n      \"integration\": \"remove the stone cleanly and reconstruct the underlying countertop surface, preserving realistic texture, lighting, and shadow continuity\"\n    },\n    {\n      \"target\": \"all red annotation marks and handwritten overlay text\",\n      \"target_area\": \"the red circle around the soap, the red handwritten Chinese text across the center, and the red X at the bottom-right\",\n      \"integration\": \"erase all annotation overlays completely and restore the underlying image naturally with consistent countertop, soap, and scene details\"\n    }\n  ],\n  \"preserve\": [\n    \"the wooden soap dish structure, material, color, and position\",\n    \"the countertop, plants, stones other than the removed bottom-right stone, background decor, and overall spa setting\",\n    \"the original camera angle, composition, depth of field, lighting direction, shadows, and natural photographic realism\"\n  ],\n  \"do_not_change\": [\n    \"do not move the soap away from the wooden soap dish\",\n    \"do not alter non-target objects or the overall scene styling beyond the requested soap replacement, stone removal, and annotation cleanup\",\n    \"do not add new props, text, logos, or decorative elements\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the central soap bar placed on top of the wooden soap dish\",\n    \"target_area\": \"the soap itself inside the red circled region\",\n    \"content\": \"replace the current opaque white rectangular soap bar with a pink transparent soap bar, keeping a realistic translucent glycerin-soap appearance and the same general size, placement, and product orientation on the soap dish\",\n    \"integration\": \"match the existing warm spa lighting, perspective, shadows, reflections, scale, and contact with the wooden soap dish so the edited soap looks naturally photographed in the same scene\"\n  },\n  \"remove\": [\n    {\n      \"target\": \"the dark stone at the bottom-right corner marked with a red X\",\n      \"target_area\": \"bottom-right foreground area\",\n      \"integration\": \"remove the stone cleanly and reconstruct the underlying countertop surface, preserving realistic texture, lighting, and shadow continuity\"\n    },\n    {\n      \"target\": \"all red annotation marks and handwritten overlay text\",\n      \"target_area\": \"the red circle around the soap, the red handwritten Chinese text across the center, and the red X at the bottom-right\",\n      \"integration\": \"erase all annotation overlays completely and restore the underlying image naturally with consistent countertop, soap, and scene details\"\n    }\n  ],\n  \"preserve\": [\n    \"the wooden soap dish structure, material, color, and position\",\n    \"the countertop, plants, stones other than the removed bottom-right stone, background decor, and overall spa setting\",\n    \"the original camera angle, composition, depth of field, lighting direction, shadows, and natural photographic realism\"\n  ],\n  \"do_not_change\": [\n    \"do not move the soap away from the wooden soap dish\",\n    \"do not alter non-target objects or the overall scene styling beyond the requested soap replacement, stone removal, and annotation cleanup\",\n    \"do not add new props, text, logos, or decorative elements\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the central soap bar placed on top of the wooden soap dish\",\n    \"target_area\": \"the soap itself inside the red circled region\",\n    \"content\": \"replace the current opaque white rectangular soap bar with a pink transparent soap bar, keeping a realistic translucent glycerin-soap appearance and the same general size, placement, and product orientation on the soap dish\",\n    \"integration\": \"match the existing warm spa lighting, perspective, shadows, reflections, scale, and contact with the wooden soap dish so the edited soap looks naturally photographed in the same scene\"\n  },\n  \"remove\": [\n    {\n      \"target\": \"the dark stone at the bottom-right corner marked with a red X\",\n      \"target_area\": \"bottom-right foreground area\",\n      \"integration\": \"remove the stone cleanly and reconstruct the underlying countertop surface, preserving realistic texture, lighting, and shadow continuity\"\n    },\n    {\n      \"target\": \"all red annotation marks and handwritten overlay text\",\n      \"target_area\": \"the red circle around the soap, the red handwritten Chinese text across the center, and the red X at the bottom-right\",\n      \"integration\": \"erase all annotation overlays completely and restore the underlying image naturally with consistent countertop, soap, and scene details\"\n    }\n  ],\n  \"preserve\": [\n    \"the wooden soap dish structure, material, color, and position\",\n    \"the countertop, plants, stones other than the removed bottom-right stone, background decor, and overall spa setting\",\n    \"the original camera angle, composition, depth of field, lighting direction, shadows, and natural photographic realism\"\n  ],\n  \"do_not_change\": [\n    \"do not move the soap away from the wooden soap dish\",\n    \"do not alter non-target objects or the overall scene styling beyond the requested soap replacement, stone removal, and annotation cleanup\",\n    \"do not add new props, text, logos, or decorative elements\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the central soap bar placed on top of the wooden soap dish\",\n    \"target_area\": \"the soap itself inside the red circled region\",\n    \"content\": \"replace the current opaque white rectangular soap bar with a pink transparent soap bar, keeping a realistic translucent glycerin-soap appearance and the same general size, placement, and product orientation on the soap dish\",\n    \"integration\": \"match the existing warm spa lighting, perspective, shadows, reflections, scale, and contact with the wooden soap dish so the edited soap looks naturally photographed in the same scene\"\n  },\n  \"remove\": [\n    {\n      \"target\": \"the dark stone at the bottom-right corner marked with a red X\",\n      \"target_area\": \"bottom-right foreground area\",\n      \"integration\": \"remove the stone cleanly and reconstruct the underlying countertop surface, preserving realistic texture, lighting, and shadow continuity\"\n    },\n    {\n      \"target\": \"all red annotation marks and handwritten overlay text\",\n      \"target_area\": \"the red circle around the soap, the red handwritten Chinese text across the center, and the red X at the bottom-right\",\n      \"integration\": \"erase all annotation overlays completely and restore the underlying image naturally with consistent countertop, soap, and scene details\"\n    }\n  ],\n  \"preserve\": [\n    \"the wooden soap dish structure, material, color, and position\",\n    \"the countertop, plants, stones other than the removed bottom-right stone, background decor, and overall spa setting\",\n    \"the original camera angle, composition, depth of field, lighting direction, shadows, and natural photographic realism\"\n  ],\n  \"do_not_change\": [\n    \"do not move the soap away from the wooden soap dish\",\n    \"do not alter non-target objects or the overall scene styling beyond the requested soap replacement, stone removal, and annotation cleanup\",\n    \"do not add new props, text, logos, or decorative elements\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-015/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-015/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the central soap bar placed on top of the wooden soap dish\",\n    \"target_area\": \"the soap itself inside the red circled region\",\n    \"content\": \"replace the current opaque white rectangular soap bar with a pink transparent soap bar, keeping a realistic translucent glycerin-soap appearance and the same general size, placement, and product orientation on the soap dish\",\n    \"integration\": \"match the existing warm spa lighting, perspective, shadows, reflections, scale, and contact with the wooden soap dish so the edited soap looks naturally photographed in the same scene\"\n  },\n  \"remove\": [\n    {\n      \"target\": \"the dark stone at the bottom-right corner marked with a red X\",\n      \"target_area\": \"bottom-right foreground area\",\n      \"integration\": \"remove the stone cleanly and reconstruct the underlying countertop surface, preserving realistic texture, lighting, and shadow continuity\"\n    },\n    {\n      \"target\": \"all red annotation marks and handwritten overlay text\",\n      \"target_area\": \"the red circle around the soap, the red handwritten Chinese text across the center, and the red X at the bottom-right\",\n      \"integration\": \"erase all annotation overlays completely and restore the underlying image naturally with consistent countertop, soap, and scene details\"\n    }\n  ],\n  \"preserve\": [\n    \"the wooden soap dish structure, material, color, and position\",\n    \"the countertop, plants, stones other than the removed bottom-right stone, background decor, and overall spa setting\",\n    \"the original camera angle, composition, depth of field, lighting direction, shadows, and natural photographic realism\"\n  ],\n  \"do_not_change\": [\n    \"do not move the soap away from the wooden soap dish\",\n    \"do not alter non-target objects or the overall scene styling beyond the requested soap replacement, stone removal, and annotation cleanup\",\n    \"do not add new props, text, logos, or decorative elements\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the central soap bar placed on top of the wooden soap dish\",\n    \"target_area\": \"the soap itself inside the red circled region\",\n    \"content\": \"replace the current opaque white rectangular soap bar with a pink transparent soap bar, keeping a realistic translucent glycerin-soap appearance and the same general size, placement, and product orientation on the soap dish\",\n    \"integration\": \"match the existing warm spa lighting, perspective, shadows, reflections, scale, and contact with the wooden soap dish so the edited soap looks naturally photographed in the same scene\"\n  },\n  \"remove\": [\n    {\n      \"target\": \"the dark stone at the bottom-right corner marked with a red X\",\n      \"target_area\": \"bottom-right foreground area\",\n      \"integration\": \"remove the stone cleanly and reconstruct the underlying countertop surface, preserving realistic texture, lighting, and shadow continuity\"\n    },\n    {\n      \"target\": \"all red annotation marks and handwritten overlay text\",\n      \"target_area\": \"the red circle around the soap, the red handwritten Chinese text across the center, and the red X at the bottom-right\",\n      \"integration\": \"erase all annotation overlays completely and restore the underlying image naturally with consistent countertop, soap, and scene details\"\n    }\n  ],\n  \"preserve\": [\n    \"the wooden soap dish structure, material, color, and position\",\n    \"the countertop, plants, stones other than the removed bottom-right stone, background decor, and overall spa setting\",\n    \"the original camera angle, composition, depth of field, lighting direction, shadows, and natural photographic realism\"\n  ],\n  \"do_not_change\": [\n    \"do not move the soap away from the wooden soap dish\",\n    \"do not alter non-target objects or the overall scene styling beyond the requested soap replacement, stone removal, and annotation cleanup\",\n    \"do not add new props, text, logos, or decorative elements\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-015-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-015-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-015-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-015-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-015-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:51:01.055Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-016",
+      "title": "8275091",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8275091",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-016-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1329311
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-016-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1411858
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8275091",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on the image, including the red circle, the handwritten text near the steam area, and the handwritten text along the bottom edge\",\n    \"integration\": \"cleanly remove the annotations without leaving traces, while preserving the underlying product image, tabletop, steam, and layout\"\n  },\n  \"insert\": {\n    \"target\": \"the cup opening area in Image A\",\n    \"content\": \"add a refined spoon placed inside the cup, anchored to the product itself rather than floating in the scene, with the spoon handle visible above the rim and naturally aligned to the cup perspective\",\n    \"integration\": \"match the existing warm lighting, reflections, gold-toned luxury aesthetic, scale, shadows, and material realism so the spoon looks like part of the original product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background behind the product\",\n    \"content\": \"replace the current background with a different style that still feels premium and cohesive with the warm product advertisement, such as a distinct elegant interior or styled lifestyle setting, while keeping the foreground composition readable and polished\",\n    \"integration\": \"preserve the existing camera angle, depth of field feel, warm lighting direction, and overall commercial ad quality so the cup and saucer remain the visual focus\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal, especially over the steam region and bottom margin\",\n    \"content\": \"reconstruct any obscured steam, background blur, or tabletop details that were covered by annotations\",\n    \"integration\": \"blend seamlessly with surrounding tones, soft focus, highlights, and shadows\"\n  },\n  \"preserve\": [\n    \"the ivory cup and saucer shape, ribbed texture, and gold trim\",\n    \"the product's material finish, color, reflections, and luxury appearance\",\n    \"the tabletop, coffee beans, and foreground object placement unless minimally affected by background replacement integration\",\n    \"the visible English headline and tagline text\",\n    \"the bottom icon row and its existing text labels\",\n    \"the overall composition, perspective, lighting direction, and realistic steam presence\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cup or saucer structure\",\n    \"do not change the existing English marketing text or icon content\",\n    \"do not move the product from its current position\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on the image, including the red circle, the handwritten text near the steam area, and the handwritten text along the bottom edge\",\n    \"integration\": \"cleanly remove the annotations without leaving traces, while preserving the underlying product image, tabletop, steam, and layout\"\n  },\n  \"insert\": {\n    \"target\": \"the cup opening area in Image A\",\n    \"content\": \"add a refined spoon placed inside the cup, anchored to the product itself rather than floating in the scene, with the spoon handle visible above the rim and naturally aligned to the cup perspective\",\n    \"integration\": \"match the existing warm lighting, reflections, gold-toned luxury aesthetic, scale, shadows, and material realism so the spoon looks like part of the original product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background behind the product\",\n    \"content\": \"replace the current background with a different style that still feels premium and cohesive with the warm product advertisement, such as a distinct elegant interior or styled lifestyle setting, while keeping the foreground composition readable and polished\",\n    \"integration\": \"preserve the existing camera angle, depth of field feel, warm lighting direction, and overall commercial ad quality so the cup and saucer remain the visual focus\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal, especially over the steam region and bottom margin\",\n    \"content\": \"reconstruct any obscured steam, background blur, or tabletop details that were covered by annotations\",\n    \"integration\": \"blend seamlessly with surrounding tones, soft focus, highlights, and shadows\"\n  },\n  \"preserve\": [\n    \"the ivory cup and saucer shape, ribbed texture, and gold trim\",\n    \"the product's material finish, color, reflections, and luxury appearance\",\n    \"the tabletop, coffee beans, and foreground object placement unless minimally affected by background replacement integration\",\n    \"the visible English headline and tagline text\",\n    \"the bottom icon row and its existing text labels\",\n    \"the overall composition, perspective, lighting direction, and realistic steam presence\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cup or saucer structure\",\n    \"do not change the existing English marketing text or icon content\",\n    \"do not move the product from its current position\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on the image, including the red circle, the handwritten text near the steam area, and the handwritten text along the bottom edge\",\n    \"integration\": \"cleanly remove the annotations without leaving traces, while preserving the underlying product image, tabletop, steam, and layout\"\n  },\n  \"insert\": {\n    \"target\": \"the cup opening area in Image A\",\n    \"content\": \"add a refined spoon placed inside the cup, anchored to the product itself rather than floating in the scene, with the spoon handle visible above the rim and naturally aligned to the cup perspective\",\n    \"integration\": \"match the existing warm lighting, reflections, gold-toned luxury aesthetic, scale, shadows, and material realism so the spoon looks like part of the original product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background behind the product\",\n    \"content\": \"replace the current background with a different style that still feels premium and cohesive with the warm product advertisement, such as a distinct elegant interior or styled lifestyle setting, while keeping the foreground composition readable and polished\",\n    \"integration\": \"preserve the existing camera angle, depth of field feel, warm lighting direction, and overall commercial ad quality so the cup and saucer remain the visual focus\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal, especially over the steam region and bottom margin\",\n    \"content\": \"reconstruct any obscured steam, background blur, or tabletop details that were covered by annotations\",\n    \"integration\": \"blend seamlessly with surrounding tones, soft focus, highlights, and shadows\"\n  },\n  \"preserve\": [\n    \"the ivory cup and saucer shape, ribbed texture, and gold trim\",\n    \"the product's material finish, color, reflections, and luxury appearance\",\n    \"the tabletop, coffee beans, and foreground object placement unless minimally affected by background replacement integration\",\n    \"the visible English headline and tagline text\",\n    \"the bottom icon r...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on the image, including the red circle, the handwritten text near the steam area, and the handwritten text along the bottom edge\",\n    \"integration\": \"cleanly remove the annotations without leaving traces, while preserving the underlying product image, tabletop, steam, and layout\"\n  },\n  \"insert\": {\n    \"target\": \"the cup opening area in Image A\",\n    \"content\": \"add a refined spoon placed inside the cup, anchored to the product itself rather than floating in the scene, with the spoon handle visible above the rim and naturally aligned to the cup perspective\",\n    \"integration\": \"match the existing warm lighting, reflections, gold-toned luxury aesthetic, scale, shadows, and material realism so the spoon looks like part of the original product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background behind the product\",\n    \"content\": \"replace the current background with a different style that still feels premium and cohesive with the warm product advertisement, such as a distinct elegant interior or styled lifestyle setting, while keeping the foreground composition readable and polished\",\n    \"integration\": \"preserve the existing camera angle, depth of field feel, warm lighting direction, and overall commercial ad quality so the cup and saucer remain the visual focus\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal, especially over the steam region and bottom margin\",\n    \"content\": \"reconstruct any obscured steam, background blur, or tabletop details that were covered by annotations\",\n    \"integration\": \"blend seamlessly with surrounding tones, soft focus, highlights, and shadows\"\n  },\n  \"preserve\": [\n    \"the ivory cup and saucer shape, ribbed texture, and gold trim\",\n    \"the product's material finish, color, reflections, and luxury appearance\",\n    \"the tabletop, coffee beans, and foreground object placement unless minimally affected by background replacement integration\",\n    \"the visible English headline and tagline text\",\n    \"the bottom icon r..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-016/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-016/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on the image, including the red circle, the handwritten text near the steam area, and the handwritten text along the bottom edge\",\n    \"integration\": \"cleanly remove the annotations without leaving traces, while preserving the underlying product image, tabletop, steam, and layout\"\n  },\n  \"insert\": {\n    \"target\": \"the cup opening area in Image A\",\n    \"content\": \"add a refined spoon placed inside the cup, anchored to the product itself rather than floating in the scene, with the spoon handle visible above the rim and naturally aligned to the cup perspective\",\n    \"integration\": \"match the existing warm lighting, reflections, gold-toned luxury aesthetic, scale, shadows, and material realism so the spoon looks like part of the original product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background behind the product\",\n    \"content\": \"replace the current background with a different style that still feels premium and cohesive with the warm product advertisement, such as a distinct elegant interior or styled lifestyle setting, while keeping the foreground composition readable and polished\",\n    \"integration\": \"preserve the existing camera angle, depth of field feel, warm lighting direction, and overall commercial ad quality so the cup and saucer remain the visual focus\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal, especially over the steam region and bottom margin\",\n    \"content\": \"reconstruct any obscured steam, background blur, or tabletop details that were covered by annotations\",\n    \"integration\": \"blend seamlessly with surrounding tones, soft focus, highlights, and shadows\"\n  },\n  \"preserve\": [\n    \"the ivory cup and saucer shape, ribbed texture, and gold trim\",\n    \"the product's material finish, color, reflections, and luxury appearance\",\n    \"the tabletop, coffee beans, and foreground object placement unless minimally affected by background replacement integration\",\n    \"the visible English headline and tagline text\",\n    \"the bottom icon row and its existing text labels\",\n    \"the overall composition, perspective, lighting direction, and realistic steam presence\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the cup or saucer structure\",\n    \"do not change the existing English marketing text or icon content\",\n    \"do not move the product from its current position\",\n    \"do not leave any annotation marks visible in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on the image, including the red circle, the handwritten text near the steam area, and the handwritten text along the bottom edge\",\n    \"integration\": \"cleanly remove the annotations without leaving traces, while preserving the underlying product image, tabletop, steam, and layout\"\n  },\n  \"insert\": {\n    \"target\": \"the cup opening area in Image A\",\n    \"content\": \"add a refined spoon placed inside the cup, anchored to the product itself rather than floating in the scene, with the spoon handle visible above the rim and naturally aligned to the cup perspective\",\n    \"integration\": \"match the existing warm lighting, reflections, gold-toned luxury aesthetic, scale, shadows, and material realism so the spoon looks like part of the original product scene\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background behind the product\",\n    \"content\": \"replace the current background with a different style that still feels premium and cohesive with the warm product advertisement, such as a distinct elegant interior or styled lifestyle setting, while keeping the foreground composition readable and polished\",\n    \"integration\": \"preserve the existing camera angle, depth of field feel, warm lighting direction, and overall commercial ad quality so the cup and saucer remain the visual focus\"\n  },\n  \"repair\": {\n    \"target\": \"areas revealed after annotation removal, especially over the steam region and bottom margin\",\n    \"content\": \"reconstruct any obscured steam, background blur, or tabletop details that were covered by annotations\",\n    \"integration\": \"blend seamlessly with surrounding tones, soft focus, highlights, and shadows\"\n  },\n  \"preserve\": [\n    \"the ivory cup and saucer shape, ribbed texture, and gold trim\",\n    \"the product's material finish, color, reflections, and luxury appearance\",\n    \"the tabletop, coffee beans, and foreground object placement unless minimally affected by background replacement integration\",\n    \"the visible English headline and tagline text\",\n    \"the bottom icon r..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-016-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-016-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-016-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-016-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-016-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:51:13.807Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-017",
+      "title": "8326815",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8326815",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-017-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1144404
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-017-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1417815
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8326815",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the transparent compartment organizer in Image A\",\n    \"target_area\": \"the three circled compartments inside the main product, corresponding to the left-upper compartment, the front-center compartment, and the right-side compartment\",\n    \"content\": \"add three pairs of socks stacked neatly inside the marked compartments, with one red pair, one yellow pair, and one blue pair; each pair should appear folded and layered naturally as everyday stored items\",\n    \"integration\": \"place the socks fully inside the product compartments, not outside the organizer; match the camera angle, scale, lighting, soft shadows, reflections, and the transparent plastic occlusion/refraction of the box so the socks look physically present inside the organizer\"\n  },\n  \"repair\": {\n    \"target\": \"all red annotation elements over the image\",\n    \"content\": \"remove the handwritten Chinese instruction text and all red circles, then restore the underlying product image cleanly\",\n    \"integration\": \"reconstruct the plastic edges, compartment dividers, highlights, reflections, and tabletop details naturally where annotations were removed\"\n  },\n  \"preserve\": [\n    \"the transparent organizer structure, compartment layout, material, and color\",\n    \"the gold label plate on the front\",\n    \"the existing lighting, perspective, shadows, reflections, and background scene\",\n    \"the printed English marketing text and icons in the bottom-right area\",\n    \"all non-target areas outside the annotated insertion regions\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not place the socks beside the product or in the background\",\n    \"do not alter the visible logo, existing product text, or bottom-right promotional text\",\n    \"do not change the overall composition or crop\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the transparent compartment organizer in Image A\",\n    \"target_area\": \"the three circled compartments inside the main product, corresponding to the left-upper compartment, the front-center compartment, and the right-side compartment\",\n    \"content\": \"add three pairs of socks stacked neatly inside the marked compartments, with one red pair, one yellow pair, and one blue pair; each pair should appear folded and layered naturally as everyday stored items\",\n    \"integration\": \"place the socks fully inside the product compartments, not outside the organizer; match the camera angle, scale, lighting, soft shadows, reflections, and the transparent plastic occlusion/refraction of the box so the socks look physically present inside the organizer\"\n  },\n  \"repair\": {\n    \"target\": \"all red annotation elements over the image\",\n    \"content\": \"remove the handwritten Chinese instruction text and all red circles, then restore the underlying product image cleanly\",\n    \"integration\": \"reconstruct the plastic edges, compartment dividers, highlights, reflections, and tabletop details naturally where annotations were removed\"\n  },\n  \"preserve\": [\n    \"the transparent organizer structure, compartment layout, material, and color\",\n    \"the gold label plate on the front\",\n    \"the existing lighting, perspective, shadows, reflections, and background scene\",\n    \"the printed English marketing text and icons in the bottom-right area\",\n    \"all non-target areas outside the annotated insertion regions\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not place the socks beside the product or in the background\",\n    \"do not alter the visible logo, existing product text, or bottom-right promotional text\",\n    \"do not change the overall composition or crop\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the transparent compartment organizer in Image A\",\n    \"target_area\": \"the three circled compartments inside the main product, corresponding to the left-upper compartment, the front-center compartment, and the right-side compartment\",\n    \"content\": \"add three pairs of socks stacked neatly inside the marked compartments, with one red pair, one yellow pair, and one blue pair; each pair should appear folded and layered naturally as everyday stored items\",\n    \"integration\": \"place the socks fully inside the product compartments, not outside the organizer; match the camera angle, scale, lighting, soft shadows, reflections, and the transparent plastic occlusion/refraction of the box so the socks look physically present inside the organizer\"\n  },\n  \"repair\": {\n    \"target\": \"all red annotation elements over the image\",\n    \"content\": \"remove the handwritten Chinese instruction text and all red circles, then restore the underlying product image cleanly\",\n    \"integration\": \"reconstruct the plastic edges, compartment dividers, highlights, reflections, and tabletop details naturally where annotations were removed\"\n  },\n  \"preserve\": [\n    \"the transparent organizer structure, compartment layout, material, and color\",\n    \"the gold label plate on the front\",\n    \"the existing lighting, perspective, shadows, reflections, and background scene\",\n    \"the printed English marketing text and icons in the bottom-right area\",\n    \"all non-target areas outside the annotated insertion regions\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not place the socks beside the product or in the background\",\n    \"do not alter the visible logo, existing product text, or bottom-right promotional text\",\n    \"do not change the overall composition or crop\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the transparent compartment organizer in Image A\",\n    \"target_area\": \"the three circled compartments inside the main product, corresponding to the left-upper compartment, the front-center compartment, and the right-side compartment\",\n    \"content\": \"add three pairs of socks stacked neatly inside the marked compartments, with one red pair, one yellow pair, and one blue pair; each pair should appear folded and layered naturally as everyday stored items\",\n    \"integration\": \"place the socks fully inside the product compartments, not outside the organizer; match the camera angle, scale, lighting, soft shadows, reflections, and the transparent plastic occlusion/refraction of the box so the socks look physically present inside the organizer\"\n  },\n  \"repair\": {\n    \"target\": \"all red annotation elements over the image\",\n    \"content\": \"remove the handwritten Chinese instruction text and all red circles, then restore the underlying product image cleanly\",\n    \"integration\": \"reconstruct the plastic edges, compartment dividers, highlights, reflections, and tabletop details naturally where annotations were removed\"\n  },\n  \"preserve\": [\n    \"the transparent organizer structure, compartment layout, material, and color\",\n    \"the gold label plate on the front\",\n    \"the existing lighting, perspective, shadows, reflections, and background scene\",\n    \"the printed English marketing text and icons in the bottom-right area\",\n    \"all non-target areas outside the annotated insertion regions\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not place the socks beside the product or in the background\",\n    \"do not alter the visible logo, existing product text, or bottom-right promotional text\",\n    \"do not change the overall composition or crop\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-017/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-017/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the transparent compartment organizer in Image A\",\n    \"target_area\": \"the three circled compartments inside the main product, corresponding to the left-upper compartment, the front-center compartment, and the right-side compartment\",\n    \"content\": \"add three pairs of socks stacked neatly inside the marked compartments, with one red pair, one yellow pair, and one blue pair; each pair should appear folded and layered naturally as everyday stored items\",\n    \"integration\": \"place the socks fully inside the product compartments, not outside the organizer; match the camera angle, scale, lighting, soft shadows, reflections, and the transparent plastic occlusion/refraction of the box so the socks look physically present inside the organizer\"\n  },\n  \"repair\": {\n    \"target\": \"all red annotation elements over the image\",\n    \"content\": \"remove the handwritten Chinese instruction text and all red circles, then restore the underlying product image cleanly\",\n    \"integration\": \"reconstruct the plastic edges, compartment dividers, highlights, reflections, and tabletop details naturally where annotations were removed\"\n  },\n  \"preserve\": [\n    \"the transparent organizer structure, compartment layout, material, and color\",\n    \"the gold label plate on the front\",\n    \"the existing lighting, perspective, shadows, reflections, and background scene\",\n    \"the printed English marketing text and icons in the bottom-right area\",\n    \"all non-target areas outside the annotated insertion regions\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not place the socks beside the product or in the background\",\n    \"do not alter the visible logo, existing product text, or bottom-right promotional text\",\n    \"do not change the overall composition or crop\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the transparent compartment organizer in Image A\",\n    \"target_area\": \"the three circled compartments inside the main product, corresponding to the left-upper compartment, the front-center compartment, and the right-side compartment\",\n    \"content\": \"add three pairs of socks stacked neatly inside the marked compartments, with one red pair, one yellow pair, and one blue pair; each pair should appear folded and layered naturally as everyday stored items\",\n    \"integration\": \"place the socks fully inside the product compartments, not outside the organizer; match the camera angle, scale, lighting, soft shadows, reflections, and the transparent plastic occlusion/refraction of the box so the socks look physically present inside the organizer\"\n  },\n  \"repair\": {\n    \"target\": \"all red annotation elements over the image\",\n    \"content\": \"remove the handwritten Chinese instruction text and all red circles, then restore the underlying product image cleanly\",\n    \"integration\": \"reconstruct the plastic edges, compartment dividers, highlights, reflections, and tabletop details naturally where annotations were removed\"\n  },\n  \"preserve\": [\n    \"the transparent organizer structure, compartment layout, material, and color\",\n    \"the gold label plate on the front\",\n    \"the existing lighting, perspective, shadows, reflections, and background scene\",\n    \"the printed English marketing text and icons in the bottom-right area\",\n    \"all non-target areas outside the annotated insertion regions\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not place the socks beside the product or in the background\",\n    \"do not alter the visible logo, existing product text, or bottom-right promotional text\",\n    \"do not change the overall composition or crop\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-017-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-017-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-017-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-017-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-017-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:50:56.366Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-018",
+      "title": "8437059",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8437059",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-018-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1264023
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-018-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1285959
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8437059",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the food contents inside the stainless steel bowl at the center-bottom of the image\",\n      \"target_area\": \"inside the bowl only, constrained by the visible rim and bowl interior\",\n      \"content\": \"replace the current soup contents with appetizing tomato beef brisket, showing a rich red tomato-based broth with clearly visible beef chunks and natural garnish, presented as a realistic hot meal inside the same bowl\",\n      \"integration\": \"keep the existing bowl unchanged and anchor the new food fully inside it; match the original camera angle, depth, scale, reflections, lighting, steam feel, and shadows so the food looks naturally served in the bowl\"\n    },\n    {\n      \"target\": \"the folded turquoise napkin on the lower-right area of the tabletop\",\n      \"target_area\": \"the napkin area on the table surface only\",\n      \"content\": \"replace the folded napkin with a pair of chopsticks placed neatly on the tabletop in the same general position\",\n      \"integration\": \"match the tabletop perspective, realistic scale, lighting direction, contact shadows, and scene styling so the chopsticks look naturally placed on the table\"\n    }\n  ],\n  \"remove\": {\n    \"target\": \"all red annotation marks, including handwritten Chinese notes and red circles or strokes over the image\",\n    \"integration\": \"remove them completely without leaving color residue, edge artifacts, or distortions\"\n  },\n  \"repair\": {\n    \"target\": \"all areas previously covered by annotations and all edited boundary regions\",\n    \"content\": \"reconstruct the underlying image cleanly so surfaces, edges, and background details look natural and uninterrupted\",\n    \"integration\": \"preserve the original composition, materials, blur depth, and lighting continuity\"\n  },\n  \"preserve\": [\n    \"the stainless steel bowl shape, size, material, rim, and exterior finish\",\n    \"the English headline and subheadline text in the upper-left area\",\n    \"the kitchen background, shelves, stacked metal bowls, window light, table, and overall composition\",\n    \"the original lighting, perspective, shadows, reflections, and photographic style\",\n    \"all non-target areas not explicitly requested for editing\"\n  ],\n  \"do_not_change\": [\n    \"do not move the bowl or alter its structure\",\n    \"do not change the background scene or camera framing\",\n    \"do not modify the visible English marketing text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new food outside the bowl\",\n    \"do not place the chopsticks loosely in a different unrelated area\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the food contents inside the stainless steel bowl at the center-bottom of the image\",\n      \"target_area\": \"inside the bowl only, constrained by the visible rim and bowl interior\",\n      \"content\": \"replace the current soup contents with appetizing tomato beef brisket, showing a rich red tomato-based broth with clearly visible beef chunks and natural garnish, presented as a realistic hot meal inside the same bowl\",\n      \"integration\": \"keep the existing bowl unchanged and anchor the new food fully inside it; match the original camera angle, depth, scale, reflections, lighting, steam feel, and shadows so the food looks naturally served in the bowl\"\n    },\n    {\n      \"target\": \"the folded turquoise napkin on the lower-right area of the tabletop\",\n      \"target_area\": \"the napkin area on the table surface only\",\n      \"content\": \"replace the folded napkin with a pair of chopsticks placed neatly on the tabletop in the same general position\",\n      \"integration\": \"match the tabletop perspective, realistic scale, lighting direction, contact shadows, and scene styling so the chopsticks look naturally placed on the table\"\n    }\n  ],\n  \"remove\": {\n    \"target\": \"all red annotation marks, including handwritten Chinese notes and red circles or strokes over the image\",\n    \"integration\": \"remove them completely without leaving color residue, edge artifacts, or distortions\"\n  },\n  \"repair\": {\n    \"target\": \"all areas previously covered by annotations and all edited boundary regions\",\n    \"content\": \"reconstruct the underlying image cleanly so surfaces, edges, and background details look natural and uninterrupted\",\n    \"integration\": \"preserve the original composition, materials, blur depth, and lighting continuity\"\n  },\n  \"preserve\": [\n    \"the stainless steel bowl shape, size, material, rim, and exterior finish\",\n    \"the English headline and subheadline text in the upper-left area\",\n    \"the kitchen background, shelves, stacked metal bowls, window light, table, and overall composition\",\n    \"the original lighting, perspective, shadows, reflections, and photographic style\",\n    \"all non-target areas not explicitly requested for editing\"\n  ],\n  \"do_not_change\": [\n    \"do not move the bowl or alter its structure\",\n    \"do not change the background scene or camera framing\",\n    \"do not modify the visible English marketing text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new food outside the bowl\",\n    \"do not place the chopsticks loosely in a different unrelated area\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the food contents inside the stainless steel bowl at the center-bottom of the image\",\n      \"target_area\": \"inside the bowl only, constrained by the visible rim and bowl interior\",\n      \"content\": \"replace the current soup contents with appetizing tomato beef brisket, showing a rich red tomato-based broth with clearly visible beef chunks and natural garnish, presented as a realistic hot meal inside the same bowl\",\n      \"integration\": \"keep the existing bowl unchanged and anchor the new food fully inside it; match the original camera angle, depth, scale, reflections, lighting, steam feel, and shadows so the food looks naturally served in the bowl\"\n    },\n    {\n      \"target\": \"the folded turquoise napkin on the lower-right area of the tabletop\",\n      \"target_area\": \"the napkin area on the table surface only\",\n      \"content\": \"replace the folded napkin with a pair of chopsticks placed neatly on the tabletop in the same general position\",\n      \"integration\": \"match the tabletop perspective, realistic scale, lighting direction, contact shadows, and scene styling so the chopsticks look naturally placed on the table\"\n    }\n  ],\n  \"remove\": {\n    \"target\": \"all red annotation marks, including handwritten Chinese notes and red circles or strokes over the image\",\n    \"integration\": \"remove them completely without leaving color residue, edge artifacts, or distortions\"\n  },\n  \"repair\": {\n    \"target\": \"all areas previously covered by annotations and all edited boundary regions\",\n    \"content\": \"reconstruct the underlying image cleanly so surfaces, edges, and background details look natural and uninterrupted\",\n    \"integration\": \"preserve the original composition, materials, blur depth, and lighting continuity\"\n  },\n  \"preserve\": [\n    \"the stainless steel bowl shape, size, material, rim, and exterior finish\",\n    \"the English headline and subheadline text in the upper-left area\",\n    \"the kitchen background, shelves, stacked metal bowls, window light, table, and overall composition\",\n    \"the original lighting, persp...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the food contents inside the stainless steel bowl at the center-bottom of the image\",\n      \"target_area\": \"inside the bowl only, constrained by the visible rim and bowl interior\",\n      \"content\": \"replace the current soup contents with appetizing tomato beef brisket, showing a rich red tomato-based broth with clearly visible beef chunks and natural garnish, presented as a realistic hot meal inside the same bowl\",\n      \"integration\": \"keep the existing bowl unchanged and anchor the new food fully inside it; match the original camera angle, depth, scale, reflections, lighting, steam feel, and shadows so the food looks naturally served in the bowl\"\n    },\n    {\n      \"target\": \"the folded turquoise napkin on the lower-right area of the tabletop\",\n      \"target_area\": \"the napkin area on the table surface only\",\n      \"content\": \"replace the folded napkin with a pair of chopsticks placed neatly on the tabletop in the same general position\",\n      \"integration\": \"match the tabletop perspective, realistic scale, lighting direction, contact shadows, and scene styling so the chopsticks look naturally placed on the table\"\n    }\n  ],\n  \"remove\": {\n    \"target\": \"all red annotation marks, including handwritten Chinese notes and red circles or strokes over the image\",\n    \"integration\": \"remove them completely without leaving color residue, edge artifacts, or distortions\"\n  },\n  \"repair\": {\n    \"target\": \"all areas previously covered by annotations and all edited boundary regions\",\n    \"content\": \"reconstruct the underlying image cleanly so surfaces, edges, and background details look natural and uninterrupted\",\n    \"integration\": \"preserve the original composition, materials, blur depth, and lighting continuity\"\n  },\n  \"preserve\": [\n    \"the stainless steel bowl shape, size, material, rim, and exterior finish\",\n    \"the English headline and subheadline text in the upper-left area\",\n    \"the kitchen background, shelves, stacked metal bowls, window light, table, and overall composition\",\n    \"the original lighting, persp..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-018/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-018/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the food contents inside the stainless steel bowl at the center-bottom of the image\",\n      \"target_area\": \"inside the bowl only, constrained by the visible rim and bowl interior\",\n      \"content\": \"replace the current soup contents with appetizing tomato beef brisket, showing a rich red tomato-based broth with clearly visible beef chunks and natural garnish, presented as a realistic hot meal inside the same bowl\",\n      \"integration\": \"keep the existing bowl unchanged and anchor the new food fully inside it; match the original camera angle, depth, scale, reflections, lighting, steam feel, and shadows so the food looks naturally served in the bowl\"\n    },\n    {\n      \"target\": \"the folded turquoise napkin on the lower-right area of the tabletop\",\n      \"target_area\": \"the napkin area on the table surface only\",\n      \"content\": \"replace the folded napkin with a pair of chopsticks placed neatly on the tabletop in the same general position\",\n      \"integration\": \"match the tabletop perspective, realistic scale, lighting direction, contact shadows, and scene styling so the chopsticks look naturally placed on the table\"\n    }\n  ],\n  \"remove\": {\n    \"target\": \"all red annotation marks, including handwritten Chinese notes and red circles or strokes over the image\",\n    \"integration\": \"remove them completely without leaving color residue, edge artifacts, or distortions\"\n  },\n  \"repair\": {\n    \"target\": \"all areas previously covered by annotations and all edited boundary regions\",\n    \"content\": \"reconstruct the underlying image cleanly so surfaces, edges, and background details look natural and uninterrupted\",\n    \"integration\": \"preserve the original composition, materials, blur depth, and lighting continuity\"\n  },\n  \"preserve\": [\n    \"the stainless steel bowl shape, size, material, rim, and exterior finish\",\n    \"the English headline and subheadline text in the upper-left area\",\n    \"the kitchen background, shelves, stacked metal bowls, window light, table, and overall composition\",\n    \"the original lighting, perspective, shadows, reflections, and photographic style\",\n    \"all non-target areas not explicitly requested for editing\"\n  ],\n  \"do_not_change\": [\n    \"do not move the bowl or alter its structure\",\n    \"do not change the background scene or camera framing\",\n    \"do not modify the visible English marketing text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new food outside the bowl\",\n    \"do not place the chopsticks loosely in a different unrelated area\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the food contents inside the stainless steel bowl at the center-bottom of the image\",\n      \"target_area\": \"inside the bowl only, constrained by the visible rim and bowl interior\",\n      \"content\": \"replace the current soup contents with appetizing tomato beef brisket, showing a rich red tomato-based broth with clearly visible beef chunks and natural garnish, presented as a realistic hot meal inside the same bowl\",\n      \"integration\": \"keep the existing bowl unchanged and anchor the new food fully inside it; match the original camera angle, depth, scale, reflections, lighting, steam feel, and shadows so the food looks naturally served in the bowl\"\n    },\n    {\n      \"target\": \"the folded turquoise napkin on the lower-right area of the tabletop\",\n      \"target_area\": \"the napkin area on the table surface only\",\n      \"content\": \"replace the folded napkin with a pair of chopsticks placed neatly on the tabletop in the same general position\",\n      \"integration\": \"match the tabletop perspective, realistic scale, lighting direction, contact shadows, and scene styling so the chopsticks look naturally placed on the table\"\n    }\n  ],\n  \"remove\": {\n    \"target\": \"all red annotation marks, including handwritten Chinese notes and red circles or strokes over the image\",\n    \"integration\": \"remove them completely without leaving color residue, edge artifacts, or distortions\"\n  },\n  \"repair\": {\n    \"target\": \"all areas previously covered by annotations and all edited boundary regions\",\n    \"content\": \"reconstruct the underlying image cleanly so surfaces, edges, and background details look natural and uninterrupted\",\n    \"integration\": \"preserve the original composition, materials, blur depth, and lighting continuity\"\n  },\n  \"preserve\": [\n    \"the stainless steel bowl shape, size, material, rim, and exterior finish\",\n    \"the English headline and subheadline text in the upper-left area\",\n    \"the kitchen background, shelves, stacked metal bowls, window light, table, and overall composition\",\n    \"the original lighting, persp..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-018-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-018-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-018-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-018-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-018-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:52:46.080Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-019",
+      "title": "8156188",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8156188",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-019-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1422448
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-019-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1507800
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8156188",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline, circled outline, and handwritten Chinese overlay notes\",\n    \"target_area\": \"the annotated regions over the rack and lower-left wall area\",\n    \"content\": \"clean restoration of the original product photo without any annotation graphics or overlay text\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main tray area of the black wall-mounted rack\",\n      \"target_area\": \"inside the rack, centered within the red boxed region and physically supported by the tray\",\n      \"content\": \"one realistic shampoo bottle placed inside the rack\",\n      \"integration\": \"match the existing bathroom product-photo style, perspective, scale, lighting, reflections, and shadows; keep the bottle naturally seated inside the basket and aligned with the rack geometry, not floating or placed in the background\",\n      \"preserve_conditions\": \"do not alter the rack structure or surrounding wall while adding the bottle\"\n    },\n    {\n      \"target\": \"the left-side hanging bar or hook area of the rack\",\n      \"target_area\": \"the circled lower-left side of the product where a towel can realistically hang\",\n      \"content\": \"one realistic towel hanging from the left-side rod/hook of the rack\",\n      \"integration\": \"match the scene perspective, gravity, fabric drape, lighting, and contact shadows so the towel appears naturally hung on the product\",\n      \"preserve_conditions\": \"anchor the towel to the product itself and keep the rack hardware visible and believable\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas revealed after removing the annotations and areas around the inserted objects\",\n    \"content\": \"restore the wall texture, water droplets, rack edges, and local shadows so the image looks like a clean original product shot\",\n    \"integration\": \"maintain consistent wall grooves, moisture details, metal highlights, and scene depth\"\n  },\n  \"preserve\": [\n    \"the black metal wall-mounted rack design, shape, finish, and proportions\",\n    \"the transparent adhesive mount and its position\",\n    \"the beige textured wall, water droplets, and overall bathroom setting\",\n    \"the background shelf and green plant on the right\",\n    \"the existing English text: 'NO-DRILL SYSTEM' and 'Water-resistant, high-strength adhesive wall mount.'\",\n    \"the original lighting, perspective, shadows, and photographic style\"\n  ],\n  \"do_not_change\": [\n    \"do not move, redesign, recolor, or resize the rack\",\n    \"do not change the camera angle or crop\",\n    \"do not remove or edit the existing English marketing text\",\n    \"do not place the shampoo bottle outside the rack or loosely in the background\",\n    \"do not keep any visible annotation marks in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline, circled outline, and handwritten Chinese overlay notes\",\n    \"target_area\": \"the annotated regions over the rack and lower-left wall area\",\n    \"content\": \"clean restoration of the original product photo without any annotation graphics or overlay text\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main tray area of the black wall-mounted rack\",\n      \"target_area\": \"inside the rack, centered within the red boxed region and physically supported by the tray\",\n      \"content\": \"one realistic shampoo bottle placed inside the rack\",\n      \"integration\": \"match the existing bathroom product-photo style, perspective, scale, lighting, reflections, and shadows; keep the bottle naturally seated inside the basket and aligned with the rack geometry, not floating or placed in the background\",\n      \"preserve_conditions\": \"do not alter the rack structure or surrounding wall while adding the bottle\"\n    },\n    {\n      \"target\": \"the left-side hanging bar or hook area of the rack\",\n      \"target_area\": \"the circled lower-left side of the product where a towel can realistically hang\",\n      \"content\": \"one realistic towel hanging from the left-side rod/hook of the rack\",\n      \"integration\": \"match the scene perspective, gravity, fabric drape, lighting, and contact shadows so the towel appears naturally hung on the product\",\n      \"preserve_conditions\": \"anchor the towel to the product itself and keep the rack hardware visible and believable\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas revealed after removing the annotations and areas around the inserted objects\",\n    \"content\": \"restore the wall texture, water droplets, rack edges, and local shadows so the image looks like a clean original product shot\",\n    \"integration\": \"maintain consistent wall grooves, moisture details, metal highlights, and scene depth\"\n  },\n  \"preserve\": [\n    \"the black metal wall-mounted rack design, shape, finish, and proportions\",\n    \"the transparent adhesive mount and its position\",\n    \"the beige textured wall, water droplets, and overall bathroom setting\",\n    \"the background shelf and green plant on the right\",\n    \"the existing English text: 'NO-DRILL SYSTEM' and 'Water-resistant, high-strength adhesive wall mount.'\",\n    \"the original lighting, perspective, shadows, and photographic style\"\n  ],\n  \"do_not_change\": [\n    \"do not move, redesign, recolor, or resize the rack\",\n    \"do not change the camera angle or crop\",\n    \"do not remove or edit the existing English marketing text\",\n    \"do not place the shampoo bottle outside the rack or loosely in the background\",\n    \"do not keep any visible annotation marks in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline, circled outline, and handwritten Chinese overlay notes\",\n    \"target_area\": \"the annotated regions over the rack and lower-left wall area\",\n    \"content\": \"clean restoration of the original product photo without any annotation graphics or overlay text\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main tray area of the black wall-mounted rack\",\n      \"target_area\": \"inside the rack, centered within the red boxed region and physically supported by the tray\",\n      \"content\": \"one realistic shampoo bottle placed inside the rack\",\n      \"integration\": \"match the existing bathroom product-photo style, perspective, scale, lighting, reflections, and shadows; keep the bottle naturally seated inside the basket and aligned with the rack geometry, not floating or placed in the background\",\n      \"preserve_conditions\": \"do not alter the rack structure or surrounding wall while adding the bottle\"\n    },\n    {\n      \"target\": \"the left-side hanging bar or hook area of the rack\",\n      \"target_area\": \"the circled lower-left side of the product where a towel can realistically hang\",\n      \"content\": \"one realistic towel hanging from the left-side rod/hook of the rack\",\n      \"integration\": \"match the scene perspective, gravity, fabric drape, lighting, and contact shadows so the towel appears naturally hung on the product\",\n      \"preserve_conditions\": \"anchor the towel to the product itself and keep the rack hardware visible and believable\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas revealed after removing the annotations and areas around the inserted objects\",\n    \"content\": \"restore the wall texture, water droplets, rack edges, and local shadows so the image looks like a clean original product shot\",\n    \"integration\": \"maintain consistent wall grooves, moisture details, metal highlights, and scene depth\"\n  },\n  \"preserve\": [\n    \"the black metal wall-mounted rack design, shape, finish, and proportions\",\n    \"the transparent adhesive mount and its position\",\n    \"the be...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline, circled outline, and handwritten Chinese overlay notes\",\n    \"target_area\": \"the annotated regions over the rack and lower-left wall area\",\n    \"content\": \"clean restoration of the original product photo without any annotation graphics or overlay text\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main tray area of the black wall-mounted rack\",\n      \"target_area\": \"inside the rack, centered within the red boxed region and physically supported by the tray\",\n      \"content\": \"one realistic shampoo bottle placed inside the rack\",\n      \"integration\": \"match the existing bathroom product-photo style, perspective, scale, lighting, reflections, and shadows; keep the bottle naturally seated inside the basket and aligned with the rack geometry, not floating or placed in the background\",\n      \"preserve_conditions\": \"do not alter the rack structure or surrounding wall while adding the bottle\"\n    },\n    {\n      \"target\": \"the left-side hanging bar or hook area of the rack\",\n      \"target_area\": \"the circled lower-left side of the product where a towel can realistically hang\",\n      \"content\": \"one realistic towel hanging from the left-side rod/hook of the rack\",\n      \"integration\": \"match the scene perspective, gravity, fabric drape, lighting, and contact shadows so the towel appears naturally hung on the product\",\n      \"preserve_conditions\": \"anchor the towel to the product itself and keep the rack hardware visible and believable\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas revealed after removing the annotations and areas around the inserted objects\",\n    \"content\": \"restore the wall texture, water droplets, rack edges, and local shadows so the image looks like a clean original product shot\",\n    \"integration\": \"maintain consistent wall grooves, moisture details, metal highlights, and scene depth\"\n  },\n  \"preserve\": [\n    \"the black metal wall-mounted rack design, shape, finish, and proportions\",\n    \"the transparent adhesive mount and its position\",\n    \"the be..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-019/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-019/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline, circled outline, and handwritten Chinese overlay notes\",\n    \"target_area\": \"the annotated regions over the rack and lower-left wall area\",\n    \"content\": \"clean restoration of the original product photo without any annotation graphics or overlay text\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main tray area of the black wall-mounted rack\",\n      \"target_area\": \"inside the rack, centered within the red boxed region and physically supported by the tray\",\n      \"content\": \"one realistic shampoo bottle placed inside the rack\",\n      \"integration\": \"match the existing bathroom product-photo style, perspective, scale, lighting, reflections, and shadows; keep the bottle naturally seated inside the basket and aligned with the rack geometry, not floating or placed in the background\",\n      \"preserve_conditions\": \"do not alter the rack structure or surrounding wall while adding the bottle\"\n    },\n    {\n      \"target\": \"the left-side hanging bar or hook area of the rack\",\n      \"target_area\": \"the circled lower-left side of the product where a towel can realistically hang\",\n      \"content\": \"one realistic towel hanging from the left-side rod/hook of the rack\",\n      \"integration\": \"match the scene perspective, gravity, fabric drape, lighting, and contact shadows so the towel appears naturally hung on the product\",\n      \"preserve_conditions\": \"anchor the towel to the product itself and keep the rack hardware visible and believable\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas revealed after removing the annotations and areas around the inserted objects\",\n    \"content\": \"restore the wall texture, water droplets, rack edges, and local shadows so the image looks like a clean original product shot\",\n    \"integration\": \"maintain consistent wall grooves, moisture details, metal highlights, and scene depth\"\n  },\n  \"preserve\": [\n    \"the black metal wall-mounted rack design, shape, finish, and proportions\",\n    \"the transparent adhesive mount and its position\",\n    \"the beige textured wall, water droplets, and overall bathroom setting\",\n    \"the background shelf and green plant on the right\",\n    \"the existing English text: 'NO-DRILL SYSTEM' and 'Water-resistant, high-strength adhesive wall mount.'\",\n    \"the original lighting, perspective, shadows, and photographic style\"\n  ],\n  \"do_not_change\": [\n    \"do not move, redesign, recolor, or resize the rack\",\n    \"do not change the camera angle or crop\",\n    \"do not remove or edit the existing English marketing text\",\n    \"do not place the shampoo bottle outside the rack or loosely in the background\",\n    \"do not keep any visible annotation marks in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation marks, including the rectangular outline, circled outline, and handwritten Chinese overlay notes\",\n    \"target_area\": \"the annotated regions over the rack and lower-left wall area\",\n    \"content\": \"clean restoration of the original product photo without any annotation graphics or overlay text\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main tray area of the black wall-mounted rack\",\n      \"target_area\": \"inside the rack, centered within the red boxed region and physically supported by the tray\",\n      \"content\": \"one realistic shampoo bottle placed inside the rack\",\n      \"integration\": \"match the existing bathroom product-photo style, perspective, scale, lighting, reflections, and shadows; keep the bottle naturally seated inside the basket and aligned with the rack geometry, not floating or placed in the background\",\n      \"preserve_conditions\": \"do not alter the rack structure or surrounding wall while adding the bottle\"\n    },\n    {\n      \"target\": \"the left-side hanging bar or hook area of the rack\",\n      \"target_area\": \"the circled lower-left side of the product where a towel can realistically hang\",\n      \"content\": \"one realistic towel hanging from the left-side rod/hook of the rack\",\n      \"integration\": \"match the scene perspective, gravity, fabric drape, lighting, and contact shadows so the towel appears naturally hung on the product\",\n      \"preserve_conditions\": \"anchor the towel to the product itself and keep the rack hardware visible and believable\"\n    }\n  ],\n  \"repair\": {\n    \"target\": \"areas revealed after removing the annotations and areas around the inserted objects\",\n    \"content\": \"restore the wall texture, water droplets, rack edges, and local shadows so the image looks like a clean original product shot\",\n    \"integration\": \"maintain consistent wall grooves, moisture details, metal highlights, and scene depth\"\n  },\n  \"preserve\": [\n    \"the black metal wall-mounted rack design, shape, finish, and proportions\",\n    \"the transparent adhesive mount and its position\",\n    \"the be..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-019-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-019-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-019-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-019-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-019-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:53:12.117Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-020",
+      "title": "8195800",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8195800",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-020-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1249786
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-020-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1376887
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8195800",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation elements overlaid on the image, including the circle around the bowl, the arrow, and the handwritten Chinese notes\",\n    \"integration\": \"remove the annotation marks cleanly without leaving artifacts, and restore the underlying bowl, rug, floor, and background naturally\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the raised white ceramic pet bowl at the center of the image\",\n    \"target_area\": \"bowl interior only\",\n    \"content\": \"realistic cat food placed inside the bowl, naturally settled and sized to fit the bowl\",\n    \"integration\": \"match the bowl perspective, warm soft lighting, highlights, shadows, and realistic contact with the bowl interior; keep the food fully inside the bowl and do not spill onto the rim, pedestal, rug, or floor\"\n  },\n  \"insert\": {\n    \"target\": \"the open area on the right side of the bowl on the rug/floor\",\n    \"target_area\": \"foreground-right area adjacent to the bowl, not covering the bowl or headline text\",\n    \"content\": \"a realistic domestic cat positioned naturally near the bowl as if approaching or beside it\",\n    \"integration\": \"match the scene's soft indoor daylight, perspective, scale, depth of field, and shadows so the cat appears naturally present in the original environment\"\n  },\n  \"repair\": {\n    \"target\": \"all regions revealed after annotation removal\",\n    \"content\": \"restore missing or obscured details of the bowl rim, bowl interior, rug texture, floor, and background where the red marks were drawn\",\n    \"integration\": \"preserve the original clean product-photo look with seamless texture, lighting, and tonal continuity\"\n  },\n  \"preserve\": [\n    \"the raised white ceramic bowl structure, shape, material, and color\",\n    \"the bowl position and camera perspective\",\n    \"the warm minimalist indoor scene, including the rug, wood floor, curtains, and vase with plant\",\n    \"the visible headline text 'Nurture Every Bite.'\",\n    \"the original soft lighting direction, shadows, and overall composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the bowl\",\n    \"do not alter the visible English text\",\n    \"do not place the cat food outside the bowl\",\n    \"do not place the cat loosely in the background far from the product\",\n    \"do not modify non-target areas except where needed to remove annotations and blend the new elements\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation elements overlaid on the image, including the circle around the bowl, the arrow, and the handwritten Chinese notes\",\n    \"integration\": \"remove the annotation marks cleanly without leaving artifacts, and restore the underlying bowl, rug, floor, and background naturally\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the raised white ceramic pet bowl at the center of the image\",\n    \"target_area\": \"bowl interior only\",\n    \"content\": \"realistic cat food placed inside the bowl, naturally settled and sized to fit the bowl\",\n    \"integration\": \"match the bowl perspective, warm soft lighting, highlights, shadows, and realistic contact with the bowl interior; keep the food fully inside the bowl and do not spill onto the rim, pedestal, rug, or floor\"\n  },\n  \"insert\": {\n    \"target\": \"the open area on the right side of the bowl on the rug/floor\",\n    \"target_area\": \"foreground-right area adjacent to the bowl, not covering the bowl or headline text\",\n    \"content\": \"a realistic domestic cat positioned naturally near the bowl as if approaching or beside it\",\n    \"integration\": \"match the scene's soft indoor daylight, perspective, scale, depth of field, and shadows so the cat appears naturally present in the original environment\"\n  },\n  \"repair\": {\n    \"target\": \"all regions revealed after annotation removal\",\n    \"content\": \"restore missing or obscured details of the bowl rim, bowl interior, rug texture, floor, and background where the red marks were drawn\",\n    \"integration\": \"preserve the original clean product-photo look with seamless texture, lighting, and tonal continuity\"\n  },\n  \"preserve\": [\n    \"the raised white ceramic bowl structure, shape, material, and color\",\n    \"the bowl position and camera perspective\",\n    \"the warm minimalist indoor scene, including the rug, wood floor, curtains, and vase with plant\",\n    \"the visible headline text 'Nurture Every Bite.'\",\n    \"the original soft lighting direction, shadows, and overall composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the bowl\",\n    \"do not alter the visible English text\",\n    \"do not place the cat food outside the bowl\",\n    \"do not place the cat loosely in the background far from the product\",\n    \"do not modify non-target areas except where needed to remove annotations and blend the new elements\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation elements overlaid on the image, including the circle around the bowl, the arrow, and the handwritten Chinese notes\",\n    \"integration\": \"remove the annotation marks cleanly without leaving artifacts, and restore the underlying bowl, rug, floor, and background naturally\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the raised white ceramic pet bowl at the center of the image\",\n    \"target_area\": \"bowl interior only\",\n    \"content\": \"realistic cat food placed inside the bowl, naturally settled and sized to fit the bowl\",\n    \"integration\": \"match the bowl perspective, warm soft lighting, highlights, shadows, and realistic contact with the bowl interior; keep the food fully inside the bowl and do not spill onto the rim, pedestal, rug, or floor\"\n  },\n  \"insert\": {\n    \"target\": \"the open area on the right side of the bowl on the rug/floor\",\n    \"target_area\": \"foreground-right area adjacent to the bowl, not covering the bowl or headline text\",\n    \"content\": \"a realistic domestic cat positioned naturally near the bowl as if approaching or beside it\",\n    \"integration\": \"match the scene's soft indoor daylight, perspective, scale, depth of field, and shadows so the cat appears naturally present in the original environment\"\n  },\n  \"repair\": {\n    \"target\": \"all regions revealed after annotation removal\",\n    \"content\": \"restore missing or obscured details of the bowl rim, bowl interior, rug texture, floor, and background where the red marks were drawn\",\n    \"integration\": \"preserve the original clean product-photo look with seamless texture, lighting, and tonal continuity\"\n  },\n  \"preserve\": [\n    \"the raised white ceramic bowl structure, shape, material, and color\",\n    \"the bowl position and camera perspective\",\n    \"the warm minimalist indoor scene, including the rug, wood floor, curtains, and vase with plant\",\n    \"the visible headline text 'Nurture Every Bite.'\",\n    \"the original soft lighting direction, shadows, and overall composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign t...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation elements overlaid on the image, including the circle around the bowl, the arrow, and the handwritten Chinese notes\",\n    \"integration\": \"remove the annotation marks cleanly without leaving artifacts, and restore the underlying bowl, rug, floor, and background naturally\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the raised white ceramic pet bowl at the center of the image\",\n    \"target_area\": \"bowl interior only\",\n    \"content\": \"realistic cat food placed inside the bowl, naturally settled and sized to fit the bowl\",\n    \"integration\": \"match the bowl perspective, warm soft lighting, highlights, shadows, and realistic contact with the bowl interior; keep the food fully inside the bowl and do not spill onto the rim, pedestal, rug, or floor\"\n  },\n  \"insert\": {\n    \"target\": \"the open area on the right side of the bowl on the rug/floor\",\n    \"target_area\": \"foreground-right area adjacent to the bowl, not covering the bowl or headline text\",\n    \"content\": \"a realistic domestic cat positioned naturally near the bowl as if approaching or beside it\",\n    \"integration\": \"match the scene's soft indoor daylight, perspective, scale, depth of field, and shadows so the cat appears naturally present in the original environment\"\n  },\n  \"repair\": {\n    \"target\": \"all regions revealed after annotation removal\",\n    \"content\": \"restore missing or obscured details of the bowl rim, bowl interior, rug texture, floor, and background where the red marks were drawn\",\n    \"integration\": \"preserve the original clean product-photo look with seamless texture, lighting, and tonal continuity\"\n  },\n  \"preserve\": [\n    \"the raised white ceramic bowl structure, shape, material, and color\",\n    \"the bowl position and camera perspective\",\n    \"the warm minimalist indoor scene, including the rug, wood floor, curtains, and vase with plant\",\n    \"the visible headline text 'Nurture Every Bite.'\",\n    \"the original soft lighting direction, shadows, and overall composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign t..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-020/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-020/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation elements overlaid on the image, including the circle around the bowl, the arrow, and the handwritten Chinese notes\",\n    \"integration\": \"remove the annotation marks cleanly without leaving artifacts, and restore the underlying bowl, rug, floor, and background naturally\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the raised white ceramic pet bowl at the center of the image\",\n    \"target_area\": \"bowl interior only\",\n    \"content\": \"realistic cat food placed inside the bowl, naturally settled and sized to fit the bowl\",\n    \"integration\": \"match the bowl perspective, warm soft lighting, highlights, shadows, and realistic contact with the bowl interior; keep the food fully inside the bowl and do not spill onto the rim, pedestal, rug, or floor\"\n  },\n  \"insert\": {\n    \"target\": \"the open area on the right side of the bowl on the rug/floor\",\n    \"target_area\": \"foreground-right area adjacent to the bowl, not covering the bowl or headline text\",\n    \"content\": \"a realistic domestic cat positioned naturally near the bowl as if approaching or beside it\",\n    \"integration\": \"match the scene's soft indoor daylight, perspective, scale, depth of field, and shadows so the cat appears naturally present in the original environment\"\n  },\n  \"repair\": {\n    \"target\": \"all regions revealed after annotation removal\",\n    \"content\": \"restore missing or obscured details of the bowl rim, bowl interior, rug texture, floor, and background where the red marks were drawn\",\n    \"integration\": \"preserve the original clean product-photo look with seamless texture, lighting, and tonal continuity\"\n  },\n  \"preserve\": [\n    \"the raised white ceramic bowl structure, shape, material, and color\",\n    \"the bowl position and camera perspective\",\n    \"the warm minimalist indoor scene, including the rug, wood floor, curtains, and vase with plant\",\n    \"the visible headline text 'Nurture Every Bite.'\",\n    \"the original soft lighting direction, shadows, and overall composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the bowl\",\n    \"do not alter the visible English text\",\n    \"do not place the cat food outside the bowl\",\n    \"do not place the cat loosely in the background far from the product\",\n    \"do not modify non-target areas except where needed to remove annotations and blend the new elements\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation elements overlaid on the image, including the circle around the bowl, the arrow, and the handwritten Chinese notes\",\n    \"integration\": \"remove the annotation marks cleanly without leaving artifacts, and restore the underlying bowl, rug, floor, and background naturally\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the raised white ceramic pet bowl at the center of the image\",\n    \"target_area\": \"bowl interior only\",\n    \"content\": \"realistic cat food placed inside the bowl, naturally settled and sized to fit the bowl\",\n    \"integration\": \"match the bowl perspective, warm soft lighting, highlights, shadows, and realistic contact with the bowl interior; keep the food fully inside the bowl and do not spill onto the rim, pedestal, rug, or floor\"\n  },\n  \"insert\": {\n    \"target\": \"the open area on the right side of the bowl on the rug/floor\",\n    \"target_area\": \"foreground-right area adjacent to the bowl, not covering the bowl or headline text\",\n    \"content\": \"a realistic domestic cat positioned naturally near the bowl as if approaching or beside it\",\n    \"integration\": \"match the scene's soft indoor daylight, perspective, scale, depth of field, and shadows so the cat appears naturally present in the original environment\"\n  },\n  \"repair\": {\n    \"target\": \"all regions revealed after annotation removal\",\n    \"content\": \"restore missing or obscured details of the bowl rim, bowl interior, rug texture, floor, and background where the red marks were drawn\",\n    \"integration\": \"preserve the original clean product-photo look with seamless texture, lighting, and tonal continuity\"\n  },\n  \"preserve\": [\n    \"the raised white ceramic bowl structure, shape, material, and color\",\n    \"the bowl position and camera perspective\",\n    \"the warm minimalist indoor scene, including the rug, wood floor, curtains, and vase with plant\",\n    \"the visible headline text 'Nurture Every Bite.'\",\n    \"the original soft lighting direction, shadows, and overall composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign t..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-020-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-020-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-020-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-020-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-020-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:51:43.091Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-021",
+      "title": "8216811",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8216811",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-021-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1286716
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-021-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1335739
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8216811",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements on Image A, including the red rectangle and the red Chinese overlay text across the lower product area\",\n    \"integration\": \"remove the annotation graphics cleanly without leaving traces, while restoring the original ad layout, surface reflections, and background continuity\"\n  },\n  \"insert\": {\n    \"target\": \"the main planter product\",\n    \"target_area\": \"inside the open top of the white inner reservoir, anchored within the product itself\",\n    \"content\": \"a realistic arrangement of healthy succulent plants planted inside the pot, sized naturally to fit the inner reservoir and visually consistent with a premium home-decor product photo\",\n    \"integration\": \"match the existing camera angle, soft studio lighting, depth of field, shadows, scale, and reflections; keep the succulents seated inside the planter rather than floating, beside the product, or extending unnaturally outside the rim\"\n  },\n  \"repair\": {\n    \"target\": \"the planter opening, body area, and lower foreground regions affected by annotation removal and plant insertion\",\n    \"content\": \"restore clean product edges, transparent ribbed plastic details, inner reservoir contours, reflections, and surrounding mist/background transitions so the result looks like an original unannotated product advertisement\",\n    \"integration\": \"preserve photorealism and maintain seamless continuity with the existing surface, blur, and lighting\"\n  },\n  \"preserve\": [\n    \"the overall product identity and shape of the transparent ribbed outer pot and white inner reservoir\",\n    \"the product material appearance, transparency, ribbed texture, and white color of the reservoir\",\n    \"the existing headline text, subtitle text, feature icons, and their positions\",\n    \"the current background plants, tabletop, lighting, perspective, shadows, reflections, and atmospheric mist\",\n    \"all non-target areas outside the planter interior\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color, material, rim shape, or structural proportions\",\n    \"do not place the succulents outside the planter or loosely in the scene\",\n    \"do not change any visible marketing text or iconography\",\n    \"do not leave any annotation marks in the final image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements on Image A, including the red rectangle and the red Chinese overlay text across the lower product area\",\n    \"integration\": \"remove the annotation graphics cleanly without leaving traces, while restoring the original ad layout, surface reflections, and background continuity\"\n  },\n  \"insert\": {\n    \"target\": \"the main planter product\",\n    \"target_area\": \"inside the open top of the white inner reservoir, anchored within the product itself\",\n    \"content\": \"a realistic arrangement of healthy succulent plants planted inside the pot, sized naturally to fit the inner reservoir and visually consistent with a premium home-decor product photo\",\n    \"integration\": \"match the existing camera angle, soft studio lighting, depth of field, shadows, scale, and reflections; keep the succulents seated inside the planter rather than floating, beside the product, or extending unnaturally outside the rim\"\n  },\n  \"repair\": {\n    \"target\": \"the planter opening, body area, and lower foreground regions affected by annotation removal and plant insertion\",\n    \"content\": \"restore clean product edges, transparent ribbed plastic details, inner reservoir contours, reflections, and surrounding mist/background transitions so the result looks like an original unannotated product advertisement\",\n    \"integration\": \"preserve photorealism and maintain seamless continuity with the existing surface, blur, and lighting\"\n  },\n  \"preserve\": [\n    \"the overall product identity and shape of the transparent ribbed outer pot and white inner reservoir\",\n    \"the product material appearance, transparency, ribbed texture, and white color of the reservoir\",\n    \"the existing headline text, subtitle text, feature icons, and their positions\",\n    \"the current background plants, tabletop, lighting, perspective, shadows, reflections, and atmospheric mist\",\n    \"all non-target areas outside the planter interior\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color, material, rim shape, or structural proportions\",\n    \"do not place the succulents outside the planter or loosely in the scene\",\n    \"do not change any visible marketing text or iconography\",\n    \"do not leave any annotation marks in the final image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements on Image A, including the red rectangle and the red Chinese overlay text across the lower product area\",\n    \"integration\": \"remove the annotation graphics cleanly without leaving traces, while restoring the original ad layout, surface reflections, and background continuity\"\n  },\n  \"insert\": {\n    \"target\": \"the main planter product\",\n    \"target_area\": \"inside the open top of the white inner reservoir, anchored within the product itself\",\n    \"content\": \"a realistic arrangement of healthy succulent plants planted inside the pot, sized naturally to fit the inner reservoir and visually consistent with a premium home-decor product photo\",\n    \"integration\": \"match the existing camera angle, soft studio lighting, depth of field, shadows, scale, and reflections; keep the succulents seated inside the planter rather than floating, beside the product, or extending unnaturally outside the rim\"\n  },\n  \"repair\": {\n    \"target\": \"the planter opening, body area, and lower foreground regions affected by annotation removal and plant insertion\",\n    \"content\": \"restore clean product edges, transparent ribbed plastic details, inner reservoir contours, reflections, and surrounding mist/background transitions so the result looks like an original unannotated product advertisement\",\n    \"integration\": \"preserve photorealism and maintain seamless continuity with the existing surface, blur, and lighting\"\n  },\n  \"preserve\": [\n    \"the overall product identity and shape of the transparent ribbed outer pot and white inner reservoir\",\n    \"the product material appearance, transparency, ribbed texture, and white color of the reservoir\",\n    \"the existing headline text, subtitle text, feature icons, and their positions\",\n    \"the current background plants, tabletop, lighting, perspective, shadows, reflections, and atmospheric mist\",\n    \"all non-target areas outside the planter interior\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color, material, rim shape, or ...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements on Image A, including the red rectangle and the red Chinese overlay text across the lower product area\",\n    \"integration\": \"remove the annotation graphics cleanly without leaving traces, while restoring the original ad layout, surface reflections, and background continuity\"\n  },\n  \"insert\": {\n    \"target\": \"the main planter product\",\n    \"target_area\": \"inside the open top of the white inner reservoir, anchored within the product itself\",\n    \"content\": \"a realistic arrangement of healthy succulent plants planted inside the pot, sized naturally to fit the inner reservoir and visually consistent with a premium home-decor product photo\",\n    \"integration\": \"match the existing camera angle, soft studio lighting, depth of field, shadows, scale, and reflections; keep the succulents seated inside the planter rather than floating, beside the product, or extending unnaturally outside the rim\"\n  },\n  \"repair\": {\n    \"target\": \"the planter opening, body area, and lower foreground regions affected by annotation removal and plant insertion\",\n    \"content\": \"restore clean product edges, transparent ribbed plastic details, inner reservoir contours, reflections, and surrounding mist/background transitions so the result looks like an original unannotated product advertisement\",\n    \"integration\": \"preserve photorealism and maintain seamless continuity with the existing surface, blur, and lighting\"\n  },\n  \"preserve\": [\n    \"the overall product identity and shape of the transparent ribbed outer pot and white inner reservoir\",\n    \"the product material appearance, transparency, ribbed texture, and white color of the reservoir\",\n    \"the existing headline text, subtitle text, feature icons, and their positions\",\n    \"the current background plants, tabletop, lighting, perspective, shadows, reflections, and atmospheric mist\",\n    \"all non-target areas outside the planter interior\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color, material, rim shape, or ..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-021/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-021/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements on Image A, including the red rectangle and the red Chinese overlay text across the lower product area\",\n    \"integration\": \"remove the annotation graphics cleanly without leaving traces, while restoring the original ad layout, surface reflections, and background continuity\"\n  },\n  \"insert\": {\n    \"target\": \"the main planter product\",\n    \"target_area\": \"inside the open top of the white inner reservoir, anchored within the product itself\",\n    \"content\": \"a realistic arrangement of healthy succulent plants planted inside the pot, sized naturally to fit the inner reservoir and visually consistent with a premium home-decor product photo\",\n    \"integration\": \"match the existing camera angle, soft studio lighting, depth of field, shadows, scale, and reflections; keep the succulents seated inside the planter rather than floating, beside the product, or extending unnaturally outside the rim\"\n  },\n  \"repair\": {\n    \"target\": \"the planter opening, body area, and lower foreground regions affected by annotation removal and plant insertion\",\n    \"content\": \"restore clean product edges, transparent ribbed plastic details, inner reservoir contours, reflections, and surrounding mist/background transitions so the result looks like an original unannotated product advertisement\",\n    \"integration\": \"preserve photorealism and maintain seamless continuity with the existing surface, blur, and lighting\"\n  },\n  \"preserve\": [\n    \"the overall product identity and shape of the transparent ribbed outer pot and white inner reservoir\",\n    \"the product material appearance, transparency, ribbed texture, and white color of the reservoir\",\n    \"the existing headline text, subtitle text, feature icons, and their positions\",\n    \"the current background plants, tabletop, lighting, perspective, shadows, reflections, and atmospheric mist\",\n    \"all non-target areas outside the planter interior\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color, material, rim shape, or structural proportions\",\n    \"do not place the succulents outside the planter or loosely in the scene\",\n    \"do not change any visible marketing text or iconography\",\n    \"do not leave any annotation marks in the final image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible annotation elements on Image A, including the red rectangle and the red Chinese overlay text across the lower product area\",\n    \"integration\": \"remove the annotation graphics cleanly without leaving traces, while restoring the original ad layout, surface reflections, and background continuity\"\n  },\n  \"insert\": {\n    \"target\": \"the main planter product\",\n    \"target_area\": \"inside the open top of the white inner reservoir, anchored within the product itself\",\n    \"content\": \"a realistic arrangement of healthy succulent plants planted inside the pot, sized naturally to fit the inner reservoir and visually consistent with a premium home-decor product photo\",\n    \"integration\": \"match the existing camera angle, soft studio lighting, depth of field, shadows, scale, and reflections; keep the succulents seated inside the planter rather than floating, beside the product, or extending unnaturally outside the rim\"\n  },\n  \"repair\": {\n    \"target\": \"the planter opening, body area, and lower foreground regions affected by annotation removal and plant insertion\",\n    \"content\": \"restore clean product edges, transparent ribbed plastic details, inner reservoir contours, reflections, and surrounding mist/background transitions so the result looks like an original unannotated product advertisement\",\n    \"integration\": \"preserve photorealism and maintain seamless continuity with the existing surface, blur, and lighting\"\n  },\n  \"preserve\": [\n    \"the overall product identity and shape of the transparent ribbed outer pot and white inner reservoir\",\n    \"the product material appearance, transparency, ribbed texture, and white color of the reservoir\",\n    \"the existing headline text, subtitle text, feature icons, and their positions\",\n    \"the current background plants, tabletop, lighting, perspective, shadows, reflections, and atmospheric mist\",\n    \"all non-target areas outside the planter interior\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color, material, rim shape, or ..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-021-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-021-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-021-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-021-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-021-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:51:57.046Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-022",
+      "title": "8508705",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8508705",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-022-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1253323
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-022-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1344478
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8508705",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on Image A, including the red Chinese instruction text, the rectangular box around the product, and the large curved circle mark on the lower right\",\n    \"target_area\": \"entire image wherever annotation marks appear\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene content underneath\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main yellow-orange pet water bowl product in the center of the image\",\n    \"target_area\": \"the product itself inside the red rectangular annotation area\",\n    \"content\": \"adjust the product to a more appropriate display size within the scene while keeping the same product identity, round structure, orange rim, pale yellow body, inner fold details, and overall perspective\",\n    \"integration\": \"the resized product must remain naturally placed on the mat with consistent perspective, contact shadows, lighting direction, reflections, and material realism\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/opening of the main product\",\n    \"target_area\": \"inside the bowl opening of the product\",\n    \"content\": \"fill the product with clean drinking water, with a realistic visible water surface inside the bowl\",\n    \"integration\": \"match the scene lighting and reflections so the water looks naturally contained inside the product, without changing the product design\"\n  },\n  \"insert\": {\n    \"target_area\": \"the lower right area indicated by the large red curved annotation, positioned on or just beside the mat near the product\",\n    \"content\": \"add one ragdoll cat in a natural scale relative to the product and scene\",\n    \"integration\": \"the cat should be realistically integrated with correct lighting, soft shadows, perspective, and grounding on the surface, and should not block the product as the main subject\"\n  },\n  \"repair\": {\n    \"target\": \"all regions previously covered by annotation marks and any edges affected by resizing or object insertion\",\n    \"content\": \"restore the background, mat, tabletop, and scene transitions so the final image looks clean and coherent\",\n    \"integration\": \"blend repaired areas seamlessly with the existing blur, lighting, shadows, and surface textures\"\n  },\n  \"preserve\": [\n    \"the product's original structure, material, orange and pale yellow color scheme, and visible design details except for the requested size adjustment\",\n    \"the existing scene composition, tabletop, mat, background blur, lighting direction, and shadows except where directly affected by the requested edits\",\n    \"the top English headline text 'NO-SPILL HYDRATION'\"\n  ],\n  \"do_not_change\": [\n    \"do not change the product into a different model or redesign its functional shape\",\n    \"do not place the added cat loosely in the far background; keep it anchored in the marked lower right scene area\",\n    \"do not alter non-target areas beyond what is necessary for annotation removal, product resizing, water insertion, and cat insertion\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on Image A, including the red Chinese instruction text, the rectangular box around the product, and the large curved circle mark on the lower right\",\n    \"target_area\": \"entire image wherever annotation marks appear\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene content underneath\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main yellow-orange pet water bowl product in the center of the image\",\n    \"target_area\": \"the product itself inside the red rectangular annotation area\",\n    \"content\": \"adjust the product to a more appropriate display size within the scene while keeping the same product identity, round structure, orange rim, pale yellow body, inner fold details, and overall perspective\",\n    \"integration\": \"the resized product must remain naturally placed on the mat with consistent perspective, contact shadows, lighting direction, reflections, and material realism\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/opening of the main product\",\n    \"target_area\": \"inside the bowl opening of the product\",\n    \"content\": \"fill the product with clean drinking water, with a realistic visible water surface inside the bowl\",\n    \"integration\": \"match the scene lighting and reflections so the water looks naturally contained inside the product, without changing the product design\"\n  },\n  \"insert\": {\n    \"target_area\": \"the lower right area indicated by the large red curved annotation, positioned on or just beside the mat near the product\",\n    \"content\": \"add one ragdoll cat in a natural scale relative to the product and scene\",\n    \"integration\": \"the cat should be realistically integrated with correct lighting, soft shadows, perspective, and grounding on the surface, and should not block the product as the main subject\"\n  },\n  \"repair\": {\n    \"target\": \"all regions previously covered by annotation marks and any edges affected by resizing or object insertion\",\n    \"content\": \"restore the background, mat, tabletop, and scene transitions so the final image looks clean and coherent\",\n    \"integration\": \"blend repaired areas seamlessly with the existing blur, lighting, shadows, and surface textures\"\n  },\n  \"preserve\": [\n    \"the product's original structure, material, orange and pale yellow color scheme, and visible design details except for the requested size adjustment\",\n    \"the existing scene composition, tabletop, mat, background blur, lighting direction, and shadows except where directly affected by the requested edits\",\n    \"the top English headline text 'NO-SPILL HYDRATION'\"\n  ],\n  \"do_not_change\": [\n    \"do not change the product into a different model or redesign its functional shape\",\n    \"do not place the added cat loosely in the far background; keep it anchored in the marked lower right scene area\",\n    \"do not alter non-target areas beyond what is necessary for annotation removal, product resizing, water insertion, and cat insertion\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on Image A, including the red Chinese instruction text, the rectangular box around the product, and the large curved circle mark on the lower right\",\n    \"target_area\": \"entire image wherever annotation marks appear\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene content underneath\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main yellow-orange pet water bowl product in the center of the image\",\n    \"target_area\": \"the product itself inside the red rectangular annotation area\",\n    \"content\": \"adjust the product to a more appropriate display size within the scene while keeping the same product identity, round structure, orange rim, pale yellow body, inner fold details, and overall perspective\",\n    \"integration\": \"the resized product must remain naturally placed on the mat with consistent perspective, contact shadows, lighting direction, reflections, and material realism\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/opening of the main product\",\n    \"target_area\": \"inside the bowl opening of the product\",\n    \"content\": \"fill the product with clean drinking water, with a realistic visible water surface inside the bowl\",\n    \"integration\": \"match the scene lighting and reflections so the water looks naturally contained inside the product, without changing the product design\"\n  },\n  \"insert\": {\n    \"target_area\": \"the lower right area indicated by the large red curved annotation, positioned on or just beside the mat near the product\",\n    \"content\": \"add one ragdoll cat in a natural scale relative to the product and scene\",\n    \"integration\": \"the cat should be realistically integrated with correct lighting, soft shadows, perspective, and grounding on the surface, and should not block the product as the main subject\"\n  },\n  \"repair\": {\n    \"target\": \"all regions previously covered by annotation marks and any edges affected by resizing or object insertion\",\n    \"content\": \"restore the background, mat, tabletop, a...",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on Image A, including the red Chinese instruction text, the rectangular box around the product, and the large curved circle mark on the lower right\",\n    \"target_area\": \"entire image wherever annotation marks appear\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene content underneath\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main yellow-orange pet water bowl product in the center of the image\",\n    \"target_area\": \"the product itself inside the red rectangular annotation area\",\n    \"content\": \"adjust the product to a more appropriate display size within the scene while keeping the same product identity, round structure, orange rim, pale yellow body, inner fold details, and overall perspective\",\n    \"integration\": \"the resized product must remain naturally placed on the mat with consistent perspective, contact shadows, lighting direction, reflections, and material realism\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/opening of the main product\",\n    \"target_area\": \"inside the bowl opening of the product\",\n    \"content\": \"fill the product with clean drinking water, with a realistic visible water surface inside the bowl\",\n    \"integration\": \"match the scene lighting and reflections so the water looks naturally contained inside the product, without changing the product design\"\n  },\n  \"insert\": {\n    \"target_area\": \"the lower right area indicated by the large red curved annotation, positioned on or just beside the mat near the product\",\n    \"content\": \"add one ragdoll cat in a natural scale relative to the product and scene\",\n    \"integration\": \"the cat should be realistically integrated with correct lighting, soft shadows, perspective, and grounding on the surface, and should not block the product as the main subject\"\n  },\n  \"repair\": {\n    \"target\": \"all regions previously covered by annotation marks and any edges affected by resizing or object insertion\",\n    \"content\": \"restore the background, mat, tabletop, a..."
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-022/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-022/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on Image A, including the red Chinese instruction text, the rectangular box around the product, and the large curved circle mark on the lower right\",\n    \"target_area\": \"entire image wherever annotation marks appear\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene content underneath\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main yellow-orange pet water bowl product in the center of the image\",\n    \"target_area\": \"the product itself inside the red rectangular annotation area\",\n    \"content\": \"adjust the product to a more appropriate display size within the scene while keeping the same product identity, round structure, orange rim, pale yellow body, inner fold details, and overall perspective\",\n    \"integration\": \"the resized product must remain naturally placed on the mat with consistent perspective, contact shadows, lighting direction, reflections, and material realism\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/opening of the main product\",\n    \"target_area\": \"inside the bowl opening of the product\",\n    \"content\": \"fill the product with clean drinking water, with a realistic visible water surface inside the bowl\",\n    \"integration\": \"match the scene lighting and reflections so the water looks naturally contained inside the product, without changing the product design\"\n  },\n  \"insert\": {\n    \"target_area\": \"the lower right area indicated by the large red curved annotation, positioned on or just beside the mat near the product\",\n    \"content\": \"add one ragdoll cat in a natural scale relative to the product and scene\",\n    \"integration\": \"the cat should be realistically integrated with correct lighting, soft shadows, perspective, and grounding on the surface, and should not block the product as the main subject\"\n  },\n  \"repair\": {\n    \"target\": \"all regions previously covered by annotation marks and any edges affected by resizing or object insertion\",\n    \"content\": \"restore the background, mat, tabletop, and scene transitions so the final image looks clean and coherent\",\n    \"integration\": \"blend repaired areas seamlessly with the existing blur, lighting, shadows, and surface textures\"\n  },\n  \"preserve\": [\n    \"the product's original structure, material, orange and pale yellow color scheme, and visible design details except for the requested size adjustment\",\n    \"the existing scene composition, tabletop, mat, background blur, lighting direction, and shadows except where directly affected by the requested edits\",\n    \"the top English headline text 'NO-SPILL HYDRATION'\"\n  ],\n  \"do_not_change\": [\n    \"do not change the product into a different model or redesign its functional shape\",\n    \"do not place the added cat loosely in the far background; keep it anchored in the marked lower right scene area\",\n    \"do not alter non-target areas beyond what is necessary for annotation removal, product resizing, water insertion, and cat insertion\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all red annotation elements overlaid on Image A, including the red Chinese instruction text, the rectangular box around the product, and the large curved circle mark on the lower right\",\n    \"target_area\": \"entire image wherever annotation marks appear\",\n    \"integration\": \"remove the annotation overlays cleanly without leaving traces, while preserving the original scene content underneath\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main yellow-orange pet water bowl product in the center of the image\",\n    \"target_area\": \"the product itself inside the red rectangular annotation area\",\n    \"content\": \"adjust the product to a more appropriate display size within the scene while keeping the same product identity, round structure, orange rim, pale yellow body, inner fold details, and overall perspective\",\n    \"integration\": \"the resized product must remain naturally placed on the mat with consistent perspective, contact shadows, lighting direction, reflections, and material realism\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/opening of the main product\",\n    \"target_area\": \"inside the bowl opening of the product\",\n    \"content\": \"fill the product with clean drinking water, with a realistic visible water surface inside the bowl\",\n    \"integration\": \"match the scene lighting and reflections so the water looks naturally contained inside the product, without changing the product design\"\n  },\n  \"insert\": {\n    \"target_area\": \"the lower right area indicated by the large red curved annotation, positioned on or just beside the mat near the product\",\n    \"content\": \"add one ragdoll cat in a natural scale relative to the product and scene\",\n    \"integration\": \"the cat should be realistically integrated with correct lighting, soft shadows, perspective, and grounding on the surface, and should not block the product as the main subject\"\n  },\n  \"repair\": {\n    \"target\": \"all regions previously covered by annotation marks and any edges affected by resizing or object insertion\",\n    \"content\": \"restore the background, mat, tabletop, a..."
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-022-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-022-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-022-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-022-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-022-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:51:44.515Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-023",
+      "title": "8514754",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8514754",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-023-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1337926
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-023-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1356225
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8514754",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the salad spinner product, specifically the transparent outer bowl and inner basket area circled in red\",\n    \"target_area\": \"inside the main product only, below the lid and within the clear bowl boundary\",\n    \"content\": \"add fresh leafy vegetables inside the spinner, such as crisp green lettuce leaves, arranged naturally as if placed in the basket for washing or drying\",\n    \"integration\": \"keep the vegetables realistically contained inside the bowl and basket, matching the product's perspective, scale, lighting, shadows, transparency, and reflections so the product still looks like the same original item\"\n  },\n  \"cleanup\": {\n    \"target\": \"all red annotation marks and red Chinese annotation text over the product area\",\n    \"content\": \"remove the circle, underline, and annotation text completely from the final image\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by annotation marks and the edited bowl interior\",\n    \"content\": \"restore clean product edges, transparent bowl surfaces, and natural interior visibility after annotation removal and vegetable insertion\"\n  },\n  \"preserve\": [\n    \"the yellow lid, top knob, side button, inner basket structure, and transparent bowl material\",\n    \"the original product shape, color, perspective, lighting, highlights, and shadows\",\n    \"the kitchen background, countertop, scattered lettuce, berries, and surrounding scene styling\",\n    \"the visible headline, subtitle, bottom icons, and feature text layout\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product or loosely beside it\",\n    \"do not alter the product exterior design or make it look like a different model\",\n    \"do not change the existing marketing text, icons, or composition except for removing the annotation overlays\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the salad spinner product, specifically the transparent outer bowl and inner basket area circled in red\",\n    \"target_area\": \"inside the main product only, below the lid and within the clear bowl boundary\",\n    \"content\": \"add fresh leafy vegetables inside the spinner, such as crisp green lettuce leaves, arranged naturally as if placed in the basket for washing or drying\",\n    \"integration\": \"keep the vegetables realistically contained inside the bowl and basket, matching the product's perspective, scale, lighting, shadows, transparency, and reflections so the product still looks like the same original item\"\n  },\n  \"cleanup\": {\n    \"target\": \"all red annotation marks and red Chinese annotation text over the product area\",\n    \"content\": \"remove the circle, underline, and annotation text completely from the final image\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by annotation marks and the edited bowl interior\",\n    \"content\": \"restore clean product edges, transparent bowl surfaces, and natural interior visibility after annotation removal and vegetable insertion\"\n  },\n  \"preserve\": [\n    \"the yellow lid, top knob, side button, inner basket structure, and transparent bowl material\",\n    \"the original product shape, color, perspective, lighting, highlights, and shadows\",\n    \"the kitchen background, countertop, scattered lettuce, berries, and surrounding scene styling\",\n    \"the visible headline, subtitle, bottom icons, and feature text layout\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product or loosely beside it\",\n    \"do not alter the product exterior design or make it look like a different model\",\n    \"do not change the existing marketing text, icons, or composition except for removing the annotation overlays\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the salad spinner product, specifically the transparent outer bowl and inner basket area circled in red\",\n    \"target_area\": \"inside the main product only, below the lid and within the clear bowl boundary\",\n    \"content\": \"add fresh leafy vegetables inside the spinner, such as crisp green lettuce leaves, arranged naturally as if placed in the basket for washing or drying\",\n    \"integration\": \"keep the vegetables realistically contained inside the bowl and basket, matching the product's perspective, scale, lighting, shadows, transparency, and reflections so the product still looks like the same original item\"\n  },\n  \"cleanup\": {\n    \"target\": \"all red annotation marks and red Chinese annotation text over the product area\",\n    \"content\": \"remove the circle, underline, and annotation text completely from the final image\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by annotation marks and the edited bowl interior\",\n    \"content\": \"restore clean product edges, transparent bowl surfaces, and natural interior visibility after annotation removal and vegetable insertion\"\n  },\n  \"preserve\": [\n    \"the yellow lid, top knob, side button, inner basket structure, and transparent bowl material\",\n    \"the original product shape, color, perspective, lighting, highlights, and shadows\",\n    \"the kitchen background, countertop, scattered lettuce, berries, and surrounding scene styling\",\n    \"the visible headline, subtitle, bottom icons, and feature text layout\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product or loosely beside it\",\n    \"do not alter the product exterior design or make it look like a different model\",\n    \"do not change the existing marketing text, icons, or composition except for removing the annotation overlays\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the salad spinner product, specifically the transparent outer bowl and inner basket area circled in red\",\n    \"target_area\": \"inside the main product only, below the lid and within the clear bowl boundary\",\n    \"content\": \"add fresh leafy vegetables inside the spinner, such as crisp green lettuce leaves, arranged naturally as if placed in the basket for washing or drying\",\n    \"integration\": \"keep the vegetables realistically contained inside the bowl and basket, matching the product's perspective, scale, lighting, shadows, transparency, and reflections so the product still looks like the same original item\"\n  },\n  \"cleanup\": {\n    \"target\": \"all red annotation marks and red Chinese annotation text over the product area\",\n    \"content\": \"remove the circle, underline, and annotation text completely from the final image\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by annotation marks and the edited bowl interior\",\n    \"content\": \"restore clean product edges, transparent bowl surfaces, and natural interior visibility after annotation removal and vegetable insertion\"\n  },\n  \"preserve\": [\n    \"the yellow lid, top knob, side button, inner basket structure, and transparent bowl material\",\n    \"the original product shape, color, perspective, lighting, highlights, and shadows\",\n    \"the kitchen background, countertop, scattered lettuce, berries, and surrounding scene styling\",\n    \"the visible headline, subtitle, bottom icons, and feature text layout\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product or loosely beside it\",\n    \"do not alter the product exterior design or make it look like a different model\",\n    \"do not change the existing marketing text, icons, or composition except for removing the annotation overlays\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-023/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-023/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the salad spinner product, specifically the transparent outer bowl and inner basket area circled in red\",\n    \"target_area\": \"inside the main product only, below the lid and within the clear bowl boundary\",\n    \"content\": \"add fresh leafy vegetables inside the spinner, such as crisp green lettuce leaves, arranged naturally as if placed in the basket for washing or drying\",\n    \"integration\": \"keep the vegetables realistically contained inside the bowl and basket, matching the product's perspective, scale, lighting, shadows, transparency, and reflections so the product still looks like the same original item\"\n  },\n  \"cleanup\": {\n    \"target\": \"all red annotation marks and red Chinese annotation text over the product area\",\n    \"content\": \"remove the circle, underline, and annotation text completely from the final image\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by annotation marks and the edited bowl interior\",\n    \"content\": \"restore clean product edges, transparent bowl surfaces, and natural interior visibility after annotation removal and vegetable insertion\"\n  },\n  \"preserve\": [\n    \"the yellow lid, top knob, side button, inner basket structure, and transparent bowl material\",\n    \"the original product shape, color, perspective, lighting, highlights, and shadows\",\n    \"the kitchen background, countertop, scattered lettuce, berries, and surrounding scene styling\",\n    \"the visible headline, subtitle, bottom icons, and feature text layout\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product or loosely beside it\",\n    \"do not alter the product exterior design or make it look like a different model\",\n    \"do not change the existing marketing text, icons, or composition except for removing the annotation overlays\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the salad spinner product, specifically the transparent outer bowl and inner basket area circled in red\",\n    \"target_area\": \"inside the main product only, below the lid and within the clear bowl boundary\",\n    \"content\": \"add fresh leafy vegetables inside the spinner, such as crisp green lettuce leaves, arranged naturally as if placed in the basket for washing or drying\",\n    \"integration\": \"keep the vegetables realistically contained inside the bowl and basket, matching the product's perspective, scale, lighting, shadows, transparency, and reflections so the product still looks like the same original item\"\n  },\n  \"cleanup\": {\n    \"target\": \"all red annotation marks and red Chinese annotation text over the product area\",\n    \"content\": \"remove the circle, underline, and annotation text completely from the final image\"\n  },\n  \"repair\": {\n    \"target\": \"the areas previously covered by annotation marks and the edited bowl interior\",\n    \"content\": \"restore clean product edges, transparent bowl surfaces, and natural interior visibility after annotation removal and vegetable insertion\"\n  },\n  \"preserve\": [\n    \"the yellow lid, top knob, side button, inner basket structure, and transparent bowl material\",\n    \"the original product shape, color, perspective, lighting, highlights, and shadows\",\n    \"the kitchen background, countertop, scattered lettuce, berries, and surrounding scene styling\",\n    \"the visible headline, subtitle, bottom icons, and feature text layout\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product or loosely beside it\",\n    \"do not alter the product exterior design or make it look like a different model\",\n    \"do not change the existing marketing text, icons, or composition except for removing the annotation overlays\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-023-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-023-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-023-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-023-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-023-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:53:35.076Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "ANNO-024",
+      "title": "8205141",
+      "status": "succeeded",
+      "selected_generation_mode": "Annotation guided edit",
+      "selected_mode": "annotation_guided_edit",
+      "selected_mode_label": "Annotation guided edit",
+      "selected_mode_contract": "Left comparison uses the annotation / marked image. Generation receives one input only: Image A is the annotated edit target.",
+      "recomposition_requirement": "8205141",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Annotation / marked image",
+          "path": "assets/ANNO-024-annotation-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Marked",
+          "dimensions": {
+            "bytes": 1449735
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/ANNO-024-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1531258
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Annotation guided edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "One input only: Image A is the annotated / marked edit target. Annotation marks are edit instructions and must be removed in the final image.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "8205141",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the hand-drawn outline and the handwritten annotation text overlay\",\n    \"integration\": \"cleanly restore the underlying scene where the annotations cross the wall, rack, carpet, and background without leaving color residue, blur, or artifacts\"\n  },\n  \"insert\": {\n    \"target_area\": \"the annotated area centered on the wooden floor guitar rack, with the new object anchored inside the rack as a stored instrument rather than placed loosely beside it or in the background\",\n    \"content\": \"add one electroplated-color guitar with a reflective metallic finish, appearing as a real guitar resting naturally in one of the rack slots\",\n    \"integration\": \"match the existing indoor lighting, warm shadows, camera perspective, depth of field, and realistic scale; the guitar should interact naturally with the rack and carpet and look like part of the original product scene\"\n  },\n  \"preserve\": [\n    \"the wooden guitar rack structure, material, color, and proportions\",\n    \"the background acoustic guitar on the left\",\n    \"the records on the right\",\n    \"the wall, baseboard, carpet texture, and overall room setting\",\n    \"the visible marketing text at the bottom reading 'Organize Your Guitars. Beautifully.'\",\n    \"the original lighting mood, perspective, and non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the rack design or slot layout\",\n    \"do not move or remove existing background objects\",\n    \"do not change the visible bottom text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new guitar outside the rack or floating in the scene\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the hand-drawn outline and the handwritten annotation text overlay\",\n    \"integration\": \"cleanly restore the underlying scene where the annotations cross the wall, rack, carpet, and background without leaving color residue, blur, or artifacts\"\n  },\n  \"insert\": {\n    \"target_area\": \"the annotated area centered on the wooden floor guitar rack, with the new object anchored inside the rack as a stored instrument rather than placed loosely beside it or in the background\",\n    \"content\": \"add one electroplated-color guitar with a reflective metallic finish, appearing as a real guitar resting naturally in one of the rack slots\",\n    \"integration\": \"match the existing indoor lighting, warm shadows, camera perspective, depth of field, and realistic scale; the guitar should interact naturally with the rack and carpet and look like part of the original product scene\"\n  },\n  \"preserve\": [\n    \"the wooden guitar rack structure, material, color, and proportions\",\n    \"the background acoustic guitar on the left\",\n    \"the records on the right\",\n    \"the wall, baseboard, carpet texture, and overall room setting\",\n    \"the visible marketing text at the bottom reading 'Organize Your Guitars. Beautifully.'\",\n    \"the original lighting mood, perspective, and non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the rack design or slot layout\",\n    \"do not move or remove existing background objects\",\n    \"do not change the visible bottom text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new guitar outside the rack or floating in the scene\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the hand-drawn outline and the handwritten annotation text overlay\",\n    \"integration\": \"cleanly restore the underlying scene where the annotations cross the wall, rack, carpet, and background without leaving color residue, blur, or artifacts\"\n  },\n  \"insert\": {\n    \"target_area\": \"the annotated area centered on the wooden floor guitar rack, with the new object anchored inside the rack as a stored instrument rather than placed loosely beside it or in the background\",\n    \"content\": \"add one electroplated-color guitar with a reflective metallic finish, appearing as a real guitar resting naturally in one of the rack slots\",\n    \"integration\": \"match the existing indoor lighting, warm shadows, camera perspective, depth of field, and realistic scale; the guitar should interact naturally with the rack and carpet and look like part of the original product scene\"\n  },\n  \"preserve\": [\n    \"the wooden guitar rack structure, material, color, and proportions\",\n    \"the background acoustic guitar on the left\",\n    \"the records on the right\",\n    \"the wall, baseboard, carpet texture, and overall room setting\",\n    \"the visible marketing text at the bottom reading 'Organize Your Guitars. Beautifully.'\",\n    \"the original lighting mood, perspective, and non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the rack design or slot layout\",\n    \"do not move or remove existing background objects\",\n    \"do not change the visible bottom text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new guitar outside the rack or floating in the scene\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the hand-drawn outline and the handwritten annotation text overlay\",\n    \"integration\": \"cleanly restore the underlying scene where the annotations cross the wall, rack, carpet, and background without leaving color residue, blur, or artifacts\"\n  },\n  \"insert\": {\n    \"target_area\": \"the annotated area centered on the wooden floor guitar rack, with the new object anchored inside the rack as a stored instrument rather than placed loosely beside it or in the background\",\n    \"content\": \"add one electroplated-color guitar with a reflective metallic finish, appearing as a real guitar resting naturally in one of the rack slots\",\n    \"integration\": \"match the existing indoor lighting, warm shadows, camera perspective, depth of field, and realistic scale; the guitar should interact naturally with the rack and carpet and look like part of the original product scene\"\n  },\n  \"preserve\": [\n    \"the wooden guitar rack structure, material, color, and proportions\",\n    \"the background acoustic guitar on the left\",\n    \"the records on the right\",\n    \"the wall, baseboard, carpet texture, and overall room setting\",\n    \"the visible marketing text at the bottom reading 'Organize Your Guitars. Beautifully.'\",\n    \"the original lighting mood, perspective, and non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the rack design or slot layout\",\n    \"do not move or remove existing background objects\",\n    \"do not change the visible bottom text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new guitar outside the rack or floating in the scene\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun/cases/ANNO-024/prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/ANNO-024/prompt_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 8
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the hand-drawn outline and the handwritten annotation text overlay\",\n    \"integration\": \"cleanly restore the underlying scene where the annotations cross the wall, rack, carpet, and background without leaving color residue, blur, or artifacts\"\n  },\n  \"insert\": {\n    \"target_area\": \"the annotated area centered on the wooden floor guitar rack, with the new object anchored inside the rack as a stored instrument rather than placed loosely beside it or in the background\",\n    \"content\": \"add one electroplated-color guitar with a reflective metallic finish, appearing as a real guitar resting naturally in one of the rack slots\",\n    \"integration\": \"match the existing indoor lighting, warm shadows, camera perspective, depth of field, and realistic scale; the guitar should interact naturally with the rack and carpet and look like part of the original product scene\"\n  },\n  \"preserve\": [\n    \"the wooden guitar rack structure, material, color, and proportions\",\n    \"the background acoustic guitar on the left\",\n    \"the records on the right\",\n    \"the wall, baseboard, carpet texture, and overall room setting\",\n    \"the visible marketing text at the bottom reading 'Organize Your Guitars. Beautifully.'\",\n    \"the original lighting mood, perspective, and non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the rack design or slot layout\",\n    \"do not move or remove existing background objects\",\n    \"do not change the visible bottom text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new guitar outside the rack or floating in the scene\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"annotated_edit_target\"\n  },\n  \"remove\": {\n    \"target\": \"all visible red annotation marks, including the hand-drawn outline and the handwritten annotation text overlay\",\n    \"integration\": \"cleanly restore the underlying scene where the annotations cross the wall, rack, carpet, and background without leaving color residue, blur, or artifacts\"\n  },\n  \"insert\": {\n    \"target_area\": \"the annotated area centered on the wooden floor guitar rack, with the new object anchored inside the rack as a stored instrument rather than placed loosely beside it or in the background\",\n    \"content\": \"add one electroplated-color guitar with a reflective metallic finish, appearing as a real guitar resting naturally in one of the rack slots\",\n    \"integration\": \"match the existing indoor lighting, warm shadows, camera perspective, depth of field, and realistic scale; the guitar should interact naturally with the rack and carpet and look like part of the original product scene\"\n  },\n  \"preserve\": [\n    \"the wooden guitar rack structure, material, color, and proportions\",\n    \"the background acoustic guitar on the left\",\n    \"the records on the right\",\n    \"the wall, baseboard, carpet texture, and overall room setting\",\n    \"the visible marketing text at the bottom reading 'Organize Your Guitars. Beautifully.'\",\n    \"the original lighting mood, perspective, and non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the rack design or slot layout\",\n    \"do not move or remove existing background objects\",\n    \"do not change the visible bottom text\",\n    \"do not leave any annotation marks in the final image\",\n    \"do not place the new guitar outside the rack or floating in the scene\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "annotation",
+                "label": "Annotation / marked image",
+                "assetPath": "assets/ANNO-024-annotation-1.png"
+              }
+            ],
+            "compare_source": "assets/ANNO-024-annotation-1.png",
+            "input_rule": "single annotated image only"
+          },
+          "output_refs": {
+            "generated": "generated/ANNO-024-generated.png"
+          },
+          "official_image_ref": "generated/ANNO-024-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/ANNO-024-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:53:53.716Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "source_prompt_report": "D:/Documents/BeePOP_slot/reports/local-edit-prompts-codex-native-20260624-annotation-single-image-rerun",
+        "source_image_report": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-annotation-single-image-rerun",
+        "reason": "annotation guided edits corrected to single annotated-image input"
+      }
+    },
+    {
+      "case_id": "SINGLE-001",
+      "title": "在主体产品中添加冰镇柠檬水",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品中添加冰镇柠檬水",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-001-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 546595
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-001-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1389792
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品中添加冰镇柠檬水",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main glass pitcher product in Image A\",\n    \"target_area\": \"inside the transparent pitcher body, below the lid and contained fully within the glass walls\",\n    \"content\": \"iced lemonade inside the pitcher, with clear pale yellow lemon water, several realistic ice cubes, and a few natural lemon slices visible through the glass\",\n    \"integration\": \"keep the lemonade physically contained inside the pitcher, match the existing lighting, reflections, transparency, refraction, perspective, and shadows of the glass product, and make the drink look naturally chilled and premium without spilling outside the container\",\n    \"preserve_conditions\": \"retain the pitcher's original shape, rim, spout, handle, base, glass clarity, and wood lid while only changing the empty interior to a filled iced lemonade presentation\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added lemonade inside the pitcher\",\n    \"content\": \"subtle cold and refreshing beverage realism, including crisp ice transparency, natural lemon slice detail, and a clean chilled appearance suitable for a product advertisement\",\n    \"integration\": \"ensure the beverage remains elegant, believable, and visually consistent with the bright lifestyle product scene\"\n  },\n  \"preserve\": [\n    \"the overall product structure and proportions of the glass pitcher\",\n    \"the transparent glass material and natural reflections of the pitcher\",\n    \"the wood lid, handle, spout, and base shape\",\n    \"all visible marketing text and feature icons on the image\",\n    \"the tabletop, leaf, ice cubes outside the pitcher, background bokeh, lighting, perspective, and shadows\",\n    \"the clean premium product-ad layout and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not place the lemonade beside the product or in the background\",\n    \"do not alter the product's exterior color, material, or geometry\",\n    \"do not modify or remove the visible text, icons, or layout elements\",\n    \"do not change non-target objects or the surrounding scene\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main glass pitcher product in Image A\",\n    \"target_area\": \"inside the transparent pitcher body, below the lid and contained fully within the glass walls\",\n    \"content\": \"iced lemonade inside the pitcher, with clear pale yellow lemon water, several realistic ice cubes, and a few natural lemon slices visible through the glass\",\n    \"integration\": \"keep the lemonade physically contained inside the pitcher, match the existing lighting, reflections, transparency, refraction, perspective, and shadows of the glass product, and make the drink look naturally chilled and premium without spilling outside the container\",\n    \"preserve_conditions\": \"retain the pitcher's original shape, rim, spout, handle, base, glass clarity, and wood lid while only changing the empty interior to a filled iced lemonade presentation\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added lemonade inside the pitcher\",\n    \"content\": \"subtle cold and refreshing beverage realism, including crisp ice transparency, natural lemon slice detail, and a clean chilled appearance suitable for a product advertisement\",\n    \"integration\": \"ensure the beverage remains elegant, believable, and visually consistent with the bright lifestyle product scene\"\n  },\n  \"preserve\": [\n    \"the overall product structure and proportions of the glass pitcher\",\n    \"the transparent glass material and natural reflections of the pitcher\",\n    \"the wood lid, handle, spout, and base shape\",\n    \"all visible marketing text and feature icons on the image\",\n    \"the tabletop, leaf, ice cubes outside the pitcher, background bokeh, lighting, perspective, and shadows\",\n    \"the clean premium product-ad layout and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not place the lemonade beside the product or in the background\",\n    \"do not alter the product's exterior color, material, or geometry\",\n    \"do not modify or remove the visible text, icons, or layout elements\",\n    \"do not change non-target objects or the surrounding scene\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main glass pitcher product in Image A\",\n    \"target_area\": \"inside the transparent pitcher body, below the lid and contained fully within the glass walls\",\n    \"content\": \"iced lemonade inside the pitcher, with clear pale yellow lemon water, several realistic ice cubes, and a few natural lemon slices visible through the glass\",\n    \"integration\": \"keep the lemonade physically contained inside the pitcher, match the existing lighting, reflections, transparency, refraction, perspective, and shadows of the glass product, and make the drink look naturally chilled and premium without spilling outside the container\",\n    \"preserve_conditions\": \"retain the pitcher's original shape, rim, spout, handle, base, glass clarity, and wood lid while only changing the empty interior to a filled iced lemonade presentation\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added lemonade inside the pitcher\",\n    \"content\": \"subtle cold and refreshing beverage realism, including crisp ice transparency, natural lemon slice detail, and a clean chilled appearance suitable for a product advertisement\",\n    \"integration\": \"ensure the beverage remains elegant, believable, and visually consistent with the bright lifestyle product scene\"\n  },\n  \"preserve\": [\n    \"the overall product structure and proportions of the glass pitcher\",\n    \"the transparent glass material and natural reflections of the pitcher\",\n    \"the wood lid, handle, spout, and base shape\",\n    \"all visible marketing text and feature icons on the image\",\n    \"the tabletop, leaf, ice cubes outside the pitcher, background bokeh, lighting, perspective, and shadows\",\n    \"the clean premium product-ad layout and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not place the lemonade beside the product or in the background\",\n    \"do not alter the product's exterior color, material, or geometry\",\n    \"do not modify or remove the visible text, icons, or layout elements\",\n    \"do not change non-target objects or the surrounding scene\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main glass pitcher product in Image A\",\n    \"target_area\": \"inside the transparent pitcher body, below the lid and contained fully within the glass walls\",\n    \"content\": \"iced lemonade inside the pitcher, with clear pale yellow lemon water, several realistic ice cubes, and a few natural lemon slices visible through the glass\",\n    \"integration\": \"keep the lemonade physically contained inside the pitcher, match the existing lighting, reflections, transparency, refraction, perspective, and shadows of the glass product, and make the drink look naturally chilled and premium without spilling outside the container\",\n    \"preserve_conditions\": \"retain the pitcher's original shape, rim, spout, handle, base, glass clarity, and wood lid while only changing the empty interior to a filled iced lemonade presentation\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added lemonade inside the pitcher\",\n    \"content\": \"subtle cold and refreshing beverage realism, including crisp ice transparency, natural lemon slice detail, and a clean chilled appearance suitable for a product advertisement\",\n    \"integration\": \"ensure the beverage remains elegant, believable, and visually consistent with the bright lifestyle product scene\"\n  },\n  \"preserve\": [\n    \"the overall product structure and proportions of the glass pitcher\",\n    \"the transparent glass material and natural reflections of the pitcher\",\n    \"the wood lid, handle, spout, and base shape\",\n    \"all visible marketing text and feature icons on the image\",\n    \"the tabletop, leaf, ice cubes outside the pitcher, background bokeh, lighting, perspective, and shadows\",\n    \"the clean premium product-ad layout and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not place the lemonade beside the product or in the background\",\n    \"do not alter the product's exterior color, material, or geometry\",\n    \"do not modify or remove the visible text, icons, or layout elements\",\n    \"do not change non-target objects or the surrounding scene\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-001\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-001/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main glass pitcher product in Image A\",\n    \"target_area\": \"inside the transparent pitcher body, below the lid and contained fully within the glass walls\",\n    \"content\": \"iced lemonade inside the pitcher, with clear pale yellow lemon water, several realistic ice cubes, and a few natural lemon slices visible through the glass\",\n    \"integration\": \"keep the lemonade physically contained inside the pitcher, match the existing lighting, reflections, transparency, refraction, perspective, and shadows of the glass product, and make the drink look naturally chilled and premium without spilling outside the container\",\n    \"preserve_conditions\": \"retain the pitcher's original shape, rim, spout, handle, base, glass clarity, and wood lid while only changing the empty interior to a filled iced lemonade presentation\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added lemonade inside the pitcher\",\n    \"content\": \"subtle cold and refreshing beverage realism, including crisp ice transparency, natural lemon slice detail, and a clean chilled appearance suitable for a product advertisement\",\n    \"integration\": \"ensure the beverage remains elegant, believable, and visually consistent with the bright lifestyle product scene\"\n  },\n  \"preserve\": [\n    \"the overall product structure and proportions of the glass pitcher\",\n    \"the transparent glass material and natural reflections of the pitcher\",\n    \"the wood lid, handle, spout, and base shape\",\n    \"all visible marketing text and feature icons on the image\",\n    \"the tabletop, leaf, ice cubes outside the pitcher, background bokeh, lighting, perspective, and shadows\",\n    \"the clean premium product-ad layout and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not place the lemonade beside the product or in the background\",\n    \"do not alter the product's exterior color, material, or geometry\",\n    \"do not modify or remove the visible text, icons, or layout elements\",\n    \"do not change non-target objects or the surrounding scene\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main glass pitcher product in Image A\",\n    \"target_area\": \"inside the transparent pitcher body, below the lid and contained fully within the glass walls\",\n    \"content\": \"iced lemonade inside the pitcher, with clear pale yellow lemon water, several realistic ice cubes, and a few natural lemon slices visible through the glass\",\n    \"integration\": \"keep the lemonade physically contained inside the pitcher, match the existing lighting, reflections, transparency, refraction, perspective, and shadows of the glass product, and make the drink look naturally chilled and premium without spilling outside the container\",\n    \"preserve_conditions\": \"retain the pitcher's original shape, rim, spout, handle, base, glass clarity, and wood lid while only changing the empty interior to a filled iced lemonade presentation\"\n  },\n  \"enhance\": {\n    \"target\": \"the newly added lemonade inside the pitcher\",\n    \"content\": \"subtle cold and refreshing beverage realism, including crisp ice transparency, natural lemon slice detail, and a clean chilled appearance suitable for a product advertisement\",\n    \"integration\": \"ensure the beverage remains elegant, believable, and visually consistent with the bright lifestyle product scene\"\n  },\n  \"preserve\": [\n    \"the overall product structure and proportions of the glass pitcher\",\n    \"the transparent glass material and natural reflections of the pitcher\",\n    \"the wood lid, handle, spout, and base shape\",\n    \"all visible marketing text and feature icons on the image\",\n    \"the tabletop, leaf, ice cubes outside the pitcher, background bokeh, lighting, perspective, and shadows\",\n    \"the clean premium product-ad layout and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not place the lemonade beside the product or in the background\",\n    \"do not alter the product's exterior color, material, or geometry\",\n    \"do not modify or remove the visible text, icons, or layout elements\",\n    \"do not change non-target objects or the surrounding scene\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-001-original-1.png",
+                "assetPath": "assets/SINGLE-001-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-001-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-001-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-001-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-001-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:06:28.940Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-002",
+      "title": "在右上角的主体产品中添加冰镇柠檬水",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在右上角的主体产品中添加冰镇柠檬水",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-002-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 691988
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-002-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 872051
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在右上角的主体产品中添加冰镇柠檬水",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the small main product positioned in the upper-right area of Image A\",\n    \"target_area\": \"inside the transparent glass pitcher only, bounded by the existing glass walls, below the wooden lid\",\n    \"content\": \"add iced lemonade inside the pitcher, with pale fresh lemon-yellow liquid, visible ice cubes, and a few natural lemon slices suspended in the drink\",\n    \"integration\": \"keep the lemonade realistically contained within the glass vessel, matching the existing studio lighting, transparency, reflections, refraction, scale, perspective, and subtle shadows of the product photo; make the drink look chilled and refreshing without changing the pitcher shape or the white background\",\n    \"preserve_conditions\": \"the added drink must appear as if photographed inside the original upper-right pitcher, not placed beside it or outside the product\"\n  },\n  \"enhance\": {\n    \"target\": \"the added lemonade inside the upper-right pitcher\",\n    \"content\": \"subtle cold beverage realism, including crisp ice clarity, natural liquid translucency, and a lightly chilled appearance\",\n    \"integration\": \"maintain clean commercial product-photo quality and avoid exaggerated condensation or splashing\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, proportions, handle, spout, wooden lid, and transparent material of all visible products\",\n    \"the overall white background, studio lighting, perspective, reflections, and shadows\",\n    \"the large left product and the lower-right product unchanged\",\n    \"all non-target areas and the original product arrangement\"\n  ],\n  \"do_not_change\": [\n    \"do not add the lemonade outside the upper-right pitcher\",\n    \"do not alter the shape, color, material, or position of the pitchers\",\n    \"do not modify the background or introduce extra props, text, or decorations\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the small main product positioned in the upper-right area of Image A\",\n    \"target_area\": \"inside the transparent glass pitcher only, bounded by the existing glass walls, below the wooden lid\",\n    \"content\": \"add iced lemonade inside the pitcher, with pale fresh lemon-yellow liquid, visible ice cubes, and a few natural lemon slices suspended in the drink\",\n    \"integration\": \"keep the lemonade realistically contained within the glass vessel, matching the existing studio lighting, transparency, reflections, refraction, scale, perspective, and subtle shadows of the product photo; make the drink look chilled and refreshing without changing the pitcher shape or the white background\",\n    \"preserve_conditions\": \"the added drink must appear as if photographed inside the original upper-right pitcher, not placed beside it or outside the product\"\n  },\n  \"enhance\": {\n    \"target\": \"the added lemonade inside the upper-right pitcher\",\n    \"content\": \"subtle cold beverage realism, including crisp ice clarity, natural liquid translucency, and a lightly chilled appearance\",\n    \"integration\": \"maintain clean commercial product-photo quality and avoid exaggerated condensation or splashing\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, proportions, handle, spout, wooden lid, and transparent material of all visible products\",\n    \"the overall white background, studio lighting, perspective, reflections, and shadows\",\n    \"the large left product and the lower-right product unchanged\",\n    \"all non-target areas and the original product arrangement\"\n  ],\n  \"do_not_change\": [\n    \"do not add the lemonade outside the upper-right pitcher\",\n    \"do not alter the shape, color, material, or position of the pitchers\",\n    \"do not modify the background or introduce extra props, text, or decorations\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the small main product positioned in the upper-right area of Image A\",\n    \"target_area\": \"inside the transparent glass pitcher only, bounded by the existing glass walls, below the wooden lid\",\n    \"content\": \"add iced lemonade inside the pitcher, with pale fresh lemon-yellow liquid, visible ice cubes, and a few natural lemon slices suspended in the drink\",\n    \"integration\": \"keep the lemonade realistically contained within the glass vessel, matching the existing studio lighting, transparency, reflections, refraction, scale, perspective, and subtle shadows of the product photo; make the drink look chilled and refreshing without changing the pitcher shape or the white background\",\n    \"preserve_conditions\": \"the added drink must appear as if photographed inside the original upper-right pitcher, not placed beside it or outside the product\"\n  },\n  \"enhance\": {\n    \"target\": \"the added lemonade inside the upper-right pitcher\",\n    \"content\": \"subtle cold beverage realism, including crisp ice clarity, natural liquid translucency, and a lightly chilled appearance\",\n    \"integration\": \"maintain clean commercial product-photo quality and avoid exaggerated condensation or splashing\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, proportions, handle, spout, wooden lid, and transparent material of all visible products\",\n    \"the overall white background, studio lighting, perspective, reflections, and shadows\",\n    \"the large left product and the lower-right product unchanged\",\n    \"all non-target areas and the original product arrangement\"\n  ],\n  \"do_not_change\": [\n    \"do not add the lemonade outside the upper-right pitcher\",\n    \"do not alter the shape, color, material, or position of the pitchers\",\n    \"do not modify the background or introduce extra props, text, or decorations\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the small main product positioned in the upper-right area of Image A\",\n    \"target_area\": \"inside the transparent glass pitcher only, bounded by the existing glass walls, below the wooden lid\",\n    \"content\": \"add iced lemonade inside the pitcher, with pale fresh lemon-yellow liquid, visible ice cubes, and a few natural lemon slices suspended in the drink\",\n    \"integration\": \"keep the lemonade realistically contained within the glass vessel, matching the existing studio lighting, transparency, reflections, refraction, scale, perspective, and subtle shadows of the product photo; make the drink look chilled and refreshing without changing the pitcher shape or the white background\",\n    \"preserve_conditions\": \"the added drink must appear as if photographed inside the original upper-right pitcher, not placed beside it or outside the product\"\n  },\n  \"enhance\": {\n    \"target\": \"the added lemonade inside the upper-right pitcher\",\n    \"content\": \"subtle cold beverage realism, including crisp ice clarity, natural liquid translucency, and a lightly chilled appearance\",\n    \"integration\": \"maintain clean commercial product-photo quality and avoid exaggerated condensation or splashing\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, proportions, handle, spout, wooden lid, and transparent material of all visible products\",\n    \"the overall white background, studio lighting, perspective, reflections, and shadows\",\n    \"the large left product and the lower-right product unchanged\",\n    \"all non-target areas and the original product arrangement\"\n  ],\n  \"do_not_change\": [\n    \"do not add the lemonade outside the upper-right pitcher\",\n    \"do not alter the shape, color, material, or position of the pitchers\",\n    \"do not modify the background or introduce extra props, text, or decorations\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-002\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-002/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the small main product positioned in the upper-right area of Image A\",\n    \"target_area\": \"inside the transparent glass pitcher only, bounded by the existing glass walls, below the wooden lid\",\n    \"content\": \"add iced lemonade inside the pitcher, with pale fresh lemon-yellow liquid, visible ice cubes, and a few natural lemon slices suspended in the drink\",\n    \"integration\": \"keep the lemonade realistically contained within the glass vessel, matching the existing studio lighting, transparency, reflections, refraction, scale, perspective, and subtle shadows of the product photo; make the drink look chilled and refreshing without changing the pitcher shape or the white background\",\n    \"preserve_conditions\": \"the added drink must appear as if photographed inside the original upper-right pitcher, not placed beside it or outside the product\"\n  },\n  \"enhance\": {\n    \"target\": \"the added lemonade inside the upper-right pitcher\",\n    \"content\": \"subtle cold beverage realism, including crisp ice clarity, natural liquid translucency, and a lightly chilled appearance\",\n    \"integration\": \"maintain clean commercial product-photo quality and avoid exaggerated condensation or splashing\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, proportions, handle, spout, wooden lid, and transparent material of all visible products\",\n    \"the overall white background, studio lighting, perspective, reflections, and shadows\",\n    \"the large left product and the lower-right product unchanged\",\n    \"all non-target areas and the original product arrangement\"\n  ],\n  \"do_not_change\": [\n    \"do not add the lemonade outside the upper-right pitcher\",\n    \"do not alter the shape, color, material, or position of the pitchers\",\n    \"do not modify the background or introduce extra props, text, or decorations\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the small main product positioned in the upper-right area of Image A\",\n    \"target_area\": \"inside the transparent glass pitcher only, bounded by the existing glass walls, below the wooden lid\",\n    \"content\": \"add iced lemonade inside the pitcher, with pale fresh lemon-yellow liquid, visible ice cubes, and a few natural lemon slices suspended in the drink\",\n    \"integration\": \"keep the lemonade realistically contained within the glass vessel, matching the existing studio lighting, transparency, reflections, refraction, scale, perspective, and subtle shadows of the product photo; make the drink look chilled and refreshing without changing the pitcher shape or the white background\",\n    \"preserve_conditions\": \"the added drink must appear as if photographed inside the original upper-right pitcher, not placed beside it or outside the product\"\n  },\n  \"enhance\": {\n    \"target\": \"the added lemonade inside the upper-right pitcher\",\n    \"content\": \"subtle cold beverage realism, including crisp ice clarity, natural liquid translucency, and a lightly chilled appearance\",\n    \"integration\": \"maintain clean commercial product-photo quality and avoid exaggerated condensation or splashing\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, proportions, handle, spout, wooden lid, and transparent material of all visible products\",\n    \"the overall white background, studio lighting, perspective, reflections, and shadows\",\n    \"the large left product and the lower-right product unchanged\",\n    \"all non-target areas and the original product arrangement\"\n  ],\n  \"do_not_change\": [\n    \"do not add the lemonade outside the upper-right pitcher\",\n    \"do not alter the shape, color, material, or position of the pitchers\",\n    \"do not modify the background or introduce extra props, text, or decorations\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-002-original-1.png",
+                "assetPath": "assets/SINGLE-002-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-002-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-002-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-002-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-002-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:03:18.241Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-003",
+      "title": "换成女人的手；下面场景中的主体产品内换成冰镇柠檬水",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "换成女人的手；下面场景中的主体产品内换成冰镇柠檬水",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-003-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1505738
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-003-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1416263
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "换成女人的手；下面场景中的主体产品内换成冰镇柠檬水",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the hand holding the handle of the glass pitcher in the lower serving scene on the right side\",\n    \"content\": \"replace it with a realistic adult woman's hand, naturally gripping the pitcher handle, with feminine proportions and smooth skin, matching the existing pose and crop\",\n    \"integration\": \"match the original lighting direction, warm indoor color tone, perspective, scale, skin realism, hand anatomy, contact points on the handle, and existing shadows so the new hand looks native to the scene\"\n  },\n  \"fill\": {\n    \"target\": \"the liquid and visible contents inside the main glass pitcher in the lower scene\",\n    \"target_area\": \"inside the pitcher only\",\n    \"content\": \"change the drink to iced lemonade, with chilled pale yellow lemonade, visible ice cubes, fresh lemon slices, and a refreshing cold beverage appearance inside the pitcher\",\n    \"integration\": \"keep the glass transparency, refraction, pitcher shape, liquid level logic, and pouring action consistent with the original scene; the beverage should remain contained inside the product and align with the current angle and motion\"\n  },\n  \"enhance\": {\n    \"target\": \"the iced lemonade inside the pitcher in the lower scene\",\n    \"content\": \"add subtle cold condensation, crisp highlights on the ice, and a fresh just-chilled look without making the scene look artificial\",\n    \"integration\": \"preserve the natural kitchen lighting, realistic reflections on the glass, and the soft premium lifestyle aesthetic\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, shape, handle, lid, and transparent material\",\n    \"the visible text, typography, and layout in both the upper and lower parts of the image\",\n    \"the upper refrigerator scene and all objects in it\",\n    \"the lower scene composition, countertop, wine glass position, background kitchen environment, and overall lighting\",\n    \"the pouring action, perspective, shadows, and realistic product proportions\"\n  ],\n  \"do_not_change\": [\n    \"do not move the pitcher out of its current position\",\n    \"do not alter the pitcher lid material or color\",\n    \"do not place the lemonade outside the pitcher as the main edit\",\n    \"do not change any non-target hands, objects, text, logo-like elements, or background areas\",\n    \"do not introduce annotation marks or extra props unrelated to the requested edit\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the hand holding the handle of the glass pitcher in the lower serving scene on the right side\",\n    \"content\": \"replace it with a realistic adult woman's hand, naturally gripping the pitcher handle, with feminine proportions and smooth skin, matching the existing pose and crop\",\n    \"integration\": \"match the original lighting direction, warm indoor color tone, perspective, scale, skin realism, hand anatomy, contact points on the handle, and existing shadows so the new hand looks native to the scene\"\n  },\n  \"fill\": {\n    \"target\": \"the liquid and visible contents inside the main glass pitcher in the lower scene\",\n    \"target_area\": \"inside the pitcher only\",\n    \"content\": \"change the drink to iced lemonade, with chilled pale yellow lemonade, visible ice cubes, fresh lemon slices, and a refreshing cold beverage appearance inside the pitcher\",\n    \"integration\": \"keep the glass transparency, refraction, pitcher shape, liquid level logic, and pouring action consistent with the original scene; the beverage should remain contained inside the product and align with the current angle and motion\"\n  },\n  \"enhance\": {\n    \"target\": \"the iced lemonade inside the pitcher in the lower scene\",\n    \"content\": \"add subtle cold condensation, crisp highlights on the ice, and a fresh just-chilled look without making the scene look artificial\",\n    \"integration\": \"preserve the natural kitchen lighting, realistic reflections on the glass, and the soft premium lifestyle aesthetic\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, shape, handle, lid, and transparent material\",\n    \"the visible text, typography, and layout in both the upper and lower parts of the image\",\n    \"the upper refrigerator scene and all objects in it\",\n    \"the lower scene composition, countertop, wine glass position, background kitchen environment, and overall lighting\",\n    \"the pouring action, perspective, shadows, and realistic product proportions\"\n  ],\n  \"do_not_change\": [\n    \"do not move the pitcher out of its current position\",\n    \"do not alter the pitcher lid material or color\",\n    \"do not place the lemonade outside the pitcher as the main edit\",\n    \"do not change any non-target hands, objects, text, logo-like elements, or background areas\",\n    \"do not introduce annotation marks or extra props unrelated to the requested edit\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the hand holding the handle of the glass pitcher in the lower serving scene on the right side\",\n    \"content\": \"replace it with a realistic adult woman's hand, naturally gripping the pitcher handle, with feminine proportions and smooth skin, matching the existing pose and crop\",\n    \"integration\": \"match the original lighting direction, warm indoor color tone, perspective, scale, skin realism, hand anatomy, contact points on the handle, and existing shadows so the new hand looks native to the scene\"\n  },\n  \"fill\": {\n    \"target\": \"the liquid and visible contents inside the main glass pitcher in the lower scene\",\n    \"target_area\": \"inside the pitcher only\",\n    \"content\": \"change the drink to iced lemonade, with chilled pale yellow lemonade, visible ice cubes, fresh lemon slices, and a refreshing cold beverage appearance inside the pitcher\",\n    \"integration\": \"keep the glass transparency, refraction, pitcher shape, liquid level logic, and pouring action consistent with the original scene; the beverage should remain contained inside the product and align with the current angle and motion\"\n  },\n  \"enhance\": {\n    \"target\": \"the iced lemonade inside the pitcher in the lower scene\",\n    \"content\": \"add subtle cold condensation, crisp highlights on the ice, and a fresh just-chilled look without making the scene look artificial\",\n    \"integration\": \"preserve the natural kitchen lighting, realistic reflections on the glass, and the soft premium lifestyle aesthetic\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, shape, handle, lid, and transparent material\",\n    \"the visible text, typography, and layout in both the upper and lower parts of the image\",\n    \"the upper refrigerator scene and all objects in it\",\n    \"the lower scene composition, countertop, wine glass position, background kitchen environment, and overall lighting\",\n    \"the pouring action, perspective, shadows, and realistic product proportions\"\n  ],\n  \"do_not_change\": [\n    \"do not move the pitcher out of its current position\",\n    \"do not alter the pitcher lid material or color\",\n    \"do not place the lemonade outside the pitcher as the main edit\",\n    \"do not change any non-target hands, objects, text, logo-like elements, or background areas\",\n    \"do not introduce annotation marks or extra props unrelated to the requested edit\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the hand holding the handle of the glass pitcher in the lower serving scene on the right side\",\n    \"content\": \"replace it with a realistic adult woman's hand, naturally gripping the pitcher handle, with feminine proportions and smooth skin, matching the existing pose and crop\",\n    \"integration\": \"match the original lighting direction, warm indoor color tone, perspective, scale, skin realism, hand anatomy, contact points on the handle, and existing shadows so the new hand looks native to the scene\"\n  },\n  \"fill\": {\n    \"target\": \"the liquid and visible contents inside the main glass pitcher in the lower scene\",\n    \"target_area\": \"inside the pitcher only\",\n    \"content\": \"change the drink to iced lemonade, with chilled pale yellow lemonade, visible ice cubes, fresh lemon slices, and a refreshing cold beverage appearance inside the pitcher\",\n    \"integration\": \"keep the glass transparency, refraction, pitcher shape, liquid level logic, and pouring action consistent with the original scene; the beverage should remain contained inside the product and align with the current angle and motion\"\n  },\n  \"enhance\": {\n    \"target\": \"the iced lemonade inside the pitcher in the lower scene\",\n    \"content\": \"add subtle cold condensation, crisp highlights on the ice, and a fresh just-chilled look without making the scene look artificial\",\n    \"integration\": \"preserve the natural kitchen lighting, realistic reflections on the glass, and the soft premium lifestyle aesthetic\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, shape, handle, lid, and transparent material\",\n    \"the visible text, typography, and layout in both the upper and lower parts of the image\",\n    \"the upper refrigerator scene and all objects in it\",\n    \"the lower scene composition, countertop, wine glass position, background kitchen environment, and overall lighting\",\n    \"the pouring action, perspective, shadows, and realistic product proportions\"\n  ],\n  \"do_not_change\": [\n    \"do not move the pitcher out of its current position\",\n    \"do not alter the pitcher lid material or color\",\n    \"do not place the lemonade outside the pitcher as the main edit\",\n    \"do not change any non-target hands, objects, text, logo-like elements, or background areas\",\n    \"do not introduce annotation marks or extra props unrelated to the requested edit\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-003\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-003/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the hand holding the handle of the glass pitcher in the lower serving scene on the right side\",\n    \"content\": \"replace it with a realistic adult woman's hand, naturally gripping the pitcher handle, with feminine proportions and smooth skin, matching the existing pose and crop\",\n    \"integration\": \"match the original lighting direction, warm indoor color tone, perspective, scale, skin realism, hand anatomy, contact points on the handle, and existing shadows so the new hand looks native to the scene\"\n  },\n  \"fill\": {\n    \"target\": \"the liquid and visible contents inside the main glass pitcher in the lower scene\",\n    \"target_area\": \"inside the pitcher only\",\n    \"content\": \"change the drink to iced lemonade, with chilled pale yellow lemonade, visible ice cubes, fresh lemon slices, and a refreshing cold beverage appearance inside the pitcher\",\n    \"integration\": \"keep the glass transparency, refraction, pitcher shape, liquid level logic, and pouring action consistent with the original scene; the beverage should remain contained inside the product and align with the current angle and motion\"\n  },\n  \"enhance\": {\n    \"target\": \"the iced lemonade inside the pitcher in the lower scene\",\n    \"content\": \"add subtle cold condensation, crisp highlights on the ice, and a fresh just-chilled look without making the scene look artificial\",\n    \"integration\": \"preserve the natural kitchen lighting, realistic reflections on the glass, and the soft premium lifestyle aesthetic\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, shape, handle, lid, and transparent material\",\n    \"the visible text, typography, and layout in both the upper and lower parts of the image\",\n    \"the upper refrigerator scene and all objects in it\",\n    \"the lower scene composition, countertop, wine glass position, background kitchen environment, and overall lighting\",\n    \"the pouring action, perspective, shadows, and realistic product proportions\"\n  ],\n  \"do_not_change\": [\n    \"do not move the pitcher out of its current position\",\n    \"do not alter the pitcher lid material or color\",\n    \"do not place the lemonade outside the pitcher as the main edit\",\n    \"do not change any non-target hands, objects, text, logo-like elements, or background areas\",\n    \"do not introduce annotation marks or extra props unrelated to the requested edit\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the hand holding the handle of the glass pitcher in the lower serving scene on the right side\",\n    \"content\": \"replace it with a realistic adult woman's hand, naturally gripping the pitcher handle, with feminine proportions and smooth skin, matching the existing pose and crop\",\n    \"integration\": \"match the original lighting direction, warm indoor color tone, perspective, scale, skin realism, hand anatomy, contact points on the handle, and existing shadows so the new hand looks native to the scene\"\n  },\n  \"fill\": {\n    \"target\": \"the liquid and visible contents inside the main glass pitcher in the lower scene\",\n    \"target_area\": \"inside the pitcher only\",\n    \"content\": \"change the drink to iced lemonade, with chilled pale yellow lemonade, visible ice cubes, fresh lemon slices, and a refreshing cold beverage appearance inside the pitcher\",\n    \"integration\": \"keep the glass transparency, refraction, pitcher shape, liquid level logic, and pouring action consistent with the original scene; the beverage should remain contained inside the product and align with the current angle and motion\"\n  },\n  \"enhance\": {\n    \"target\": \"the iced lemonade inside the pitcher in the lower scene\",\n    \"content\": \"add subtle cold condensation, crisp highlights on the ice, and a fresh just-chilled look without making the scene look artificial\",\n    \"integration\": \"preserve the natural kitchen lighting, realistic reflections on the glass, and the soft premium lifestyle aesthetic\"\n  },\n  \"preserve\": [\n    \"the glass pitcher structure, shape, handle, lid, and transparent material\",\n    \"the visible text, typography, and layout in both the upper and lower parts of the image\",\n    \"the upper refrigerator scene and all objects in it\",\n    \"the lower scene composition, countertop, wine glass position, background kitchen environment, and overall lighting\",\n    \"the pouring action, perspective, shadows, and realistic product proportions\"\n  ],\n  \"do_not_change\": [\n    \"do not move the pitcher out of its current position\",\n    \"do not alter the pitcher lid material or color\",\n    \"do not place the lemonade outside the pitcher as the main edit\",\n    \"do not change any non-target hands, objects, text, logo-like elements, or background areas\",\n    \"do not introduce annotation marks or extra props unrelated to the requested edit\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-003-original-1.png",
+                "assetPath": "assets/SINGLE-003-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-003-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-003-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-003-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-003-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:06:51.357Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-004",
+      "title": "在饭团上添加一片方形海苔和肉松",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在饭团上添加一片方形海苔和肉松",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-004-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1136140
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-004-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1127617
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在饭团上添加一片方形海苔和肉松",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the heart-shaped rice ball on the mint-green plate at the right side of the image\",\n    \"target_area\": \"directly on the surface of the rice ball\",\n    \"content\": \"add one square sheet of nori attached neatly to the rice ball surface, and add a small natural-looking amount of pork floss on or slightly overlapping the nori and rice surface so it reads as a topping on the rice ball\",\n    \"integration\": \"the added nori and pork floss must be anchored to the rice ball itself, with realistic food texture, scale, shadows, and perspective matching the existing scene lighting; keep the toppings clean, appetizing, and naturally blended with the rice grains without floating or appearing beside the product\",\n    \"preserve_conditions\": \"preserve the rice ball's overall heart shape and size while adding the toppings\"\n  },\n  \"preserve\": [\n    \"the stainless steel rice mold on the left, including its structure, reflections, material, and position\",\n    \"the mint-green plate, countertop, kitchen background, lighting, perspective, shadows, and depth of field\",\n    \"the existing headline text at the top and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not move the rice ball, plate, or mold\",\n    \"do not alter the background composition or blur level\",\n    \"do not change the color, material, or shape of the mold\",\n    \"do not place the nori or pork floss beside the rice ball or in the background\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the heart-shaped rice ball on the mint-green plate at the right side of the image\",\n    \"target_area\": \"directly on the surface of the rice ball\",\n    \"content\": \"add one square sheet of nori attached neatly to the rice ball surface, and add a small natural-looking amount of pork floss on or slightly overlapping the nori and rice surface so it reads as a topping on the rice ball\",\n    \"integration\": \"the added nori and pork floss must be anchored to the rice ball itself, with realistic food texture, scale, shadows, and perspective matching the existing scene lighting; keep the toppings clean, appetizing, and naturally blended with the rice grains without floating or appearing beside the product\",\n    \"preserve_conditions\": \"preserve the rice ball's overall heart shape and size while adding the toppings\"\n  },\n  \"preserve\": [\n    \"the stainless steel rice mold on the left, including its structure, reflections, material, and position\",\n    \"the mint-green plate, countertop, kitchen background, lighting, perspective, shadows, and depth of field\",\n    \"the existing headline text at the top and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not move the rice ball, plate, or mold\",\n    \"do not alter the background composition or blur level\",\n    \"do not change the color, material, or shape of the mold\",\n    \"do not place the nori or pork floss beside the rice ball or in the background\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the heart-shaped rice ball on the mint-green plate at the right side of the image\",\n    \"target_area\": \"directly on the surface of the rice ball\",\n    \"content\": \"add one square sheet of nori attached neatly to the rice ball surface, and add a small natural-looking amount of pork floss on or slightly overlapping the nori and rice surface so it reads as a topping on the rice ball\",\n    \"integration\": \"the added nori and pork floss must be anchored to the rice ball itself, with realistic food texture, scale, shadows, and perspective matching the existing scene lighting; keep the toppings clean, appetizing, and naturally blended with the rice grains without floating or appearing beside the product\",\n    \"preserve_conditions\": \"preserve the rice ball's overall heart shape and size while adding the toppings\"\n  },\n  \"preserve\": [\n    \"the stainless steel rice mold on the left, including its structure, reflections, material, and position\",\n    \"the mint-green plate, countertop, kitchen background, lighting, perspective, shadows, and depth of field\",\n    \"the existing headline text at the top and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not move the rice ball, plate, or mold\",\n    \"do not alter the background composition or blur level\",\n    \"do not change the color, material, or shape of the mold\",\n    \"do not place the nori or pork floss beside the rice ball or in the background\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the heart-shaped rice ball on the mint-green plate at the right side of the image\",\n    \"target_area\": \"directly on the surface of the rice ball\",\n    \"content\": \"add one square sheet of nori attached neatly to the rice ball surface, and add a small natural-looking amount of pork floss on or slightly overlapping the nori and rice surface so it reads as a topping on the rice ball\",\n    \"integration\": \"the added nori and pork floss must be anchored to the rice ball itself, with realistic food texture, scale, shadows, and perspective matching the existing scene lighting; keep the toppings clean, appetizing, and naturally blended with the rice grains without floating or appearing beside the product\",\n    \"preserve_conditions\": \"preserve the rice ball's overall heart shape and size while adding the toppings\"\n  },\n  \"preserve\": [\n    \"the stainless steel rice mold on the left, including its structure, reflections, material, and position\",\n    \"the mint-green plate, countertop, kitchen background, lighting, perspective, shadows, and depth of field\",\n    \"the existing headline text at the top and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not move the rice ball, plate, or mold\",\n    \"do not alter the background composition or blur level\",\n    \"do not change the color, material, or shape of the mold\",\n    \"do not place the nori or pork floss beside the rice ball or in the background\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-004\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-004/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the heart-shaped rice ball on the mint-green plate at the right side of the image\",\n    \"target_area\": \"directly on the surface of the rice ball\",\n    \"content\": \"add one square sheet of nori attached neatly to the rice ball surface, and add a small natural-looking amount of pork floss on or slightly overlapping the nori and rice surface so it reads as a topping on the rice ball\",\n    \"integration\": \"the added nori and pork floss must be anchored to the rice ball itself, with realistic food texture, scale, shadows, and perspective matching the existing scene lighting; keep the toppings clean, appetizing, and naturally blended with the rice grains without floating or appearing beside the product\",\n    \"preserve_conditions\": \"preserve the rice ball's overall heart shape and size while adding the toppings\"\n  },\n  \"preserve\": [\n    \"the stainless steel rice mold on the left, including its structure, reflections, material, and position\",\n    \"the mint-green plate, countertop, kitchen background, lighting, perspective, shadows, and depth of field\",\n    \"the existing headline text at the top and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not move the rice ball, plate, or mold\",\n    \"do not alter the background composition or blur level\",\n    \"do not change the color, material, or shape of the mold\",\n    \"do not place the nori or pork floss beside the rice ball or in the background\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the heart-shaped rice ball on the mint-green plate at the right side of the image\",\n    \"target_area\": \"directly on the surface of the rice ball\",\n    \"content\": \"add one square sheet of nori attached neatly to the rice ball surface, and add a small natural-looking amount of pork floss on or slightly overlapping the nori and rice surface so it reads as a topping on the rice ball\",\n    \"integration\": \"the added nori and pork floss must be anchored to the rice ball itself, with realistic food texture, scale, shadows, and perspective matching the existing scene lighting; keep the toppings clean, appetizing, and naturally blended with the rice grains without floating or appearing beside the product\",\n    \"preserve_conditions\": \"preserve the rice ball's overall heart shape and size while adding the toppings\"\n  },\n  \"preserve\": [\n    \"the stainless steel rice mold on the left, including its structure, reflections, material, and position\",\n    \"the mint-green plate, countertop, kitchen background, lighting, perspective, shadows, and depth of field\",\n    \"the existing headline text at the top and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not move the rice ball, plate, or mold\",\n    \"do not alter the background composition or blur level\",\n    \"do not change the color, material, or shape of the mold\",\n    \"do not place the nori or pork floss beside the rice ball or in the background\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-004-original-1.png",
+                "assetPath": "assets/SINGLE-004-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-004-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-004-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-004-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-004-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:03:54.616Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-005",
+      "title": "更换背景为液态水珠背景",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "更换背景为液态水珠背景",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-005-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 542275
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-005-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1313584
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "更换背景为液态水珠背景",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing plain olive-green background surrounding the framed product detail panels and bottom caption text in Image A\",\n    \"content\": \"a refined liquid water droplet background with a clean premium-ad look, featuring soft translucent droplets and subtle watery texture across the backdrop\",\n    \"integration\": \"keep the full product collage, panel borders, close-up product details, visible text, spacing, perspective, shadows, and lighting unchanged; apply the new water-droplet background only to the backdrop area so it feels naturally designed into the original composition, with sufficient contrast and cleanliness to preserve text readability and the premium product presentation\"\n  },\n  \"preserve\": [\n    \"the timer product appearance, shape, material, and color inside all framed panels\",\n    \"all framed panel positions, sizes, borders, and composition\",\n    \"all visible text including CHROME FINISH, VISUAL SCALE, CENTRAL CONTROL, SATIN BODY, and PRECISION MECHANISM ELEGANT TIMING\",\n    \"original lighting, reflections, shadows, perspective, and sharpness of the product imagery\",\n    \"all non-background areas that are not explicitly targeted for replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product itself\",\n    \"do not move, resize, or crop the collage elements\",\n    \"do not change any visible text, font, or text placement\",\n    \"do not add unrelated objects or decorative elements beyond the requested water-droplet background\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing plain olive-green background surrounding the framed product detail panels and bottom caption text in Image A\",\n    \"content\": \"a refined liquid water droplet background with a clean premium-ad look, featuring soft translucent droplets and subtle watery texture across the backdrop\",\n    \"integration\": \"keep the full product collage, panel borders, close-up product details, visible text, spacing, perspective, shadows, and lighting unchanged; apply the new water-droplet background only to the backdrop area so it feels naturally designed into the original composition, with sufficient contrast and cleanliness to preserve text readability and the premium product presentation\"\n  },\n  \"preserve\": [\n    \"the timer product appearance, shape, material, and color inside all framed panels\",\n    \"all framed panel positions, sizes, borders, and composition\",\n    \"all visible text including CHROME FINISH, VISUAL SCALE, CENTRAL CONTROL, SATIN BODY, and PRECISION MECHANISM ELEGANT TIMING\",\n    \"original lighting, reflections, shadows, perspective, and sharpness of the product imagery\",\n    \"all non-background areas that are not explicitly targeted for replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product itself\",\n    \"do not move, resize, or crop the collage elements\",\n    \"do not change any visible text, font, or text placement\",\n    \"do not add unrelated objects or decorative elements beyond the requested water-droplet background\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing plain olive-green background surrounding the framed product detail panels and bottom caption text in Image A\",\n    \"content\": \"a refined liquid water droplet background with a clean premium-ad look, featuring soft translucent droplets and subtle watery texture across the backdrop\",\n    \"integration\": \"keep the full product collage, panel borders, close-up product details, visible text, spacing, perspective, shadows, and lighting unchanged; apply the new water-droplet background only to the backdrop area so it feels naturally designed into the original composition, with sufficient contrast and cleanliness to preserve text readability and the premium product presentation\"\n  },\n  \"preserve\": [\n    \"the timer product appearance, shape, material, and color inside all framed panels\",\n    \"all framed panel positions, sizes, borders, and composition\",\n    \"all visible text including CHROME FINISH, VISUAL SCALE, CENTRAL CONTROL, SATIN BODY, and PRECISION MECHANISM ELEGANT TIMING\",\n    \"original lighting, reflections, shadows, perspective, and sharpness of the product imagery\",\n    \"all non-background areas that are not explicitly targeted for replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product itself\",\n    \"do not move, resize, or crop the collage elements\",\n    \"do not change any visible text, font, or text placement\",\n    \"do not add unrelated objects or decorative elements beyond the requested water-droplet background\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing plain olive-green background surrounding the framed product detail panels and bottom caption text in Image A\",\n    \"content\": \"a refined liquid water droplet background with a clean premium-ad look, featuring soft translucent droplets and subtle watery texture across the backdrop\",\n    \"integration\": \"keep the full product collage, panel borders, close-up product details, visible text, spacing, perspective, shadows, and lighting unchanged; apply the new water-droplet background only to the backdrop area so it feels naturally designed into the original composition, with sufficient contrast and cleanliness to preserve text readability and the premium product presentation\"\n  },\n  \"preserve\": [\n    \"the timer product appearance, shape, material, and color inside all framed panels\",\n    \"all framed panel positions, sizes, borders, and composition\",\n    \"all visible text including CHROME FINISH, VISUAL SCALE, CENTRAL CONTROL, SATIN BODY, and PRECISION MECHANISM ELEGANT TIMING\",\n    \"original lighting, reflections, shadows, perspective, and sharpness of the product imagery\",\n    \"all non-background areas that are not explicitly targeted for replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product itself\",\n    \"do not move, resize, or crop the collage elements\",\n    \"do not change any visible text, font, or text placement\",\n    \"do not add unrelated objects or decorative elements beyond the requested water-droplet background\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-005\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-005/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing plain olive-green background surrounding the framed product detail panels and bottom caption text in Image A\",\n    \"content\": \"a refined liquid water droplet background with a clean premium-ad look, featuring soft translucent droplets and subtle watery texture across the backdrop\",\n    \"integration\": \"keep the full product collage, panel borders, close-up product details, visible text, spacing, perspective, shadows, and lighting unchanged; apply the new water-droplet background only to the backdrop area so it feels naturally designed into the original composition, with sufficient contrast and cleanliness to preserve text readability and the premium product presentation\"\n  },\n  \"preserve\": [\n    \"the timer product appearance, shape, material, and color inside all framed panels\",\n    \"all framed panel positions, sizes, borders, and composition\",\n    \"all visible text including CHROME FINISH, VISUAL SCALE, CENTRAL CONTROL, SATIN BODY, and PRECISION MECHANISM ELEGANT TIMING\",\n    \"original lighting, reflections, shadows, perspective, and sharpness of the product imagery\",\n    \"all non-background areas that are not explicitly targeted for replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product itself\",\n    \"do not move, resize, or crop the collage elements\",\n    \"do not change any visible text, font, or text placement\",\n    \"do not add unrelated objects or decorative elements beyond the requested water-droplet background\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing plain olive-green background surrounding the framed product detail panels and bottom caption text in Image A\",\n    \"content\": \"a refined liquid water droplet background with a clean premium-ad look, featuring soft translucent droplets and subtle watery texture across the backdrop\",\n    \"integration\": \"keep the full product collage, panel borders, close-up product details, visible text, spacing, perspective, shadows, and lighting unchanged; apply the new water-droplet background only to the backdrop area so it feels naturally designed into the original composition, with sufficient contrast and cleanliness to preserve text readability and the premium product presentation\"\n  },\n  \"preserve\": [\n    \"the timer product appearance, shape, material, and color inside all framed panels\",\n    \"all framed panel positions, sizes, borders, and composition\",\n    \"all visible text including CHROME FINISH, VISUAL SCALE, CENTRAL CONTROL, SATIN BODY, and PRECISION MECHANISM ELEGANT TIMING\",\n    \"original lighting, reflections, shadows, perspective, and sharpness of the product imagery\",\n    \"all non-background areas that are not explicitly targeted for replacement\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product itself\",\n    \"do not move, resize, or crop the collage elements\",\n    \"do not change any visible text, font, or text placement\",\n    \"do not add unrelated objects or decorative elements beyond the requested water-droplet background\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-005-original-1.png",
+                "assetPath": "assets/SINGLE-005-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-005-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-005-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-005-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-005-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:06:05.807Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-006",
+      "title": "修改座椅颜色为黄色；修改背景场景；修改黑色铁架为蓝色铁架",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "修改座椅颜色为黄色；修改背景场景；修改黑色铁架为蓝色铁架",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-006-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1816887
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-006-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1545527
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "修改座椅颜色为黄色；修改背景场景；修改黑色铁架为蓝色铁架",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"change_color\": [\n    {\n      \"target\": \"the three seat cushions and seat-back upholstery on the swing chair\",\n      \"content\": \"change the upholstery color from light gray to a clean, medium warm yellow\",\n      \"integration\": \"keep the original fabric texture, stitching, cushion thickness, shading, highlights, and natural outdoor lighting so the recolored cushions still look realistic and consistent with the original product photo\"\n    },\n    {\n      \"target\": \"the black metal swing frame, including the legs, top support frame, armrest bars, and visible metal structural parts\",\n      \"content\": \"change the metal finish from black to blue\",\n      \"integration\": \"preserve the original matte or lightly satin metal appearance, reflections, edge definition, shadows, and perspective so it remains the same product structure with only the frame color changed\"\n    }\n  ],\n  \"replace\": {\n    \"target\": \"the entire background scene behind and around the swing chair\",\n    \"target_area\": \"garden foliage, flowers, and surrounding patio environment only, excluding the swing product itself\",\n    \"content\": \"replace the current garden background with a different outdoor lifestyle setting that still suits a premium patio swing product photo\",\n    \"integration\": \"keep the swing chair centered as the main subject and match the new background to the original camera angle, depth of field, daylight brightness, perspective, scale, and shadow direction so the product remains naturally grounded in the scene\"\n  },\n  \"preserve\": [\n    \"the overall swing chair structure and dimensions\",\n    \"the canopy shape, fabric form, and current canopy color\",\n    \"the suspension chains and their positions\",\n    \"the product angle, framing, and perspective\",\n    \"the existing lighting direction and realistic shadows on the product\",\n    \"the fabric and metal material realism\",\n    \"the visible text 'All-Weather Comfort'\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the shape or construction of the swing chair\",\n    \"do not add or remove product parts\",\n    \"do not move the product away from its current central composition\",\n    \"do not change non-target product details beyond the requested seat color and frame color edits\",\n    \"do not place new objects on the seat or attach decorations to the product\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"change_color\": [\n    {\n      \"target\": \"the three seat cushions and seat-back upholstery on the swing chair\",\n      \"content\": \"change the upholstery color from light gray to a clean, medium warm yellow\",\n      \"integration\": \"keep the original fabric texture, stitching, cushion thickness, shading, highlights, and natural outdoor lighting so the recolored cushions still look realistic and consistent with the original product photo\"\n    },\n    {\n      \"target\": \"the black metal swing frame, including the legs, top support frame, armrest bars, and visible metal structural parts\",\n      \"content\": \"change the metal finish from black to blue\",\n      \"integration\": \"preserve the original matte or lightly satin metal appearance, reflections, edge definition, shadows, and perspective so it remains the same product structure with only the frame color changed\"\n    }\n  ],\n  \"replace\": {\n    \"target\": \"the entire background scene behind and around the swing chair\",\n    \"target_area\": \"garden foliage, flowers, and surrounding patio environment only, excluding the swing product itself\",\n    \"content\": \"replace the current garden background with a different outdoor lifestyle setting that still suits a premium patio swing product photo\",\n    \"integration\": \"keep the swing chair centered as the main subject and match the new background to the original camera angle, depth of field, daylight brightness, perspective, scale, and shadow direction so the product remains naturally grounded in the scene\"\n  },\n  \"preserve\": [\n    \"the overall swing chair structure and dimensions\",\n    \"the canopy shape, fabric form, and current canopy color\",\n    \"the suspension chains and their positions\",\n    \"the product angle, framing, and perspective\",\n    \"the existing lighting direction and realistic shadows on the product\",\n    \"the fabric and metal material realism\",\n    \"the visible text 'All-Weather Comfort'\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the shape or construction of the swing chair\",\n    \"do not add or remove product parts\",\n    \"do not move the product away from its current central composition\",\n    \"do not change non-target product details beyond the requested seat color and frame color edits\",\n    \"do not place new objects on the seat or attach decorations to the product\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"change_color\": [\n    {\n      \"target\": \"the three seat cushions and seat-back upholstery on the swing chair\",\n      \"content\": \"change the upholstery color from light gray to a clean, medium warm yellow\",\n      \"integration\": \"keep the original fabric texture, stitching, cushion thickness, shading, highlights, and natural outdoor lighting so the recolored cushions still look realistic and consistent with the original product photo\"\n    },\n    {\n      \"target\": \"the black metal swing frame, including the legs, top support frame, armrest bars, and visible metal structural parts\",\n      \"content\": \"change the metal finish from black to blue\",\n      \"integration\": \"preserve the original matte or lightly satin metal appearance, reflections, edge definition, shadows, and perspective so it remains the same product structure with only the frame color changed\"\n    }\n  ],\n  \"replace\": {\n    \"target\": \"the entire background scene behind and around the swing chair\",\n    \"target_area\": \"garden foliage, flowers, and surrounding patio environment only, excluding the swing product itself\",\n    \"content\": \"replace the current garden background with a different outdoor lifestyle setting that still suits a premium patio swing product photo\",\n    \"integration\": \"keep the swing chair centered as the main subject and match the new background to the original camera angle, depth of field, daylight brightness, perspective, scale, and shadow direction so the product remains naturally grounded in the scene\"\n  },\n  \"preserve\": [\n    \"the overall swing chair structure and dimensions\",\n    \"the canopy shape, fabric form, and current canopy color\",\n    \"the suspension chains and their positions\",\n    \"the product angle, framing, and perspective\",\n    \"the existing lighting direction and realistic shadows on the product\",\n    \"the fabric and metal material realism\",\n    \"the visible text 'All-Weather Comfort'\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the shape or construction of the swing chair\",\n    \"do not add or remove product parts\",\n    \"do not move the product away from its current central composition\",\n    \"do not change non-target product details beyond the requested seat color and frame color edits\",\n    \"do not place new objects on the seat or attach decorations to the product\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"change_color\": [\n    {\n      \"target\": \"the three seat cushions and seat-back upholstery on the swing chair\",\n      \"content\": \"change the upholstery color from light gray to a clean, medium warm yellow\",\n      \"integration\": \"keep the original fabric texture, stitching, cushion thickness, shading, highlights, and natural outdoor lighting so the recolored cushions still look realistic and consistent with the original product photo\"\n    },\n    {\n      \"target\": \"the black metal swing frame, including the legs, top support frame, armrest bars, and visible metal structural parts\",\n      \"content\": \"change the metal finish from black to blue\",\n      \"integration\": \"preserve the original matte or lightly satin metal appearance, reflections, edge definition, shadows, and perspective so it remains the same product structure with only the frame color changed\"\n    }\n  ],\n  \"replace\": {\n    \"target\": \"the entire background scene behind and around the swing chair\",\n    \"target_area\": \"garden foliage, flowers, and surrounding patio environment only, excluding the swing product itself\",\n    \"content\": \"replace the current garden background with a different outdoor lifestyle setting that still suits a premium patio swing product photo\",\n    \"integration\": \"keep the swing chair centered as the main subject and match the new background to the original camera angle, depth of field, daylight brightness, perspective, scale, and shadow direction so the product remains naturally grounded in the scene\"\n  },\n  \"preserve\": [\n    \"the overall swing chair structure and dimensions\",\n    \"the canopy shape, fabric form, and current canopy color\",\n    \"the suspension chains and their positions\",\n    \"the product angle, framing, and perspective\",\n    \"the existing lighting direction and realistic shadows on the product\",\n    \"the fabric and metal material realism\",\n    \"the visible text 'All-Weather Comfort'\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the shape or construction of the swing chair\",\n    \"do not add or remove product parts\",\n    \"do not move the product away from its current central composition\",\n    \"do not change non-target product details beyond the requested seat color and frame color edits\",\n    \"do not place new objects on the seat or attach decorations to the product\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-006\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-006/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"change_color\": [\n    {\n      \"target\": \"the three seat cushions and seat-back upholstery on the swing chair\",\n      \"content\": \"change the upholstery color from light gray to a clean, medium warm yellow\",\n      \"integration\": \"keep the original fabric texture, stitching, cushion thickness, shading, highlights, and natural outdoor lighting so the recolored cushions still look realistic and consistent with the original product photo\"\n    },\n    {\n      \"target\": \"the black metal swing frame, including the legs, top support frame, armrest bars, and visible metal structural parts\",\n      \"content\": \"change the metal finish from black to blue\",\n      \"integration\": \"preserve the original matte or lightly satin metal appearance, reflections, edge definition, shadows, and perspective so it remains the same product structure with only the frame color changed\"\n    }\n  ],\n  \"replace\": {\n    \"target\": \"the entire background scene behind and around the swing chair\",\n    \"target_area\": \"garden foliage, flowers, and surrounding patio environment only, excluding the swing product itself\",\n    \"content\": \"replace the current garden background with a different outdoor lifestyle setting that still suits a premium patio swing product photo\",\n    \"integration\": \"keep the swing chair centered as the main subject and match the new background to the original camera angle, depth of field, daylight brightness, perspective, scale, and shadow direction so the product remains naturally grounded in the scene\"\n  },\n  \"preserve\": [\n    \"the overall swing chair structure and dimensions\",\n    \"the canopy shape, fabric form, and current canopy color\",\n    \"the suspension chains and their positions\",\n    \"the product angle, framing, and perspective\",\n    \"the existing lighting direction and realistic shadows on the product\",\n    \"the fabric and metal material realism\",\n    \"the visible text 'All-Weather Comfort'\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the shape or construction of the swing chair\",\n    \"do not add or remove product parts\",\n    \"do not move the product away from its current central composition\",\n    \"do not change non-target product details beyond the requested seat color and frame color edits\",\n    \"do not place new objects on the seat or attach decorations to the product\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"change_color\": [\n    {\n      \"target\": \"the three seat cushions and seat-back upholstery on the swing chair\",\n      \"content\": \"change the upholstery color from light gray to a clean, medium warm yellow\",\n      \"integration\": \"keep the original fabric texture, stitching, cushion thickness, shading, highlights, and natural outdoor lighting so the recolored cushions still look realistic and consistent with the original product photo\"\n    },\n    {\n      \"target\": \"the black metal swing frame, including the legs, top support frame, armrest bars, and visible metal structural parts\",\n      \"content\": \"change the metal finish from black to blue\",\n      \"integration\": \"preserve the original matte or lightly satin metal appearance, reflections, edge definition, shadows, and perspective so it remains the same product structure with only the frame color changed\"\n    }\n  ],\n  \"replace\": {\n    \"target\": \"the entire background scene behind and around the swing chair\",\n    \"target_area\": \"garden foliage, flowers, and surrounding patio environment only, excluding the swing product itself\",\n    \"content\": \"replace the current garden background with a different outdoor lifestyle setting that still suits a premium patio swing product photo\",\n    \"integration\": \"keep the swing chair centered as the main subject and match the new background to the original camera angle, depth of field, daylight brightness, perspective, scale, and shadow direction so the product remains naturally grounded in the scene\"\n  },\n  \"preserve\": [\n    \"the overall swing chair structure and dimensions\",\n    \"the canopy shape, fabric form, and current canopy color\",\n    \"the suspension chains and their positions\",\n    \"the product angle, framing, and perspective\",\n    \"the existing lighting direction and realistic shadows on the product\",\n    \"the fabric and metal material realism\",\n    \"the visible text 'All-Weather Comfort'\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the shape or construction of the swing chair\",\n    \"do not add or remove product parts\",\n    \"do not move the product away from its current central composition\",\n    \"do not change non-target product details beyond the requested seat color and frame color edits\",\n    \"do not place new objects on the seat or attach decorations to the product\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-006-original-1.png",
+                "assetPath": "assets/SINGLE-006-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-006-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-006-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-006-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-006-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:05:54.637Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-007",
+      "title": "在主体产品中添加莫吉托",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品中添加莫吉托",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-007-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1591694
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-007-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1542532
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品中添加莫吉托",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the empty glass mixing vessel centered in the image\",\n    \"target_area\": \"inside the transparent container only, following the visible inner walls, rim height, spout opening, and base perspective of the glass\",\n    \"content\": \"a realistic mojito inside the vessel, with pale sparkling cocktail liquid, several ice cubes, fresh mint leaves, and lime pieces arranged naturally as a prepared drink\",\n    \"integration\": \"keep the mojito fully contained inside the glass product, match the existing camera angle, warm bar lighting, glass refraction, reflections, shadows, and crystal-cut distortion through the patterned surface, and make the liquid level and ingredients look physically plausible within the vessel\"\n  },\n  \"preserve\": [\n    \"the glass product's shape, crystal-cut texture, transparency, rim, spout, and base\",\n    \"the product's scale, position, perspective, and tabletop reflection\",\n    \"the warm bar background, shaker, jigger, ice cubes on the table, and all non-target objects\",\n    \"all visible marketing text and bottom icon labels exactly as shown\",\n    \"overall lighting, color mood, shadows, and premium product photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mojito beside the product or in the background\",\n    \"do not alter the glass material, exterior pattern, or product silhouette\",\n    \"do not modify or remove any existing text, icons, or layout elements\",\n    \"do not change non-target areas outside the interior of the main glass vessel\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the empty glass mixing vessel centered in the image\",\n    \"target_area\": \"inside the transparent container only, following the visible inner walls, rim height, spout opening, and base perspective of the glass\",\n    \"content\": \"a realistic mojito inside the vessel, with pale sparkling cocktail liquid, several ice cubes, fresh mint leaves, and lime pieces arranged naturally as a prepared drink\",\n    \"integration\": \"keep the mojito fully contained inside the glass product, match the existing camera angle, warm bar lighting, glass refraction, reflections, shadows, and crystal-cut distortion through the patterned surface, and make the liquid level and ingredients look physically plausible within the vessel\"\n  },\n  \"preserve\": [\n    \"the glass product's shape, crystal-cut texture, transparency, rim, spout, and base\",\n    \"the product's scale, position, perspective, and tabletop reflection\",\n    \"the warm bar background, shaker, jigger, ice cubes on the table, and all non-target objects\",\n    \"all visible marketing text and bottom icon labels exactly as shown\",\n    \"overall lighting, color mood, shadows, and premium product photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mojito beside the product or in the background\",\n    \"do not alter the glass material, exterior pattern, or product silhouette\",\n    \"do not modify or remove any existing text, icons, or layout elements\",\n    \"do not change non-target areas outside the interior of the main glass vessel\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the empty glass mixing vessel centered in the image\",\n    \"target_area\": \"inside the transparent container only, following the visible inner walls, rim height, spout opening, and base perspective of the glass\",\n    \"content\": \"a realistic mojito inside the vessel, with pale sparkling cocktail liquid, several ice cubes, fresh mint leaves, and lime pieces arranged naturally as a prepared drink\",\n    \"integration\": \"keep the mojito fully contained inside the glass product, match the existing camera angle, warm bar lighting, glass refraction, reflections, shadows, and crystal-cut distortion through the patterned surface, and make the liquid level and ingredients look physically plausible within the vessel\"\n  },\n  \"preserve\": [\n    \"the glass product's shape, crystal-cut texture, transparency, rim, spout, and base\",\n    \"the product's scale, position, perspective, and tabletop reflection\",\n    \"the warm bar background, shaker, jigger, ice cubes on the table, and all non-target objects\",\n    \"all visible marketing text and bottom icon labels exactly as shown\",\n    \"overall lighting, color mood, shadows, and premium product photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mojito beside the product or in the background\",\n    \"do not alter the glass material, exterior pattern, or product silhouette\",\n    \"do not modify or remove any existing text, icons, or layout elements\",\n    \"do not change non-target areas outside the interior of the main glass vessel\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the empty glass mixing vessel centered in the image\",\n    \"target_area\": \"inside the transparent container only, following the visible inner walls, rim height, spout opening, and base perspective of the glass\",\n    \"content\": \"a realistic mojito inside the vessel, with pale sparkling cocktail liquid, several ice cubes, fresh mint leaves, and lime pieces arranged naturally as a prepared drink\",\n    \"integration\": \"keep the mojito fully contained inside the glass product, match the existing camera angle, warm bar lighting, glass refraction, reflections, shadows, and crystal-cut distortion through the patterned surface, and make the liquid level and ingredients look physically plausible within the vessel\"\n  },\n  \"preserve\": [\n    \"the glass product's shape, crystal-cut texture, transparency, rim, spout, and base\",\n    \"the product's scale, position, perspective, and tabletop reflection\",\n    \"the warm bar background, shaker, jigger, ice cubes on the table, and all non-target objects\",\n    \"all visible marketing text and bottom icon labels exactly as shown\",\n    \"overall lighting, color mood, shadows, and premium product photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mojito beside the product or in the background\",\n    \"do not alter the glass material, exterior pattern, or product silhouette\",\n    \"do not modify or remove any existing text, icons, or layout elements\",\n    \"do not change non-target areas outside the interior of the main glass vessel\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-007\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-007/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the empty glass mixing vessel centered in the image\",\n    \"target_area\": \"inside the transparent container only, following the visible inner walls, rim height, spout opening, and base perspective of the glass\",\n    \"content\": \"a realistic mojito inside the vessel, with pale sparkling cocktail liquid, several ice cubes, fresh mint leaves, and lime pieces arranged naturally as a prepared drink\",\n    \"integration\": \"keep the mojito fully contained inside the glass product, match the existing camera angle, warm bar lighting, glass refraction, reflections, shadows, and crystal-cut distortion through the patterned surface, and make the liquid level and ingredients look physically plausible within the vessel\"\n  },\n  \"preserve\": [\n    \"the glass product's shape, crystal-cut texture, transparency, rim, spout, and base\",\n    \"the product's scale, position, perspective, and tabletop reflection\",\n    \"the warm bar background, shaker, jigger, ice cubes on the table, and all non-target objects\",\n    \"all visible marketing text and bottom icon labels exactly as shown\",\n    \"overall lighting, color mood, shadows, and premium product photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mojito beside the product or in the background\",\n    \"do not alter the glass material, exterior pattern, or product silhouette\",\n    \"do not modify or remove any existing text, icons, or layout elements\",\n    \"do not change non-target areas outside the interior of the main glass vessel\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the empty glass mixing vessel centered in the image\",\n    \"target_area\": \"inside the transparent container only, following the visible inner walls, rim height, spout opening, and base perspective of the glass\",\n    \"content\": \"a realistic mojito inside the vessel, with pale sparkling cocktail liquid, several ice cubes, fresh mint leaves, and lime pieces arranged naturally as a prepared drink\",\n    \"integration\": \"keep the mojito fully contained inside the glass product, match the existing camera angle, warm bar lighting, glass refraction, reflections, shadows, and crystal-cut distortion through the patterned surface, and make the liquid level and ingredients look physically plausible within the vessel\"\n  },\n  \"preserve\": [\n    \"the glass product's shape, crystal-cut texture, transparency, rim, spout, and base\",\n    \"the product's scale, position, perspective, and tabletop reflection\",\n    \"the warm bar background, shaker, jigger, ice cubes on the table, and all non-target objects\",\n    \"all visible marketing text and bottom icon labels exactly as shown\",\n    \"overall lighting, color mood, shadows, and premium product photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mojito beside the product or in the background\",\n    \"do not alter the glass material, exterior pattern, or product silhouette\",\n    \"do not modify or remove any existing text, icons, or layout elements\",\n    \"do not change non-target areas outside the interior of the main glass vessel\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-007-original-1.png",
+                "assetPath": "assets/SINGLE-007-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-007-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-007-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-007-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-007-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:03:43.048Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-008",
+      "title": "在主体产品中添加多肉盆栽",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品中添加多肉盆栽",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-008-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1306569
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-008-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1307077
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品中添加多肉盆栽",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product in the center of Image A, specifically inside the open top of the transparent ribbed planter container\",\n    \"target_area\": \"the interior planting area of the product, above the white inner reservoir and contained within the rim\",\n    \"content\": \"a realistic succulent potted arrangement with several healthy fleshy green succulents, styled as a compact decorative planting that appears naturally planted inside the product\",\n    \"integration\": \"anchor the succulent arrangement inside the product itself, not beside it and not in the background; match the existing soft natural lighting, camera angle, scale, depth, shadows, reflections, and premium product-ad style; keep the added plant centered and proportionate to the container opening so it looks like the product is being used as a planter\"\n  },\n  \"preserve\": [\n    \"the transparent ribbed outer pot structure and shape\",\n    \"the white inner reservoir component\",\n    \"the product material appearance, color, reflections, and gloss\",\n    \"all visible text and icon graphics at the top of the image\",\n    \"the background plants, tabletop, lighting, perspective, and overall composition\",\n    \"all non-target areas outside the product interior\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product size, silhouette, or viewing angle\",\n    \"do not move the product from its current position\",\n    \"do not remove or rewrite any existing text or icons\",\n    \"do not place the succulent outside the main product\",\n    \"do not change the scene mood, shadows, or background decor\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product in the center of Image A, specifically inside the open top of the transparent ribbed planter container\",\n    \"target_area\": \"the interior planting area of the product, above the white inner reservoir and contained within the rim\",\n    \"content\": \"a realistic succulent potted arrangement with several healthy fleshy green succulents, styled as a compact decorative planting that appears naturally planted inside the product\",\n    \"integration\": \"anchor the succulent arrangement inside the product itself, not beside it and not in the background; match the existing soft natural lighting, camera angle, scale, depth, shadows, reflections, and premium product-ad style; keep the added plant centered and proportionate to the container opening so it looks like the product is being used as a planter\"\n  },\n  \"preserve\": [\n    \"the transparent ribbed outer pot structure and shape\",\n    \"the white inner reservoir component\",\n    \"the product material appearance, color, reflections, and gloss\",\n    \"all visible text and icon graphics at the top of the image\",\n    \"the background plants, tabletop, lighting, perspective, and overall composition\",\n    \"all non-target areas outside the product interior\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product size, silhouette, or viewing angle\",\n    \"do not move the product from its current position\",\n    \"do not remove or rewrite any existing text or icons\",\n    \"do not place the succulent outside the main product\",\n    \"do not change the scene mood, shadows, or background decor\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product in the center of Image A, specifically inside the open top of the transparent ribbed planter container\",\n    \"target_area\": \"the interior planting area of the product, above the white inner reservoir and contained within the rim\",\n    \"content\": \"a realistic succulent potted arrangement with several healthy fleshy green succulents, styled as a compact decorative planting that appears naturally planted inside the product\",\n    \"integration\": \"anchor the succulent arrangement inside the product itself, not beside it and not in the background; match the existing soft natural lighting, camera angle, scale, depth, shadows, reflections, and premium product-ad style; keep the added plant centered and proportionate to the container opening so it looks like the product is being used as a planter\"\n  },\n  \"preserve\": [\n    \"the transparent ribbed outer pot structure and shape\",\n    \"the white inner reservoir component\",\n    \"the product material appearance, color, reflections, and gloss\",\n    \"all visible text and icon graphics at the top of the image\",\n    \"the background plants, tabletop, lighting, perspective, and overall composition\",\n    \"all non-target areas outside the product interior\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product size, silhouette, or viewing angle\",\n    \"do not move the product from its current position\",\n    \"do not remove or rewrite any existing text or icons\",\n    \"do not place the succulent outside the main product\",\n    \"do not change the scene mood, shadows, or background decor\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product in the center of Image A, specifically inside the open top of the transparent ribbed planter container\",\n    \"target_area\": \"the interior planting area of the product, above the white inner reservoir and contained within the rim\",\n    \"content\": \"a realistic succulent potted arrangement with several healthy fleshy green succulents, styled as a compact decorative planting that appears naturally planted inside the product\",\n    \"integration\": \"anchor the succulent arrangement inside the product itself, not beside it and not in the background; match the existing soft natural lighting, camera angle, scale, depth, shadows, reflections, and premium product-ad style; keep the added plant centered and proportionate to the container opening so it looks like the product is being used as a planter\"\n  },\n  \"preserve\": [\n    \"the transparent ribbed outer pot structure and shape\",\n    \"the white inner reservoir component\",\n    \"the product material appearance, color, reflections, and gloss\",\n    \"all visible text and icon graphics at the top of the image\",\n    \"the background plants, tabletop, lighting, perspective, and overall composition\",\n    \"all non-target areas outside the product interior\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product size, silhouette, or viewing angle\",\n    \"do not move the product from its current position\",\n    \"do not remove or rewrite any existing text or icons\",\n    \"do not place the succulent outside the main product\",\n    \"do not change the scene mood, shadows, or background decor\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-retry-anno001-005-010-single008-013\\cases\\SINGLE-008\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-008/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 5
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product in the center of Image A, specifically inside the open top of the transparent ribbed planter container\",\n    \"target_area\": \"the interior planting area of the product, above the white inner reservoir and contained within the rim\",\n    \"content\": \"a realistic succulent potted arrangement with several healthy fleshy green succulents, styled as a compact decorative planting that appears naturally planted inside the product\",\n    \"integration\": \"anchor the succulent arrangement inside the product itself, not beside it and not in the background; match the existing soft natural lighting, camera angle, scale, depth, shadows, reflections, and premium product-ad style; keep the added plant centered and proportionate to the container opening so it looks like the product is being used as a planter\"\n  },\n  \"preserve\": [\n    \"the transparent ribbed outer pot structure and shape\",\n    \"the white inner reservoir component\",\n    \"the product material appearance, color, reflections, and gloss\",\n    \"all visible text and icon graphics at the top of the image\",\n    \"the background plants, tabletop, lighting, perspective, and overall composition\",\n    \"all non-target areas outside the product interior\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product size, silhouette, or viewing angle\",\n    \"do not move the product from its current position\",\n    \"do not remove or rewrite any existing text or icons\",\n    \"do not place the succulent outside the main product\",\n    \"do not change the scene mood, shadows, or background decor\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product in the center of Image A, specifically inside the open top of the transparent ribbed planter container\",\n    \"target_area\": \"the interior planting area of the product, above the white inner reservoir and contained within the rim\",\n    \"content\": \"a realistic succulent potted arrangement with several healthy fleshy green succulents, styled as a compact decorative planting that appears naturally planted inside the product\",\n    \"integration\": \"anchor the succulent arrangement inside the product itself, not beside it and not in the background; match the existing soft natural lighting, camera angle, scale, depth, shadows, reflections, and premium product-ad style; keep the added plant centered and proportionate to the container opening so it looks like the product is being used as a planter\"\n  },\n  \"preserve\": [\n    \"the transparent ribbed outer pot structure and shape\",\n    \"the white inner reservoir component\",\n    \"the product material appearance, color, reflections, and gloss\",\n    \"all visible text and icon graphics at the top of the image\",\n    \"the background plants, tabletop, lighting, perspective, and overall composition\",\n    \"all non-target areas outside the product interior\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product size, silhouette, or viewing angle\",\n    \"do not move the product from its current position\",\n    \"do not remove or rewrite any existing text or icons\",\n    \"do not place the succulent outside the main product\",\n    \"do not change the scene mood, shadows, or background decor\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-008-original-1.png",
+                "assetPath": "assets/SINGLE-008-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-008-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-008-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-008-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "retry_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-008-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:18:11.285Z",
+              "retry_source": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-retry-anno001-005-010-single008-013"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "rerun_count": 1,
+        "updated_at": "2026-06-24T13:20:00.815Z",
+        "previous_generated": [
+          {
+            "path": "generated/SINGLE-008-generated.png",
+            "label": "Previous Generated",
+            "mime_type": "image/png",
+            "exists": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SINGLE-009",
+      "title": "在主体产品中添加手机、零食",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品中添加手机、零食",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-009-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1589530
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-009-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1641291
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品中添加手机、零食",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product, specifically the open tray and storage compartments of the sofa armrest organizer\",\n    \"target_area\": \"inside the organizer compartments only, anchored to the product itself rather than floating beside it or in the background\",\n    \"content\": \"add one modern smartphone and a small assortment of snacks such as packaged chips or biscuits, arranged naturally inside the organizer so they appear stored for convenient use\",\n    \"integration\": \"match the existing indoor lighting, soft shadows, perspective, scale, material realism, and product geometry; place the phone and snacks so they fit the tray sizes and compartment depths without altering the organizer's structure\"\n  },\n  \"preserve\": [\n    \"the sofa armrest organizer's shape, structure, material, and blue-gray color\",\n    \"the visible text 'SPACES RECLAIMED' in the top-left area\",\n    \"the sofa, blanket, wooden table, background, and overall composition\",\n    \"the original lighting, perspective, highlights, and shadows\",\n    \"all non-target areas and product details not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not change the product size, compartments, or attachment to the sofa arm\",\n    \"do not place the phone or snacks outside the product\",\n    \"do not modify the existing scene styling or remove visible text\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product, specifically the open tray and storage compartments of the sofa armrest organizer\",\n    \"target_area\": \"inside the organizer compartments only, anchored to the product itself rather than floating beside it or in the background\",\n    \"content\": \"add one modern smartphone and a small assortment of snacks such as packaged chips or biscuits, arranged naturally inside the organizer so they appear stored for convenient use\",\n    \"integration\": \"match the existing indoor lighting, soft shadows, perspective, scale, material realism, and product geometry; place the phone and snacks so they fit the tray sizes and compartment depths without altering the organizer's structure\"\n  },\n  \"preserve\": [\n    \"the sofa armrest organizer's shape, structure, material, and blue-gray color\",\n    \"the visible text 'SPACES RECLAIMED' in the top-left area\",\n    \"the sofa, blanket, wooden table, background, and overall composition\",\n    \"the original lighting, perspective, highlights, and shadows\",\n    \"all non-target areas and product details not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not change the product size, compartments, or attachment to the sofa arm\",\n    \"do not place the phone or snacks outside the product\",\n    \"do not modify the existing scene styling or remove visible text\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product, specifically the open tray and storage compartments of the sofa armrest organizer\",\n    \"target_area\": \"inside the organizer compartments only, anchored to the product itself rather than floating beside it or in the background\",\n    \"content\": \"add one modern smartphone and a small assortment of snacks such as packaged chips or biscuits, arranged naturally inside the organizer so they appear stored for convenient use\",\n    \"integration\": \"match the existing indoor lighting, soft shadows, perspective, scale, material realism, and product geometry; place the phone and snacks so they fit the tray sizes and compartment depths without altering the organizer's structure\"\n  },\n  \"preserve\": [\n    \"the sofa armrest organizer's shape, structure, material, and blue-gray color\",\n    \"the visible text 'SPACES RECLAIMED' in the top-left area\",\n    \"the sofa, blanket, wooden table, background, and overall composition\",\n    \"the original lighting, perspective, highlights, and shadows\",\n    \"all non-target areas and product details not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not change the product size, compartments, or attachment to the sofa arm\",\n    \"do not place the phone or snacks outside the product\",\n    \"do not modify the existing scene styling or remove visible text\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product, specifically the open tray and storage compartments of the sofa armrest organizer\",\n    \"target_area\": \"inside the organizer compartments only, anchored to the product itself rather than floating beside it or in the background\",\n    \"content\": \"add one modern smartphone and a small assortment of snacks such as packaged chips or biscuits, arranged naturally inside the organizer so they appear stored for convenient use\",\n    \"integration\": \"match the existing indoor lighting, soft shadows, perspective, scale, material realism, and product geometry; place the phone and snacks so they fit the tray sizes and compartment depths without altering the organizer's structure\"\n  },\n  \"preserve\": [\n    \"the sofa armrest organizer's shape, structure, material, and blue-gray color\",\n    \"the visible text 'SPACES RECLAIMED' in the top-left area\",\n    \"the sofa, blanket, wooden table, background, and overall composition\",\n    \"the original lighting, perspective, highlights, and shadows\",\n    \"all non-target areas and product details not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not change the product size, compartments, or attachment to the sofa arm\",\n    \"do not place the phone or snacks outside the product\",\n    \"do not modify the existing scene styling or remove visible text\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-009\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-009/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product, specifically the open tray and storage compartments of the sofa armrest organizer\",\n    \"target_area\": \"inside the organizer compartments only, anchored to the product itself rather than floating beside it or in the background\",\n    \"content\": \"add one modern smartphone and a small assortment of snacks such as packaged chips or biscuits, arranged naturally inside the organizer so they appear stored for convenient use\",\n    \"integration\": \"match the existing indoor lighting, soft shadows, perspective, scale, material realism, and product geometry; place the phone and snacks so they fit the tray sizes and compartment depths without altering the organizer's structure\"\n  },\n  \"preserve\": [\n    \"the sofa armrest organizer's shape, structure, material, and blue-gray color\",\n    \"the visible text 'SPACES RECLAIMED' in the top-left area\",\n    \"the sofa, blanket, wooden table, background, and overall composition\",\n    \"the original lighting, perspective, highlights, and shadows\",\n    \"all non-target areas and product details not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not change the product size, compartments, or attachment to the sofa arm\",\n    \"do not place the phone or snacks outside the product\",\n    \"do not modify the existing scene styling or remove visible text\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product, specifically the open tray and storage compartments of the sofa armrest organizer\",\n    \"target_area\": \"inside the organizer compartments only, anchored to the product itself rather than floating beside it or in the background\",\n    \"content\": \"add one modern smartphone and a small assortment of snacks such as packaged chips or biscuits, arranged naturally inside the organizer so they appear stored for convenient use\",\n    \"integration\": \"match the existing indoor lighting, soft shadows, perspective, scale, material realism, and product geometry; place the phone and snacks so they fit the tray sizes and compartment depths without altering the organizer's structure\"\n  },\n  \"preserve\": [\n    \"the sofa armrest organizer's shape, structure, material, and blue-gray color\",\n    \"the visible text 'SPACES RECLAIMED' in the top-left area\",\n    \"the sofa, blanket, wooden table, background, and overall composition\",\n    \"the original lighting, perspective, highlights, and shadows\",\n    \"all non-target areas and product details not explicitly edited\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the organizer\",\n    \"do not change the product size, compartments, or attachment to the sofa arm\",\n    \"do not place the phone or snacks outside the product\",\n    \"do not modify the existing scene styling or remove visible text\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-009-original-1.png",
+                "assetPath": "assets/SINGLE-009-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-009-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-009-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-009-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-009-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:05:26.331Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-010",
+      "title": "换一个人物；换一张背景场景",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "换一个人物；换一张背景场景",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-010-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1264682
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-010-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1360580
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "换一个人物；换一张背景场景",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the seated male model on the right side of the scene, including his face, hair, body, clothing, and visible pose in the chair\",\n      \"content\": \"a different human model seated in the same position, wearing the earbud naturally in the ear, with a calm premium lifestyle-ad look that fits the product campaign\",\n      \"integration\": \"match the original camera angle, body scale, pose alignment, desk interaction, lighting direction, skin shading, shadows, and overall realistic premium advertising style; keep the new person seamlessly integrated into the same composition without changing the product placement or text layout\",\n      \"preserve_conditions\": \"retain the original scene balance, keep the earbud on the model visible and believable, and avoid covering existing product-focused elements\"\n    },\n    {\n      \"target\": \"the background environment behind the subject and desk, including the current office interior and shelving area\",\n      \"content\": \"a different background scene with a refined, premium, tranquil atmosphere suitable for wireless earbuds advertising\",\n      \"integration\": \"replace only the environmental backdrop while preserving the foreground desk setup, product composition, perspective depth, lighting consistency, shadows, and overall cinematic commercial quality; the new background should feel naturally photographed in the same shot\",\n      \"preserve_conditions\": \"do not disturb the foreground earbuds product render, the desk objects that are part of the composition, or the headline typography\"\n    }\n  ],\n  \"preserve\": [\n    \"the enlarged floating earbuds product at the lower left, including its structure, material, color, orientation, and glow-ring presentation\",\n    \"the earbud worn in the subject's ear as the same product identity\",\n    \"the visible headline text 'Pure Tranquility' and subheadline 'Superior Noise Reduction'\",\n    \"the overall premium advertisement composition, framing, perspective, and lighting mood\",\n    \"the desk, foreground product placement, and non-target objects unless minor adjustment is required for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the earbuds product design, color, branding presentation, or visible product details\",\n    \"do not edit, remove, restyle, or reposition the existing headline and subheadline text\",\n    \"do not move the floating product render away from its current lower-left feature position\",\n    \"do not introduce annotation marks, extra text, logos, or unrelated objects\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the seated male model on the right side of the scene, including his face, hair, body, clothing, and visible pose in the chair\",\n      \"content\": \"a different human model seated in the same position, wearing the earbud naturally in the ear, with a calm premium lifestyle-ad look that fits the product campaign\",\n      \"integration\": \"match the original camera angle, body scale, pose alignment, desk interaction, lighting direction, skin shading, shadows, and overall realistic premium advertising style; keep the new person seamlessly integrated into the same composition without changing the product placement or text layout\",\n      \"preserve_conditions\": \"retain the original scene balance, keep the earbud on the model visible and believable, and avoid covering existing product-focused elements\"\n    },\n    {\n      \"target\": \"the background environment behind the subject and desk, including the current office interior and shelving area\",\n      \"content\": \"a different background scene with a refined, premium, tranquil atmosphere suitable for wireless earbuds advertising\",\n      \"integration\": \"replace only the environmental backdrop while preserving the foreground desk setup, product composition, perspective depth, lighting consistency, shadows, and overall cinematic commercial quality; the new background should feel naturally photographed in the same shot\",\n      \"preserve_conditions\": \"do not disturb the foreground earbuds product render, the desk objects that are part of the composition, or the headline typography\"\n    }\n  ],\n  \"preserve\": [\n    \"the enlarged floating earbuds product at the lower left, including its structure, material, color, orientation, and glow-ring presentation\",\n    \"the earbud worn in the subject's ear as the same product identity\",\n    \"the visible headline text 'Pure Tranquility' and subheadline 'Superior Noise Reduction'\",\n    \"the overall premium advertisement composition, framing, perspective, and lighting mood\",\n    \"the desk, foreground product placement, and non-target objects unless minor adjustment is required for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the earbuds product design, color, branding presentation, or visible product details\",\n    \"do not edit, remove, restyle, or reposition the existing headline and subheadline text\",\n    \"do not move the floating product render away from its current lower-left feature position\",\n    \"do not introduce annotation marks, extra text, logos, or unrelated objects\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the seated male model on the right side of the scene, including his face, hair, body, clothing, and visible pose in the chair\",\n      \"content\": \"a different human model seated in the same position, wearing the earbud naturally in the ear, with a calm premium lifestyle-ad look that fits the product campaign\",\n      \"integration\": \"match the original camera angle, body scale, pose alignment, desk interaction, lighting direction, skin shading, shadows, and overall realistic premium advertising style; keep the new person seamlessly integrated into the same composition without changing the product placement or text layout\",\n      \"preserve_conditions\": \"retain the original scene balance, keep the earbud on the model visible and believable, and avoid covering existing product-focused elements\"\n    },\n    {\n      \"target\": \"the background environment behind the subject and desk, including the current office interior and shelving area\",\n      \"content\": \"a different background scene with a refined, premium, tranquil atmosphere suitable for wireless earbuds advertising\",\n      \"integration\": \"replace only the environmental backdrop while preserving the foreground desk setup, product composition, perspective depth, lighting consistency, shadows, and overall cinematic commercial quality; the new background should feel naturally photographed in the same shot\",\n      \"preserve_conditions\": \"do not disturb the foreground earbuds product render, the desk objects that are part of the composition, or the headline typography\"\n    }\n  ],\n  \"preserve\": [\n    \"the enlarged floating earbuds product at the lower left, including its structure, material, color, orientation, and glow-ring presentation\",\n    \"the earbud worn in the subject's ear as the same product identity\",\n    \"the visible headline text 'Pure Tranquility' and subheadline 'Superior Noise Reduction'\",\n    \"the overall premium advertisement composition, framing, perspective, and lighting mood\",\n    \"the desk, foreground product placement, and non-target objects unless minor adjustment is required for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the earbuds product design, color, branding presentation, or visible product details\",\n    \"do not edit, remove, restyle, or reposition the existing headline and subheadline text\",\n    \"do not move the floating product render away from its current lower-left feature position\",\n    \"do not introduce annotation marks, extra text, logos, or unrelated objects\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the seated male model on the right side of the scene, including his face, hair, body, clothing, and visible pose in the chair\",\n      \"content\": \"a different human model seated in the same position, wearing the earbud naturally in the ear, with a calm premium lifestyle-ad look that fits the product campaign\",\n      \"integration\": \"match the original camera angle, body scale, pose alignment, desk interaction, lighting direction, skin shading, shadows, and overall realistic premium advertising style; keep the new person seamlessly integrated into the same composition without changing the product placement or text layout\",\n      \"preserve_conditions\": \"retain the original scene balance, keep the earbud on the model visible and believable, and avoid covering existing product-focused elements\"\n    },\n    {\n      \"target\": \"the background environment behind the subject and desk, including the current office interior and shelving area\",\n      \"content\": \"a different background scene with a refined, premium, tranquil atmosphere suitable for wireless earbuds advertising\",\n      \"integration\": \"replace only the environmental backdrop while preserving the foreground desk setup, product composition, perspective depth, lighting consistency, shadows, and overall cinematic commercial quality; the new background should feel naturally photographed in the same shot\",\n      \"preserve_conditions\": \"do not disturb the foreground earbuds product render, the desk objects that are part of the composition, or the headline typography\"\n    }\n  ],\n  \"preserve\": [\n    \"the enlarged floating earbuds product at the lower left, including its structure, material, color, orientation, and glow-ring presentation\",\n    \"the earbud worn in the subject's ear as the same product identity\",\n    \"the visible headline text 'Pure Tranquility' and subheadline 'Superior Noise Reduction'\",\n    \"the overall premium advertisement composition, framing, perspective, and lighting mood\",\n    \"the desk, foreground product placement, and non-target objects unless minor adjustment is required for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the earbuds product design, color, branding presentation, or visible product details\",\n    \"do not edit, remove, restyle, or reposition the existing headline and subheadline text\",\n    \"do not move the floating product render away from its current lower-left feature position\",\n    \"do not introduce annotation marks, extra text, logos, or unrelated objects\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-010\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-010/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the seated male model on the right side of the scene, including his face, hair, body, clothing, and visible pose in the chair\",\n      \"content\": \"a different human model seated in the same position, wearing the earbud naturally in the ear, with a calm premium lifestyle-ad look that fits the product campaign\",\n      \"integration\": \"match the original camera angle, body scale, pose alignment, desk interaction, lighting direction, skin shading, shadows, and overall realistic premium advertising style; keep the new person seamlessly integrated into the same composition without changing the product placement or text layout\",\n      \"preserve_conditions\": \"retain the original scene balance, keep the earbud on the model visible and believable, and avoid covering existing product-focused elements\"\n    },\n    {\n      \"target\": \"the background environment behind the subject and desk, including the current office interior and shelving area\",\n      \"content\": \"a different background scene with a refined, premium, tranquil atmosphere suitable for wireless earbuds advertising\",\n      \"integration\": \"replace only the environmental backdrop while preserving the foreground desk setup, product composition, perspective depth, lighting consistency, shadows, and overall cinematic commercial quality; the new background should feel naturally photographed in the same shot\",\n      \"preserve_conditions\": \"do not disturb the foreground earbuds product render, the desk objects that are part of the composition, or the headline typography\"\n    }\n  ],\n  \"preserve\": [\n    \"the enlarged floating earbuds product at the lower left, including its structure, material, color, orientation, and glow-ring presentation\",\n    \"the earbud worn in the subject's ear as the same product identity\",\n    \"the visible headline text 'Pure Tranquility' and subheadline 'Superior Noise Reduction'\",\n    \"the overall premium advertisement composition, framing, perspective, and lighting mood\",\n    \"the desk, foreground product placement, and non-target objects unless minor adjustment is required for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the earbuds product design, color, branding presentation, or visible product details\",\n    \"do not edit, remove, restyle, or reposition the existing headline and subheadline text\",\n    \"do not move the floating product render away from its current lower-left feature position\",\n    \"do not introduce annotation marks, extra text, logos, or unrelated objects\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": [\n    {\n      \"target\": \"the seated male model on the right side of the scene, including his face, hair, body, clothing, and visible pose in the chair\",\n      \"content\": \"a different human model seated in the same position, wearing the earbud naturally in the ear, with a calm premium lifestyle-ad look that fits the product campaign\",\n      \"integration\": \"match the original camera angle, body scale, pose alignment, desk interaction, lighting direction, skin shading, shadows, and overall realistic premium advertising style; keep the new person seamlessly integrated into the same composition without changing the product placement or text layout\",\n      \"preserve_conditions\": \"retain the original scene balance, keep the earbud on the model visible and believable, and avoid covering existing product-focused elements\"\n    },\n    {\n      \"target\": \"the background environment behind the subject and desk, including the current office interior and shelving area\",\n      \"content\": \"a different background scene with a refined, premium, tranquil atmosphere suitable for wireless earbuds advertising\",\n      \"integration\": \"replace only the environmental backdrop while preserving the foreground desk setup, product composition, perspective depth, lighting consistency, shadows, and overall cinematic commercial quality; the new background should feel naturally photographed in the same shot\",\n      \"preserve_conditions\": \"do not disturb the foreground earbuds product render, the desk objects that are part of the composition, or the headline typography\"\n    }\n  ],\n  \"preserve\": [\n    \"the enlarged floating earbuds product at the lower left, including its structure, material, color, orientation, and glow-ring presentation\",\n    \"the earbud worn in the subject's ear as the same product identity\",\n    \"the visible headline text 'Pure Tranquility' and subheadline 'Superior Noise Reduction'\",\n    \"the overall premium advertisement composition, framing, perspective, and lighting mood\",\n    \"the desk, foreground product placement, and non-target objects unless minor adjustment is required for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the earbuds product design, color, branding presentation, or visible product details\",\n    \"do not edit, remove, restyle, or reposition the existing headline and subheadline text\",\n    \"do not move the floating product render away from its current lower-left feature position\",\n    \"do not introduce annotation marks, extra text, logos, or unrelated objects\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-010-original-1.png",
+                "assetPath": "assets/SINGLE-010-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-010-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-010-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-010-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-010-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:07:44.100Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-011",
+      "title": "在主体产品中添加首饰",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品中添加首饰",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-011-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1293331
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-011-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1207992
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品中添加首饰",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the inside surface of the central raised wooden bowl/tray\",\n    \"target_area\": \"inside the bowl only\",\n    \"content\": \"a small selection of refined jewelry placed inside the bowl, such as elegant gold rings, a delicate bracelet, and a subtle necklace, arranged neatly and naturally as product styling props\",\n    \"style\": \"luxury, minimal, premium lifestyle styling that matches the warm and sophisticated scene\",\n    \"integration\": \"keep the jewelry realistically scaled to the bowl, resting naturally on the inner wooden surface, with matching warm highlights, soft shadows, perspective, depth of field, and material reflections consistent with the original lighting and camera angle\",\n    \"preserve_conditions\": \"the jewelry must be clearly contained within the bowl and must not float, spill onto the tabletop, or appear in the background\"\n  },\n  \"preserve\": [\n    \"the wooden bowl/tray structure, proportions, wood grain, and brown material appearance\",\n    \"the gold legs of the product\",\n    \"the tabletop, perfume bottle, pearls, background, lighting, shadows, and camera perspective\",\n    \"all existing visible text overlay including the headline, subtitle, and icon labels\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, material, or color\",\n    \"do not place the jewelry beside the product or elsewhere in the scene\",\n    \"do not remove or modify existing scene objects or text\",\n    \"do not change the composition, crop, or overall atmosphere except for the added jewelry inside the bowl\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the inside surface of the central raised wooden bowl/tray\",\n    \"target_area\": \"inside the bowl only\",\n    \"content\": \"a small selection of refined jewelry placed inside the bowl, such as elegant gold rings, a delicate bracelet, and a subtle necklace, arranged neatly and naturally as product styling props\",\n    \"style\": \"luxury, minimal, premium lifestyle styling that matches the warm and sophisticated scene\",\n    \"integration\": \"keep the jewelry realistically scaled to the bowl, resting naturally on the inner wooden surface, with matching warm highlights, soft shadows, perspective, depth of field, and material reflections consistent with the original lighting and camera angle\",\n    \"preserve_conditions\": \"the jewelry must be clearly contained within the bowl and must not float, spill onto the tabletop, or appear in the background\"\n  },\n  \"preserve\": [\n    \"the wooden bowl/tray structure, proportions, wood grain, and brown material appearance\",\n    \"the gold legs of the product\",\n    \"the tabletop, perfume bottle, pearls, background, lighting, shadows, and camera perspective\",\n    \"all existing visible text overlay including the headline, subtitle, and icon labels\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, material, or color\",\n    \"do not place the jewelry beside the product or elsewhere in the scene\",\n    \"do not remove or modify existing scene objects or text\",\n    \"do not change the composition, crop, or overall atmosphere except for the added jewelry inside the bowl\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the inside surface of the central raised wooden bowl/tray\",\n    \"target_area\": \"inside the bowl only\",\n    \"content\": \"a small selection of refined jewelry placed inside the bowl, such as elegant gold rings, a delicate bracelet, and a subtle necklace, arranged neatly and naturally as product styling props\",\n    \"style\": \"luxury, minimal, premium lifestyle styling that matches the warm and sophisticated scene\",\n    \"integration\": \"keep the jewelry realistically scaled to the bowl, resting naturally on the inner wooden surface, with matching warm highlights, soft shadows, perspective, depth of field, and material reflections consistent with the original lighting and camera angle\",\n    \"preserve_conditions\": \"the jewelry must be clearly contained within the bowl and must not float, spill onto the tabletop, or appear in the background\"\n  },\n  \"preserve\": [\n    \"the wooden bowl/tray structure, proportions, wood grain, and brown material appearance\",\n    \"the gold legs of the product\",\n    \"the tabletop, perfume bottle, pearls, background, lighting, shadows, and camera perspective\",\n    \"all existing visible text overlay including the headline, subtitle, and icon labels\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, material, or color\",\n    \"do not place the jewelry beside the product or elsewhere in the scene\",\n    \"do not remove or modify existing scene objects or text\",\n    \"do not change the composition, crop, or overall atmosphere except for the added jewelry inside the bowl\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the inside surface of the central raised wooden bowl/tray\",\n    \"target_area\": \"inside the bowl only\",\n    \"content\": \"a small selection of refined jewelry placed inside the bowl, such as elegant gold rings, a delicate bracelet, and a subtle necklace, arranged neatly and naturally as product styling props\",\n    \"style\": \"luxury, minimal, premium lifestyle styling that matches the warm and sophisticated scene\",\n    \"integration\": \"keep the jewelry realistically scaled to the bowl, resting naturally on the inner wooden surface, with matching warm highlights, soft shadows, perspective, depth of field, and material reflections consistent with the original lighting and camera angle\",\n    \"preserve_conditions\": \"the jewelry must be clearly contained within the bowl and must not float, spill onto the tabletop, or appear in the background\"\n  },\n  \"preserve\": [\n    \"the wooden bowl/tray structure, proportions, wood grain, and brown material appearance\",\n    \"the gold legs of the product\",\n    \"the tabletop, perfume bottle, pearls, background, lighting, shadows, and camera perspective\",\n    \"all existing visible text overlay including the headline, subtitle, and icon labels\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, material, or color\",\n    \"do not place the jewelry beside the product or elsewhere in the scene\",\n    \"do not remove or modify existing scene objects or text\",\n    \"do not change the composition, crop, or overall atmosphere except for the added jewelry inside the bowl\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-011\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-011/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the inside surface of the central raised wooden bowl/tray\",\n    \"target_area\": \"inside the bowl only\",\n    \"content\": \"a small selection of refined jewelry placed inside the bowl, such as elegant gold rings, a delicate bracelet, and a subtle necklace, arranged neatly and naturally as product styling props\",\n    \"style\": \"luxury, minimal, premium lifestyle styling that matches the warm and sophisticated scene\",\n    \"integration\": \"keep the jewelry realistically scaled to the bowl, resting naturally on the inner wooden surface, with matching warm highlights, soft shadows, perspective, depth of field, and material reflections consistent with the original lighting and camera angle\",\n    \"preserve_conditions\": \"the jewelry must be clearly contained within the bowl and must not float, spill onto the tabletop, or appear in the background\"\n  },\n  \"preserve\": [\n    \"the wooden bowl/tray structure, proportions, wood grain, and brown material appearance\",\n    \"the gold legs of the product\",\n    \"the tabletop, perfume bottle, pearls, background, lighting, shadows, and camera perspective\",\n    \"all existing visible text overlay including the headline, subtitle, and icon labels\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, material, or color\",\n    \"do not place the jewelry beside the product or elsewhere in the scene\",\n    \"do not remove or modify existing scene objects or text\",\n    \"do not change the composition, crop, or overall atmosphere except for the added jewelry inside the bowl\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the inside surface of the central raised wooden bowl/tray\",\n    \"target_area\": \"inside the bowl only\",\n    \"content\": \"a small selection of refined jewelry placed inside the bowl, such as elegant gold rings, a delicate bracelet, and a subtle necklace, arranged neatly and naturally as product styling props\",\n    \"style\": \"luxury, minimal, premium lifestyle styling that matches the warm and sophisticated scene\",\n    \"integration\": \"keep the jewelry realistically scaled to the bowl, resting naturally on the inner wooden surface, with matching warm highlights, soft shadows, perspective, depth of field, and material reflections consistent with the original lighting and camera angle\",\n    \"preserve_conditions\": \"the jewelry must be clearly contained within the bowl and must not float, spill onto the tabletop, or appear in the background\"\n  },\n  \"preserve\": [\n    \"the wooden bowl/tray structure, proportions, wood grain, and brown material appearance\",\n    \"the gold legs of the product\",\n    \"the tabletop, perfume bottle, pearls, background, lighting, shadows, and camera perspective\",\n    \"all existing visible text overlay including the headline, subtitle, and icon labels\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, material, or color\",\n    \"do not place the jewelry beside the product or elsewhere in the scene\",\n    \"do not remove or modify existing scene objects or text\",\n    \"do not change the composition, crop, or overall atmosphere except for the added jewelry inside the bowl\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-011-original-1.png",
+                "assetPath": "assets/SINGLE-011-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-011-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-011-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-011-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-011-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:06:15.088Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-012",
+      "title": "在主体产品内部添加一个小型植物",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品内部添加一个小型植物",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-012-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1686661
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-012-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1650289
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品内部添加一个小型植物",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior ground area inside the main white mesh protective cover in the foreground\",\n    \"content\": \"add one small healthy green plant inside the product, emerging naturally from the soil under the mesh cover; the plant should be modest in size, visually appropriate for a young seedling or small sprout, and clearly positioned within the enclosed space of the product\",\n    \"integration\": \"anchor the plant directly into the existing soil inside the cover, not outside the product and not floating; match the scene's warm natural lighting, shallow depth of field, soft shadows, scale, perspective, and realistic contact with the soil; ensure the plant is visible through the mesh while preserving the mesh translucency and the product's existing form\"\n  },\n  \"preserve\": [\n    \"the white mesh protective cover's structure, shape, frame, material, and color\",\n    \"all visible text and icons in the promotional layout\",\n    \"the existing background blur, lighting direction, shadows, and overall composition\",\n    \"the soil texture, surrounding moss, and non-target foreground details outside the product\"\n  ],\n  \"do_not_change\": [\n    \"do not place the plant beside the product or in the background\",\n    \"do not alter the product's size, perspective, or construction\",\n    \"do not change the visible headline, subheadline, or feature icons\",\n    \"do not modify non-target areas of the image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior ground area inside the main white mesh protective cover in the foreground\",\n    \"content\": \"add one small healthy green plant inside the product, emerging naturally from the soil under the mesh cover; the plant should be modest in size, visually appropriate for a young seedling or small sprout, and clearly positioned within the enclosed space of the product\",\n    \"integration\": \"anchor the plant directly into the existing soil inside the cover, not outside the product and not floating; match the scene's warm natural lighting, shallow depth of field, soft shadows, scale, perspective, and realistic contact with the soil; ensure the plant is visible through the mesh while preserving the mesh translucency and the product's existing form\"\n  },\n  \"preserve\": [\n    \"the white mesh protective cover's structure, shape, frame, material, and color\",\n    \"all visible text and icons in the promotional layout\",\n    \"the existing background blur, lighting direction, shadows, and overall composition\",\n    \"the soil texture, surrounding moss, and non-target foreground details outside the product\"\n  ],\n  \"do_not_change\": [\n    \"do not place the plant beside the product or in the background\",\n    \"do not alter the product's size, perspective, or construction\",\n    \"do not change the visible headline, subheadline, or feature icons\",\n    \"do not modify non-target areas of the image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior ground area inside the main white mesh protective cover in the foreground\",\n    \"content\": \"add one small healthy green plant inside the product, emerging naturally from the soil under the mesh cover; the plant should be modest in size, visually appropriate for a young seedling or small sprout, and clearly positioned within the enclosed space of the product\",\n    \"integration\": \"anchor the plant directly into the existing soil inside the cover, not outside the product and not floating; match the scene's warm natural lighting, shallow depth of field, soft shadows, scale, perspective, and realistic contact with the soil; ensure the plant is visible through the mesh while preserving the mesh translucency and the product's existing form\"\n  },\n  \"preserve\": [\n    \"the white mesh protective cover's structure, shape, frame, material, and color\",\n    \"all visible text and icons in the promotional layout\",\n    \"the existing background blur, lighting direction, shadows, and overall composition\",\n    \"the soil texture, surrounding moss, and non-target foreground details outside the product\"\n  ],\n  \"do_not_change\": [\n    \"do not place the plant beside the product or in the background\",\n    \"do not alter the product's size, perspective, or construction\",\n    \"do not change the visible headline, subheadline, or feature icons\",\n    \"do not modify non-target areas of the image\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior ground area inside the main white mesh protective cover in the foreground\",\n    \"content\": \"add one small healthy green plant inside the product, emerging naturally from the soil under the mesh cover; the plant should be modest in size, visually appropriate for a young seedling or small sprout, and clearly positioned within the enclosed space of the product\",\n    \"integration\": \"anchor the plant directly into the existing soil inside the cover, not outside the product and not floating; match the scene's warm natural lighting, shallow depth of field, soft shadows, scale, perspective, and realistic contact with the soil; ensure the plant is visible through the mesh while preserving the mesh translucency and the product's existing form\"\n  },\n  \"preserve\": [\n    \"the white mesh protective cover's structure, shape, frame, material, and color\",\n    \"all visible text and icons in the promotional layout\",\n    \"the existing background blur, lighting direction, shadows, and overall composition\",\n    \"the soil texture, surrounding moss, and non-target foreground details outside the product\"\n  ],\n  \"do_not_change\": [\n    \"do not place the plant beside the product or in the background\",\n    \"do not alter the product's size, perspective, or construction\",\n    \"do not change the visible headline, subheadline, or feature icons\",\n    \"do not modify non-target areas of the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-012\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-012/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior ground area inside the main white mesh protective cover in the foreground\",\n    \"content\": \"add one small healthy green plant inside the product, emerging naturally from the soil under the mesh cover; the plant should be modest in size, visually appropriate for a young seedling or small sprout, and clearly positioned within the enclosed space of the product\",\n    \"integration\": \"anchor the plant directly into the existing soil inside the cover, not outside the product and not floating; match the scene's warm natural lighting, shallow depth of field, soft shadows, scale, perspective, and realistic contact with the soil; ensure the plant is visible through the mesh while preserving the mesh translucency and the product's existing form\"\n  },\n  \"preserve\": [\n    \"the white mesh protective cover's structure, shape, frame, material, and color\",\n    \"all visible text and icons in the promotional layout\",\n    \"the existing background blur, lighting direction, shadows, and overall composition\",\n    \"the soil texture, surrounding moss, and non-target foreground details outside the product\"\n  ],\n  \"do_not_change\": [\n    \"do not place the plant beside the product or in the background\",\n    \"do not alter the product's size, perspective, or construction\",\n    \"do not change the visible headline, subheadline, or feature icons\",\n    \"do not modify non-target areas of the image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior ground area inside the main white mesh protective cover in the foreground\",\n    \"content\": \"add one small healthy green plant inside the product, emerging naturally from the soil under the mesh cover; the plant should be modest in size, visually appropriate for a young seedling or small sprout, and clearly positioned within the enclosed space of the product\",\n    \"integration\": \"anchor the plant directly into the existing soil inside the cover, not outside the product and not floating; match the scene's warm natural lighting, shallow depth of field, soft shadows, scale, perspective, and realistic contact with the soil; ensure the plant is visible through the mesh while preserving the mesh translucency and the product's existing form\"\n  },\n  \"preserve\": [\n    \"the white mesh protective cover's structure, shape, frame, material, and color\",\n    \"all visible text and icons in the promotional layout\",\n    \"the existing background blur, lighting direction, shadows, and overall composition\",\n    \"the soil texture, surrounding moss, and non-target foreground details outside the product\"\n  ],\n  \"do_not_change\": [\n    \"do not place the plant beside the product or in the background\",\n    \"do not alter the product's size, perspective, or construction\",\n    \"do not change the visible headline, subheadline, or feature icons\",\n    \"do not modify non-target areas of the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-012-original-1.png",
+                "assetPath": "assets/SINGLE-012-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-012-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-012-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-012-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-012-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:07:35.876Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-013",
+      "title": "在产品内部添加水；在地面添加一只猫",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在产品内部添加水；在地面添加一只猫",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-013-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1263999
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-013-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1326781
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在产品内部添加水；在地面添加一只猫",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/open reservoir area inside the main yellow product\",\n    \"target_area\": \"the central recessed interior of the product\",\n    \"content\": \"add clean, realistic water contained inside the product, visibly filling the inner reservoir without overflowing\",\n    \"integration\": \"match the product's existing perspective, soft indoor lighting, reflections, rim occlusion, and natural shadowing so the water looks physically inside the container and consistent with the scene\",\n    \"preserve_conditions\": \"keep the product's structure, materials, orange-yellow color, and visible inner details intact while only adding the water surface\"\n  },\n  \"insert\": {\n    \"target\": \"the floor area around the product\",\n    \"target_area\": \"the ground plane near the mat and product base\",\n    \"content\": \"add one realistic cat standing or sitting on the floor near the product\",\n    \"integration\": \"the cat should be scaled naturally for the scene, grounded on the floor with correct contact shadows, lit by the same warm indoor light, and placed as part of the environment rather than inside the product or floating in the background\",\n    \"preserve_conditions\": \"avoid blocking the main product excessively and keep the cat secondary to the product\"\n  },\n  \"preserve\": [\n    \"the overall product shape and structure\",\n    \"the yellow and orange product colors\",\n    \"the product material appearance and finish\",\n    \"the visible top text 'NO-SPILL HYDRATION'\",\n    \"the mat, floor, background lighting, perspective, and existing shadows except where the cat naturally interacts with the floor\",\n    \"all non-target areas not directly affected by the added water or cat\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or dimensions\",\n    \"do not move the product from its current position\",\n    \"do not change the camera angle or scene composition\",\n    \"do not place the cat inside the product\",\n    \"do not spill water outside the product\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/open reservoir area inside the main yellow product\",\n    \"target_area\": \"the central recessed interior of the product\",\n    \"content\": \"add clean, realistic water contained inside the product, visibly filling the inner reservoir without overflowing\",\n    \"integration\": \"match the product's existing perspective, soft indoor lighting, reflections, rim occlusion, and natural shadowing so the water looks physically inside the container and consistent with the scene\",\n    \"preserve_conditions\": \"keep the product's structure, materials, orange-yellow color, and visible inner details intact while only adding the water surface\"\n  },\n  \"insert\": {\n    \"target\": \"the floor area around the product\",\n    \"target_area\": \"the ground plane near the mat and product base\",\n    \"content\": \"add one realistic cat standing or sitting on the floor near the product\",\n    \"integration\": \"the cat should be scaled naturally for the scene, grounded on the floor with correct contact shadows, lit by the same warm indoor light, and placed as part of the environment rather than inside the product or floating in the background\",\n    \"preserve_conditions\": \"avoid blocking the main product excessively and keep the cat secondary to the product\"\n  },\n  \"preserve\": [\n    \"the overall product shape and structure\",\n    \"the yellow and orange product colors\",\n    \"the product material appearance and finish\",\n    \"the visible top text 'NO-SPILL HYDRATION'\",\n    \"the mat, floor, background lighting, perspective, and existing shadows except where the cat naturally interacts with the floor\",\n    \"all non-target areas not directly affected by the added water or cat\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or dimensions\",\n    \"do not move the product from its current position\",\n    \"do not change the camera angle or scene composition\",\n    \"do not place the cat inside the product\",\n    \"do not spill water outside the product\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/open reservoir area inside the main yellow product\",\n    \"target_area\": \"the central recessed interior of the product\",\n    \"content\": \"add clean, realistic water contained inside the product, visibly filling the inner reservoir without overflowing\",\n    \"integration\": \"match the product's existing perspective, soft indoor lighting, reflections, rim occlusion, and natural shadowing so the water looks physically inside the container and consistent with the scene\",\n    \"preserve_conditions\": \"keep the product's structure, materials, orange-yellow color, and visible inner details intact while only adding the water surface\"\n  },\n  \"insert\": {\n    \"target\": \"the floor area around the product\",\n    \"target_area\": \"the ground plane near the mat and product base\",\n    \"content\": \"add one realistic cat standing or sitting on the floor near the product\",\n    \"integration\": \"the cat should be scaled naturally for the scene, grounded on the floor with correct contact shadows, lit by the same warm indoor light, and placed as part of the environment rather than inside the product or floating in the background\",\n    \"preserve_conditions\": \"avoid blocking the main product excessively and keep the cat secondary to the product\"\n  },\n  \"preserve\": [\n    \"the overall product shape and structure\",\n    \"the yellow and orange product colors\",\n    \"the product material appearance and finish\",\n    \"the visible top text 'NO-SPILL HYDRATION'\",\n    \"the mat, floor, background lighting, perspective, and existing shadows except where the cat naturally interacts with the floor\",\n    \"all non-target areas not directly affected by the added water or cat\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or dimensions\",\n    \"do not move the product from its current position\",\n    \"do not change the camera angle or scene composition\",\n    \"do not place the cat inside the product\",\n    \"do not spill water outside the product\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/open reservoir area inside the main yellow product\",\n    \"target_area\": \"the central recessed interior of the product\",\n    \"content\": \"add clean, realistic water contained inside the product, visibly filling the inner reservoir without overflowing\",\n    \"integration\": \"match the product's existing perspective, soft indoor lighting, reflections, rim occlusion, and natural shadowing so the water looks physically inside the container and consistent with the scene\",\n    \"preserve_conditions\": \"keep the product's structure, materials, orange-yellow color, and visible inner details intact while only adding the water surface\"\n  },\n  \"insert\": {\n    \"target\": \"the floor area around the product\",\n    \"target_area\": \"the ground plane near the mat and product base\",\n    \"content\": \"add one realistic cat standing or sitting on the floor near the product\",\n    \"integration\": \"the cat should be scaled naturally for the scene, grounded on the floor with correct contact shadows, lit by the same warm indoor light, and placed as part of the environment rather than inside the product or floating in the background\",\n    \"preserve_conditions\": \"avoid blocking the main product excessively and keep the cat secondary to the product\"\n  },\n  \"preserve\": [\n    \"the overall product shape and structure\",\n    \"the yellow and orange product colors\",\n    \"the product material appearance and finish\",\n    \"the visible top text 'NO-SPILL HYDRATION'\",\n    \"the mat, floor, background lighting, perspective, and existing shadows except where the cat naturally interacts with the floor\",\n    \"all non-target areas not directly affected by the added water or cat\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or dimensions\",\n    \"do not move the product from its current position\",\n    \"do not change the camera angle or scene composition\",\n    \"do not place the cat inside the product\",\n    \"do not spill water outside the product\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-retry-anno001-005-010-single008-013\\cases\\SINGLE-013\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-013/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 5
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/open reservoir area inside the main yellow product\",\n    \"target_area\": \"the central recessed interior of the product\",\n    \"content\": \"add clean, realistic water contained inside the product, visibly filling the inner reservoir without overflowing\",\n    \"integration\": \"match the product's existing perspective, soft indoor lighting, reflections, rim occlusion, and natural shadowing so the water looks physically inside the container and consistent with the scene\",\n    \"preserve_conditions\": \"keep the product's structure, materials, orange-yellow color, and visible inner details intact while only adding the water surface\"\n  },\n  \"insert\": {\n    \"target\": \"the floor area around the product\",\n    \"target_area\": \"the ground plane near the mat and product base\",\n    \"content\": \"add one realistic cat standing or sitting on the floor near the product\",\n    \"integration\": \"the cat should be scaled naturally for the scene, grounded on the floor with correct contact shadows, lit by the same warm indoor light, and placed as part of the environment rather than inside the product or floating in the background\",\n    \"preserve_conditions\": \"avoid blocking the main product excessively and keep the cat secondary to the product\"\n  },\n  \"preserve\": [\n    \"the overall product shape and structure\",\n    \"the yellow and orange product colors\",\n    \"the product material appearance and finish\",\n    \"the visible top text 'NO-SPILL HYDRATION'\",\n    \"the mat, floor, background lighting, perspective, and existing shadows except where the cat naturally interacts with the floor\",\n    \"all non-target areas not directly affected by the added water or cat\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or dimensions\",\n    \"do not move the product from its current position\",\n    \"do not change the camera angle or scene composition\",\n    \"do not place the cat inside the product\",\n    \"do not spill water outside the product\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inner basin/open reservoir area inside the main yellow product\",\n    \"target_area\": \"the central recessed interior of the product\",\n    \"content\": \"add clean, realistic water contained inside the product, visibly filling the inner reservoir without overflowing\",\n    \"integration\": \"match the product's existing perspective, soft indoor lighting, reflections, rim occlusion, and natural shadowing so the water looks physically inside the container and consistent with the scene\",\n    \"preserve_conditions\": \"keep the product's structure, materials, orange-yellow color, and visible inner details intact while only adding the water surface\"\n  },\n  \"insert\": {\n    \"target\": \"the floor area around the product\",\n    \"target_area\": \"the ground plane near the mat and product base\",\n    \"content\": \"add one realistic cat standing or sitting on the floor near the product\",\n    \"integration\": \"the cat should be scaled naturally for the scene, grounded on the floor with correct contact shadows, lit by the same warm indoor light, and placed as part of the environment rather than inside the product or floating in the background\",\n    \"preserve_conditions\": \"avoid blocking the main product excessively and keep the cat secondary to the product\"\n  },\n  \"preserve\": [\n    \"the overall product shape and structure\",\n    \"the yellow and orange product colors\",\n    \"the product material appearance and finish\",\n    \"the visible top text 'NO-SPILL HYDRATION'\",\n    \"the mat, floor, background lighting, perspective, and existing shadows except where the cat naturally interacts with the floor\",\n    \"all non-target areas not directly affected by the added water or cat\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product design or dimensions\",\n    \"do not move the product from its current position\",\n    \"do not change the camera angle or scene composition\",\n    \"do not place the cat inside the product\",\n    \"do not spill water outside the product\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-013-original-1.png",
+                "assetPath": "assets/SINGLE-013-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-013-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-013-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-013-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "retry_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-013-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T13:16:50.076Z",
+              "retry_source": "D:/Documents/BeePOP_slot/reports/local-edit-images-gemini-flash-20260624-retry-anno001-005-010-single008-013"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      },
+      "rerun": {
+        "rerun_count": 1,
+        "updated_at": "2026-06-24T13:20:00.815Z",
+        "previous_generated": [
+          {
+            "path": "generated/SINGLE-013-generated.png",
+            "label": "Previous Generated",
+            "mime_type": "image/png",
+            "exists": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SINGLE-014",
+      "title": "在产品内添加零食和玻璃杯",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在产品内添加零食和玻璃杯",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-014-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1359662
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-014-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1446617
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在产品内添加零食和玻璃杯",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior compartments of the light blue tray product\",\n    \"target_area\": \"selected open storage sections inside the tray, especially the larger rectangular compartments suitable for snacks\",\n    \"content\": \"add neatly arranged snacks inside the tray compartments, such as small cookies, crackers, candies, or bite-sized treats, placed naturally as usable contents of the organizer\",\n    \"integration\": \"keep the snacks realistically seated inside the compartments with correct scale, soft natural shadows, matching warm indoor lighting, and perspective consistent with the original product photo\",\n    \"preserve_conditions\": \"do not deform or redesign the tray; the snacks must appear contained within the product rather than floating above it or placed outside it\"\n  },\n  \"insert\": {\n    \"target\": \"the tray product in Image A\",\n    \"target_area\": \"a compartment that can plausibly hold a cup, preferably the round cup-holder section or another appropriately sized section inside the tray\",\n    \"content\": \"insert a clear glass drinking cup inside the product, sized to fit naturally within the compartment and visually consistent with the tray's intended use\",\n    \"integration\": \"match the existing camera angle, warm living-room lighting, reflections, contact shadows, and product perspective so the glass cup looks physically present in the tray\",\n    \"preserve_conditions\": \"the cup must be inside the product itself, not on the table beside it, and must not cover the visible slogan text in the image\"\n  },\n  \"preserve\": [\n    \"the tray's overall structure, compartment layout, material, light blue rim color, and white base\",\n    \"the wooden table, sofa, blanket, curtain background, and warm soft indoor lighting\",\n    \"the visible text 'COMFORT WITHIN REACH' and its style, position, and color\",\n    \"the original camera perspective, shadows, and overall clean product-photo composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or resize the product\",\n    \"do not alter the product's shape, edges, handles, or compartments\",\n    \"do not place added objects outside the tray or in the background\",\n    \"do not modify any non-target area of the image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior compartments of the light blue tray product\",\n    \"target_area\": \"selected open storage sections inside the tray, especially the larger rectangular compartments suitable for snacks\",\n    \"content\": \"add neatly arranged snacks inside the tray compartments, such as small cookies, crackers, candies, or bite-sized treats, placed naturally as usable contents of the organizer\",\n    \"integration\": \"keep the snacks realistically seated inside the compartments with correct scale, soft natural shadows, matching warm indoor lighting, and perspective consistent with the original product photo\",\n    \"preserve_conditions\": \"do not deform or redesign the tray; the snacks must appear contained within the product rather than floating above it or placed outside it\"\n  },\n  \"insert\": {\n    \"target\": \"the tray product in Image A\",\n    \"target_area\": \"a compartment that can plausibly hold a cup, preferably the round cup-holder section or another appropriately sized section inside the tray\",\n    \"content\": \"insert a clear glass drinking cup inside the product, sized to fit naturally within the compartment and visually consistent with the tray's intended use\",\n    \"integration\": \"match the existing camera angle, warm living-room lighting, reflections, contact shadows, and product perspective so the glass cup looks physically present in the tray\",\n    \"preserve_conditions\": \"the cup must be inside the product itself, not on the table beside it, and must not cover the visible slogan text in the image\"\n  },\n  \"preserve\": [\n    \"the tray's overall structure, compartment layout, material, light blue rim color, and white base\",\n    \"the wooden table, sofa, blanket, curtain background, and warm soft indoor lighting\",\n    \"the visible text 'COMFORT WITHIN REACH' and its style, position, and color\",\n    \"the original camera perspective, shadows, and overall clean product-photo composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or resize the product\",\n    \"do not alter the product's shape, edges, handles, or compartments\",\n    \"do not place added objects outside the tray or in the background\",\n    \"do not modify any non-target area of the image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior compartments of the light blue tray product\",\n    \"target_area\": \"selected open storage sections inside the tray, especially the larger rectangular compartments suitable for snacks\",\n    \"content\": \"add neatly arranged snacks inside the tray compartments, such as small cookies, crackers, candies, or bite-sized treats, placed naturally as usable contents of the organizer\",\n    \"integration\": \"keep the snacks realistically seated inside the compartments with correct scale, soft natural shadows, matching warm indoor lighting, and perspective consistent with the original product photo\",\n    \"preserve_conditions\": \"do not deform or redesign the tray; the snacks must appear contained within the product rather than floating above it or placed outside it\"\n  },\n  \"insert\": {\n    \"target\": \"the tray product in Image A\",\n    \"target_area\": \"a compartment that can plausibly hold a cup, preferably the round cup-holder section or another appropriately sized section inside the tray\",\n    \"content\": \"insert a clear glass drinking cup inside the product, sized to fit naturally within the compartment and visually consistent with the tray's intended use\",\n    \"integration\": \"match the existing camera angle, warm living-room lighting, reflections, contact shadows, and product perspective so the glass cup looks physically present in the tray\",\n    \"preserve_conditions\": \"the cup must be inside the product itself, not on the table beside it, and must not cover the visible slogan text in the image\"\n  },\n  \"preserve\": [\n    \"the tray's overall structure, compartment layout, material, light blue rim color, and white base\",\n    \"the wooden table, sofa, blanket, curtain background, and warm soft indoor lighting\",\n    \"the visible text 'COMFORT WITHIN REACH' and its style, position, and color\",\n    \"the original camera perspective, shadows, and overall clean product-photo composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or resize the product\",\n    \"do not alter the product's shape, edges, handles, or compartments\",\n    \"do not place added objects outside the tray or in the background\",\n    \"do not modify any non-target area of the image\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior compartments of the light blue tray product\",\n    \"target_area\": \"selected open storage sections inside the tray, especially the larger rectangular compartments suitable for snacks\",\n    \"content\": \"add neatly arranged snacks inside the tray compartments, such as small cookies, crackers, candies, or bite-sized treats, placed naturally as usable contents of the organizer\",\n    \"integration\": \"keep the snacks realistically seated inside the compartments with correct scale, soft natural shadows, matching warm indoor lighting, and perspective consistent with the original product photo\",\n    \"preserve_conditions\": \"do not deform or redesign the tray; the snacks must appear contained within the product rather than floating above it or placed outside it\"\n  },\n  \"insert\": {\n    \"target\": \"the tray product in Image A\",\n    \"target_area\": \"a compartment that can plausibly hold a cup, preferably the round cup-holder section or another appropriately sized section inside the tray\",\n    \"content\": \"insert a clear glass drinking cup inside the product, sized to fit naturally within the compartment and visually consistent with the tray's intended use\",\n    \"integration\": \"match the existing camera angle, warm living-room lighting, reflections, contact shadows, and product perspective so the glass cup looks physically present in the tray\",\n    \"preserve_conditions\": \"the cup must be inside the product itself, not on the table beside it, and must not cover the visible slogan text in the image\"\n  },\n  \"preserve\": [\n    \"the tray's overall structure, compartment layout, material, light blue rim color, and white base\",\n    \"the wooden table, sofa, blanket, curtain background, and warm soft indoor lighting\",\n    \"the visible text 'COMFORT WITHIN REACH' and its style, position, and color\",\n    \"the original camera perspective, shadows, and overall clean product-photo composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or resize the product\",\n    \"do not alter the product's shape, edges, handles, or compartments\",\n    \"do not place added objects outside the tray or in the background\",\n    \"do not modify any non-target area of the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-014\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-014/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior compartments of the light blue tray product\",\n    \"target_area\": \"selected open storage sections inside the tray, especially the larger rectangular compartments suitable for snacks\",\n    \"content\": \"add neatly arranged snacks inside the tray compartments, such as small cookies, crackers, candies, or bite-sized treats, placed naturally as usable contents of the organizer\",\n    \"integration\": \"keep the snacks realistically seated inside the compartments with correct scale, soft natural shadows, matching warm indoor lighting, and perspective consistent with the original product photo\",\n    \"preserve_conditions\": \"do not deform or redesign the tray; the snacks must appear contained within the product rather than floating above it or placed outside it\"\n  },\n  \"insert\": {\n    \"target\": \"the tray product in Image A\",\n    \"target_area\": \"a compartment that can plausibly hold a cup, preferably the round cup-holder section or another appropriately sized section inside the tray\",\n    \"content\": \"insert a clear glass drinking cup inside the product, sized to fit naturally within the compartment and visually consistent with the tray's intended use\",\n    \"integration\": \"match the existing camera angle, warm living-room lighting, reflections, contact shadows, and product perspective so the glass cup looks physically present in the tray\",\n    \"preserve_conditions\": \"the cup must be inside the product itself, not on the table beside it, and must not cover the visible slogan text in the image\"\n  },\n  \"preserve\": [\n    \"the tray's overall structure, compartment layout, material, light blue rim color, and white base\",\n    \"the wooden table, sofa, blanket, curtain background, and warm soft indoor lighting\",\n    \"the visible text 'COMFORT WITHIN REACH' and its style, position, and color\",\n    \"the original camera perspective, shadows, and overall clean product-photo composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or resize the product\",\n    \"do not alter the product's shape, edges, handles, or compartments\",\n    \"do not place added objects outside the tray or in the background\",\n    \"do not modify any non-target area of the image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior compartments of the light blue tray product\",\n    \"target_area\": \"selected open storage sections inside the tray, especially the larger rectangular compartments suitable for snacks\",\n    \"content\": \"add neatly arranged snacks inside the tray compartments, such as small cookies, crackers, candies, or bite-sized treats, placed naturally as usable contents of the organizer\",\n    \"integration\": \"keep the snacks realistically seated inside the compartments with correct scale, soft natural shadows, matching warm indoor lighting, and perspective consistent with the original product photo\",\n    \"preserve_conditions\": \"do not deform or redesign the tray; the snacks must appear contained within the product rather than floating above it or placed outside it\"\n  },\n  \"insert\": {\n    \"target\": \"the tray product in Image A\",\n    \"target_area\": \"a compartment that can plausibly hold a cup, preferably the round cup-holder section or another appropriately sized section inside the tray\",\n    \"content\": \"insert a clear glass drinking cup inside the product, sized to fit naturally within the compartment and visually consistent with the tray's intended use\",\n    \"integration\": \"match the existing camera angle, warm living-room lighting, reflections, contact shadows, and product perspective so the glass cup looks physically present in the tray\",\n    \"preserve_conditions\": \"the cup must be inside the product itself, not on the table beside it, and must not cover the visible slogan text in the image\"\n  },\n  \"preserve\": [\n    \"the tray's overall structure, compartment layout, material, light blue rim color, and white base\",\n    \"the wooden table, sofa, blanket, curtain background, and warm soft indoor lighting\",\n    \"the visible text 'COMFORT WITHIN REACH' and its style, position, and color\",\n    \"the original camera perspective, shadows, and overall clean product-photo composition\"\n  ],\n  \"do_not_change\": [\n    \"do not move or resize the product\",\n    \"do not alter the product's shape, edges, handles, or compartments\",\n    \"do not place added objects outside the tray or in the background\",\n    \"do not modify any non-target area of the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-014-original-1.png",
+                "assetPath": "assets/SINGLE-014-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-014-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-014-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-014-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-014-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:06:43.925Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-015",
+      "title": "在主体产品的三个洞口分别添加一只小鸟",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品的三个洞口分别添加一只小鸟",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-015-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1507660
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-015-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1532034
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品的三个洞口分别添加一只小鸟",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three visible round entrance holes on the wooden birdhouse product in Image A\",\n    \"target_area\": \"inside or right at the opening of each of the three holes, with one small bird per hole\",\n    \"content\": \"add three small realistic birds, placing one bird in each birdhouse opening, with each bird partially visible as if peeking out from its own entrance\",\n    \"style\": \"natural, charming, realistic garden product photography consistent with the existing warm sanctuary mood\",\n    \"integration\": \"anchor each bird to the product itself rather than beside it or in the background; match the birds to the existing golden natural light, soft shadows, shallow depth of field, perspective, and scale of the birdhouse; make the birds look naturally nested within the openings without altering the shape of the holes or the wooden structure\",\n    \"preserve_conditions\": \"keep the birdhouse material, wood grain, color, typography, icons, background foliage, stump surface, composition, and all non-target areas unchanged\"\n  },\n  \"preserve\": [\n    \"the full wooden birdhouse structure and the exact shape and position of all three visible openings\",\n    \"the wood material, grain, finish, and color of the product\",\n    \"all visible text including 'GARDEN SANCTUARY' and 'Crafted for comfort and charm'\",\n    \"the three feature icons and their labels on the left side\",\n    \"the lighting, shadows, perspective, depth of field, and garden background atmosphere\",\n    \"the tree stump base and surrounding non-target details\"\n  ],\n  \"do_not_change\": [\n    \"do not move, resize, or redesign the birdhouse\",\n    \"do not place birds outside the three openings or elsewhere in the scene\",\n    \"do not change the visible text, icon layout, or branding-style composition\",\n    \"do not alter the background, stump, or overall framing\",\n    \"do not add extra birds beyond one small bird in each of the three openings\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three visible round entrance holes on the wooden birdhouse product in Image A\",\n    \"target_area\": \"inside or right at the opening of each of the three holes, with one small bird per hole\",\n    \"content\": \"add three small realistic birds, placing one bird in each birdhouse opening, with each bird partially visible as if peeking out from its own entrance\",\n    \"style\": \"natural, charming, realistic garden product photography consistent with the existing warm sanctuary mood\",\n    \"integration\": \"anchor each bird to the product itself rather than beside it or in the background; match the birds to the existing golden natural light, soft shadows, shallow depth of field, perspective, and scale of the birdhouse; make the birds look naturally nested within the openings without altering the shape of the holes or the wooden structure\",\n    \"preserve_conditions\": \"keep the birdhouse material, wood grain, color, typography, icons, background foliage, stump surface, composition, and all non-target areas unchanged\"\n  },\n  \"preserve\": [\n    \"the full wooden birdhouse structure and the exact shape and position of all three visible openings\",\n    \"the wood material, grain, finish, and color of the product\",\n    \"all visible text including 'GARDEN SANCTUARY' and 'Crafted for comfort and charm'\",\n    \"the three feature icons and their labels on the left side\",\n    \"the lighting, shadows, perspective, depth of field, and garden background atmosphere\",\n    \"the tree stump base and surrounding non-target details\"\n  ],\n  \"do_not_change\": [\n    \"do not move, resize, or redesign the birdhouse\",\n    \"do not place birds outside the three openings or elsewhere in the scene\",\n    \"do not change the visible text, icon layout, or branding-style composition\",\n    \"do not alter the background, stump, or overall framing\",\n    \"do not add extra birds beyond one small bird in each of the three openings\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three visible round entrance holes on the wooden birdhouse product in Image A\",\n    \"target_area\": \"inside or right at the opening of each of the three holes, with one small bird per hole\",\n    \"content\": \"add three small realistic birds, placing one bird in each birdhouse opening, with each bird partially visible as if peeking out from its own entrance\",\n    \"style\": \"natural, charming, realistic garden product photography consistent with the existing warm sanctuary mood\",\n    \"integration\": \"anchor each bird to the product itself rather than beside it or in the background; match the birds to the existing golden natural light, soft shadows, shallow depth of field, perspective, and scale of the birdhouse; make the birds look naturally nested within the openings without altering the shape of the holes or the wooden structure\",\n    \"preserve_conditions\": \"keep the birdhouse material, wood grain, color, typography, icons, background foliage, stump surface, composition, and all non-target areas unchanged\"\n  },\n  \"preserve\": [\n    \"the full wooden birdhouse structure and the exact shape and position of all three visible openings\",\n    \"the wood material, grain, finish, and color of the product\",\n    \"all visible text including 'GARDEN SANCTUARY' and 'Crafted for comfort and charm'\",\n    \"the three feature icons and their labels on the left side\",\n    \"the lighting, shadows, perspective, depth of field, and garden background atmosphere\",\n    \"the tree stump base and surrounding non-target details\"\n  ],\n  \"do_not_change\": [\n    \"do not move, resize, or redesign the birdhouse\",\n    \"do not place birds outside the three openings or elsewhere in the scene\",\n    \"do not change the visible text, icon layout, or branding-style composition\",\n    \"do not alter the background, stump, or overall framing\",\n    \"do not add extra birds beyond one small bird in each of the three openings\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three visible round entrance holes on the wooden birdhouse product in Image A\",\n    \"target_area\": \"inside or right at the opening of each of the three holes, with one small bird per hole\",\n    \"content\": \"add three small realistic birds, placing one bird in each birdhouse opening, with each bird partially visible as if peeking out from its own entrance\",\n    \"style\": \"natural, charming, realistic garden product photography consistent with the existing warm sanctuary mood\",\n    \"integration\": \"anchor each bird to the product itself rather than beside it or in the background; match the birds to the existing golden natural light, soft shadows, shallow depth of field, perspective, and scale of the birdhouse; make the birds look naturally nested within the openings without altering the shape of the holes or the wooden structure\",\n    \"preserve_conditions\": \"keep the birdhouse material, wood grain, color, typography, icons, background foliage, stump surface, composition, and all non-target areas unchanged\"\n  },\n  \"preserve\": [\n    \"the full wooden birdhouse structure and the exact shape and position of all three visible openings\",\n    \"the wood material, grain, finish, and color of the product\",\n    \"all visible text including 'GARDEN SANCTUARY' and 'Crafted for comfort and charm'\",\n    \"the three feature icons and their labels on the left side\",\n    \"the lighting, shadows, perspective, depth of field, and garden background atmosphere\",\n    \"the tree stump base and surrounding non-target details\"\n  ],\n  \"do_not_change\": [\n    \"do not move, resize, or redesign the birdhouse\",\n    \"do not place birds outside the three openings or elsewhere in the scene\",\n    \"do not change the visible text, icon layout, or branding-style composition\",\n    \"do not alter the background, stump, or overall framing\",\n    \"do not add extra birds beyond one small bird in each of the three openings\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-015\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-015/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three visible round entrance holes on the wooden birdhouse product in Image A\",\n    \"target_area\": \"inside or right at the opening of each of the three holes, with one small bird per hole\",\n    \"content\": \"add three small realistic birds, placing one bird in each birdhouse opening, with each bird partially visible as if peeking out from its own entrance\",\n    \"style\": \"natural, charming, realistic garden product photography consistent with the existing warm sanctuary mood\",\n    \"integration\": \"anchor each bird to the product itself rather than beside it or in the background; match the birds to the existing golden natural light, soft shadows, shallow depth of field, perspective, and scale of the birdhouse; make the birds look naturally nested within the openings without altering the shape of the holes or the wooden structure\",\n    \"preserve_conditions\": \"keep the birdhouse material, wood grain, color, typography, icons, background foliage, stump surface, composition, and all non-target areas unchanged\"\n  },\n  \"preserve\": [\n    \"the full wooden birdhouse structure and the exact shape and position of all three visible openings\",\n    \"the wood material, grain, finish, and color of the product\",\n    \"all visible text including 'GARDEN SANCTUARY' and 'Crafted for comfort and charm'\",\n    \"the three feature icons and their labels on the left side\",\n    \"the lighting, shadows, perspective, depth of field, and garden background atmosphere\",\n    \"the tree stump base and surrounding non-target details\"\n  ],\n  \"do_not_change\": [\n    \"do not move, resize, or redesign the birdhouse\",\n    \"do not place birds outside the three openings or elsewhere in the scene\",\n    \"do not change the visible text, icon layout, or branding-style composition\",\n    \"do not alter the background, stump, or overall framing\",\n    \"do not add extra birds beyond one small bird in each of the three openings\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the three visible round entrance holes on the wooden birdhouse product in Image A\",\n    \"target_area\": \"inside or right at the opening of each of the three holes, with one small bird per hole\",\n    \"content\": \"add three small realistic birds, placing one bird in each birdhouse opening, with each bird partially visible as if peeking out from its own entrance\",\n    \"style\": \"natural, charming, realistic garden product photography consistent with the existing warm sanctuary mood\",\n    \"integration\": \"anchor each bird to the product itself rather than beside it or in the background; match the birds to the existing golden natural light, soft shadows, shallow depth of field, perspective, and scale of the birdhouse; make the birds look naturally nested within the openings without altering the shape of the holes or the wooden structure\",\n    \"preserve_conditions\": \"keep the birdhouse material, wood grain, color, typography, icons, background foliage, stump surface, composition, and all non-target areas unchanged\"\n  },\n  \"preserve\": [\n    \"the full wooden birdhouse structure and the exact shape and position of all three visible openings\",\n    \"the wood material, grain, finish, and color of the product\",\n    \"all visible text including 'GARDEN SANCTUARY' and 'Crafted for comfort and charm'\",\n    \"the three feature icons and their labels on the left side\",\n    \"the lighting, shadows, perspective, depth of field, and garden background atmosphere\",\n    \"the tree stump base and surrounding non-target details\"\n  ],\n  \"do_not_change\": [\n    \"do not move, resize, or redesign the birdhouse\",\n    \"do not place birds outside the three openings or elsewhere in the scene\",\n    \"do not change the visible text, icon layout, or branding-style composition\",\n    \"do not alter the background, stump, or overall framing\",\n    \"do not add extra birds beyond one small bird in each of the three openings\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-015-original-1.png",
+                "assetPath": "assets/SINGLE-015-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-015-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-015-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-015-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-015-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:07:39.999Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-016",
+      "title": "在产品内添加一只变色龙",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在产品内添加一只变色龙",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-016-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1630193
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-016-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1614275
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在产品内添加一只变色龙",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the top surface and immediate upper area of the mounted rock-like platform inside the terrarium\",\n    \"target_area\": \"centered on the product so the new subject is clearly inside/on the product area rather than floating beside it or placed in the background\",\n    \"content\": \"a realistic chameleon perched naturally on the product platform, with its body conforming to the platform shape and scale, appearing like it belongs in this terrarium scene\",\n    \"style\": \"photorealistic, natural terrarium wildlife look, consistent with the cinematic low-light product photography\",\n    \"integration\": \"match the existing warm moody terrarium lighting, soft shadows, moisture-rich atmosphere, perspective, depth of field, and contact shadow on the platform; keep the chameleon proportionate to the product and visually integrated without covering the main product silhouette more than necessary\",\n    \"preserve_conditions\": \"the chameleon must be anchored to the product itself, not added loosely beside the product, on the glass, or in the background plants\"\n  },\n  \"preserve\": [\n    \"the product's structure, material, dark rock-like texture, mount position, and overall silhouette\",\n    \"the terrarium background including plants, bark, condensation, lighting, and atmosphere\",\n    \"the visible text 'ELEVATE THEIR HORIZON'\",\n    \"the original camera angle, composition, shadows, and product-photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color or material\",\n    \"do not remove or edit the existing text\",\n    \"do not place the chameleon outside the product area or elsewhere in the enclosure\",\n    \"do not change unrelated scene elements\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the top surface and immediate upper area of the mounted rock-like platform inside the terrarium\",\n    \"target_area\": \"centered on the product so the new subject is clearly inside/on the product area rather than floating beside it or placed in the background\",\n    \"content\": \"a realistic chameleon perched naturally on the product platform, with its body conforming to the platform shape and scale, appearing like it belongs in this terrarium scene\",\n    \"style\": \"photorealistic, natural terrarium wildlife look, consistent with the cinematic low-light product photography\",\n    \"integration\": \"match the existing warm moody terrarium lighting, soft shadows, moisture-rich atmosphere, perspective, depth of field, and contact shadow on the platform; keep the chameleon proportionate to the product and visually integrated without covering the main product silhouette more than necessary\",\n    \"preserve_conditions\": \"the chameleon must be anchored to the product itself, not added loosely beside the product, on the glass, or in the background plants\"\n  },\n  \"preserve\": [\n    \"the product's structure, material, dark rock-like texture, mount position, and overall silhouette\",\n    \"the terrarium background including plants, bark, condensation, lighting, and atmosphere\",\n    \"the visible text 'ELEVATE THEIR HORIZON'\",\n    \"the original camera angle, composition, shadows, and product-photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color or material\",\n    \"do not remove or edit the existing text\",\n    \"do not place the chameleon outside the product area or elsewhere in the enclosure\",\n    \"do not change unrelated scene elements\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the top surface and immediate upper area of the mounted rock-like platform inside the terrarium\",\n    \"target_area\": \"centered on the product so the new subject is clearly inside/on the product area rather than floating beside it or placed in the background\",\n    \"content\": \"a realistic chameleon perched naturally on the product platform, with its body conforming to the platform shape and scale, appearing like it belongs in this terrarium scene\",\n    \"style\": \"photorealistic, natural terrarium wildlife look, consistent with the cinematic low-light product photography\",\n    \"integration\": \"match the existing warm moody terrarium lighting, soft shadows, moisture-rich atmosphere, perspective, depth of field, and contact shadow on the platform; keep the chameleon proportionate to the product and visually integrated without covering the main product silhouette more than necessary\",\n    \"preserve_conditions\": \"the chameleon must be anchored to the product itself, not added loosely beside the product, on the glass, or in the background plants\"\n  },\n  \"preserve\": [\n    \"the product's structure, material, dark rock-like texture, mount position, and overall silhouette\",\n    \"the terrarium background including plants, bark, condensation, lighting, and atmosphere\",\n    \"the visible text 'ELEVATE THEIR HORIZON'\",\n    \"the original camera angle, composition, shadows, and product-photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color or material\",\n    \"do not remove or edit the existing text\",\n    \"do not place the chameleon outside the product area or elsewhere in the enclosure\",\n    \"do not change unrelated scene elements\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the top surface and immediate upper area of the mounted rock-like platform inside the terrarium\",\n    \"target_area\": \"centered on the product so the new subject is clearly inside/on the product area rather than floating beside it or placed in the background\",\n    \"content\": \"a realistic chameleon perched naturally on the product platform, with its body conforming to the platform shape and scale, appearing like it belongs in this terrarium scene\",\n    \"style\": \"photorealistic, natural terrarium wildlife look, consistent with the cinematic low-light product photography\",\n    \"integration\": \"match the existing warm moody terrarium lighting, soft shadows, moisture-rich atmosphere, perspective, depth of field, and contact shadow on the platform; keep the chameleon proportionate to the product and visually integrated without covering the main product silhouette more than necessary\",\n    \"preserve_conditions\": \"the chameleon must be anchored to the product itself, not added loosely beside the product, on the glass, or in the background plants\"\n  },\n  \"preserve\": [\n    \"the product's structure, material, dark rock-like texture, mount position, and overall silhouette\",\n    \"the terrarium background including plants, bark, condensation, lighting, and atmosphere\",\n    \"the visible text 'ELEVATE THEIR HORIZON'\",\n    \"the original camera angle, composition, shadows, and product-photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color or material\",\n    \"do not remove or edit the existing text\",\n    \"do not place the chameleon outside the product area or elsewhere in the enclosure\",\n    \"do not change unrelated scene elements\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-016\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-016/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the top surface and immediate upper area of the mounted rock-like platform inside the terrarium\",\n    \"target_area\": \"centered on the product so the new subject is clearly inside/on the product area rather than floating beside it or placed in the background\",\n    \"content\": \"a realistic chameleon perched naturally on the product platform, with its body conforming to the platform shape and scale, appearing like it belongs in this terrarium scene\",\n    \"style\": \"photorealistic, natural terrarium wildlife look, consistent with the cinematic low-light product photography\",\n    \"integration\": \"match the existing warm moody terrarium lighting, soft shadows, moisture-rich atmosphere, perspective, depth of field, and contact shadow on the platform; keep the chameleon proportionate to the product and visually integrated without covering the main product silhouette more than necessary\",\n    \"preserve_conditions\": \"the chameleon must be anchored to the product itself, not added loosely beside the product, on the glass, or in the background plants\"\n  },\n  \"preserve\": [\n    \"the product's structure, material, dark rock-like texture, mount position, and overall silhouette\",\n    \"the terrarium background including plants, bark, condensation, lighting, and atmosphere\",\n    \"the visible text 'ELEVATE THEIR HORIZON'\",\n    \"the original camera angle, composition, shadows, and product-photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color or material\",\n    \"do not remove or edit the existing text\",\n    \"do not place the chameleon outside the product area or elsewhere in the enclosure\",\n    \"do not change unrelated scene elements\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the top surface and immediate upper area of the mounted rock-like platform inside the terrarium\",\n    \"target_area\": \"centered on the product so the new subject is clearly inside/on the product area rather than floating beside it or placed in the background\",\n    \"content\": \"a realistic chameleon perched naturally on the product platform, with its body conforming to the platform shape and scale, appearing like it belongs in this terrarium scene\",\n    \"style\": \"photorealistic, natural terrarium wildlife look, consistent with the cinematic low-light product photography\",\n    \"integration\": \"match the existing warm moody terrarium lighting, soft shadows, moisture-rich atmosphere, perspective, depth of field, and contact shadow on the platform; keep the chameleon proportionate to the product and visually integrated without covering the main product silhouette more than necessary\",\n    \"preserve_conditions\": \"the chameleon must be anchored to the product itself, not added loosely beside the product, on the glass, or in the background plants\"\n  },\n  \"preserve\": [\n    \"the product's structure, material, dark rock-like texture, mount position, and overall silhouette\",\n    \"the terrarium background including plants, bark, condensation, lighting, and atmosphere\",\n    \"the visible text 'ELEVATE THEIR HORIZON'\",\n    \"the original camera angle, composition, shadows, and product-photography style\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the product\",\n    \"do not alter the product color or material\",\n    \"do not remove or edit the existing text\",\n    \"do not place the chameleon outside the product area or elsewhere in the enclosure\",\n    \"do not change unrelated scene elements\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-016-original-1.png",
+                "assetPath": "assets/SINGLE-016-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-016-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-016-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-016-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-016-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:06:56.458Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-017",
+      "title": "添加一只鸟",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "添加一只鸟",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-017-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1491692
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-017-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1449212
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "添加一只鸟",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target_area\": \"on the main product, specifically perched naturally on the front edge of the seed tray or feeder opening area\",\n    \"content\": \"a single small realistic songbird, naturally posed as if visiting the feeder, with lifelike feathers, believable feet placement, and a scale appropriate to the bird feeder\",\n    \"integration\": \"match the existing warm golden-hour lighting, shallow depth of field, camera perspective, reflections on the clear acrylic feeder, and soft natural shadows; the bird should look physically supported by the feeder and appear as part of the original product scene, not floating in the background\",\n    \"preserve_conditions\": \"keep the bird feeder fully recognizable as the main subject and avoid covering key product details more than necessary\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic bird feeder structure, shape, and proportions\",\n    \"the suction cups, window attachment, and feeder compartments\",\n    \"the seed mix inside the tray\",\n    \"the warm natural lighting, reflections, shadows, and outdoor blurred garden background\",\n    \"the visible text 'BRING NATURE HOME'\",\n    \"the overall composition, perspective, and product-centered commercial look\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the feeder's material, color, or construction\",\n    \"do not move or replace the product\",\n    \"do not add extra birds or other animals\",\n    \"do not modify the background layout or the visible marketing text\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target_area\": \"on the main product, specifically perched naturally on the front edge of the seed tray or feeder opening area\",\n    \"content\": \"a single small realistic songbird, naturally posed as if visiting the feeder, with lifelike feathers, believable feet placement, and a scale appropriate to the bird feeder\",\n    \"integration\": \"match the existing warm golden-hour lighting, shallow depth of field, camera perspective, reflections on the clear acrylic feeder, and soft natural shadows; the bird should look physically supported by the feeder and appear as part of the original product scene, not floating in the background\",\n    \"preserve_conditions\": \"keep the bird feeder fully recognizable as the main subject and avoid covering key product details more than necessary\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic bird feeder structure, shape, and proportions\",\n    \"the suction cups, window attachment, and feeder compartments\",\n    \"the seed mix inside the tray\",\n    \"the warm natural lighting, reflections, shadows, and outdoor blurred garden background\",\n    \"the visible text 'BRING NATURE HOME'\",\n    \"the overall composition, perspective, and product-centered commercial look\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the feeder's material, color, or construction\",\n    \"do not move or replace the product\",\n    \"do not add extra birds or other animals\",\n    \"do not modify the background layout or the visible marketing text\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target_area\": \"on the main product, specifically perched naturally on the front edge of the seed tray or feeder opening area\",\n    \"content\": \"a single small realistic songbird, naturally posed as if visiting the feeder, with lifelike feathers, believable feet placement, and a scale appropriate to the bird feeder\",\n    \"integration\": \"match the existing warm golden-hour lighting, shallow depth of field, camera perspective, reflections on the clear acrylic feeder, and soft natural shadows; the bird should look physically supported by the feeder and appear as part of the original product scene, not floating in the background\",\n    \"preserve_conditions\": \"keep the bird feeder fully recognizable as the main subject and avoid covering key product details more than necessary\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic bird feeder structure, shape, and proportions\",\n    \"the suction cups, window attachment, and feeder compartments\",\n    \"the seed mix inside the tray\",\n    \"the warm natural lighting, reflections, shadows, and outdoor blurred garden background\",\n    \"the visible text 'BRING NATURE HOME'\",\n    \"the overall composition, perspective, and product-centered commercial look\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the feeder's material, color, or construction\",\n    \"do not move or replace the product\",\n    \"do not add extra birds or other animals\",\n    \"do not modify the background layout or the visible marketing text\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target_area\": \"on the main product, specifically perched naturally on the front edge of the seed tray or feeder opening area\",\n    \"content\": \"a single small realistic songbird, naturally posed as if visiting the feeder, with lifelike feathers, believable feet placement, and a scale appropriate to the bird feeder\",\n    \"integration\": \"match the existing warm golden-hour lighting, shallow depth of field, camera perspective, reflections on the clear acrylic feeder, and soft natural shadows; the bird should look physically supported by the feeder and appear as part of the original product scene, not floating in the background\",\n    \"preserve_conditions\": \"keep the bird feeder fully recognizable as the main subject and avoid covering key product details more than necessary\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic bird feeder structure, shape, and proportions\",\n    \"the suction cups, window attachment, and feeder compartments\",\n    \"the seed mix inside the tray\",\n    \"the warm natural lighting, reflections, shadows, and outdoor blurred garden background\",\n    \"the visible text 'BRING NATURE HOME'\",\n    \"the overall composition, perspective, and product-centered commercial look\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the feeder's material, color, or construction\",\n    \"do not move or replace the product\",\n    \"do not add extra birds or other animals\",\n    \"do not modify the background layout or the visible marketing text\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-017\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-017/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target_area\": \"on the main product, specifically perched naturally on the front edge of the seed tray or feeder opening area\",\n    \"content\": \"a single small realistic songbird, naturally posed as if visiting the feeder, with lifelike feathers, believable feet placement, and a scale appropriate to the bird feeder\",\n    \"integration\": \"match the existing warm golden-hour lighting, shallow depth of field, camera perspective, reflections on the clear acrylic feeder, and soft natural shadows; the bird should look physically supported by the feeder and appear as part of the original product scene, not floating in the background\",\n    \"preserve_conditions\": \"keep the bird feeder fully recognizable as the main subject and avoid covering key product details more than necessary\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic bird feeder structure, shape, and proportions\",\n    \"the suction cups, window attachment, and feeder compartments\",\n    \"the seed mix inside the tray\",\n    \"the warm natural lighting, reflections, shadows, and outdoor blurred garden background\",\n    \"the visible text 'BRING NATURE HOME'\",\n    \"the overall composition, perspective, and product-centered commercial look\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the feeder's material, color, or construction\",\n    \"do not move or replace the product\",\n    \"do not add extra birds or other animals\",\n    \"do not modify the background layout or the visible marketing text\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target_area\": \"on the main product, specifically perched naturally on the front edge of the seed tray or feeder opening area\",\n    \"content\": \"a single small realistic songbird, naturally posed as if visiting the feeder, with lifelike feathers, believable feet placement, and a scale appropriate to the bird feeder\",\n    \"integration\": \"match the existing warm golden-hour lighting, shallow depth of field, camera perspective, reflections on the clear acrylic feeder, and soft natural shadows; the bird should look physically supported by the feeder and appear as part of the original product scene, not floating in the background\",\n    \"preserve_conditions\": \"keep the bird feeder fully recognizable as the main subject and avoid covering key product details more than necessary\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic bird feeder structure, shape, and proportions\",\n    \"the suction cups, window attachment, and feeder compartments\",\n    \"the seed mix inside the tray\",\n    \"the warm natural lighting, reflections, shadows, and outdoor blurred garden background\",\n    \"the visible text 'BRING NATURE HOME'\",\n    \"the overall composition, perspective, and product-centered commercial look\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the feeder's material, color, or construction\",\n    \"do not move or replace the product\",\n    \"do not add extra birds or other animals\",\n    \"do not modify the background layout or the visible marketing text\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-017-original-1.png",
+                "assetPath": "assets/SINGLE-017-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-017-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-017-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-017-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-017-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:07:09.481Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-018",
+      "title": "在主体产品的挂钩处添加一卷纸；内部添加一包湿纸巾",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品的挂钩处添加一卷纸；内部添加一包湿纸巾",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-018-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1371681
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-018-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1287714
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品的挂钩处添加一卷纸；内部添加一包湿纸巾",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main product's lower hanging rod/hook area beneath the wall-mounted black storage box\",\n      \"content\": \"add one realistic roll of toilet paper mounted on the product rod so it hangs naturally and fits the holder's intended function\",\n      \"integration\": \"match the existing bathroom lighting, soft shadows, perspective, scale, and matte product styling; align the roll cleanly with the rod and make it look physically supported by the product\",\n      \"preserve_conditions\": \"do not alter the product's black metal structure, lid position, wall mounting, or surrounding bathroom scene\"\n    },\n    {\n      \"target\": \"the interior of the open black wall-mounted storage box\",\n      \"content\": \"add one pack of wet wipes placed neatly inside the box, visible from the current camera angle and sized appropriately to fit the container\",\n      \"integration\": \"match the scene perspective, interior shadows, material interaction, and realistic placement so the wet wipes appear naturally stored inside the product\",\n      \"preserve_conditions\": \"keep the container open and preserve the existing box shape, edges, and interior appearance aside from the added wet wipes pack\"\n    }\n  ],\n  \"preserve\": [\n    \"the black wall-mounted storage box design, proportions, matte finish, and open-lid structure\",\n    \"the bathroom wall tiles, bench, towel, vase, plant, lighting, perspective, and shadows\",\n    \"the visible headline text in the upper left\",\n    \"overall image composition and product identity\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product or change its angle\",\n    \"do not change the product color, material, logo, or visible text\",\n    \"do not add accessories anywhere outside the product's rod and box interior\",\n    \"do not modify non-target background elements\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main product's lower hanging rod/hook area beneath the wall-mounted black storage box\",\n      \"content\": \"add one realistic roll of toilet paper mounted on the product rod so it hangs naturally and fits the holder's intended function\",\n      \"integration\": \"match the existing bathroom lighting, soft shadows, perspective, scale, and matte product styling; align the roll cleanly with the rod and make it look physically supported by the product\",\n      \"preserve_conditions\": \"do not alter the product's black metal structure, lid position, wall mounting, or surrounding bathroom scene\"\n    },\n    {\n      \"target\": \"the interior of the open black wall-mounted storage box\",\n      \"content\": \"add one pack of wet wipes placed neatly inside the box, visible from the current camera angle and sized appropriately to fit the container\",\n      \"integration\": \"match the scene perspective, interior shadows, material interaction, and realistic placement so the wet wipes appear naturally stored inside the product\",\n      \"preserve_conditions\": \"keep the container open and preserve the existing box shape, edges, and interior appearance aside from the added wet wipes pack\"\n    }\n  ],\n  \"preserve\": [\n    \"the black wall-mounted storage box design, proportions, matte finish, and open-lid structure\",\n    \"the bathroom wall tiles, bench, towel, vase, plant, lighting, perspective, and shadows\",\n    \"the visible headline text in the upper left\",\n    \"overall image composition and product identity\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product or change its angle\",\n    \"do not change the product color, material, logo, or visible text\",\n    \"do not add accessories anywhere outside the product's rod and box interior\",\n    \"do not modify non-target background elements\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main product's lower hanging rod/hook area beneath the wall-mounted black storage box\",\n      \"content\": \"add one realistic roll of toilet paper mounted on the product rod so it hangs naturally and fits the holder's intended function\",\n      \"integration\": \"match the existing bathroom lighting, soft shadows, perspective, scale, and matte product styling; align the roll cleanly with the rod and make it look physically supported by the product\",\n      \"preserve_conditions\": \"do not alter the product's black metal structure, lid position, wall mounting, or surrounding bathroom scene\"\n    },\n    {\n      \"target\": \"the interior of the open black wall-mounted storage box\",\n      \"content\": \"add one pack of wet wipes placed neatly inside the box, visible from the current camera angle and sized appropriately to fit the container\",\n      \"integration\": \"match the scene perspective, interior shadows, material interaction, and realistic placement so the wet wipes appear naturally stored inside the product\",\n      \"preserve_conditions\": \"keep the container open and preserve the existing box shape, edges, and interior appearance aside from the added wet wipes pack\"\n    }\n  ],\n  \"preserve\": [\n    \"the black wall-mounted storage box design, proportions, matte finish, and open-lid structure\",\n    \"the bathroom wall tiles, bench, towel, vase, plant, lighting, perspective, and shadows\",\n    \"the visible headline text in the upper left\",\n    \"overall image composition and product identity\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product or change its angle\",\n    \"do not change the product color, material, logo, or visible text\",\n    \"do not add accessories anywhere outside the product's rod and box interior\",\n    \"do not modify non-target background elements\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main product's lower hanging rod/hook area beneath the wall-mounted black storage box\",\n      \"content\": \"add one realistic roll of toilet paper mounted on the product rod so it hangs naturally and fits the holder's intended function\",\n      \"integration\": \"match the existing bathroom lighting, soft shadows, perspective, scale, and matte product styling; align the roll cleanly with the rod and make it look physically supported by the product\",\n      \"preserve_conditions\": \"do not alter the product's black metal structure, lid position, wall mounting, or surrounding bathroom scene\"\n    },\n    {\n      \"target\": \"the interior of the open black wall-mounted storage box\",\n      \"content\": \"add one pack of wet wipes placed neatly inside the box, visible from the current camera angle and sized appropriately to fit the container\",\n      \"integration\": \"match the scene perspective, interior shadows, material interaction, and realistic placement so the wet wipes appear naturally stored inside the product\",\n      \"preserve_conditions\": \"keep the container open and preserve the existing box shape, edges, and interior appearance aside from the added wet wipes pack\"\n    }\n  ],\n  \"preserve\": [\n    \"the black wall-mounted storage box design, proportions, matte finish, and open-lid structure\",\n    \"the bathroom wall tiles, bench, towel, vase, plant, lighting, perspective, and shadows\",\n    \"the visible headline text in the upper left\",\n    \"overall image composition and product identity\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product or change its angle\",\n    \"do not change the product color, material, logo, or visible text\",\n    \"do not add accessories anywhere outside the product's rod and box interior\",\n    \"do not modify non-target background elements\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-018\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-018/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main product's lower hanging rod/hook area beneath the wall-mounted black storage box\",\n      \"content\": \"add one realistic roll of toilet paper mounted on the product rod so it hangs naturally and fits the holder's intended function\",\n      \"integration\": \"match the existing bathroom lighting, soft shadows, perspective, scale, and matte product styling; align the roll cleanly with the rod and make it look physically supported by the product\",\n      \"preserve_conditions\": \"do not alter the product's black metal structure, lid position, wall mounting, or surrounding bathroom scene\"\n    },\n    {\n      \"target\": \"the interior of the open black wall-mounted storage box\",\n      \"content\": \"add one pack of wet wipes placed neatly inside the box, visible from the current camera angle and sized appropriately to fit the container\",\n      \"integration\": \"match the scene perspective, interior shadows, material interaction, and realistic placement so the wet wipes appear naturally stored inside the product\",\n      \"preserve_conditions\": \"keep the container open and preserve the existing box shape, edges, and interior appearance aside from the added wet wipes pack\"\n    }\n  ],\n  \"preserve\": [\n    \"the black wall-mounted storage box design, proportions, matte finish, and open-lid structure\",\n    \"the bathroom wall tiles, bench, towel, vase, plant, lighting, perspective, and shadows\",\n    \"the visible headline text in the upper left\",\n    \"overall image composition and product identity\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product or change its angle\",\n    \"do not change the product color, material, logo, or visible text\",\n    \"do not add accessories anywhere outside the product's rod and box interior\",\n    \"do not modify non-target background elements\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": [\n    {\n      \"target\": \"the main product's lower hanging rod/hook area beneath the wall-mounted black storage box\",\n      \"content\": \"add one realistic roll of toilet paper mounted on the product rod so it hangs naturally and fits the holder's intended function\",\n      \"integration\": \"match the existing bathroom lighting, soft shadows, perspective, scale, and matte product styling; align the roll cleanly with the rod and make it look physically supported by the product\",\n      \"preserve_conditions\": \"do not alter the product's black metal structure, lid position, wall mounting, or surrounding bathroom scene\"\n    },\n    {\n      \"target\": \"the interior of the open black wall-mounted storage box\",\n      \"content\": \"add one pack of wet wipes placed neatly inside the box, visible from the current camera angle and sized appropriately to fit the container\",\n      \"integration\": \"match the scene perspective, interior shadows, material interaction, and realistic placement so the wet wipes appear naturally stored inside the product\",\n      \"preserve_conditions\": \"keep the container open and preserve the existing box shape, edges, and interior appearance aside from the added wet wipes pack\"\n    }\n  ],\n  \"preserve\": [\n    \"the black wall-mounted storage box design, proportions, matte finish, and open-lid structure\",\n    \"the bathroom wall tiles, bench, towel, vase, plant, lighting, perspective, and shadows\",\n    \"the visible headline text in the upper left\",\n    \"overall image composition and product identity\"\n  ],\n  \"do_not_change\": [\n    \"do not move the product or change its angle\",\n    \"do not change the product color, material, logo, or visible text\",\n    \"do not add accessories anywhere outside the product's rod and box interior\",\n    \"do not modify non-target background elements\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-018-original-1.png",
+                "assetPath": "assets/SINGLE-018-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-018-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-018-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-018-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-018-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:16:55.436Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-019",
+      "title": "在主体产品上添加一本钢琴谱",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品上添加一本钢琴谱",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-019-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1126940
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-019-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1335567
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品上添加一本钢琴谱",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden tabletop stand product in Image A, specifically the front display surface where reading material would rest\",\n    \"target_area\": \"centered on the product's front panel and lower support ledge, attached to and resting on the stand itself rather than floating beside it\",\n    \"content\": \"a realistic piano score book or sheet music booklet placed on the stand, sized proportionally to the product, with visible music notation pages suitable for piano practice or performance reading\",\n    \"integration\": \"make the inserted piano score look naturally supported by the stand, matching the warm indoor lighting, soft shadows, viewing angle, perspective, scale, and material interaction of the original scene; keep the score aligned as if the product is being used as a music stand\"\n  },\n  \"preserve\": [\n    \"the wooden structure, shape, joints, screws, and adjustability details of the main product\",\n    \"the original wood color and material texture of the stand and desk\",\n    \"the warm lighting, camera perspective, and natural shadows in the scene\",\n    \"the background brush jar, pencils on the desk, and overall tabletop composition\",\n    \"the visible top text 'CREATE COMFORTABLY' unless any small portion is naturally occluded by the inserted object\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the main product\",\n    \"do not replace the product with a different type of stand\",\n    \"do not add extra accessories beyond the requested piano score book\",\n    \"do not alter the background, desk surface, or existing objects outside the insertion needed for the score\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden tabletop stand product in Image A, specifically the front display surface where reading material would rest\",\n    \"target_area\": \"centered on the product's front panel and lower support ledge, attached to and resting on the stand itself rather than floating beside it\",\n    \"content\": \"a realistic piano score book or sheet music booklet placed on the stand, sized proportionally to the product, with visible music notation pages suitable for piano practice or performance reading\",\n    \"integration\": \"make the inserted piano score look naturally supported by the stand, matching the warm indoor lighting, soft shadows, viewing angle, perspective, scale, and material interaction of the original scene; keep the score aligned as if the product is being used as a music stand\"\n  },\n  \"preserve\": [\n    \"the wooden structure, shape, joints, screws, and adjustability details of the main product\",\n    \"the original wood color and material texture of the stand and desk\",\n    \"the warm lighting, camera perspective, and natural shadows in the scene\",\n    \"the background brush jar, pencils on the desk, and overall tabletop composition\",\n    \"the visible top text 'CREATE COMFORTABLY' unless any small portion is naturally occluded by the inserted object\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the main product\",\n    \"do not replace the product with a different type of stand\",\n    \"do not add extra accessories beyond the requested piano score book\",\n    \"do not alter the background, desk surface, or existing objects outside the insertion needed for the score\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden tabletop stand product in Image A, specifically the front display surface where reading material would rest\",\n    \"target_area\": \"centered on the product's front panel and lower support ledge, attached to and resting on the stand itself rather than floating beside it\",\n    \"content\": \"a realistic piano score book or sheet music booklet placed on the stand, sized proportionally to the product, with visible music notation pages suitable for piano practice or performance reading\",\n    \"integration\": \"make the inserted piano score look naturally supported by the stand, matching the warm indoor lighting, soft shadows, viewing angle, perspective, scale, and material interaction of the original scene; keep the score aligned as if the product is being used as a music stand\"\n  },\n  \"preserve\": [\n    \"the wooden structure, shape, joints, screws, and adjustability details of the main product\",\n    \"the original wood color and material texture of the stand and desk\",\n    \"the warm lighting, camera perspective, and natural shadows in the scene\",\n    \"the background brush jar, pencils on the desk, and overall tabletop composition\",\n    \"the visible top text 'CREATE COMFORTABLY' unless any small portion is naturally occluded by the inserted object\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the main product\",\n    \"do not replace the product with a different type of stand\",\n    \"do not add extra accessories beyond the requested piano score book\",\n    \"do not alter the background, desk surface, or existing objects outside the insertion needed for the score\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden tabletop stand product in Image A, specifically the front display surface where reading material would rest\",\n    \"target_area\": \"centered on the product's front panel and lower support ledge, attached to and resting on the stand itself rather than floating beside it\",\n    \"content\": \"a realistic piano score book or sheet music booklet placed on the stand, sized proportionally to the product, with visible music notation pages suitable for piano practice or performance reading\",\n    \"integration\": \"make the inserted piano score look naturally supported by the stand, matching the warm indoor lighting, soft shadows, viewing angle, perspective, scale, and material interaction of the original scene; keep the score aligned as if the product is being used as a music stand\"\n  },\n  \"preserve\": [\n    \"the wooden structure, shape, joints, screws, and adjustability details of the main product\",\n    \"the original wood color and material texture of the stand and desk\",\n    \"the warm lighting, camera perspective, and natural shadows in the scene\",\n    \"the background brush jar, pencils on the desk, and overall tabletop composition\",\n    \"the visible top text 'CREATE COMFORTABLY' unless any small portion is naturally occluded by the inserted object\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the main product\",\n    \"do not replace the product with a different type of stand\",\n    \"do not add extra accessories beyond the requested piano score book\",\n    \"do not alter the background, desk surface, or existing objects outside the insertion needed for the score\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-019\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-019/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden tabletop stand product in Image A, specifically the front display surface where reading material would rest\",\n    \"target_area\": \"centered on the product's front panel and lower support ledge, attached to and resting on the stand itself rather than floating beside it\",\n    \"content\": \"a realistic piano score book or sheet music booklet placed on the stand, sized proportionally to the product, with visible music notation pages suitable for piano practice or performance reading\",\n    \"integration\": \"make the inserted piano score look naturally supported by the stand, matching the warm indoor lighting, soft shadows, viewing angle, perspective, scale, and material interaction of the original scene; keep the score aligned as if the product is being used as a music stand\"\n  },\n  \"preserve\": [\n    \"the wooden structure, shape, joints, screws, and adjustability details of the main product\",\n    \"the original wood color and material texture of the stand and desk\",\n    \"the warm lighting, camera perspective, and natural shadows in the scene\",\n    \"the background brush jar, pencils on the desk, and overall tabletop composition\",\n    \"the visible top text 'CREATE COMFORTABLY' unless any small portion is naturally occluded by the inserted object\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the main product\",\n    \"do not replace the product with a different type of stand\",\n    \"do not add extra accessories beyond the requested piano score book\",\n    \"do not alter the background, desk surface, or existing objects outside the insertion needed for the score\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden tabletop stand product in Image A, specifically the front display surface where reading material would rest\",\n    \"target_area\": \"centered on the product's front panel and lower support ledge, attached to and resting on the stand itself rather than floating beside it\",\n    \"content\": \"a realistic piano score book or sheet music booklet placed on the stand, sized proportionally to the product, with visible music notation pages suitable for piano practice or performance reading\",\n    \"integration\": \"make the inserted piano score look naturally supported by the stand, matching the warm indoor lighting, soft shadows, viewing angle, perspective, scale, and material interaction of the original scene; keep the score aligned as if the product is being used as a music stand\"\n  },\n  \"preserve\": [\n    \"the wooden structure, shape, joints, screws, and adjustability details of the main product\",\n    \"the original wood color and material texture of the stand and desk\",\n    \"the warm lighting, camera perspective, and natural shadows in the scene\",\n    \"the background brush jar, pencils on the desk, and overall tabletop composition\",\n    \"the visible top text 'CREATE COMFORTABLY' unless any small portion is naturally occluded by the inserted object\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the main product\",\n    \"do not replace the product with a different type of stand\",\n    \"do not add extra accessories beyond the requested piano score book\",\n    \"do not alter the background, desk surface, or existing objects outside the insertion needed for the score\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-019-original-1.png",
+                "assetPath": "assets/SINGLE-019-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-019-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-019-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-019-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-019-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:09:26.251Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-020",
+      "title": "在主体产品添加半杯芒果奶昔",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品添加半杯芒果奶昔",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-020-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1411844
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-020-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1343243
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品添加半杯芒果奶昔",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the main foreground clear plastic cup product in the center of Image A, filling the inside of the cup itself\",\n    \"target_area\": \"the interior volume of the main product cup below the dome lid\",\n    \"content\": \"add mango milkshake inside the cup so it appears half full, with a smooth thick blended texture and natural ripe mango orange-yellow color\",\n    \"integration\": \"keep the milkshake accurately contained within the transparent cup, match the existing camera angle, lighting, reflections, refraction, shadows, and realism of the plastic material, and show the fill level at about half of the visible cup capacity without spilling or changing the cup shape\",\n    \"preserve_conditions\": \"preserve the cup's transparent plastic structure, dome lid, rim details, and overall product identity while only adding the beverage inside\"\n  },\n  \"preserve\": [\n    \"the main cup's shape, transparency, lid, rim, and product structure\",\n    \"the stacked cups in the background\",\n    \"the bowl of fruit, fork, countertop, kitchen background, and cloth\",\n    \"the existing lighting, perspective, shadows, reflections, and scene composition\",\n    \"the visible text overlay at the lower left\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mango milkshake beside the product or in the background\",\n    \"do not alter the product material, color, size, or lid structure\",\n    \"do not modify or remove any existing text in the image\",\n    \"do not change non-target objects or the overall scene\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the main foreground clear plastic cup product in the center of Image A, filling the inside of the cup itself\",\n    \"target_area\": \"the interior volume of the main product cup below the dome lid\",\n    \"content\": \"add mango milkshake inside the cup so it appears half full, with a smooth thick blended texture and natural ripe mango orange-yellow color\",\n    \"integration\": \"keep the milkshake accurately contained within the transparent cup, match the existing camera angle, lighting, reflections, refraction, shadows, and realism of the plastic material, and show the fill level at about half of the visible cup capacity without spilling or changing the cup shape\",\n    \"preserve_conditions\": \"preserve the cup's transparent plastic structure, dome lid, rim details, and overall product identity while only adding the beverage inside\"\n  },\n  \"preserve\": [\n    \"the main cup's shape, transparency, lid, rim, and product structure\",\n    \"the stacked cups in the background\",\n    \"the bowl of fruit, fork, countertop, kitchen background, and cloth\",\n    \"the existing lighting, perspective, shadows, reflections, and scene composition\",\n    \"the visible text overlay at the lower left\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mango milkshake beside the product or in the background\",\n    \"do not alter the product material, color, size, or lid structure\",\n    \"do not modify or remove any existing text in the image\",\n    \"do not change non-target objects or the overall scene\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the main foreground clear plastic cup product in the center of Image A, filling the inside of the cup itself\",\n    \"target_area\": \"the interior volume of the main product cup below the dome lid\",\n    \"content\": \"add mango milkshake inside the cup so it appears half full, with a smooth thick blended texture and natural ripe mango orange-yellow color\",\n    \"integration\": \"keep the milkshake accurately contained within the transparent cup, match the existing camera angle, lighting, reflections, refraction, shadows, and realism of the plastic material, and show the fill level at about half of the visible cup capacity without spilling or changing the cup shape\",\n    \"preserve_conditions\": \"preserve the cup's transparent plastic structure, dome lid, rim details, and overall product identity while only adding the beverage inside\"\n  },\n  \"preserve\": [\n    \"the main cup's shape, transparency, lid, rim, and product structure\",\n    \"the stacked cups in the background\",\n    \"the bowl of fruit, fork, countertop, kitchen background, and cloth\",\n    \"the existing lighting, perspective, shadows, reflections, and scene composition\",\n    \"the visible text overlay at the lower left\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mango milkshake beside the product or in the background\",\n    \"do not alter the product material, color, size, or lid structure\",\n    \"do not modify or remove any existing text in the image\",\n    \"do not change non-target objects or the overall scene\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the main foreground clear plastic cup product in the center of Image A, filling the inside of the cup itself\",\n    \"target_area\": \"the interior volume of the main product cup below the dome lid\",\n    \"content\": \"add mango milkshake inside the cup so it appears half full, with a smooth thick blended texture and natural ripe mango orange-yellow color\",\n    \"integration\": \"keep the milkshake accurately contained within the transparent cup, match the existing camera angle, lighting, reflections, refraction, shadows, and realism of the plastic material, and show the fill level at about half of the visible cup capacity without spilling or changing the cup shape\",\n    \"preserve_conditions\": \"preserve the cup's transparent plastic structure, dome lid, rim details, and overall product identity while only adding the beverage inside\"\n  },\n  \"preserve\": [\n    \"the main cup's shape, transparency, lid, rim, and product structure\",\n    \"the stacked cups in the background\",\n    \"the bowl of fruit, fork, countertop, kitchen background, and cloth\",\n    \"the existing lighting, perspective, shadows, reflections, and scene composition\",\n    \"the visible text overlay at the lower left\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mango milkshake beside the product or in the background\",\n    \"do not alter the product material, color, size, or lid structure\",\n    \"do not modify or remove any existing text in the image\",\n    \"do not change non-target objects or the overall scene\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-020\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-020/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the main foreground clear plastic cup product in the center of Image A, filling the inside of the cup itself\",\n    \"target_area\": \"the interior volume of the main product cup below the dome lid\",\n    \"content\": \"add mango milkshake inside the cup so it appears half full, with a smooth thick blended texture and natural ripe mango orange-yellow color\",\n    \"integration\": \"keep the milkshake accurately contained within the transparent cup, match the existing camera angle, lighting, reflections, refraction, shadows, and realism of the plastic material, and show the fill level at about half of the visible cup capacity without spilling or changing the cup shape\",\n    \"preserve_conditions\": \"preserve the cup's transparent plastic structure, dome lid, rim details, and overall product identity while only adding the beverage inside\"\n  },\n  \"preserve\": [\n    \"the main cup's shape, transparency, lid, rim, and product structure\",\n    \"the stacked cups in the background\",\n    \"the bowl of fruit, fork, countertop, kitchen background, and cloth\",\n    \"the existing lighting, perspective, shadows, reflections, and scene composition\",\n    \"the visible text overlay at the lower left\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mango milkshake beside the product or in the background\",\n    \"do not alter the product material, color, size, or lid structure\",\n    \"do not modify or remove any existing text in the image\",\n    \"do not change non-target objects or the overall scene\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the main foreground clear plastic cup product in the center of Image A, filling the inside of the cup itself\",\n    \"target_area\": \"the interior volume of the main product cup below the dome lid\",\n    \"content\": \"add mango milkshake inside the cup so it appears half full, with a smooth thick blended texture and natural ripe mango orange-yellow color\",\n    \"integration\": \"keep the milkshake accurately contained within the transparent cup, match the existing camera angle, lighting, reflections, refraction, shadows, and realism of the plastic material, and show the fill level at about half of the visible cup capacity without spilling or changing the cup shape\",\n    \"preserve_conditions\": \"preserve the cup's transparent plastic structure, dome lid, rim details, and overall product identity while only adding the beverage inside\"\n  },\n  \"preserve\": [\n    \"the main cup's shape, transparency, lid, rim, and product structure\",\n    \"the stacked cups in the background\",\n    \"the bowl of fruit, fork, countertop, kitchen background, and cloth\",\n    \"the existing lighting, perspective, shadows, reflections, and scene composition\",\n    \"the visible text overlay at the lower left\"\n  ],\n  \"do_not_change\": [\n    \"do not place the mango milkshake beside the product or in the background\",\n    \"do not alter the product material, color, size, or lid structure\",\n    \"do not modify or remove any existing text in the image\",\n    \"do not change non-target objects or the overall scene\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-020-original-1.png",
+                "assetPath": "assets/SINGLE-020-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-020-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-020-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-020-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-020-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:08:04.595Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-021",
+      "title": "修改为家居风格的模糊背景",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "修改为家居风格的模糊背景",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-021-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1122838
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-021-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1203514
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "修改为家居风格的模糊背景",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing full-frame background area around and behind the product showcase layout in Image A\",\n    \"content\": \"a blurred home interior style background with a warm, clean, modern residential atmosphere, such as soft furniture tones, subtle indoor light, and a lifestyle-oriented domestic setting kept intentionally out of focus\",\n    \"integration\": \"replace only the background while keeping the product poster composition intact; match the existing soft high-key lighting, preserve depth and visual hierarchy, keep the background blurred enough to avoid competing with the product, and ensure the new home setting feels natural behind the transparent cup and dome packaging visuals\"\n  },\n  \"preserve\": [\n    \"the transparent plastic cup and dome lid product appearance, structure, material, color, and reflections\",\n    \"all visible text including 'FLUID CLARITY', 'Effortless Form, Pristine Function.', 'SECURE SEAL', 'VENTED DOME', and 'STABLE FORM'\",\n    \"the existing collage layout with the large left product image and the two smaller right-side product images\",\n    \"the current camera perspective, framing, product scale, shadows, highlights, and clean commercial presentation\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, vent hole, rim details, or cup proportions\",\n    \"do not move, rewrite, remove, or restyle any text\",\n    \"do not add extra household objects in front of the product or overlapping the text panels\",\n    \"do not change any non-background areas unless required for seamless background integration\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing full-frame background area around and behind the product showcase layout in Image A\",\n    \"content\": \"a blurred home interior style background with a warm, clean, modern residential atmosphere, such as soft furniture tones, subtle indoor light, and a lifestyle-oriented domestic setting kept intentionally out of focus\",\n    \"integration\": \"replace only the background while keeping the product poster composition intact; match the existing soft high-key lighting, preserve depth and visual hierarchy, keep the background blurred enough to avoid competing with the product, and ensure the new home setting feels natural behind the transparent cup and dome packaging visuals\"\n  },\n  \"preserve\": [\n    \"the transparent plastic cup and dome lid product appearance, structure, material, color, and reflections\",\n    \"all visible text including 'FLUID CLARITY', 'Effortless Form, Pristine Function.', 'SECURE SEAL', 'VENTED DOME', and 'STABLE FORM'\",\n    \"the existing collage layout with the large left product image and the two smaller right-side product images\",\n    \"the current camera perspective, framing, product scale, shadows, highlights, and clean commercial presentation\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, vent hole, rim details, or cup proportions\",\n    \"do not move, rewrite, remove, or restyle any text\",\n    \"do not add extra household objects in front of the product or overlapping the text panels\",\n    \"do not change any non-background areas unless required for seamless background integration\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing full-frame background area around and behind the product showcase layout in Image A\",\n    \"content\": \"a blurred home interior style background with a warm, clean, modern residential atmosphere, such as soft furniture tones, subtle indoor light, and a lifestyle-oriented domestic setting kept intentionally out of focus\",\n    \"integration\": \"replace only the background while keeping the product poster composition intact; match the existing soft high-key lighting, preserve depth and visual hierarchy, keep the background blurred enough to avoid competing with the product, and ensure the new home setting feels natural behind the transparent cup and dome packaging visuals\"\n  },\n  \"preserve\": [\n    \"the transparent plastic cup and dome lid product appearance, structure, material, color, and reflections\",\n    \"all visible text including 'FLUID CLARITY', 'Effortless Form, Pristine Function.', 'SECURE SEAL', 'VENTED DOME', and 'STABLE FORM'\",\n    \"the existing collage layout with the large left product image and the two smaller right-side product images\",\n    \"the current camera perspective, framing, product scale, shadows, highlights, and clean commercial presentation\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, vent hole, rim details, or cup proportions\",\n    \"do not move, rewrite, remove, or restyle any text\",\n    \"do not add extra household objects in front of the product or overlapping the text panels\",\n    \"do not change any non-background areas unless required for seamless background integration\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing full-frame background area around and behind the product showcase layout in Image A\",\n    \"content\": \"a blurred home interior style background with a warm, clean, modern residential atmosphere, such as soft furniture tones, subtle indoor light, and a lifestyle-oriented domestic setting kept intentionally out of focus\",\n    \"integration\": \"replace only the background while keeping the product poster composition intact; match the existing soft high-key lighting, preserve depth and visual hierarchy, keep the background blurred enough to avoid competing with the product, and ensure the new home setting feels natural behind the transparent cup and dome packaging visuals\"\n  },\n  \"preserve\": [\n    \"the transparent plastic cup and dome lid product appearance, structure, material, color, and reflections\",\n    \"all visible text including 'FLUID CLARITY', 'Effortless Form, Pristine Function.', 'SECURE SEAL', 'VENTED DOME', and 'STABLE FORM'\",\n    \"the existing collage layout with the large left product image and the two smaller right-side product images\",\n    \"the current camera perspective, framing, product scale, shadows, highlights, and clean commercial presentation\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, vent hole, rim details, or cup proportions\",\n    \"do not move, rewrite, remove, or restyle any text\",\n    \"do not add extra household objects in front of the product or overlapping the text panels\",\n    \"do not change any non-background areas unless required for seamless background integration\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-021\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-021/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing full-frame background area around and behind the product showcase layout in Image A\",\n    \"content\": \"a blurred home interior style background with a warm, clean, modern residential atmosphere, such as soft furniture tones, subtle indoor light, and a lifestyle-oriented domestic setting kept intentionally out of focus\",\n    \"integration\": \"replace only the background while keeping the product poster composition intact; match the existing soft high-key lighting, preserve depth and visual hierarchy, keep the background blurred enough to avoid competing with the product, and ensure the new home setting feels natural behind the transparent cup and dome packaging visuals\"\n  },\n  \"preserve\": [\n    \"the transparent plastic cup and dome lid product appearance, structure, material, color, and reflections\",\n    \"all visible text including 'FLUID CLARITY', 'Effortless Form, Pristine Function.', 'SECURE SEAL', 'VENTED DOME', and 'STABLE FORM'\",\n    \"the existing collage layout with the large left product image and the two smaller right-side product images\",\n    \"the current camera perspective, framing, product scale, shadows, highlights, and clean commercial presentation\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, vent hole, rim details, or cup proportions\",\n    \"do not move, rewrite, remove, or restyle any text\",\n    \"do not add extra household objects in front of the product or overlapping the text panels\",\n    \"do not change any non-background areas unless required for seamless background integration\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the existing full-frame background area around and behind the product showcase layout in Image A\",\n    \"content\": \"a blurred home interior style background with a warm, clean, modern residential atmosphere, such as soft furniture tones, subtle indoor light, and a lifestyle-oriented domestic setting kept intentionally out of focus\",\n    \"integration\": \"replace only the background while keeping the product poster composition intact; match the existing soft high-key lighting, preserve depth and visual hierarchy, keep the background blurred enough to avoid competing with the product, and ensure the new home setting feels natural behind the transparent cup and dome packaging visuals\"\n  },\n  \"preserve\": [\n    \"the transparent plastic cup and dome lid product appearance, structure, material, color, and reflections\",\n    \"all visible text including 'FLUID CLARITY', 'Effortless Form, Pristine Function.', 'SECURE SEAL', 'VENTED DOME', and 'STABLE FORM'\",\n    \"the existing collage layout with the large left product image and the two smaller right-side product images\",\n    \"the current camera perspective, framing, product scale, shadows, highlights, and clean commercial presentation\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product shape, vent hole, rim details, or cup proportions\",\n    \"do not move, rewrite, remove, or restyle any text\",\n    \"do not add extra household objects in front of the product or overlapping the text panels\",\n    \"do not change any non-background areas unless required for seamless background integration\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-021-original-1.png",
+                "assetPath": "assets/SINGLE-021-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-021-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-021-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-021-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-021-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:08:20.936Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-022",
+      "title": "在产品里添加化妆品",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在产品里添加化妆品",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-022-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1242366
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-022-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1335099
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在产品里添加化妆品",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the transparent acrylic storage organizer in Image A, specifically the visible upper compartments, middle compartments, and bottom drawer space inside the product\",\n    \"content\": \"a tasteful assortment of cosmetics placed inside the organizer, such as lipsticks, makeup brushes, compact powder cases, small skincare bottles, and perfume or serum containers, sized realistically to fit the compartments\",\n    \"integration\": \"place all added cosmetics inside the organizer itself, neatly arranged as if stored in use; maintain realistic scale, reflections through the clear acrylic, correct perspective, soft warm lighting, natural shadows, and the existing clean lifestyle product-photo aesthetic; do not place cosmetics outside the organizer or floating loosely in the scene\",\n    \"preserve_conditions\": \"keep the organizer's acrylic structure, transparency, drawer layout, edges, handles, tabletop placement, camera angle, background decor, visible text, and overall lighting unchanged\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic material, structure, and proportions of the organizer\",\n    \"the warm natural lighting, soft shadows, and overall scene perspective\",\n    \"the tabletop, vase, background wall, and surrounding objects\",\n    \"the existing product photo composition and clean aesthetic\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's shape, number of compartments, drawer design, or material color\",\n    \"do not add cosmetics beside the product, behind the product, or elsewhere in the background\",\n    \"do not modify existing visible text, logo, or non-target objects\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the transparent acrylic storage organizer in Image A, specifically the visible upper compartments, middle compartments, and bottom drawer space inside the product\",\n    \"content\": \"a tasteful assortment of cosmetics placed inside the organizer, such as lipsticks, makeup brushes, compact powder cases, small skincare bottles, and perfume or serum containers, sized realistically to fit the compartments\",\n    \"integration\": \"place all added cosmetics inside the organizer itself, neatly arranged as if stored in use; maintain realistic scale, reflections through the clear acrylic, correct perspective, soft warm lighting, natural shadows, and the existing clean lifestyle product-photo aesthetic; do not place cosmetics outside the organizer or floating loosely in the scene\",\n    \"preserve_conditions\": \"keep the organizer's acrylic structure, transparency, drawer layout, edges, handles, tabletop placement, camera angle, background decor, visible text, and overall lighting unchanged\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic material, structure, and proportions of the organizer\",\n    \"the warm natural lighting, soft shadows, and overall scene perspective\",\n    \"the tabletop, vase, background wall, and surrounding objects\",\n    \"the existing product photo composition and clean aesthetic\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's shape, number of compartments, drawer design, or material color\",\n    \"do not add cosmetics beside the product, behind the product, or elsewhere in the background\",\n    \"do not modify existing visible text, logo, or non-target objects\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the transparent acrylic storage organizer in Image A, specifically the visible upper compartments, middle compartments, and bottom drawer space inside the product\",\n    \"content\": \"a tasteful assortment of cosmetics placed inside the organizer, such as lipsticks, makeup brushes, compact powder cases, small skincare bottles, and perfume or serum containers, sized realistically to fit the compartments\",\n    \"integration\": \"place all added cosmetics inside the organizer itself, neatly arranged as if stored in use; maintain realistic scale, reflections through the clear acrylic, correct perspective, soft warm lighting, natural shadows, and the existing clean lifestyle product-photo aesthetic; do not place cosmetics outside the organizer or floating loosely in the scene\",\n    \"preserve_conditions\": \"keep the organizer's acrylic structure, transparency, drawer layout, edges, handles, tabletop placement, camera angle, background decor, visible text, and overall lighting unchanged\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic material, structure, and proportions of the organizer\",\n    \"the warm natural lighting, soft shadows, and overall scene perspective\",\n    \"the tabletop, vase, background wall, and surrounding objects\",\n    \"the existing product photo composition and clean aesthetic\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's shape, number of compartments, drawer design, or material color\",\n    \"do not add cosmetics beside the product, behind the product, or elsewhere in the background\",\n    \"do not modify existing visible text, logo, or non-target objects\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the transparent acrylic storage organizer in Image A, specifically the visible upper compartments, middle compartments, and bottom drawer space inside the product\",\n    \"content\": \"a tasteful assortment of cosmetics placed inside the organizer, such as lipsticks, makeup brushes, compact powder cases, small skincare bottles, and perfume or serum containers, sized realistically to fit the compartments\",\n    \"integration\": \"place all added cosmetics inside the organizer itself, neatly arranged as if stored in use; maintain realistic scale, reflections through the clear acrylic, correct perspective, soft warm lighting, natural shadows, and the existing clean lifestyle product-photo aesthetic; do not place cosmetics outside the organizer or floating loosely in the scene\",\n    \"preserve_conditions\": \"keep the organizer's acrylic structure, transparency, drawer layout, edges, handles, tabletop placement, camera angle, background decor, visible text, and overall lighting unchanged\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic material, structure, and proportions of the organizer\",\n    \"the warm natural lighting, soft shadows, and overall scene perspective\",\n    \"the tabletop, vase, background wall, and surrounding objects\",\n    \"the existing product photo composition and clean aesthetic\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's shape, number of compartments, drawer design, or material color\",\n    \"do not add cosmetics beside the product, behind the product, or elsewhere in the background\",\n    \"do not modify existing visible text, logo, or non-target objects\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-022\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-022/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the transparent acrylic storage organizer in Image A, specifically the visible upper compartments, middle compartments, and bottom drawer space inside the product\",\n    \"content\": \"a tasteful assortment of cosmetics placed inside the organizer, such as lipsticks, makeup brushes, compact powder cases, small skincare bottles, and perfume or serum containers, sized realistically to fit the compartments\",\n    \"integration\": \"place all added cosmetics inside the organizer itself, neatly arranged as if stored in use; maintain realistic scale, reflections through the clear acrylic, correct perspective, soft warm lighting, natural shadows, and the existing clean lifestyle product-photo aesthetic; do not place cosmetics outside the organizer or floating loosely in the scene\",\n    \"preserve_conditions\": \"keep the organizer's acrylic structure, transparency, drawer layout, edges, handles, tabletop placement, camera angle, background decor, visible text, and overall lighting unchanged\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic material, structure, and proportions of the organizer\",\n    \"the warm natural lighting, soft shadows, and overall scene perspective\",\n    \"the tabletop, vase, background wall, and surrounding objects\",\n    \"the existing product photo composition and clean aesthetic\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's shape, number of compartments, drawer design, or material color\",\n    \"do not add cosmetics beside the product, behind the product, or elsewhere in the background\",\n    \"do not modify existing visible text, logo, or non-target objects\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the transparent acrylic storage organizer in Image A, specifically the visible upper compartments, middle compartments, and bottom drawer space inside the product\",\n    \"content\": \"a tasteful assortment of cosmetics placed inside the organizer, such as lipsticks, makeup brushes, compact powder cases, small skincare bottles, and perfume or serum containers, sized realistically to fit the compartments\",\n    \"integration\": \"place all added cosmetics inside the organizer itself, neatly arranged as if stored in use; maintain realistic scale, reflections through the clear acrylic, correct perspective, soft warm lighting, natural shadows, and the existing clean lifestyle product-photo aesthetic; do not place cosmetics outside the organizer or floating loosely in the scene\",\n    \"preserve_conditions\": \"keep the organizer's acrylic structure, transparency, drawer layout, edges, handles, tabletop placement, camera angle, background decor, visible text, and overall lighting unchanged\"\n  },\n  \"preserve\": [\n    \"the transparent acrylic material, structure, and proportions of the organizer\",\n    \"the warm natural lighting, soft shadows, and overall scene perspective\",\n    \"the tabletop, vase, background wall, and surrounding objects\",\n    \"the existing product photo composition and clean aesthetic\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product's shape, number of compartments, drawer design, or material color\",\n    \"do not add cosmetics beside the product, behind the product, or elsewhere in the background\",\n    \"do not modify existing visible text, logo, or non-target objects\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-022-original-1.png",
+                "assetPath": "assets/SINGLE-022-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-022-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-022-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-022-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-022-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:10:54.544Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-023",
+      "title": "换一张背景；在产品上添加一条狗",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "换一张背景；在产品上添加一条狗",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-023-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1347577
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-023-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1522724
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "换一张背景；在产品上添加一条狗",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current poolside background and surrounding environment behind and around the product\",\n    \"content\": \"a different clean and attractive background suitable for a pet product lifestyle image, while keeping the product as the visual focus\",\n    \"integration\": \"replace only the background environment; maintain the existing camera angle, product placement, foreground surface contact, realistic depth of field, natural daylight feel, and consistent reflections and shadows around the product\"\n  },\n  \"insert\": {\n    \"target\": \"the main blue inflatable pet product\",\n    \"target_area\": \"inside or resting directly on the center of the inflatable ring product\",\n    \"content\": \"a dog naturally lying or sitting on the product as if using it comfortably\",\n    \"integration\": \"the dog must be anchored on the product itself, not beside it or in the background; match the scene lighting, scale, perspective, soft shadows, and contact with the product surface so the dog looks physically supported by the inflatable product\"\n  },\n  \"preserve\": [\n    \"the product’s oval inflatable structure\",\n    \"the blue PVC-like material appearance\",\n    \"the white paw-print pattern on the product\",\n    \"the product’s size, shape, and viewing angle\",\n    \"the existing visible promotional text and icon layout at the bottom\",\n    \"overall image sharpness and realistic commercial product-photo quality\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product color, material, or paw-print graphics\",\n    \"do not move the product to a different position in the frame\",\n    \"do not place the dog beside the product, behind the product, or floating separately from it\",\n    \"do not modify non-target text, logo-like elements, or bottom iconography\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current poolside background and surrounding environment behind and around the product\",\n    \"content\": \"a different clean and attractive background suitable for a pet product lifestyle image, while keeping the product as the visual focus\",\n    \"integration\": \"replace only the background environment; maintain the existing camera angle, product placement, foreground surface contact, realistic depth of field, natural daylight feel, and consistent reflections and shadows around the product\"\n  },\n  \"insert\": {\n    \"target\": \"the main blue inflatable pet product\",\n    \"target_area\": \"inside or resting directly on the center of the inflatable ring product\",\n    \"content\": \"a dog naturally lying or sitting on the product as if using it comfortably\",\n    \"integration\": \"the dog must be anchored on the product itself, not beside it or in the background; match the scene lighting, scale, perspective, soft shadows, and contact with the product surface so the dog looks physically supported by the inflatable product\"\n  },\n  \"preserve\": [\n    \"the product’s oval inflatable structure\",\n    \"the blue PVC-like material appearance\",\n    \"the white paw-print pattern on the product\",\n    \"the product’s size, shape, and viewing angle\",\n    \"the existing visible promotional text and icon layout at the bottom\",\n    \"overall image sharpness and realistic commercial product-photo quality\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product color, material, or paw-print graphics\",\n    \"do not move the product to a different position in the frame\",\n    \"do not place the dog beside the product, behind the product, or floating separately from it\",\n    \"do not modify non-target text, logo-like elements, or bottom iconography\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current poolside background and surrounding environment behind and around the product\",\n    \"content\": \"a different clean and attractive background suitable for a pet product lifestyle image, while keeping the product as the visual focus\",\n    \"integration\": \"replace only the background environment; maintain the existing camera angle, product placement, foreground surface contact, realistic depth of field, natural daylight feel, and consistent reflections and shadows around the product\"\n  },\n  \"insert\": {\n    \"target\": \"the main blue inflatable pet product\",\n    \"target_area\": \"inside or resting directly on the center of the inflatable ring product\",\n    \"content\": \"a dog naturally lying or sitting on the product as if using it comfortably\",\n    \"integration\": \"the dog must be anchored on the product itself, not beside it or in the background; match the scene lighting, scale, perspective, soft shadows, and contact with the product surface so the dog looks physically supported by the inflatable product\"\n  },\n  \"preserve\": [\n    \"the product’s oval inflatable structure\",\n    \"the blue PVC-like material appearance\",\n    \"the white paw-print pattern on the product\",\n    \"the product’s size, shape, and viewing angle\",\n    \"the existing visible promotional text and icon layout at the bottom\",\n    \"overall image sharpness and realistic commercial product-photo quality\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product color, material, or paw-print graphics\",\n    \"do not move the product to a different position in the frame\",\n    \"do not place the dog beside the product, behind the product, or floating separately from it\",\n    \"do not modify non-target text, logo-like elements, or bottom iconography\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current poolside background and surrounding environment behind and around the product\",\n    \"content\": \"a different clean and attractive background suitable for a pet product lifestyle image, while keeping the product as the visual focus\",\n    \"integration\": \"replace only the background environment; maintain the existing camera angle, product placement, foreground surface contact, realistic depth of field, natural daylight feel, and consistent reflections and shadows around the product\"\n  },\n  \"insert\": {\n    \"target\": \"the main blue inflatable pet product\",\n    \"target_area\": \"inside or resting directly on the center of the inflatable ring product\",\n    \"content\": \"a dog naturally lying or sitting on the product as if using it comfortably\",\n    \"integration\": \"the dog must be anchored on the product itself, not beside it or in the background; match the scene lighting, scale, perspective, soft shadows, and contact with the product surface so the dog looks physically supported by the inflatable product\"\n  },\n  \"preserve\": [\n    \"the product’s oval inflatable structure\",\n    \"the blue PVC-like material appearance\",\n    \"the white paw-print pattern on the product\",\n    \"the product’s size, shape, and viewing angle\",\n    \"the existing visible promotional text and icon layout at the bottom\",\n    \"overall image sharpness and realistic commercial product-photo quality\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product color, material, or paw-print graphics\",\n    \"do not move the product to a different position in the frame\",\n    \"do not place the dog beside the product, behind the product, or floating separately from it\",\n    \"do not modify non-target text, logo-like elements, or bottom iconography\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-023\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-023/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current poolside background and surrounding environment behind and around the product\",\n    \"content\": \"a different clean and attractive background suitable for a pet product lifestyle image, while keeping the product as the visual focus\",\n    \"integration\": \"replace only the background environment; maintain the existing camera angle, product placement, foreground surface contact, realistic depth of field, natural daylight feel, and consistent reflections and shadows around the product\"\n  },\n  \"insert\": {\n    \"target\": \"the main blue inflatable pet product\",\n    \"target_area\": \"inside or resting directly on the center of the inflatable ring product\",\n    \"content\": \"a dog naturally lying or sitting on the product as if using it comfortably\",\n    \"integration\": \"the dog must be anchored on the product itself, not beside it or in the background; match the scene lighting, scale, perspective, soft shadows, and contact with the product surface so the dog looks physically supported by the inflatable product\"\n  },\n  \"preserve\": [\n    \"the product’s oval inflatable structure\",\n    \"the blue PVC-like material appearance\",\n    \"the white paw-print pattern on the product\",\n    \"the product’s size, shape, and viewing angle\",\n    \"the existing visible promotional text and icon layout at the bottom\",\n    \"overall image sharpness and realistic commercial product-photo quality\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product color, material, or paw-print graphics\",\n    \"do not move the product to a different position in the frame\",\n    \"do not place the dog beside the product, behind the product, or floating separately from it\",\n    \"do not modify non-target text, logo-like elements, or bottom iconography\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"replace\": {\n    \"target\": \"the current poolside background and surrounding environment behind and around the product\",\n    \"content\": \"a different clean and attractive background suitable for a pet product lifestyle image, while keeping the product as the visual focus\",\n    \"integration\": \"replace only the background environment; maintain the existing camera angle, product placement, foreground surface contact, realistic depth of field, natural daylight feel, and consistent reflections and shadows around the product\"\n  },\n  \"insert\": {\n    \"target\": \"the main blue inflatable pet product\",\n    \"target_area\": \"inside or resting directly on the center of the inflatable ring product\",\n    \"content\": \"a dog naturally lying or sitting on the product as if using it comfortably\",\n    \"integration\": \"the dog must be anchored on the product itself, not beside it or in the background; match the scene lighting, scale, perspective, soft shadows, and contact with the product surface so the dog looks physically supported by the inflatable product\"\n  },\n  \"preserve\": [\n    \"the product’s oval inflatable structure\",\n    \"the blue PVC-like material appearance\",\n    \"the white paw-print pattern on the product\",\n    \"the product’s size, shape, and viewing angle\",\n    \"the existing visible promotional text and icon layout at the bottom\",\n    \"overall image sharpness and realistic commercial product-photo quality\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product color, material, or paw-print graphics\",\n    \"do not move the product to a different position in the frame\",\n    \"do not place the dog beside the product, behind the product, or floating separately from it\",\n    \"do not modify non-target text, logo-like elements, or bottom iconography\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-023-original-1.png",
+                "assetPath": "assets/SINGLE-023-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-023-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-023-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-023-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-023-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:10:16.466Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-024",
+      "title": "在主体产品上添加一把红色吉他",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在主体产品上添加一把红色吉他",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-024-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1489334
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-024-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1461373
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在主体产品上添加一把红色吉他",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden guitar rack product in Image A\",\n    \"target_area\": \"inside the rack, positioned in one of the storage slots so the guitar is clearly being held by the product rather than placed beside it\",\n    \"content\": \"add one red guitar with realistic proportions and a clean finished appearance, oriented naturally as a stored guitar that fits the rack\",\n    \"integration\": \"match the existing warm indoor lighting, shallow depth of field, camera perspective, shadows, scale, and scene realism; make the guitar interact naturally with the rack so it looks physically supported by the product and consistent with the surrounding carpet and room\"\n  },\n  \"preserve\": [\n    \"the wooden rack's structure, dimensions, material, brown color, and all visible edges and cutout shapes\",\n    \"the background scene including the carpet, wall, shelf, records, and partial guitar already in the room\",\n    \"the existing lighting mood, perspective, focus style, and natural shadows\",\n    \"the visible promotional text at the bottom of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the rack\",\n    \"do not place the new guitar loosely beside the product or in the background\",\n    \"do not alter non-target objects, background composition, or existing text\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden guitar rack product in Image A\",\n    \"target_area\": \"inside the rack, positioned in one of the storage slots so the guitar is clearly being held by the product rather than placed beside it\",\n    \"content\": \"add one red guitar with realistic proportions and a clean finished appearance, oriented naturally as a stored guitar that fits the rack\",\n    \"integration\": \"match the existing warm indoor lighting, shallow depth of field, camera perspective, shadows, scale, and scene realism; make the guitar interact naturally with the rack so it looks physically supported by the product and consistent with the surrounding carpet and room\"\n  },\n  \"preserve\": [\n    \"the wooden rack's structure, dimensions, material, brown color, and all visible edges and cutout shapes\",\n    \"the background scene including the carpet, wall, shelf, records, and partial guitar already in the room\",\n    \"the existing lighting mood, perspective, focus style, and natural shadows\",\n    \"the visible promotional text at the bottom of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the rack\",\n    \"do not place the new guitar loosely beside the product or in the background\",\n    \"do not alter non-target objects, background composition, or existing text\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden guitar rack product in Image A\",\n    \"target_area\": \"inside the rack, positioned in one of the storage slots so the guitar is clearly being held by the product rather than placed beside it\",\n    \"content\": \"add one red guitar with realistic proportions and a clean finished appearance, oriented naturally as a stored guitar that fits the rack\",\n    \"integration\": \"match the existing warm indoor lighting, shallow depth of field, camera perspective, shadows, scale, and scene realism; make the guitar interact naturally with the rack so it looks physically supported by the product and consistent with the surrounding carpet and room\"\n  },\n  \"preserve\": [\n    \"the wooden rack's structure, dimensions, material, brown color, and all visible edges and cutout shapes\",\n    \"the background scene including the carpet, wall, shelf, records, and partial guitar already in the room\",\n    \"the existing lighting mood, perspective, focus style, and natural shadows\",\n    \"the visible promotional text at the bottom of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the rack\",\n    \"do not place the new guitar loosely beside the product or in the background\",\n    \"do not alter non-target objects, background composition, or existing text\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden guitar rack product in Image A\",\n    \"target_area\": \"inside the rack, positioned in one of the storage slots so the guitar is clearly being held by the product rather than placed beside it\",\n    \"content\": \"add one red guitar with realistic proportions and a clean finished appearance, oriented naturally as a stored guitar that fits the rack\",\n    \"integration\": \"match the existing warm indoor lighting, shallow depth of field, camera perspective, shadows, scale, and scene realism; make the guitar interact naturally with the rack so it looks physically supported by the product and consistent with the surrounding carpet and room\"\n  },\n  \"preserve\": [\n    \"the wooden rack's structure, dimensions, material, brown color, and all visible edges and cutout shapes\",\n    \"the background scene including the carpet, wall, shelf, records, and partial guitar already in the room\",\n    \"the existing lighting mood, perspective, focus style, and natural shadows\",\n    \"the visible promotional text at the bottom of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the rack\",\n    \"do not place the new guitar loosely beside the product or in the background\",\n    \"do not alter non-target objects, background composition, or existing text\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-024\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-024/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden guitar rack product in Image A\",\n    \"target_area\": \"inside the rack, positioned in one of the storage slots so the guitar is clearly being held by the product rather than placed beside it\",\n    \"content\": \"add one red guitar with realistic proportions and a clean finished appearance, oriented naturally as a stored guitar that fits the rack\",\n    \"integration\": \"match the existing warm indoor lighting, shallow depth of field, camera perspective, shadows, scale, and scene realism; make the guitar interact naturally with the rack so it looks physically supported by the product and consistent with the surrounding carpet and room\"\n  },\n  \"preserve\": [\n    \"the wooden rack's structure, dimensions, material, brown color, and all visible edges and cutout shapes\",\n    \"the background scene including the carpet, wall, shelf, records, and partial guitar already in the room\",\n    \"the existing lighting mood, perspective, focus style, and natural shadows\",\n    \"the visible promotional text at the bottom of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the rack\",\n    \"do not place the new guitar loosely beside the product or in the background\",\n    \"do not alter non-target objects, background composition, or existing text\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main wooden guitar rack product in Image A\",\n    \"target_area\": \"inside the rack, positioned in one of the storage slots so the guitar is clearly being held by the product rather than placed beside it\",\n    \"content\": \"add one red guitar with realistic proportions and a clean finished appearance, oriented naturally as a stored guitar that fits the rack\",\n    \"integration\": \"match the existing warm indoor lighting, shallow depth of field, camera perspective, shadows, scale, and scene realism; make the guitar interact naturally with the rack so it looks physically supported by the product and consistent with the surrounding carpet and room\"\n  },\n  \"preserve\": [\n    \"the wooden rack's structure, dimensions, material, brown color, and all visible edges and cutout shapes\",\n    \"the background scene including the carpet, wall, shelf, records, and partial guitar already in the room\",\n    \"the existing lighting mood, perspective, focus style, and natural shadows\",\n    \"the visible promotional text at the bottom of the image\"\n  ],\n  \"do_not_change\": [\n    \"do not move or redesign the rack\",\n    \"do not place the new guitar loosely beside the product or in the background\",\n    \"do not alter non-target objects, background composition, or existing text\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-024-original-1.png",
+                "assetPath": "assets/SINGLE-024-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-024-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-024-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-024-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-024-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:10:10.460Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-025",
+      "title": "将产品主体中间的抽屉拉开",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "将产品主体中间的抽屉拉开",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-025-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1534118
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-025-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1377902
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "将产品主体中间的抽屉拉开",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the middle drawer on the front face of the wooden three-drawer organizer\",\n    \"content\": \"pull the existing middle drawer outward from the cabinet so it is visibly open\",\n    \"integration\": \"keep the drawer aligned with the product's original perspective and scale, preserve realistic depth between the drawer front and cabinet body, and add natural contact shadows and interior shading consistent with the warm soft light from the right side\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the middle drawer and the newly revealed interior cavity of the organizer\",\n    \"content\": \"show the middle drawer in an open state with believable drawer depth, visible inner side panels, and a clean wooden interior that matches the same dark wood material and craftsmanship as the rest of the product\",\n    \"integration\": \"maintain the existing wood grain, finish, edge thickness, knob placement, and overall handcrafted structure so the opened drawer looks like the original product photographed in the same scene\"\n  },\n  \"preserve\": [\n    \"the overall wooden organizer size, shape, and handcrafted style\",\n    \"the left and right drawers in their original closed positions\",\n    \"the dark wood material, color tone, surface texture, and visible wood grain\",\n    \"the tabletop cloth, plant, key, open notebook, feather pen, lighting, shadows, and camera angle\",\n    \"the existing text overlay and all non-target areas unless affected only by the drawer opening geometry\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or remove existing scene objects\",\n    \"do not change the product color, material, or hardware design\",\n    \"do not move the organizer itself or alter the background composition\",\n    \"do not open the left or right drawers\",\n    \"do not place the drawer outside the product body or detach it unrealistically\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the middle drawer on the front face of the wooden three-drawer organizer\",\n    \"content\": \"pull the existing middle drawer outward from the cabinet so it is visibly open\",\n    \"integration\": \"keep the drawer aligned with the product's original perspective and scale, preserve realistic depth between the drawer front and cabinet body, and add natural contact shadows and interior shading consistent with the warm soft light from the right side\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the middle drawer and the newly revealed interior cavity of the organizer\",\n    \"content\": \"show the middle drawer in an open state with believable drawer depth, visible inner side panels, and a clean wooden interior that matches the same dark wood material and craftsmanship as the rest of the product\",\n    \"integration\": \"maintain the existing wood grain, finish, edge thickness, knob placement, and overall handcrafted structure so the opened drawer looks like the original product photographed in the same scene\"\n  },\n  \"preserve\": [\n    \"the overall wooden organizer size, shape, and handcrafted style\",\n    \"the left and right drawers in their original closed positions\",\n    \"the dark wood material, color tone, surface texture, and visible wood grain\",\n    \"the tabletop cloth, plant, key, open notebook, feather pen, lighting, shadows, and camera angle\",\n    \"the existing text overlay and all non-target areas unless affected only by the drawer opening geometry\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or remove existing scene objects\",\n    \"do not change the product color, material, or hardware design\",\n    \"do not move the organizer itself or alter the background composition\",\n    \"do not open the left or right drawers\",\n    \"do not place the drawer outside the product body or detach it unrealistically\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the middle drawer on the front face of the wooden three-drawer organizer\",\n    \"content\": \"pull the existing middle drawer outward from the cabinet so it is visibly open\",\n    \"integration\": \"keep the drawer aligned with the product's original perspective and scale, preserve realistic depth between the drawer front and cabinet body, and add natural contact shadows and interior shading consistent with the warm soft light from the right side\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the middle drawer and the newly revealed interior cavity of the organizer\",\n    \"content\": \"show the middle drawer in an open state with believable drawer depth, visible inner side panels, and a clean wooden interior that matches the same dark wood material and craftsmanship as the rest of the product\",\n    \"integration\": \"maintain the existing wood grain, finish, edge thickness, knob placement, and overall handcrafted structure so the opened drawer looks like the original product photographed in the same scene\"\n  },\n  \"preserve\": [\n    \"the overall wooden organizer size, shape, and handcrafted style\",\n    \"the left and right drawers in their original closed positions\",\n    \"the dark wood material, color tone, surface texture, and visible wood grain\",\n    \"the tabletop cloth, plant, key, open notebook, feather pen, lighting, shadows, and camera angle\",\n    \"the existing text overlay and all non-target areas unless affected only by the drawer opening geometry\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or remove existing scene objects\",\n    \"do not change the product color, material, or hardware design\",\n    \"do not move the organizer itself or alter the background composition\",\n    \"do not open the left or right drawers\",\n    \"do not place the drawer outside the product body or detach it unrealistically\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the middle drawer on the front face of the wooden three-drawer organizer\",\n    \"content\": \"pull the existing middle drawer outward from the cabinet so it is visibly open\",\n    \"integration\": \"keep the drawer aligned with the product's original perspective and scale, preserve realistic depth between the drawer front and cabinet body, and add natural contact shadows and interior shading consistent with the warm soft light from the right side\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the middle drawer and the newly revealed interior cavity of the organizer\",\n    \"content\": \"show the middle drawer in an open state with believable drawer depth, visible inner side panels, and a clean wooden interior that matches the same dark wood material and craftsmanship as the rest of the product\",\n    \"integration\": \"maintain the existing wood grain, finish, edge thickness, knob placement, and overall handcrafted structure so the opened drawer looks like the original product photographed in the same scene\"\n  },\n  \"preserve\": [\n    \"the overall wooden organizer size, shape, and handcrafted style\",\n    \"the left and right drawers in their original closed positions\",\n    \"the dark wood material, color tone, surface texture, and visible wood grain\",\n    \"the tabletop cloth, plant, key, open notebook, feather pen, lighting, shadows, and camera angle\",\n    \"the existing text overlay and all non-target areas unless affected only by the drawer opening geometry\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or remove existing scene objects\",\n    \"do not change the product color, material, or hardware design\",\n    \"do not move the organizer itself or alter the background composition\",\n    \"do not open the left or right drawers\",\n    \"do not place the drawer outside the product body or detach it unrealistically\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-025\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-025/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the middle drawer on the front face of the wooden three-drawer organizer\",\n    \"content\": \"pull the existing middle drawer outward from the cabinet so it is visibly open\",\n    \"integration\": \"keep the drawer aligned with the product's original perspective and scale, preserve realistic depth between the drawer front and cabinet body, and add natural contact shadows and interior shading consistent with the warm soft light from the right side\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the middle drawer and the newly revealed interior cavity of the organizer\",\n    \"content\": \"show the middle drawer in an open state with believable drawer depth, visible inner side panels, and a clean wooden interior that matches the same dark wood material and craftsmanship as the rest of the product\",\n    \"integration\": \"maintain the existing wood grain, finish, edge thickness, knob placement, and overall handcrafted structure so the opened drawer looks like the original product photographed in the same scene\"\n  },\n  \"preserve\": [\n    \"the overall wooden organizer size, shape, and handcrafted style\",\n    \"the left and right drawers in their original closed positions\",\n    \"the dark wood material, color tone, surface texture, and visible wood grain\",\n    \"the tabletop cloth, plant, key, open notebook, feather pen, lighting, shadows, and camera angle\",\n    \"the existing text overlay and all non-target areas unless affected only by the drawer opening geometry\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or remove existing scene objects\",\n    \"do not change the product color, material, or hardware design\",\n    \"do not move the organizer itself or alter the background composition\",\n    \"do not open the left or right drawers\",\n    \"do not place the drawer outside the product body or detach it unrealistically\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"move\": {\n    \"target\": \"the middle drawer on the front face of the wooden three-drawer organizer\",\n    \"content\": \"pull the existing middle drawer outward from the cabinet so it is visibly open\",\n    \"integration\": \"keep the drawer aligned with the product's original perspective and scale, preserve realistic depth between the drawer front and cabinet body, and add natural contact shadows and interior shading consistent with the warm soft light from the right side\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the middle drawer and the newly revealed interior cavity of the organizer\",\n    \"content\": \"show the middle drawer in an open state with believable drawer depth, visible inner side panels, and a clean wooden interior that matches the same dark wood material and craftsmanship as the rest of the product\",\n    \"integration\": \"maintain the existing wood grain, finish, edge thickness, knob placement, and overall handcrafted structure so the opened drawer looks like the original product photographed in the same scene\"\n  },\n  \"preserve\": [\n    \"the overall wooden organizer size, shape, and handcrafted style\",\n    \"the left and right drawers in their original closed positions\",\n    \"the dark wood material, color tone, surface texture, and visible wood grain\",\n    \"the tabletop cloth, plant, key, open notebook, feather pen, lighting, shadows, and camera angle\",\n    \"the existing text overlay and all non-target areas unless affected only by the drawer opening geometry\"\n  ],\n  \"do_not_change\": [\n    \"do not add new objects or remove existing scene objects\",\n    \"do not change the product color, material, or hardware design\",\n    \"do not move the organizer itself or alter the background composition\",\n    \"do not open the left or right drawers\",\n    \"do not place the drawer outside the product body or detach it unrealistically\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-025-original-1.png",
+                "assetPath": "assets/SINGLE-025-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-025-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-025-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-025-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-025-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:09:19.270Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-026",
+      "title": "在产品主体内部添加一些包装零食",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在产品主体内部添加一些包装零食",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-026-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1345777
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-026-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1416240
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在产品主体内部添加一些包装零食",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior space of the clear rectangular storage bin, visible through the transparent walls and open usable cavity beneath the lid\",\n    \"target_area\": \"inside the main product only\",\n    \"content\": \"add several neatly arranged packaged snacks inside the bin, such as small bagged snacks or individually wrapped snack packs, with realistic retail-style packaging and varied shapes so the container looks organized but not overfilled\",\n    \"integration\": \"keep the snacks fully contained within the bin, scaled correctly to the product size, visible through the transparent plastic, and matched to the existing warm kitchen lighting, reflections, perspective, shadows, and material realism of the clear container\"\n  },\n  \"preserve\": [\n    \"the storage bin's shape, size, transparent plastic material, ribbed lid texture, side handles, and overall product structure\",\n    \"the countertop, bowl of lemons, kitchen background, lighting direction, reflections, shadows, and camera perspective\",\n    \"the visible text 'CLARITY & ORDER' and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not place any snacks outside the product\",\n    \"do not alter the product color, transparency, lid position, or exterior form\",\n    \"do not remove, replace, or modify the background objects or visible text\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior space of the clear rectangular storage bin, visible through the transparent walls and open usable cavity beneath the lid\",\n    \"target_area\": \"inside the main product only\",\n    \"content\": \"add several neatly arranged packaged snacks inside the bin, such as small bagged snacks or individually wrapped snack packs, with realistic retail-style packaging and varied shapes so the container looks organized but not overfilled\",\n    \"integration\": \"keep the snacks fully contained within the bin, scaled correctly to the product size, visible through the transparent plastic, and matched to the existing warm kitchen lighting, reflections, perspective, shadows, and material realism of the clear container\"\n  },\n  \"preserve\": [\n    \"the storage bin's shape, size, transparent plastic material, ribbed lid texture, side handles, and overall product structure\",\n    \"the countertop, bowl of lemons, kitchen background, lighting direction, reflections, shadows, and camera perspective\",\n    \"the visible text 'CLARITY & ORDER' and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not place any snacks outside the product\",\n    \"do not alter the product color, transparency, lid position, or exterior form\",\n    \"do not remove, replace, or modify the background objects or visible text\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior space of the clear rectangular storage bin, visible through the transparent walls and open usable cavity beneath the lid\",\n    \"target_area\": \"inside the main product only\",\n    \"content\": \"add several neatly arranged packaged snacks inside the bin, such as small bagged snacks or individually wrapped snack packs, with realistic retail-style packaging and varied shapes so the container looks organized but not overfilled\",\n    \"integration\": \"keep the snacks fully contained within the bin, scaled correctly to the product size, visible through the transparent plastic, and matched to the existing warm kitchen lighting, reflections, perspective, shadows, and material realism of the clear container\"\n  },\n  \"preserve\": [\n    \"the storage bin's shape, size, transparent plastic material, ribbed lid texture, side handles, and overall product structure\",\n    \"the countertop, bowl of lemons, kitchen background, lighting direction, reflections, shadows, and camera perspective\",\n    \"the visible text 'CLARITY & ORDER' and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not place any snacks outside the product\",\n    \"do not alter the product color, transparency, lid position, or exterior form\",\n    \"do not remove, replace, or modify the background objects or visible text\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior space of the clear rectangular storage bin, visible through the transparent walls and open usable cavity beneath the lid\",\n    \"target_area\": \"inside the main product only\",\n    \"content\": \"add several neatly arranged packaged snacks inside the bin, such as small bagged snacks or individually wrapped snack packs, with realistic retail-style packaging and varied shapes so the container looks organized but not overfilled\",\n    \"integration\": \"keep the snacks fully contained within the bin, scaled correctly to the product size, visible through the transparent plastic, and matched to the existing warm kitchen lighting, reflections, perspective, shadows, and material realism of the clear container\"\n  },\n  \"preserve\": [\n    \"the storage bin's shape, size, transparent plastic material, ribbed lid texture, side handles, and overall product structure\",\n    \"the countertop, bowl of lemons, kitchen background, lighting direction, reflections, shadows, and camera perspective\",\n    \"the visible text 'CLARITY & ORDER' and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not place any snacks outside the product\",\n    \"do not alter the product color, transparency, lid position, or exterior form\",\n    \"do not remove, replace, or modify the background objects or visible text\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-026\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-026/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior space of the clear rectangular storage bin, visible through the transparent walls and open usable cavity beneath the lid\",\n    \"target_area\": \"inside the main product only\",\n    \"content\": \"add several neatly arranged packaged snacks inside the bin, such as small bagged snacks or individually wrapped snack packs, with realistic retail-style packaging and varied shapes so the container looks organized but not overfilled\",\n    \"integration\": \"keep the snacks fully contained within the bin, scaled correctly to the product size, visible through the transparent plastic, and matched to the existing warm kitchen lighting, reflections, perspective, shadows, and material realism of the clear container\"\n  },\n  \"preserve\": [\n    \"the storage bin's shape, size, transparent plastic material, ribbed lid texture, side handles, and overall product structure\",\n    \"the countertop, bowl of lemons, kitchen background, lighting direction, reflections, shadows, and camera perspective\",\n    \"the visible text 'CLARITY & ORDER' and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not place any snacks outside the product\",\n    \"do not alter the product color, transparency, lid position, or exterior form\",\n    \"do not remove, replace, or modify the background objects or visible text\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior space of the clear rectangular storage bin, visible through the transparent walls and open usable cavity beneath the lid\",\n    \"target_area\": \"inside the main product only\",\n    \"content\": \"add several neatly arranged packaged snacks inside the bin, such as small bagged snacks or individually wrapped snack packs, with realistic retail-style packaging and varied shapes so the container looks organized but not overfilled\",\n    \"integration\": \"keep the snacks fully contained within the bin, scaled correctly to the product size, visible through the transparent plastic, and matched to the existing warm kitchen lighting, reflections, perspective, shadows, and material realism of the clear container\"\n  },\n  \"preserve\": [\n    \"the storage bin's shape, size, transparent plastic material, ribbed lid texture, side handles, and overall product structure\",\n    \"the countertop, bowl of lemons, kitchen background, lighting direction, reflections, shadows, and camera perspective\",\n    \"the visible text 'CLARITY & ORDER' and all non-target areas\"\n  ],\n  \"do_not_change\": [\n    \"do not place any snacks outside the product\",\n    \"do not alter the product color, transparency, lid position, or exterior form\",\n    \"do not remove, replace, or modify the background objects or visible text\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-026-original-1.png",
+                "assetPath": "assets/SINGLE-026-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-026-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-026-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-026-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-026-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:10:32.639Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-027",
+      "title": "在产品主体内部摆上咖啡和面包",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在产品主体内部摆上咖啡和面包",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-027-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1377952
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-027-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1374621
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在产品主体内部摆上咖啡和面包",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the empty interior surface of the black rectangular tray\",\n    \"target_area\": \"inside the tray only, centered and naturally arranged within the tray's inner base area\",\n    \"content\": \"add a tasteful serving arrangement of coffee and bread inside the tray, such as one elegant cup of coffee and a few pieces of bread or pastry placed neatly as if the tray is being used for serving\",\n    \"integration\": \"keep the new items fully inside the tray, match the existing camera angle, perspective, scale, soft indoor lighting, realistic shadows, and surface contact; make the coffee and bread look naturally styled for a premium home-living product photo without covering or altering the tray structure\"\n  },\n  \"preserve\": [\n    \"the black tray shape, proportions, wood-like material texture, and gold handles\",\n    \"the existing marble tabletop, background window blur, candle, cups outside the tray, book, and decorative background elements\",\n    \"the visible headline, subtitle, and icon text at the top of the image\",\n    \"the original lighting direction, reflections, perspective, and overall premium product-photo atmosphere\"\n  ],\n  \"do_not_change\": [\n    \"do not place the coffee or bread outside the tray\",\n    \"do not change the tray color, material, handle design, or dimensions\",\n    \"do not remove, edit, or move the existing visible text or icons\",\n    \"do not alter non-target areas of the image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the empty interior surface of the black rectangular tray\",\n    \"target_area\": \"inside the tray only, centered and naturally arranged within the tray's inner base area\",\n    \"content\": \"add a tasteful serving arrangement of coffee and bread inside the tray, such as one elegant cup of coffee and a few pieces of bread or pastry placed neatly as if the tray is being used for serving\",\n    \"integration\": \"keep the new items fully inside the tray, match the existing camera angle, perspective, scale, soft indoor lighting, realistic shadows, and surface contact; make the coffee and bread look naturally styled for a premium home-living product photo without covering or altering the tray structure\"\n  },\n  \"preserve\": [\n    \"the black tray shape, proportions, wood-like material texture, and gold handles\",\n    \"the existing marble tabletop, background window blur, candle, cups outside the tray, book, and decorative background elements\",\n    \"the visible headline, subtitle, and icon text at the top of the image\",\n    \"the original lighting direction, reflections, perspective, and overall premium product-photo atmosphere\"\n  ],\n  \"do_not_change\": [\n    \"do not place the coffee or bread outside the tray\",\n    \"do not change the tray color, material, handle design, or dimensions\",\n    \"do not remove, edit, or move the existing visible text or icons\",\n    \"do not alter non-target areas of the image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the empty interior surface of the black rectangular tray\",\n    \"target_area\": \"inside the tray only, centered and naturally arranged within the tray's inner base area\",\n    \"content\": \"add a tasteful serving arrangement of coffee and bread inside the tray, such as one elegant cup of coffee and a few pieces of bread or pastry placed neatly as if the tray is being used for serving\",\n    \"integration\": \"keep the new items fully inside the tray, match the existing camera angle, perspective, scale, soft indoor lighting, realistic shadows, and surface contact; make the coffee and bread look naturally styled for a premium home-living product photo without covering or altering the tray structure\"\n  },\n  \"preserve\": [\n    \"the black tray shape, proportions, wood-like material texture, and gold handles\",\n    \"the existing marble tabletop, background window blur, candle, cups outside the tray, book, and decorative background elements\",\n    \"the visible headline, subtitle, and icon text at the top of the image\",\n    \"the original lighting direction, reflections, perspective, and overall premium product-photo atmosphere\"\n  ],\n  \"do_not_change\": [\n    \"do not place the coffee or bread outside the tray\",\n    \"do not change the tray color, material, handle design, or dimensions\",\n    \"do not remove, edit, or move the existing visible text or icons\",\n    \"do not alter non-target areas of the image\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the empty interior surface of the black rectangular tray\",\n    \"target_area\": \"inside the tray only, centered and naturally arranged within the tray's inner base area\",\n    \"content\": \"add a tasteful serving arrangement of coffee and bread inside the tray, such as one elegant cup of coffee and a few pieces of bread or pastry placed neatly as if the tray is being used for serving\",\n    \"integration\": \"keep the new items fully inside the tray, match the existing camera angle, perspective, scale, soft indoor lighting, realistic shadows, and surface contact; make the coffee and bread look naturally styled for a premium home-living product photo without covering or altering the tray structure\"\n  },\n  \"preserve\": [\n    \"the black tray shape, proportions, wood-like material texture, and gold handles\",\n    \"the existing marble tabletop, background window blur, candle, cups outside the tray, book, and decorative background elements\",\n    \"the visible headline, subtitle, and icon text at the top of the image\",\n    \"the original lighting direction, reflections, perspective, and overall premium product-photo atmosphere\"\n  ],\n  \"do_not_change\": [\n    \"do not place the coffee or bread outside the tray\",\n    \"do not change the tray color, material, handle design, or dimensions\",\n    \"do not remove, edit, or move the existing visible text or icons\",\n    \"do not alter non-target areas of the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-027\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-027/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the empty interior surface of the black rectangular tray\",\n    \"target_area\": \"inside the tray only, centered and naturally arranged within the tray's inner base area\",\n    \"content\": \"add a tasteful serving arrangement of coffee and bread inside the tray, such as one elegant cup of coffee and a few pieces of bread or pastry placed neatly as if the tray is being used for serving\",\n    \"integration\": \"keep the new items fully inside the tray, match the existing camera angle, perspective, scale, soft indoor lighting, realistic shadows, and surface contact; make the coffee and bread look naturally styled for a premium home-living product photo without covering or altering the tray structure\"\n  },\n  \"preserve\": [\n    \"the black tray shape, proportions, wood-like material texture, and gold handles\",\n    \"the existing marble tabletop, background window blur, candle, cups outside the tray, book, and decorative background elements\",\n    \"the visible headline, subtitle, and icon text at the top of the image\",\n    \"the original lighting direction, reflections, perspective, and overall premium product-photo atmosphere\"\n  ],\n  \"do_not_change\": [\n    \"do not place the coffee or bread outside the tray\",\n    \"do not change the tray color, material, handle design, or dimensions\",\n    \"do not remove, edit, or move the existing visible text or icons\",\n    \"do not alter non-target areas of the image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the main product itself, specifically the empty interior surface of the black rectangular tray\",\n    \"target_area\": \"inside the tray only, centered and naturally arranged within the tray's inner base area\",\n    \"content\": \"add a tasteful serving arrangement of coffee and bread inside the tray, such as one elegant cup of coffee and a few pieces of bread or pastry placed neatly as if the tray is being used for serving\",\n    \"integration\": \"keep the new items fully inside the tray, match the existing camera angle, perspective, scale, soft indoor lighting, realistic shadows, and surface contact; make the coffee and bread look naturally styled for a premium home-living product photo without covering or altering the tray structure\"\n  },\n  \"preserve\": [\n    \"the black tray shape, proportions, wood-like material texture, and gold handles\",\n    \"the existing marble tabletop, background window blur, candle, cups outside the tray, book, and decorative background elements\",\n    \"the visible headline, subtitle, and icon text at the top of the image\",\n    \"the original lighting direction, reflections, perspective, and overall premium product-photo atmosphere\"\n  ],\n  \"do_not_change\": [\n    \"do not place the coffee or bread outside the tray\",\n    \"do not change the tray color, material, handle design, or dimensions\",\n    \"do not remove, edit, or move the existing visible text or icons\",\n    \"do not alter non-target areas of the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-027-original-1.png",
+                "assetPath": "assets/SINGLE-027-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-027-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-027-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-027-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-027-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:09:50.885Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-028",
+      "title": "在产品主体内添加宠物粮食；背景上添加一只变色龙",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在产品主体内添加宠物粮食；背景上添加一只变色龙",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-028-original-1.jpg",
+          "exists": true,
+          "mime_type": "image/jpeg",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 317004
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-028-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1809806
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在产品主体内添加宠物粮食；背景上添加一只变色龙",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the green double-compartment feeder product in the foreground\",\n    \"target_area\": \"both food compartments within the product body\",\n    \"content\": \"add realistic pet food inside the two compartments, with the food sitting naturally in the tray cavities and clearly contained within the product\",\n    \"integration\": \"match the existing camera angle, tray perspective, lighting direction, shadows, scale, and terrarium setting; keep the food visually natural for a reptile habitat scene and ensure it appears placed inside the feeder rather than outside or beside it\",\n    \"preserve_conditions\": \"keep the feeder’s shape, rim edges, divider, dark green plastic material, and overall product geometry unchanged\"\n  },\n  \"insert\": {\n    \"target\": \"the terrarium background behind the feeder\",\n    \"target_area\": \"background foliage or rock area where a chameleon can appear naturally without blocking the product\",\n    \"content\": \"add one realistic chameleon in the background\",\n    \"integration\": \"blend the chameleon into the habitat with matching depth, lighting, scale, color realism, shadows, and natural pose; it should read as part of the terrarium environment and remain secondary to the product\"\n  },\n  \"preserve\": [\n    \"the green double-compartment feeder’s structure, material, color, proportions, and perspective\",\n    \"the existing visible text in the upper-right area\",\n    \"the overall terrarium lighting, shadows, and natural habitat atmosphere\",\n    \"the surrounding plants, rocks, substrate, and all non-target areas unless minimally adjusted for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product’s shape, divider, tray edges, or placement\",\n    \"do not change the existing visible text or remove it\",\n    \"do not place the pet food outside the feeder\",\n    \"do not place the chameleon on the product itself or in the foreground\",\n    \"do not modify the image framing, camera angle, or overall scene composition beyond the requested edits\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the green double-compartment feeder product in the foreground\",\n    \"target_area\": \"both food compartments within the product body\",\n    \"content\": \"add realistic pet food inside the two compartments, with the food sitting naturally in the tray cavities and clearly contained within the product\",\n    \"integration\": \"match the existing camera angle, tray perspective, lighting direction, shadows, scale, and terrarium setting; keep the food visually natural for a reptile habitat scene and ensure it appears placed inside the feeder rather than outside or beside it\",\n    \"preserve_conditions\": \"keep the feeder’s shape, rim edges, divider, dark green plastic material, and overall product geometry unchanged\"\n  },\n  \"insert\": {\n    \"target\": \"the terrarium background behind the feeder\",\n    \"target_area\": \"background foliage or rock area where a chameleon can appear naturally without blocking the product\",\n    \"content\": \"add one realistic chameleon in the background\",\n    \"integration\": \"blend the chameleon into the habitat with matching depth, lighting, scale, color realism, shadows, and natural pose; it should read as part of the terrarium environment and remain secondary to the product\"\n  },\n  \"preserve\": [\n    \"the green double-compartment feeder’s structure, material, color, proportions, and perspective\",\n    \"the existing visible text in the upper-right area\",\n    \"the overall terrarium lighting, shadows, and natural habitat atmosphere\",\n    \"the surrounding plants, rocks, substrate, and all non-target areas unless minimally adjusted for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product’s shape, divider, tray edges, or placement\",\n    \"do not change the existing visible text or remove it\",\n    \"do not place the pet food outside the feeder\",\n    \"do not place the chameleon on the product itself or in the foreground\",\n    \"do not modify the image framing, camera angle, or overall scene composition beyond the requested edits\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the green double-compartment feeder product in the foreground\",\n    \"target_area\": \"both food compartments within the product body\",\n    \"content\": \"add realistic pet food inside the two compartments, with the food sitting naturally in the tray cavities and clearly contained within the product\",\n    \"integration\": \"match the existing camera angle, tray perspective, lighting direction, shadows, scale, and terrarium setting; keep the food visually natural for a reptile habitat scene and ensure it appears placed inside the feeder rather than outside or beside it\",\n    \"preserve_conditions\": \"keep the feeder’s shape, rim edges, divider, dark green plastic material, and overall product geometry unchanged\"\n  },\n  \"insert\": {\n    \"target\": \"the terrarium background behind the feeder\",\n    \"target_area\": \"background foliage or rock area where a chameleon can appear naturally without blocking the product\",\n    \"content\": \"add one realistic chameleon in the background\",\n    \"integration\": \"blend the chameleon into the habitat with matching depth, lighting, scale, color realism, shadows, and natural pose; it should read as part of the terrarium environment and remain secondary to the product\"\n  },\n  \"preserve\": [\n    \"the green double-compartment feeder’s structure, material, color, proportions, and perspective\",\n    \"the existing visible text in the upper-right area\",\n    \"the overall terrarium lighting, shadows, and natural habitat atmosphere\",\n    \"the surrounding plants, rocks, substrate, and all non-target areas unless minimally adjusted for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product’s shape, divider, tray edges, or placement\",\n    \"do not change the existing visible text or remove it\",\n    \"do not place the pet food outside the feeder\",\n    \"do not place the chameleon on the product itself or in the foreground\",\n    \"do not modify the image framing, camera angle, or overall scene composition beyond the requested edits\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the green double-compartment feeder product in the foreground\",\n    \"target_area\": \"both food compartments within the product body\",\n    \"content\": \"add realistic pet food inside the two compartments, with the food sitting naturally in the tray cavities and clearly contained within the product\",\n    \"integration\": \"match the existing camera angle, tray perspective, lighting direction, shadows, scale, and terrarium setting; keep the food visually natural for a reptile habitat scene and ensure it appears placed inside the feeder rather than outside or beside it\",\n    \"preserve_conditions\": \"keep the feeder’s shape, rim edges, divider, dark green plastic material, and overall product geometry unchanged\"\n  },\n  \"insert\": {\n    \"target\": \"the terrarium background behind the feeder\",\n    \"target_area\": \"background foliage or rock area where a chameleon can appear naturally without blocking the product\",\n    \"content\": \"add one realistic chameleon in the background\",\n    \"integration\": \"blend the chameleon into the habitat with matching depth, lighting, scale, color realism, shadows, and natural pose; it should read as part of the terrarium environment and remain secondary to the product\"\n  },\n  \"preserve\": [\n    \"the green double-compartment feeder’s structure, material, color, proportions, and perspective\",\n    \"the existing visible text in the upper-right area\",\n    \"the overall terrarium lighting, shadows, and natural habitat atmosphere\",\n    \"the surrounding plants, rocks, substrate, and all non-target areas unless minimally adjusted for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product’s shape, divider, tray edges, or placement\",\n    \"do not change the existing visible text or remove it\",\n    \"do not place the pet food outside the feeder\",\n    \"do not place the chameleon on the product itself or in the foreground\",\n    \"do not modify the image framing, camera angle, or overall scene composition beyond the requested edits\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-028\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-028/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the green double-compartment feeder product in the foreground\",\n    \"target_area\": \"both food compartments within the product body\",\n    \"content\": \"add realistic pet food inside the two compartments, with the food sitting naturally in the tray cavities and clearly contained within the product\",\n    \"integration\": \"match the existing camera angle, tray perspective, lighting direction, shadows, scale, and terrarium setting; keep the food visually natural for a reptile habitat scene and ensure it appears placed inside the feeder rather than outside or beside it\",\n    \"preserve_conditions\": \"keep the feeder’s shape, rim edges, divider, dark green plastic material, and overall product geometry unchanged\"\n  },\n  \"insert\": {\n    \"target\": \"the terrarium background behind the feeder\",\n    \"target_area\": \"background foliage or rock area where a chameleon can appear naturally without blocking the product\",\n    \"content\": \"add one realistic chameleon in the background\",\n    \"integration\": \"blend the chameleon into the habitat with matching depth, lighting, scale, color realism, shadows, and natural pose; it should read as part of the terrarium environment and remain secondary to the product\"\n  },\n  \"preserve\": [\n    \"the green double-compartment feeder’s structure, material, color, proportions, and perspective\",\n    \"the existing visible text in the upper-right area\",\n    \"the overall terrarium lighting, shadows, and natural habitat atmosphere\",\n    \"the surrounding plants, rocks, substrate, and all non-target areas unless minimally adjusted for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product’s shape, divider, tray edges, or placement\",\n    \"do not change the existing visible text or remove it\",\n    \"do not place the pet food outside the feeder\",\n    \"do not place the chameleon on the product itself or in the foreground\",\n    \"do not modify the image framing, camera angle, or overall scene composition beyond the requested edits\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the inside of the green double-compartment feeder product in the foreground\",\n    \"target_area\": \"both food compartments within the product body\",\n    \"content\": \"add realistic pet food inside the two compartments, with the food sitting naturally in the tray cavities and clearly contained within the product\",\n    \"integration\": \"match the existing camera angle, tray perspective, lighting direction, shadows, scale, and terrarium setting; keep the food visually natural for a reptile habitat scene and ensure it appears placed inside the feeder rather than outside or beside it\",\n    \"preserve_conditions\": \"keep the feeder’s shape, rim edges, divider, dark green plastic material, and overall product geometry unchanged\"\n  },\n  \"insert\": {\n    \"target\": \"the terrarium background behind the feeder\",\n    \"target_area\": \"background foliage or rock area where a chameleon can appear naturally without blocking the product\",\n    \"content\": \"add one realistic chameleon in the background\",\n    \"integration\": \"blend the chameleon into the habitat with matching depth, lighting, scale, color realism, shadows, and natural pose; it should read as part of the terrarium environment and remain secondary to the product\"\n  },\n  \"preserve\": [\n    \"the green double-compartment feeder’s structure, material, color, proportions, and perspective\",\n    \"the existing visible text in the upper-right area\",\n    \"the overall terrarium lighting, shadows, and natural habitat atmosphere\",\n    \"the surrounding plants, rocks, substrate, and all non-target areas unless minimally adjusted for seamless integration\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the product’s shape, divider, tray edges, or placement\",\n    \"do not change the existing visible text or remove it\",\n    \"do not place the pet food outside the feeder\",\n    \"do not place the chameleon on the product itself or in the foreground\",\n    \"do not modify the image framing, camera angle, or overall scene composition beyond the requested edits\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-028-original-1.jpg",
+                "assetPath": "assets/SINGLE-028-original-1.jpg"
+              }
+            ],
+            "compare_source": "assets/SINGLE-028-original-1.jpg"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-028-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-028-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-028-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:10:45.246Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-029",
+      "title": "保留一个产品主体，在产品里添加炸鸡和薯条",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "保留一个产品主体，在产品里添加炸鸡和薯条",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-029-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1575644
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-029-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1511756
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "保留一个产品主体，在产品里添加炸鸡和薯条",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the main wire mesh basket product in Image A\",\n    \"target_area\": \"inside the basket/tray cavity of the single main product, centered within the product and contained by the basket edges\",\n    \"content\": \"a realistic serving of golden fried chicken pieces and French fries placed inside the basket, with the food filling the product naturally without overflowing excessively\",\n    \"integration\": \"match the existing camera angle, soft kitchen lighting, reflections, shadows, depth, and scale; keep the food seated convincingly within the mesh basket so it looks physically supported by the product rather than floating or placed beside it\"\n  },\n  \"preserve\": [\n    \"the single main product body and its overall structure\",\n    \"the metal wire mesh material, silver color, and rim shape\",\n    \"the product perspective, lighting, shadows, and tabletop scene\",\n    \"all visible text and icons in the original image\",\n    \"the background air fryer and surrounding non-target objects\"\n  ],\n  \"do_not_change\": [\n    \"do not duplicate or add extra product bodies\",\n    \"do not place the fried chicken or fries outside the product\",\n    \"do not alter the product shape, material, color, logo, text, or mesh construction\",\n    \"do not change the background composition except for natural occlusion caused by the inserted food\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the main wire mesh basket product in Image A\",\n    \"target_area\": \"inside the basket/tray cavity of the single main product, centered within the product and contained by the basket edges\",\n    \"content\": \"a realistic serving of golden fried chicken pieces and French fries placed inside the basket, with the food filling the product naturally without overflowing excessively\",\n    \"integration\": \"match the existing camera angle, soft kitchen lighting, reflections, shadows, depth, and scale; keep the food seated convincingly within the mesh basket so it looks physically supported by the product rather than floating or placed beside it\"\n  },\n  \"preserve\": [\n    \"the single main product body and its overall structure\",\n    \"the metal wire mesh material, silver color, and rim shape\",\n    \"the product perspective, lighting, shadows, and tabletop scene\",\n    \"all visible text and icons in the original image\",\n    \"the background air fryer and surrounding non-target objects\"\n  ],\n  \"do_not_change\": [\n    \"do not duplicate or add extra product bodies\",\n    \"do not place the fried chicken or fries outside the product\",\n    \"do not alter the product shape, material, color, logo, text, or mesh construction\",\n    \"do not change the background composition except for natural occlusion caused by the inserted food\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the main wire mesh basket product in Image A\",\n    \"target_area\": \"inside the basket/tray cavity of the single main product, centered within the product and contained by the basket edges\",\n    \"content\": \"a realistic serving of golden fried chicken pieces and French fries placed inside the basket, with the food filling the product naturally without overflowing excessively\",\n    \"integration\": \"match the existing camera angle, soft kitchen lighting, reflections, shadows, depth, and scale; keep the food seated convincingly within the mesh basket so it looks physically supported by the product rather than floating or placed beside it\"\n  },\n  \"preserve\": [\n    \"the single main product body and its overall structure\",\n    \"the metal wire mesh material, silver color, and rim shape\",\n    \"the product perspective, lighting, shadows, and tabletop scene\",\n    \"all visible text and icons in the original image\",\n    \"the background air fryer and surrounding non-target objects\"\n  ],\n  \"do_not_change\": [\n    \"do not duplicate or add extra product bodies\",\n    \"do not place the fried chicken or fries outside the product\",\n    \"do not alter the product shape, material, color, logo, text, or mesh construction\",\n    \"do not change the background composition except for natural occlusion caused by the inserted food\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the main wire mesh basket product in Image A\",\n    \"target_area\": \"inside the basket/tray cavity of the single main product, centered within the product and contained by the basket edges\",\n    \"content\": \"a realistic serving of golden fried chicken pieces and French fries placed inside the basket, with the food filling the product naturally without overflowing excessively\",\n    \"integration\": \"match the existing camera angle, soft kitchen lighting, reflections, shadows, depth, and scale; keep the food seated convincingly within the mesh basket so it looks physically supported by the product rather than floating or placed beside it\"\n  },\n  \"preserve\": [\n    \"the single main product body and its overall structure\",\n    \"the metal wire mesh material, silver color, and rim shape\",\n    \"the product perspective, lighting, shadows, and tabletop scene\",\n    \"all visible text and icons in the original image\",\n    \"the background air fryer and surrounding non-target objects\"\n  ],\n  \"do_not_change\": [\n    \"do not duplicate or add extra product bodies\",\n    \"do not place the fried chicken or fries outside the product\",\n    \"do not alter the product shape, material, color, logo, text, or mesh construction\",\n    \"do not change the background composition except for natural occlusion caused by the inserted food\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-029\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-029/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the main wire mesh basket product in Image A\",\n    \"target_area\": \"inside the basket/tray cavity of the single main product, centered within the product and contained by the basket edges\",\n    \"content\": \"a realistic serving of golden fried chicken pieces and French fries placed inside the basket, with the food filling the product naturally without overflowing excessively\",\n    \"integration\": \"match the existing camera angle, soft kitchen lighting, reflections, shadows, depth, and scale; keep the food seated convincingly within the mesh basket so it looks physically supported by the product rather than floating or placed beside it\"\n  },\n  \"preserve\": [\n    \"the single main product body and its overall structure\",\n    \"the metal wire mesh material, silver color, and rim shape\",\n    \"the product perspective, lighting, shadows, and tabletop scene\",\n    \"all visible text and icons in the original image\",\n    \"the background air fryer and surrounding non-target objects\"\n  ],\n  \"do_not_change\": [\n    \"do not duplicate or add extra product bodies\",\n    \"do not place the fried chicken or fries outside the product\",\n    \"do not alter the product shape, material, color, logo, text, or mesh construction\",\n    \"do not change the background composition except for natural occlusion caused by the inserted food\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the main wire mesh basket product in Image A\",\n    \"target_area\": \"inside the basket/tray cavity of the single main product, centered within the product and contained by the basket edges\",\n    \"content\": \"a realistic serving of golden fried chicken pieces and French fries placed inside the basket, with the food filling the product naturally without overflowing excessively\",\n    \"integration\": \"match the existing camera angle, soft kitchen lighting, reflections, shadows, depth, and scale; keep the food seated convincingly within the mesh basket so it looks physically supported by the product rather than floating or placed beside it\"\n  },\n  \"preserve\": [\n    \"the single main product body and its overall structure\",\n    \"the metal wire mesh material, silver color, and rim shape\",\n    \"the product perspective, lighting, shadows, and tabletop scene\",\n    \"all visible text and icons in the original image\",\n    \"the background air fryer and surrounding non-target objects\"\n  ],\n  \"do_not_change\": [\n    \"do not duplicate or add extra product bodies\",\n    \"do not place the fried chicken or fries outside the product\",\n    \"do not alter the product shape, material, color, logo, text, or mesh construction\",\n    \"do not change the background composition except for natural occlusion caused by the inserted food\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-029-original-1.png",
+                "assetPath": "assets/SINGLE-029-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-029-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-029-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-029-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-029-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:10:48.474Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-030",
+      "title": "在内部添加五颜六色的保龄球玩具",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在内部添加五颜六色的保龄球玩具",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-030-original-1.jpg",
+          "exists": true,
+          "mime_type": "image/jpeg",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 572964
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-030-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1317066
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在内部添加五颜六色的保龄球玩具",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the transparent storage box shown at the center of Image A\",\n    \"target_area\": \"inside the box, resting naturally on the bottom surface and fully contained within the box walls\",\n    \"content\": \"add five colorful bowling ball toys inside the box, using a mix of bright colors such as red, yellow, blue, green, and purple, arranged naturally as display items with realistic size and spacing\",\n    \"integration\": \"match the existing camera angle, product perspective, transparent acrylic walls, soft indoor lighting, floor reflections, and natural shadows; ensure the toys appear physically inside the box and visible through the clear panels and top opening without floating or intersecting the box structure\",\n    \"preserve_conditions\": \"keep the product as the main subject and do not place the toys outside the box or in the background\"\n  },\n  \"preserve\": [\n    \"the storage box structure, shape, dimensions, black frame, zipper, handles, transparent material, and overall product appearance\",\n    \"the existing background scene, floor, furniture, and plush toy\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the original lighting, perspective, reflections, shadows, and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the box color, material, or construction\",\n    \"do not remove or edit any existing text or icons\",\n    \"do not add extra objects outside the box\",\n    \"do not change the background or overall image framing\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the transparent storage box shown at the center of Image A\",\n    \"target_area\": \"inside the box, resting naturally on the bottom surface and fully contained within the box walls\",\n    \"content\": \"add five colorful bowling ball toys inside the box, using a mix of bright colors such as red, yellow, blue, green, and purple, arranged naturally as display items with realistic size and spacing\",\n    \"integration\": \"match the existing camera angle, product perspective, transparent acrylic walls, soft indoor lighting, floor reflections, and natural shadows; ensure the toys appear physically inside the box and visible through the clear panels and top opening without floating or intersecting the box structure\",\n    \"preserve_conditions\": \"keep the product as the main subject and do not place the toys outside the box or in the background\"\n  },\n  \"preserve\": [\n    \"the storage box structure, shape, dimensions, black frame, zipper, handles, transparent material, and overall product appearance\",\n    \"the existing background scene, floor, furniture, and plush toy\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the original lighting, perspective, reflections, shadows, and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the box color, material, or construction\",\n    \"do not remove or edit any existing text or icons\",\n    \"do not add extra objects outside the box\",\n    \"do not change the background or overall image framing\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the transparent storage box shown at the center of Image A\",\n    \"target_area\": \"inside the box, resting naturally on the bottom surface and fully contained within the box walls\",\n    \"content\": \"add five colorful bowling ball toys inside the box, using a mix of bright colors such as red, yellow, blue, green, and purple, arranged naturally as display items with realistic size and spacing\",\n    \"integration\": \"match the existing camera angle, product perspective, transparent acrylic walls, soft indoor lighting, floor reflections, and natural shadows; ensure the toys appear physically inside the box and visible through the clear panels and top opening without floating or intersecting the box structure\",\n    \"preserve_conditions\": \"keep the product as the main subject and do not place the toys outside the box or in the background\"\n  },\n  \"preserve\": [\n    \"the storage box structure, shape, dimensions, black frame, zipper, handles, transparent material, and overall product appearance\",\n    \"the existing background scene, floor, furniture, and plush toy\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the original lighting, perspective, reflections, shadows, and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the box color, material, or construction\",\n    \"do not remove or edit any existing text or icons\",\n    \"do not add extra objects outside the box\",\n    \"do not change the background or overall image framing\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the transparent storage box shown at the center of Image A\",\n    \"target_area\": \"inside the box, resting naturally on the bottom surface and fully contained within the box walls\",\n    \"content\": \"add five colorful bowling ball toys inside the box, using a mix of bright colors such as red, yellow, blue, green, and purple, arranged naturally as display items with realistic size and spacing\",\n    \"integration\": \"match the existing camera angle, product perspective, transparent acrylic walls, soft indoor lighting, floor reflections, and natural shadows; ensure the toys appear physically inside the box and visible through the clear panels and top opening without floating or intersecting the box structure\",\n    \"preserve_conditions\": \"keep the product as the main subject and do not place the toys outside the box or in the background\"\n  },\n  \"preserve\": [\n    \"the storage box structure, shape, dimensions, black frame, zipper, handles, transparent material, and overall product appearance\",\n    \"the existing background scene, floor, furniture, and plush toy\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the original lighting, perspective, reflections, shadows, and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the box color, material, or construction\",\n    \"do not remove or edit any existing text or icons\",\n    \"do not add extra objects outside the box\",\n    \"do not change the background or overall image framing\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-030\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-030/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the transparent storage box shown at the center of Image A\",\n    \"target_area\": \"inside the box, resting naturally on the bottom surface and fully contained within the box walls\",\n    \"content\": \"add five colorful bowling ball toys inside the box, using a mix of bright colors such as red, yellow, blue, green, and purple, arranged naturally as display items with realistic size and spacing\",\n    \"integration\": \"match the existing camera angle, product perspective, transparent acrylic walls, soft indoor lighting, floor reflections, and natural shadows; ensure the toys appear physically inside the box and visible through the clear panels and top opening without floating or intersecting the box structure\",\n    \"preserve_conditions\": \"keep the product as the main subject and do not place the toys outside the box or in the background\"\n  },\n  \"preserve\": [\n    \"the storage box structure, shape, dimensions, black frame, zipper, handles, transparent material, and overall product appearance\",\n    \"the existing background scene, floor, furniture, and plush toy\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the original lighting, perspective, reflections, shadows, and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the box color, material, or construction\",\n    \"do not remove or edit any existing text or icons\",\n    \"do not add extra objects outside the box\",\n    \"do not change the background or overall image framing\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the interior of the transparent storage box shown at the center of Image A\",\n    \"target_area\": \"inside the box, resting naturally on the bottom surface and fully contained within the box walls\",\n    \"content\": \"add five colorful bowling ball toys inside the box, using a mix of bright colors such as red, yellow, blue, green, and purple, arranged naturally as display items with realistic size and spacing\",\n    \"integration\": \"match the existing camera angle, product perspective, transparent acrylic walls, soft indoor lighting, floor reflections, and natural shadows; ensure the toys appear physically inside the box and visible through the clear panels and top opening without floating or intersecting the box structure\",\n    \"preserve_conditions\": \"keep the product as the main subject and do not place the toys outside the box or in the background\"\n  },\n  \"preserve\": [\n    \"the storage box structure, shape, dimensions, black frame, zipper, handles, transparent material, and overall product appearance\",\n    \"the existing background scene, floor, furniture, and plush toy\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the original lighting, perspective, reflections, shadows, and composition\"\n  ],\n  \"do_not_change\": [\n    \"do not alter the box color, material, or construction\",\n    \"do not remove or edit any existing text or icons\",\n    \"do not add extra objects outside the box\",\n    \"do not change the background or overall image framing\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-030-original-1.jpg",
+                "assetPath": "assets/SINGLE-030-original-1.jpg"
+              }
+            ],
+            "compare_source": "assets/SINGLE-030-original-1.jpg"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-030-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-030-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-030-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:10:57.264Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-031",
+      "title": "在内部添加蔬菜",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在内部添加蔬菜",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-031-original-1.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 1366195
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-031-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1355616
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在内部添加蔬菜",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the visible inner basket area inside the yellow salad spinner / produce washer\",\n    \"target_area\": \"inside the product only, contained within the basket and not spilling onto the countertop\",\n    \"content\": \"fresh vegetables inside the basket, primarily crisp leafy greens such as lettuce, arranged naturally as if the product is loaded for washing or drying\",\n    \"integration\": \"keep the vegetables correctly scaled to the basket, partially visible through the basket slits and open top area, matching the existing soft daylight, perspective, shadows, highlights, and realistic product photography style\",\n    \"preserve_conditions\": \"maintain the product's original structure, yellow color, transparent outer bowl, lid details, button, handle, and overall commercial composition\"\n  },\n  \"preserve\": [\n    \"the full product shape, materials, and assembly\",\n    \"the existing visible headline, subtitle, and bottom icon text\",\n    \"the countertop, surrounding lettuce leaves, berries, and background scene\",\n    \"the original lighting direction, soft reflections, shadows, and camera angle\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product\",\n    \"do not alter the product color, lid design, basket pattern, or bowl transparency\",\n    \"do not modify or remove any existing text, icons, logo-like elements, or layout\",\n    \"do not change non-target areas of the image\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the visible inner basket area inside the yellow salad spinner / produce washer\",\n    \"target_area\": \"inside the product only, contained within the basket and not spilling onto the countertop\",\n    \"content\": \"fresh vegetables inside the basket, primarily crisp leafy greens such as lettuce, arranged naturally as if the product is loaded for washing or drying\",\n    \"integration\": \"keep the vegetables correctly scaled to the basket, partially visible through the basket slits and open top area, matching the existing soft daylight, perspective, shadows, highlights, and realistic product photography style\",\n    \"preserve_conditions\": \"maintain the product's original structure, yellow color, transparent outer bowl, lid details, button, handle, and overall commercial composition\"\n  },\n  \"preserve\": [\n    \"the full product shape, materials, and assembly\",\n    \"the existing visible headline, subtitle, and bottom icon text\",\n    \"the countertop, surrounding lettuce leaves, berries, and background scene\",\n    \"the original lighting direction, soft reflections, shadows, and camera angle\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product\",\n    \"do not alter the product color, lid design, basket pattern, or bowl transparency\",\n    \"do not modify or remove any existing text, icons, logo-like elements, or layout\",\n    \"do not change non-target areas of the image\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the visible inner basket area inside the yellow salad spinner / produce washer\",\n    \"target_area\": \"inside the product only, contained within the basket and not spilling onto the countertop\",\n    \"content\": \"fresh vegetables inside the basket, primarily crisp leafy greens such as lettuce, arranged naturally as if the product is loaded for washing or drying\",\n    \"integration\": \"keep the vegetables correctly scaled to the basket, partially visible through the basket slits and open top area, matching the existing soft daylight, perspective, shadows, highlights, and realistic product photography style\",\n    \"preserve_conditions\": \"maintain the product's original structure, yellow color, transparent outer bowl, lid details, button, handle, and overall commercial composition\"\n  },\n  \"preserve\": [\n    \"the full product shape, materials, and assembly\",\n    \"the existing visible headline, subtitle, and bottom icon text\",\n    \"the countertop, surrounding lettuce leaves, berries, and background scene\",\n    \"the original lighting direction, soft reflections, shadows, and camera angle\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product\",\n    \"do not alter the product color, lid design, basket pattern, or bowl transparency\",\n    \"do not modify or remove any existing text, icons, logo-like elements, or layout\",\n    \"do not change non-target areas of the image\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the visible inner basket area inside the yellow salad spinner / produce washer\",\n    \"target_area\": \"inside the product only, contained within the basket and not spilling onto the countertop\",\n    \"content\": \"fresh vegetables inside the basket, primarily crisp leafy greens such as lettuce, arranged naturally as if the product is loaded for washing or drying\",\n    \"integration\": \"keep the vegetables correctly scaled to the basket, partially visible through the basket slits and open top area, matching the existing soft daylight, perspective, shadows, highlights, and realistic product photography style\",\n    \"preserve_conditions\": \"maintain the product's original structure, yellow color, transparent outer bowl, lid details, button, handle, and overall commercial composition\"\n  },\n  \"preserve\": [\n    \"the full product shape, materials, and assembly\",\n    \"the existing visible headline, subtitle, and bottom icon text\",\n    \"the countertop, surrounding lettuce leaves, berries, and background scene\",\n    \"the original lighting direction, soft reflections, shadows, and camera angle\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product\",\n    \"do not alter the product color, lid design, basket pattern, or bowl transparency\",\n    \"do not modify or remove any existing text, icons, logo-like elements, or layout\",\n    \"do not change non-target areas of the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-031\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-031/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the visible inner basket area inside the yellow salad spinner / produce washer\",\n    \"target_area\": \"inside the product only, contained within the basket and not spilling onto the countertop\",\n    \"content\": \"fresh vegetables inside the basket, primarily crisp leafy greens such as lettuce, arranged naturally as if the product is loaded for washing or drying\",\n    \"integration\": \"keep the vegetables correctly scaled to the basket, partially visible through the basket slits and open top area, matching the existing soft daylight, perspective, shadows, highlights, and realistic product photography style\",\n    \"preserve_conditions\": \"maintain the product's original structure, yellow color, transparent outer bowl, lid details, button, handle, and overall commercial composition\"\n  },\n  \"preserve\": [\n    \"the full product shape, materials, and assembly\",\n    \"the existing visible headline, subtitle, and bottom icon text\",\n    \"the countertop, surrounding lettuce leaves, berries, and background scene\",\n    \"the original lighting direction, soft reflections, shadows, and camera angle\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product\",\n    \"do not alter the product color, lid design, basket pattern, or bowl transparency\",\n    \"do not modify or remove any existing text, icons, logo-like elements, or layout\",\n    \"do not change non-target areas of the image\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"fill\": {\n    \"target\": \"the interior of the main product, specifically the visible inner basket area inside the yellow salad spinner / produce washer\",\n    \"target_area\": \"inside the product only, contained within the basket and not spilling onto the countertop\",\n    \"content\": \"fresh vegetables inside the basket, primarily crisp leafy greens such as lettuce, arranged naturally as if the product is loaded for washing or drying\",\n    \"integration\": \"keep the vegetables correctly scaled to the basket, partially visible through the basket slits and open top area, matching the existing soft daylight, perspective, shadows, highlights, and realistic product photography style\",\n    \"preserve_conditions\": \"maintain the product's original structure, yellow color, transparent outer bowl, lid details, button, handle, and overall commercial composition\"\n  },\n  \"preserve\": [\n    \"the full product shape, materials, and assembly\",\n    \"the existing visible headline, subtitle, and bottom icon text\",\n    \"the countertop, surrounding lettuce leaves, berries, and background scene\",\n    \"the original lighting direction, soft reflections, shadows, and camera angle\"\n  ],\n  \"do_not_change\": [\n    \"do not place vegetables outside the product\",\n    \"do not alter the product color, lid design, basket pattern, or bowl transparency\",\n    \"do not modify or remove any existing text, icons, logo-like elements, or layout\",\n    \"do not change non-target areas of the image\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-031-original-1.png",
+                "assetPath": "assets/SINGLE-031-original-1.png"
+              }
+            ],
+            "compare_source": "assets/SINGLE-031-original-1.png"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-031-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-031-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-031-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:10:31.875Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    },
+    {
+      "case_id": "SINGLE-032",
+      "title": "在烤盘里添加一只烤火鸡；略微改变拍摄视角后替换背景为厨房背景",
+      "status": "succeeded",
+      "selected_generation_mode": "Single image edit",
+      "selected_mode": "single_image_edit",
+      "selected_mode_label": "Single image edit",
+      "selected_mode_contract": "Left comparison uses the original product image as the edit target.",
+      "recomposition_requirement": "在烤盘里添加一只烤火鸡；略微改变拍摄视角后替换背景为厨房背景",
+      "media": [
+        {
+          "role": "image_a",
+          "kind": "input",
+          "label": "Original",
+          "path": "assets/SINGLE-032-original-1.jpg",
+          "exists": true,
+          "mime_type": "image/jpeg",
+          "badge": "Original",
+          "dimensions": {
+            "bytes": 646203
+          }
+        },
+        {
+          "role": "generated",
+          "kind": "generated",
+          "label": "Generated",
+          "path": "generated/SINGLE-032-generated.png",
+          "exists": true,
+          "mime_type": "image/png",
+          "badge": "Generated",
+          "dimensions": {
+            "bytes": 1495050
+          }
+        }
+      ],
+      "warnings": [],
+      "prompt_health": {
+        "status": "ok",
+        "critical_fields": [
+          {
+            "field_id": "selected_generation_mode",
+            "label": "Generation Mode",
+            "value": "Single image edit",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "selected_mode_contract",
+            "label": "Image Input Rule",
+            "value": "Left comparison uses the original product image as the edit target.",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "recomposition_requirement",
+            "label": "User Edit Instruction",
+            "value": "在烤盘里添加一只烤火鸡；略微改变拍摄视角后替换背景为厨房背景",
+            "missing": false,
+            "placement": "card"
+          },
+          {
+            "field_id": "final_prompt",
+            "label": "Final Prompt",
+            "value": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the stainless steel roasting pan in Image A\",\n    \"content\": \"add one whole roasted turkey placed naturally inside the roasting pan, resting within the tray area and fitting the pan scale realistically\",\n    \"integration\": \"match the existing studio-commercial lighting, reflections, shadows, metal surroundings, and perspective; keep the turkey centered within the pan and visually grounded on the rack/tray area rather than floating or placed outside the product\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main product shot in Image A\",\n    \"content\": \"slightly adjust the camera angle to a subtly different product photography viewpoint while keeping the roasting pan as the clear focal subject\",\n    \"integration\": \"preserve realistic product proportions, stainless steel geometry, rim shape, rack structure, reflections, and shadow behavior; the angle change should be mild and consistent with a professional ecommerce product image\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background environment behind the product\",\n    \"content\": \"replace the current background with a clean kitchen background that suits a premium cookware advertisement\",\n    \"integration\": \"keep the background softly out of focus, align depth and perspective with the new product viewpoint, and preserve the product's foreground prominence without covering the tray or altering the overlaid marketing text and icons\"\n  },\n  \"preserve\": [\n    \"the stainless steel roasting pan and wire rack structure\",\n    \"the original product material, silver color, shape, and dimensions\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the overall commercial lighting quality, metallic reflections, and realistic shadows\",\n    \"the centered product composition and clean product-ad visual style\"\n  ],\n  \"do_not_change\": [\n    \"do not move the turkey outside the pan\",\n    \"do not alter or remove the product text overlays or bottom icons\",\n    \"do not change the pan into a different product type, material, or color\",\n    \"do not add extra food items, utensils, hands, or unrelated kitchen objects into the tray area\"\n  ]\n}",
+            "missing": false,
+            "placement": "drawer"
+          }
+        ],
+        "warning_families": [],
+        "source_excerpts": []
+      },
+      "steps": {
+        "main_agent": {
+          "name": "Prompt generation",
+          "transport": {
+            "transport_id": "codex_native"
+          },
+          "refs": {
+            "final_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the stainless steel roasting pan in Image A\",\n    \"content\": \"add one whole roasted turkey placed naturally inside the roasting pan, resting within the tray area and fitting the pan scale realistically\",\n    \"integration\": \"match the existing studio-commercial lighting, reflections, shadows, metal surroundings, and perspective; keep the turkey centered within the pan and visually grounded on the rack/tray area rather than floating or placed outside the product\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main product shot in Image A\",\n    \"content\": \"slightly adjust the camera angle to a subtly different product photography viewpoint while keeping the roasting pan as the clear focal subject\",\n    \"integration\": \"preserve realistic product proportions, stainless steel geometry, rim shape, rack structure, reflections, and shadow behavior; the angle change should be mild and consistent with a professional ecommerce product image\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background environment behind the product\",\n    \"content\": \"replace the current background with a clean kitchen background that suits a premium cookware advertisement\",\n    \"integration\": \"keep the background softly out of focus, align depth and perspective with the new product viewpoint, and preserve the product's foreground prominence without covering the tray or altering the overlaid marketing text and icons\"\n  },\n  \"preserve\": [\n    \"the stainless steel roasting pan and wire rack structure\",\n    \"the original product material, silver color, shape, and dimensions\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the overall commercial lighting quality, metallic reflections, and realistic shadows\",\n    \"the centered product composition and clean product-ad visual style\"\n  ],\n  \"do_not_change\": [\n    \"do not move the turkey outside the pan\",\n    \"do not alter or remove the product text overlays or bottom icons\",\n    \"do not change the pan into a different product type, material, or color\",\n    \"do not add extra food items, utensils, hands, or unrelated kitchen objects into the tray area\"\n  ]\n}",
+            "final_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the stainless steel roasting pan in Image A\",\n    \"content\": \"add one whole roasted turkey placed naturally inside the roasting pan, resting within the tray area and fitting the pan scale realistically\",\n    \"integration\": \"match the existing studio-commercial lighting, reflections, shadows, metal surroundings, and perspective; keep the turkey centered within the pan and visually grounded on the rack/tray area rather than floating or placed outside the product\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main product shot in Image A\",\n    \"content\": \"slightly adjust the camera angle to a subtly different product photography viewpoint while keeping the roasting pan as the clear focal subject\",\n    \"integration\": \"preserve realistic product proportions, stainless steel geometry, rim shape, rack structure, reflections, and shadow behavior; the angle change should be mild and consistent with a professional ecommerce product image\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background environment behind the product\",\n    \"content\": \"replace the current background with a clean kitchen background that suits a premium cookware advertisement\",\n    \"integration\": \"keep the background softly out of focus, align depth and perspective with the new product viewpoint, and preserve the product's foreground prominence without covering the tray or altering the overlaid marketing text and icons\"\n  },\n  \"preserve\": [\n    \"the stainless steel roasting pan and wire rack structure\",\n    \"the original product material, silver color, shape, and dimensions\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the overall commercial lighting quality, metallic reflections, and realistic shadows\",\n    \"the centered product composition and clean product-ad visual style\"\n  ],\n  \"do_not_change\": [\n    \"do not move the turkey outside the pan\",\n    \"do not alter or remove the product text overlays or bottom icons\",\n    \"do not change the pan into a different product type, material, or color\",\n    \"do not add extra food items, utensils, hands, or unrelated kitchen objects into the tray area\"\n  ]\n}",
+            "agent_output_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the stainless steel roasting pan in Image A\",\n    \"content\": \"add one whole roasted turkey placed naturally inside the roasting pan, resting within the tray area and fitting the pan scale realistically\",\n    \"integration\": \"match the existing studio-commercial lighting, reflections, shadows, metal surroundings, and perspective; keep the turkey centered within the pan and visually grounded on the rack/tray area rather than floating or placed outside the product\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main product shot in Image A\",\n    \"content\": \"slightly adjust the camera angle to a subtly different product photography viewpoint while keeping the roasting pan as the clear focal subject\",\n    \"integration\": \"preserve realistic product proportions, stainless steel geometry, rim shape, rack structure, reflections, and shadow behavior; the angle change should be mild and consistent with a professional ecommerce product image\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background environment behind the product\",\n    \"content\": \"replace the current background with a clean kitchen background that suits a premium cookware advertisement\",\n    \"integration\": \"keep the background softly out of focus, align depth and perspective with the new product viewpoint, and preserve the product's foreground prominence without covering the tray or altering the overlaid marketing text and icons\"\n  },\n  \"preserve\": [\n    \"the stainless steel roasting pan and wire rack structure\",\n    \"the original product material, silver color, shape, and dimensions\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the overall commercial lighting quality, metallic reflections, and realistic shadows\",\n    \"the centered product composition and clean product-ad visual style\"\n  ],\n  \"do_not_change\": [\n    \"do not move the turkey outside the pan\",\n    \"do not alter or remove the product text overlays or bottom icons\",\n    \"do not change the pan into a different product type, material, or color\",\n    \"do not add extra food items, utensils, hands, or unrelated kitchen objects into the tray area\"\n  ]\n}"
+          },
+          "input_refs": {
+            "prompt_result_path": "D:\\Documents\\BeePOP_slot\\reports\\local-edit-prompts-codex-native-20260624-r5-md-format\\cases\\SINGLE-032\\prompt_result.json"
+          },
+          "output_refs": {
+            "prompt_result_path": "cases/SINGLE-032/image_result.json"
+          }
+        },
+        "image_generation": {
+          "name": "Image generation",
+          "transport": {
+            "transport_id": "gemini_flash_image",
+            "model": "gemini-3.1-flash-image",
+            "concurrency": 1
+          },
+          "refs": {
+            "image_generation_prompt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the stainless steel roasting pan in Image A\",\n    \"content\": \"add one whole roasted turkey placed naturally inside the roasting pan, resting within the tray area and fitting the pan scale realistically\",\n    \"integration\": \"match the existing studio-commercial lighting, reflections, shadows, metal surroundings, and perspective; keep the turkey centered within the pan and visually grounded on the rack/tray area rather than floating or placed outside the product\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main product shot in Image A\",\n    \"content\": \"slightly adjust the camera angle to a subtly different product photography viewpoint while keeping the roasting pan as the clear focal subject\",\n    \"integration\": \"preserve realistic product proportions, stainless steel geometry, rim shape, rack structure, reflections, and shadow behavior; the angle change should be mild and consistent with a professional ecommerce product image\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background environment behind the product\",\n    \"content\": \"replace the current background with a clean kitchen background that suits a premium cookware advertisement\",\n    \"integration\": \"keep the background softly out of focus, align depth and perspective with the new product viewpoint, and preserve the product's foreground prominence without covering the tray or altering the overlaid marketing text and icons\"\n  },\n  \"preserve\": [\n    \"the stainless steel roasting pan and wire rack structure\",\n    \"the original product material, silver color, shape, and dimensions\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the overall commercial lighting quality, metallic reflections, and realistic shadows\",\n    \"the centered product composition and clean product-ad visual style\"\n  ],\n  \"do_not_change\": [\n    \"do not move the turkey outside the pan\",\n    \"do not alter or remove the product text overlays or bottom icons\",\n    \"do not change the pan into a different product type, material, or color\",\n    \"do not add extra food items, utensils, hands, or unrelated kitchen objects into the tray area\"\n  ]\n}",
+            "image_generation_prompt_excerpt": "{\n  \"status\": \"proceed\",\n  \"edit_target\": \"Image A\",\n  \"image_roles\": {\n    \"Image A\": \"edit_target\"\n  },\n  \"insert\": {\n    \"target\": \"the inside of the stainless steel roasting pan in Image A\",\n    \"content\": \"add one whole roasted turkey placed naturally inside the roasting pan, resting within the tray area and fitting the pan scale realistically\",\n    \"integration\": \"match the existing studio-commercial lighting, reflections, shadows, metal surroundings, and perspective; keep the turkey centered within the pan and visually grounded on the rack/tray area rather than floating or placed outside the product\"\n  },\n  \"reconstruct\": {\n    \"target\": \"the main product shot in Image A\",\n    \"content\": \"slightly adjust the camera angle to a subtly different product photography viewpoint while keeping the roasting pan as the clear focal subject\",\n    \"integration\": \"preserve realistic product proportions, stainless steel geometry, rim shape, rack structure, reflections, and shadow behavior; the angle change should be mild and consistent with a professional ecommerce product image\"\n  },\n  \"replace\": {\n    \"target\": \"the blurred background environment behind the product\",\n    \"content\": \"replace the current background with a clean kitchen background that suits a premium cookware advertisement\",\n    \"integration\": \"keep the background softly out of focus, align depth and perspective with the new product viewpoint, and preserve the product's foreground prominence without covering the tray or altering the overlaid marketing text and icons\"\n  },\n  \"preserve\": [\n    \"the stainless steel roasting pan and wire rack structure\",\n    \"the original product material, silver color, shape, and dimensions\",\n    \"the visible headline text, subtitle text, and bottom feature icons with their wording\",\n    \"the overall commercial lighting quality, metallic reflections, and realistic shadows\",\n    \"the centered product composition and clean product-ad visual style\"\n  ],\n  \"do_not_change\": [\n    \"do not move the turkey outside the pan\",\n    \"do not alter or remove the product text overlays or bottom icons\",\n    \"do not change the pan into a different product type, material, or color\",\n    \"do not add extra food items, utensils, hands, or unrelated kitchen objects into the tray area\"\n  ]\n}"
+          },
+          "input_refs": {
+            "assets": [
+              {
+                "role": "original",
+                "label": "Original",
+                "promptRunAssetPath": "assets/SINGLE-032-original-1.jpg",
+                "assetPath": "assets/SINGLE-032-original-1.jpg"
+              }
+            ],
+            "compare_source": "assets/SINGLE-032-original-1.jpg"
+          },
+          "output_refs": {
+            "generated": "generated/SINGLE-032-generated.png"
+          },
+          "official_image_ref": "generated/SINGLE-032-generated.png",
+          "attempts": [
+            {
+              "attempt_id": "attempt_1",
+              "transport": {
+                "transport_id": "gemini_flash_image"
+              },
+              "generated_ref": "generated/SINGLE-032-generated.png"
+            }
+          ]
+        },
+        "audit": {
+          "name": "Report integration",
+          "refs": {
+            "provider_status": {
+              "provider_status": "generated",
+              "model": "gemini-3.1-flash-image",
+              "created_at": "2026-06-24T09:11:25.572Z"
+            }
+          },
+          "warnings": [],
+          "blockers": []
+        }
+      }
+    }
+  ],
+  "artifacts": [],
+  "warnings": []
+};
